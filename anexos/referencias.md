@@ -2,25 +2,32 @@
 
 ## Objetivo
 
-Recopila las fuentes y referencias utilizadas por el proyecto.
+Describe el contenido del documento Referencias dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye recursos y referencias externas; no incluye documentación principal del proyecto.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Listado de referencias útiles y enlaces de apoyo para la base de conocimiento.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Anexos](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Referencias.

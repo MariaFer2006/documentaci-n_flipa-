@@ -2,29 +2,44 @@
 
 ## Objetivo
 
-Explica la organización de la documentación funcional en la Knowledge Base.
+Presenta el propósito y el contenido de la carpeta Funcional.
 
 ## Alcance
 
-Incluye requisitos, casos de uso e historias de usuario; no incluye diseño técnico ni documentación de QA.
+Incluye los documentos de la carpeta Funcional y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice facilita el acceso a los documentos funcionales del proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Documento funcional](documento-funcional.md)
-- [Casos de uso](casos-de-uso.md)
-- [Historias usuario](historias-usuario.md)
-- [Requerimientos funcionales](requerimientos-funcionales.md)
-- [Requerimientos no funcionales](requerimientos-no-funcionales.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Tecnico](../tecnico/README.md)
+- [Qa](../qa/README.md)
+- [Documento Funcional](documento-funcional.md)
+- [Casos De Uso](casos-de-uso.md)
+- [Historias Usuario](historias-usuario.md)
+- [Requerimientos Funcionales](requerimientos-funcionales.md)
+- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+
+## Contenido
+
+Esta carpeta contiene los documentos siguientes:
+- [Documento Funcional](documento-funcional.md)
+- [Casos De Uso](casos-de-uso.md)
+- [Historias Usuario](historias-usuario.md)
+- [Requerimientos Funcionales](requerimientos-funcionales.md)
+- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)

@@ -1,26 +1,40 @@
-# Documento funcional
+# Documento Funcional
 
 ## Objetivo
 
-Resume la funcionalidad del proyecto de forma estructurada.
+Describe el contenido del documento Documento Funcional dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye descripciones de funciones; no incluye detalles técnicos o de pruebas.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Resumen estructurado de la funcionalidad del proyecto. Use esta plantilla para describir requisitos y comportamientos.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Funcional](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Tecnico](../tecnico/README.md)
+- [Qa](../qa/README.md)
+- [Casos De Uso](casos-de-uso.md)
+- [Historias Usuario](historias-usuario.md)
+- [Requerimientos Funcionales](requerimientos-funcionales.md)
+- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Documento Funcional.

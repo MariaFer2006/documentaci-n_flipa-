@@ -1,27 +1,40 @@
-# Requerimientos funcionales
+# Requerimientos Funcionales
 
 ## Objetivo
 
-Lista los requerimientos funcionales del proyecto.
+Describe el contenido del documento Requerimientos Funcionales dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye requerimientos funcionales específicos; no incluye requisitos de calidad o no funcionales.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Lista de requerimientos funcionales. Cada requisito debe ser concreto y verificable.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Requerimientos no funcionales](requerimientos-no-funcionales.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Funcional](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Tecnico](../tecnico/README.md)
+- [Qa](../qa/README.md)
+- [Documento Funcional](documento-funcional.md)
+- [Casos De Uso](casos-de-uso.md)
+- [Historias Usuario](historias-usuario.md)
+- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Requerimientos Funcionales.

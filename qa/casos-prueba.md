@@ -1,26 +1,38 @@
-# Casos de prueba
+# Casos Prueba
 
 ## Objetivo
 
-Describe los casos de prueba principales y sus objetivos.
+Describe el contenido del documento Casos Prueba dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye casos de prueba clave; no incluye todos los casos de prueba posibles.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Casos de prueba principales y su objetivo.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Qa](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Manuales](../manuales/README.md)
+- [Estrategia Pruebas](estrategia-pruebas.md)
+- [Criterios Aceptacion](criterios-aceptacion.md)
+- [Bugs](bugs.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Casos Prueba.

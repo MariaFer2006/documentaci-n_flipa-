@@ -2,24 +2,29 @@
 
 ## Objetivo
 
-Explica qué cubre este documento sobre Changelog.
+Registra los cambios relevantes de la documentación.
 
 ## Alcance
 
-Incluye este tema específico; no incluye otros temas de la base de conocimiento.
+Incluye actualizaciones de la biblioteca de conocimiento; no incluye versiones de producto.
 
-## Contenido
+## Responsable
 
-Pendiente de documentación.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](README.md)
+- [Contribuir](CONTRIBUTING.md)
+
+## Contenido
+
+Registro de cambios de la documentación. Contiene entradas de versiones y mejoras de la estructura.

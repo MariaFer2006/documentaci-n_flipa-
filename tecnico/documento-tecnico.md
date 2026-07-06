@@ -1,26 +1,42 @@
-# Documento técnico
+# Documento Tecnico
 
 ## Objetivo
 
-Resume el diseño técnico y las decisiones de arquitectura del proyecto.
+Describe el contenido del documento Documento Tecnico dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye un resumen técnico; no incluye todos los detalles de implementación.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Resumen técnico del proyecto y decisiones de diseño importantes.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Tecnico](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Decisiones](../decisiones/README.md)
+- [Arquitectura](arquitectura.md)
+- [Componentes](componentes.md)
+- [Apis](apis.md)
+- [Base Datos](base-datos.md)
+- [Integraciones](integraciones.md)
+- [Seguridad](seguridad.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Documento Tecnico.

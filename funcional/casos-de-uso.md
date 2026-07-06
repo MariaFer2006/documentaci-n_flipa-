@@ -1,26 +1,40 @@
-# Casos de uso
+# Casos De Uso
 
 ## Objetivo
 
-Describe los casos de uso principales del sistema.
+Describe el contenido del documento Casos De Uso dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye casos de uso clave; no incluye todos los escenarios posibles.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Casos de uso principales del sistema. Documente cada caso de forma clara y separada.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Funcional](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Tecnico](../tecnico/README.md)
+- [Qa](../qa/README.md)
+- [Documento Funcional](documento-funcional.md)
+- [Historias Usuario](historias-usuario.md)
+- [Requerimientos Funcionales](requerimientos-funcionales.md)
+- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Casos De Uso.

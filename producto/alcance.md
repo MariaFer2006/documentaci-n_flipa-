@@ -2,25 +2,38 @@
 
 ## Objetivo
 
-Describe qué incluye y qué no incluye el alcance del proyecto.
+Describe el contenido del documento Alcance dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye los límites del proyecto; no incluye detalles de implementación.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Alcance del proyecto: qué incluye y qué queda fuera.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Producto](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Funcional](../funcional/README.md)
+- [Conocimiento](../conocimiento/README.md)
+- [Objetivo](objetivo.md)
+- [Vision](vision.md)
+- [Roadmap](roadmap.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Alcance.

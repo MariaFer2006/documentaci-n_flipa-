@@ -1,26 +1,37 @@
-# Manual de usuario
+# Manual Usuario
 
 ## Objetivo
 
-Proporciona instrucciones para el usuario final.
+Describe el contenido del documento Manual Usuario dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye tareas y pasos de uso; no incluye configuración técnica del sistema.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Instrucciones para el usuario final. Divide el contenido en tareas y pasos claros.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Manuales](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Qa](../qa/README.md)
+- [Producto](../producto/README.md)
+- [Manual Administrador](manual-administrador.md)
+- [Onboarding](onboarding.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Manual Usuario.

@@ -2,25 +2,39 @@
 
 ## Objetivo
 
-Identifica los actores clave del negocio y sus roles.
+Describe el contenido del documento Actores dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye actores y sus responsabilidades; no incluye documentación técnica o de pruebas.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Principales actores del negocio y su papel dentro del sistema.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Negocio](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Descripcion Negocio](descripcion-negocio.md)
+- [Procesos](procesos.md)
+- [Indicadores](indicadores.md)
+- [Reglas Negocio](reglas-negocio.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Actores.

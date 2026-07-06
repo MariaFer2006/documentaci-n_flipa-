@@ -1,26 +1,39 @@
-# FAQ
+# Faq
 
 ## Objetivo
 
-Recopila preguntas frecuentes sobre el proyecto.
+Describe el contenido del documento Faq dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye preguntas frecuentes; no incluye documentación completa de cada tema.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Preguntas frecuentes sobre el proyecto y sus respuestas.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Conocimiento](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Conceptos](conceptos.md)
+- [Glosario](glosario.md)
+- [Troubleshooting](troubleshooting.md)
+- [Buenas Practicas](buenas-practicas.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Faq.

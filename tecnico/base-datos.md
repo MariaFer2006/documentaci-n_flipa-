@@ -1,26 +1,42 @@
-# Base de datos
+# Base Datos
 
 ## Objetivo
 
-Describe el modelado de datos y aspectos clave de la base de datos.
+Describe el contenido del documento Base Datos dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye el modelado y consideraciones de base de datos; no incluye scripts SQL.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Descripción del modelado de datos y aspectos principales de la base de datos.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Tecnico](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Decisiones](../decisiones/README.md)
+- [Arquitectura](arquitectura.md)
+- [Componentes](componentes.md)
+- [Apis](apis.md)
+- [Integraciones](integraciones.md)
+- [Seguridad](seguridad.md)
+- [Documento Tecnico](documento-tecnico.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Base Datos.

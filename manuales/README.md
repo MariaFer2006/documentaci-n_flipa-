@@ -2,27 +2,39 @@
 
 ## Objetivo
 
-Describe el propósito de la carpeta de manuales del proyecto.
+Presenta el propósito y el contenido de la carpeta Manuales.
 
 ## Alcance
 
-Incluye manuales de usuario, administrador y onboarding; no incluye documentación técnica de desarrollo.
+Incluye los documentos de la carpeta Manuales y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice agrupa los manuales para usuarios y operadores del sistema.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Manual usuario](manual-usuario.md)
-- [Manual administrador](manual-administrador.md)
-- [Onboarding](onboarding.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Qa](../qa/README.md)
+- [Producto](../producto/README.md)
+- [Manual Usuario](manual-usuario.md)
+- [Manual Administrador](manual-administrador.md)
+- [Onboarding](onboarding.md)
+
+## Contenido
+
+Esta carpeta contiene los documentos siguientes:
+- [Manual Usuario](manual-usuario.md)
+- [Manual Administrador](manual-administrador.md)
+- [Onboarding](onboarding.md)

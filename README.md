@@ -1,33 +1,42 @@
-# Biblioteca de Conocimiento
+# Flipa - Biblioteca de Conocimiento
 
 ## Objetivo
 
-Presenta la estructura de navegación principal de la biblioteca de conocimiento.
+Presenta el proyecto Flipa y actúa como portal de navegación principal.
 
 ## Alcance
 
-Incluye enlaces a las secciones principales; no incluye contenido detallado de cada tema.
+Incluye la descripción del repositorio, la estructura de la biblioteca, el flujo recomendado de lectura y accesos rápidos a las áreas principales.
 
-## Contenido
+## Responsable
 
-Esta página es el punto de entrada para acceder a los índices de cada dominio de conocimiento.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](producto/README.md)
-- [Readme](negocio/README.md)
-- [Readme](funcional/README.md)
-- [Readme](tecnico/README.md)
-- [Readme](qa/README.md)
-- [Readme](manuales/README.md)
-- [Readme](conocimiento/README.md)
-- [Readme](decisiones/README.md)
-- [Readme](anexos/README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Mapa Del Conocimiento](MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](ONBOARDING.md)
+- [Convenciones](CONVENCIONES.md)
+- [Producto](producto/README.md)
+- [Negocio](negocio/README.md)
+- [Funcional](funcional/README.md)
+- [Tecnico](tecnico/README.md)
+- [Qa](qa/README.md)
+- [Manuales](manuales/README.md)
+- [Conocimiento](conocimiento/README.md)
+- [Decisiones](decisiones/README.md)
+- [Anexos](anexos/README.md)
+
+## Contenido
+
+Flipa es la biblioteca de conocimiento del proyecto. Esta documentación está diseñada para ser un portal de consulta rápido, un guía de onboarding y una base estructurada para entrenamiento de IA. No es un producto; es la documentación del proyecto.
+
+Use los enlaces de esta página para saltar a cada sección y comenzar por el mapa de conocimiento.

@@ -2,25 +2,41 @@
 
 ## Objetivo
 
-Documenta las integraciones clave con sistemas externos.
+Describe el contenido del documento Integraciones dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye integraciones con terceros; no incluye detalles de implementación completa.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Integraciones clave con sistemas externos o servicios.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Tecnico](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Decisiones](../decisiones/README.md)
+- [Arquitectura](arquitectura.md)
+- [Componentes](componentes.md)
+- [Apis](apis.md)
+- [Base Datos](base-datos.md)
+- [Seguridad](seguridad.md)
+- [Documento Tecnico](documento-tecnico.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Integraciones.

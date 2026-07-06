@@ -2,29 +2,43 @@
 
 ## Objetivo
 
-Introduce los elementos reutilizables de conocimiento del proyecto.
+Presenta el propósito y el contenido de la carpeta Conocimiento.
 
 ## Alcance
 
-Incluye definiciones, glosario, FAQ y troubleshooting; no incluye documentación funcional o técnica específica.
+Incluye los documentos de la carpeta Conocimiento y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice agrupa documentos de conocimiento reutilizable y de referencia para el equipo.
+Pendiente de asignación
 
-## Referencias relacionadas
+## Fecha de actualización
 
+2026-07-06
+
+## Estado
+
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
 - [Conceptos](conceptos.md)
 - [Glosario](glosario.md)
 - [Faq](faq.md)
 - [Troubleshooting](troubleshooting.md)
-- [Buenas practicas](buenas-practicas.md)
-- [Readme](../README.md)
+- [Buenas Practicas](buenas-practicas.md)
 
-## Última actualización
+## Contenido
 
-2026-07-06
-
-Responsable
-
-Pendiente de documentación
+Esta carpeta contiene los documentos siguientes:
+- [Conceptos](conceptos.md)
+- [Glosario](glosario.md)
+- [Faq](faq.md)
+- [Troubleshooting](troubleshooting.md)
+- [Buenas Practicas](buenas-practicas.md)

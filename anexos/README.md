@@ -2,25 +2,33 @@
 
 ## Objetivo
 
-Describe el propósito y el contenido de la carpeta de anexos.
+Presenta el propósito y el contenido de la carpeta Anexos.
 
 ## Alcance
 
-Incluye referencias y material complementario; no incluye documentación principal del proyecto.
+Incluye los documentos de la carpeta Anexos y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Lista material de apoyo y referencias externas relacionadas con el proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Referencias](referencias.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Referencias](referencias.md)
+
+## Contenido
+
+Esta carpeta contiene los documentos siguientes:
+- [Referencias](referencias.md)

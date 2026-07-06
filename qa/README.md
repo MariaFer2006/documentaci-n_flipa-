@@ -1,29 +1,42 @@
-# QA
+# Qa
 
 ## Objetivo
 
-Presenta la documentación de garantía de calidad y pruebas.
+Presenta el propósito y el contenido de la carpeta Qa.
 
 ## Alcance
 
-Incluye estrategia, criterios de aceptación, casos de prueba y bugs; no incluye documentación técnica de arquitectura.
+Incluye los documentos de la carpeta Qa y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice facilita el acceso a la documentación de QA del proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Estrategia pruebas](estrategia-pruebas.md)
-- [Criterios aceptacion](criterios-aceptacion.md)
-- [Casos prueba](casos-prueba.md)
-- [Bugs](bugs.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Manuales](../manuales/README.md)
+- [Estrategia Pruebas](estrategia-pruebas.md)
+- [Criterios Aceptacion](criterios-aceptacion.md)
+- [Casos Prueba](casos-prueba.md)
+- [Bugs](bugs.md)
+
+## Contenido
+
+Esta carpeta contiene los documentos siguientes:
+- [Estrategia Pruebas](estrategia-pruebas.md)
+- [Criterios Aceptacion](criterios-aceptacion.md)
+- [Casos Prueba](casos-prueba.md)
+- [Bugs](bugs.md)

@@ -1,26 +1,38 @@
-# Estrategia de pruebas
+# Estrategia Pruebas
 
 ## Objetivo
 
-Describe el enfoque general para asegurar la calidad del proyecto.
+Describe el contenido del documento Estrategia Pruebas dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye la estrategia de pruebas; no incluye todos los detalles ejecutivos de cada ciclo.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Enfoque general para asegurar la calidad del proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Qa](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Funcional](../funcional/README.md)
+- [Manuales](../manuales/README.md)
+- [Criterios Aceptacion](criterios-aceptacion.md)
+- [Casos Prueba](casos-prueba.md)
+- [Bugs](bugs.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Estrategia Pruebas.

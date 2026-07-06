@@ -2,28 +2,42 @@
 
 ## Objetivo
 
-Describe la estructura de la documentación de producto.
+Presenta el propósito y el contenido de la carpeta Producto.
 
 ## Alcance
 
-Incluye vision, objetivos, roadmap y alcance; no incluye detalles de desarrollo técnico.
+Incluye los documentos de la carpeta Producto y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice agrupa los documentos que explican el propósito y la evolución del producto.
+Pendiente de asignación
 
-## Referencias relacionadas
+## Fecha de actualización
 
+2026-07-06
+
+## Estado
+
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Funcional](../funcional/README.md)
+- [Conocimiento](../conocimiento/README.md)
 - [Objetivo](objetivo.md)
 - [Vision](vision.md)
 - [Roadmap](roadmap.md)
 - [Alcance](alcance.md)
-- [Readme](../README.md)
 
-## Última actualización
+## Contenido
 
-2026-07-06
-
-Responsable
-
-Pendiente de documentación
+Esta carpeta contiene los documentos siguientes:
+- [Objetivo](objetivo.md)
+- [Vision](vision.md)
+- [Roadmap](roadmap.md)
+- [Alcance](alcance.md)

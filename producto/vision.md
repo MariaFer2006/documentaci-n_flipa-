@@ -1,26 +1,39 @@
-# Visión
+# Vision
 
 ## Objetivo
 
-Describe la visión del producto y su propósito a largo plazo.
+Describe el contenido del documento Vision dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye la visión del producto; no incluye detalles técnicos de implementación.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Visión del producto: propósito y resultado esperado.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Producto](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Negocio](../negocio/README.md)
+- [Funcional](../funcional/README.md)
+- [Conocimiento](../conocimiento/README.md)
+- [Objetivo](objetivo.md)
+- [Roadmap](roadmap.md)
+- [Alcance](alcance.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Vision.

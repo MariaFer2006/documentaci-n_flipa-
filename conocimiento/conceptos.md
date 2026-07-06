@@ -2,26 +2,38 @@
 
 ## Objetivo
 
-Define los conceptos clave del proyecto.
+Describe el contenido del documento Conceptos dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye conceptos esenciales; no incluye documentación detallada de procesos o reglas.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Definiciones clave del dominio y términos relevantes.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Glosario](glosario.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Conocimiento](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Glosario](glosario.md)
+- [Faq](faq.md)
+- [Troubleshooting](troubleshooting.md)
+- [Buenas Practicas](buenas-practicas.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Conceptos.

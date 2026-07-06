@@ -2,29 +2,44 @@
 
 ## Objetivo
 
-Presenta la documentación del dominio de negocio y reglas asociadas.
+Presenta el propósito y el contenido de la carpeta Negocio.
 
 ## Alcance
 
-Incluye actores, procesos, indicadores y reglas de negocio; no incluye documentación técnica ni casos de prueba.
+Incluye los documentos de la carpeta Negocio y su relación con las otras capas de la biblioteca.
 
-## Contenido
+## Responsable
 
-Este índice organiza el conocimiento de negocio relevante para el proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Descripcion negocio](descripcion-negocio.md)
-- [Actores](actores.md)
-- [Procesos](procesos.md)
-- [Indicadores](indicadores.md)
-- [Reglas negocio](reglas-negocio.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Descripcion Negocio](descripcion-negocio.md)
+- [Actores](actores.md)
+- [Procesos](procesos.md)
+- [Indicadores](indicadores.md)
+- [Reglas Negocio](reglas-negocio.md)
+
+## Contenido
+
+Esta carpeta contiene los documentos siguientes:
+- [Descripcion Negocio](descripcion-negocio.md)
+- [Actores](actores.md)
+- [Procesos](procesos.md)
+- [Indicadores](indicadores.md)
+- [Reglas Negocio](reglas-negocio.md)

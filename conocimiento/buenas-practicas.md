@@ -1,26 +1,39 @@
-# Buenas prácticas
+# Buenas Practicas
 
 ## Objetivo
 
-Reúne pautas y recomendaciones generales para el proyecto.
+Describe el contenido del documento Buenas Practicas dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye buenas prácticas; no incluye procedimientos específicos de desarrollo o pruebas.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Describe buenas prácticas generales relacionadas con el proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Conocimiento](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Conceptos](conceptos.md)
+- [Glosario](glosario.md)
+- [Faq](faq.md)
+- [Troubleshooting](troubleshooting.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Buenas Practicas.

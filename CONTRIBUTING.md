@@ -1,25 +1,30 @@
-# Contributing
+# Contribuir
 
 ## Objetivo
 
-Explica qué cubre este documento sobre Contributing.
+Explica cómo contribuir a la biblioteca de conocimiento.
 
 ## Alcance
 
-Incluye este tema específico; no incluye otros temas de la base de conocimiento.
+Incluye reglas de contribución para mantener la estructura y la calidad documental.
 
-## Contenido
+## Responsable
 
-Pendiente de documentación.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Flipa - Biblioteca de Conocimiento](README.md)
+- [Convenciones](CONVENCIONES.md)
+
+## Contenido
+
+Guía para contribuir a esta biblioteca de conocimiento. Use el formato estándar y las convenciones definidas en CONVENCIONES.md.

@@ -2,25 +2,39 @@
 
 ## Objetivo
 
-Documenta métricas e indicadores de negocio importantes.
+Describe el contenido del documento Indicadores dentro de la biblioteca Flipa.
 
 ## Alcance
 
-Incluye indicadores clave; no incluye análisis detallado de resultados.
+Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
 
-## Contenido
+## Responsable
 
-Métricas e indicadores de negocio importantes para este proyecto.
+Pendiente de asignación
 
-## Referencias relacionadas
-
-- [Readme](README.md)
-- [Readme](../README.md)
-
-## Última actualización
+## Fecha de actualización
 
 2026-07-06
 
-Responsable
+## Estado
 
-Pendiente de documentación
+Borrador
+
+## Documentos relacionados
+
+- [Negocio](README.md)
+- [Flipa - Biblioteca de Conocimiento](../README.md)
+- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../ONBOARDING.md)
+- [Convenciones](../CONVENCIONES.md)
+- [Producto](../producto/README.md)
+- [Funcional](../funcional/README.md)
+- [Qa](../qa/README.md)
+- [Descripcion Negocio](descripcion-negocio.md)
+- [Actores](actores.md)
+- [Procesos](procesos.md)
+- [Reglas Negocio](reglas-negocio.md)
+
+## Contenido
+
+TODO: completar con la información específica de Flipa para Indicadores.
