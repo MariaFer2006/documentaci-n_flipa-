@@ -34,9 +34,10 @@ Borrador
 - [Conocimiento](conocimiento/README.md)
 - [Decisiones](decisiones/README.md)
 - [Anexos](anexos/README.md)
+- 
 
 ## Contenido
 
-Flipa es la biblioteca de conocimiento del proyecto. Esta documentación está diseñada para ser un portal de consulta rápido, un guía de onboarding y una base estructurada para entrenamiento de IA. No es un producto; es la documentación del proyecto.
+ Esta documentación está diseñada para ser un portal de consulta rápido, un guía de onboarding y una base estructurada para entrenamiento de IA. No es un producto; es la documentación del proyecto.
 
 Use los enlaces de esta página para saltar a cada sección y comenzar por el mapa de conocimiento.
