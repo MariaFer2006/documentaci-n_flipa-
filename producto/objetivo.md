@@ -10,7 +10,7 @@ Este documento cubre el propósito comercial y estratégico del producto, sus me
 
 ## Responsable
 
-Equipo de producto y negocio
+Equipo de producto 
 
 ## Fecha de actualización
 
