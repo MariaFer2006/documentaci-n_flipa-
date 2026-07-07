@@ -1,4 +1,4 @@
-# Flipa - Biblioteca de Conocimiento
+# Flipa 
 
 ## Objetivo
 
