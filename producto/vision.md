@@ -2,7 +2,7 @@
 
 | **Documento** | Visión del Producto |
 |--------------|---------------------|
-| **Proyecto** | Flipa (Nombre interno) |
+| **Proyecto** | Fliipa  |
 | **Versión** | 1.0 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto y Estrategia |
