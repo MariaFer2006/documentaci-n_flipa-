@@ -2,7 +2,7 @@
 
 | **Documento** | Alcance del Producto |
 |--------------|----------------------|
-| **Proyecto** | Flipa (B2B Crédito Empresarial) |
+| **Proyecto** | Flipa |
 | **Versión** | 1.0 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
