@@ -45,7 +45,7 @@ Flipa busca:
 - Incrementar la recurrencia y el volumen de compra en D1.
 - Facilitar el acceso al crédito formal para micro y pequeñas empresas.
 - Reducir la dependencia de mecanismos tradicionales de evaluación crediticia.
-- Generar nuevas fuentes de ingresos para Zooms.
+- Generar nuevas fuentes de ingresos para sumz.
 - Convertirse en un activo estratégico para el Grupo Santo Domingo.
 - Validar un modelo de negocio escalable basado en información transaccional.
 
