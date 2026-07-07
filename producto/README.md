@@ -40,21 +40,24 @@ No hace parte de esta carpeta la documentación técnica, arquitectura, APIs, in
 
 # Responsable
 
-Maria Fernanda Herazo Escobar 
+| Versión | Fecha | Autor | Descripción |
+|----------|------------|-------------------------|--------------------------------------------|
+| 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
 
 ---
 
 # Fecha de actualización
 
-2026-07-06
 
+| **Documento** | Alcance del Producto |
+|--------------|----------------------|
+| **Proyecto** | Flipa (B2B Crédito Empresarial) |
+| **Versión** | 1.0 |
+| **Estado** | En revisión |
+| **Responsable** | Equipo de Producto |
+| **Última actualización** | 2026-07-07 |
 ---
 
-# Estado
-
-**Borrador**
-
----
 
 # Documentos relacionados
 
