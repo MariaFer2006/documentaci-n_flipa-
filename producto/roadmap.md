@@ -1,12 +1,13 @@
+
 # Roadmap del Producto
 
 | **Documento** | Roadmap del Producto |
 |--------------|----------------------|
-| **Proyecto** | Flipa (Nombre interno) |
-| **Versión** | 1.0 |
+| **Proyecto** | Fliipa (Nombre interno) |
+| **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
-| **Última actualización** | 2026-07-07 |
+| **Última actualización** | 2026-07-08 |
 
 ---
 
@@ -15,12 +16,13 @@
 | Versión | Fecha | Autor | Descripción |
 |----------|------------|-------------------------|--------------------------------------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación del roadmap estratégico del producto. |
+| 1.1 | 2026-07-08 | María Fernanda Herazo | Ajustes para reforzar la generación de información crediticia para el Grupo Santo Domingo, alineando el documento con Visión, Alcance y Objetivo. |
 
 ---
 
 # Propósito
 
-Definir la evolución estratégica de Flipa como producto, identificando las capacidades actuales y las líneas de crecimiento que permitirán consolidar la plataforma como un ecosistema financiero para empresas.
+Definir la evolución estratégica de Fliipa como producto, identificando las capacidades actuales y las líneas de crecimiento que permitirán consolidar la plataforma como un ecosistema financiero para empresas.
 
 Este roadmap representa una visión de alto nivel y sirve como guía para la evolución funcional del producto.
 
@@ -28,13 +30,13 @@ Este roadmap representa una visión de alto nivel y sirve como guía para la evo
 
 # Objetivo
 
-Orientar la evolución de Flipa mediante la incorporación progresiva de nuevas capacidades de negocio, fortaleciendo la propuesta de valor para clientes, aliados estratégicos y el Grupo Santo Domingo.
+Orientar la evolución de Fliipa mediante la incorporación progresiva de nuevas capacidades de negocio, fortaleciendo la propuesta de valor para clientes, aliados estratégicos y el Grupo Santo Domingo.
 
 ---
 
 # Estado actual del producto
 
-Actualmente Flipa cuenta con capacidades para soportar el ciclo principal del crédito empresarial, incluyendo:
+Actualmente Fliipa cuenta con capacidades para soportar el ciclo principal del crédito empresarial, incluyendo:
 
 - Captación de clientes preaprobados.
 - Onboarding digital.
@@ -138,7 +140,7 @@ Preparar la plataforma para soportar el crecimiento del negocio.
 
 **Objetivo**
 
-Convertir Flipa en una plataforma financiera para diferentes líneas de negocio.
+Convertir Fliipa en una plataforma financiera para diferentes líneas de negocio.
 
 ### Evolución esperada
 
@@ -159,7 +161,7 @@ Convertir Flipa en una plataforma financiera para diferentes líneas de negocio.
 | Automatizar procesos | Incrementar la eficiencia operativa. |
 | Expandir el ecosistema financiero | Incorporar nuevos aliados y empresas. |
 | Incorporar nuevos productos | Diversificar la oferta financiera. |
-| Aprovechar la analítica de datos | Generar mayor valor para el negocio. |
+| Aprovechar la analítica de datos | Generar información crediticia de valor para el negocio y para el Grupo Santo Domingo. |
 
 ---
 
@@ -169,6 +171,7 @@ La evolución del producto estará guiada por los siguientes principios:
 
 - Generar valor para el cliente.
 - Aprovechar la información transaccional como ventaja competitiva.
+- Aportar información crediticia al ecosistema de datos del Grupo Santo Domingo.
 - Escalar de forma sostenible.
 - Automatizar procesos siempre que sea posible.
 - Mantener una experiencia simple y completamente digital.
@@ -179,7 +182,7 @@ La evolución del producto estará guiada por los siguientes principios:
 
 # Resultado esperado
 
-La evolución del roadmap permitirá que Flipa pase de ser una solución de crédito empresarial a convertirse en una plataforma financiera digital escalable, capaz de ofrecer nuevos productos y servicios financieros para diferentes empresas del Grupo Santo Domingo y otros aliados estratégicos, manteniendo como eje central el uso inteligente de los datos para la toma de decisiones.
+La evolución del roadmap permitirá que Fliipa pase de ser una solución de crédito empresarial a convertirse en una plataforma financiera digital escalable, capaz de ofrecer nuevos productos y servicios financieros para diferentes empresas del Grupo Santo Domingo y otros aliados estratégicos, manteniendo como eje central el uso inteligente de los datos para la toma de decisiones.
 
 ---
 
