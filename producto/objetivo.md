@@ -1,27 +1,26 @@
 # Objetivo del producto
 
+| Documento | Objetivo del Producto |
+|-----------|------------------------|
+| **Proyecto** | Fliipa |
+| **Versión** | 1.1 |
+| **Estado** | En revisión |
+| **Responsable** | Equipo de Producto |
+| **Última actualización** | 2026-07-08 |
+
+---
+
 ## Objetivo
-
-Definir de forma clara el propósito de Flipa como producto y sus metas de negocio, para que cualquier integrante nuevo pueda entender por qué existe el proyecto y qué debe demostrar para considerarse exitoso.
-
+Definir de forma clara el propósito de Fliipa como producto y sus metas de negocio, para que cualquier integrante nuevo pueda entender por qué existe el proyecto y qué debe demostrar para considerarse exitoso.
 ## Alcance
-
 Este documento cubre el propósito comercial y estratégico del producto, sus metas principales y los principios que guían su desarrollo. No reemplaza la descripción detallada del negocio ni los requisitos funcionales del sistema.
+## Control de versiones
 
-## Responsable
-
-Equipo de producto 
-
-## Fecha de actualización
-
-2026-07-07
-
-## Estado
-
-En revisión
-
+| Versión | Fecha | Autor | Descripción |
+|---------|-------|--------|-------------|
+| 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
+| 1.1 | 2026-07-08 | María Fernanda Herazo | Ajuste de metas, principios e indicadores de éxito para alinear el documento con las observaciones de Francisco Javier Martínez Vargas e Iván Aponte. |
 ## Documentos relacionados
-
 - [Producto](README.md)
 - [Flipa - Biblioteca de Conocimiento](../README.md)
 - [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
@@ -33,32 +32,29 @@ En revisión
 - [Visión](vision.md)
 - [Roadmap](roadmap.md)
 - [Alcance](alcance.md)
-
 ## Contenido
-
 ### Propósito del producto
-
-Flipa busca ofrecer crédito formal a micro y pequeñas empresas que compran con frecuencia en D1, usando información transaccional real para tomar mejores decisiones de riesgo que las que ofrece la banca tradicional.
-
+Fliipa busca ofrecer crédito formal a micro y pequeñas empresas que compran con frecuencia en D1, usando información transaccional real para tomar mejores decisiones de riesgo que las que ofrece la banca tradicional.
 ### Metas principales
-
 - Brindar financiamiento accesible a negocios que no tienen historial crediticio sólido.
 - Ofrecer tasas más justas y condiciones claras.
 - Aumentar las ventas y la recurrencia de compra en D1.
 - Incrementar el ticket promedio de los clientes.
-- Crear un negocio financiero sostenible para Zooms y para el Grupo Santo Domingo.
-
+- Construir historial crediticio para micro y pequeñas empresas mediante el uso de datos transaccionales.
+- Generar información crediticia que fortalezca la estrategia de datos del Grupo Santo Domingo.
+- Crear un negocio financiero sostenible para Sumz y para el Grupo Santo Domingo.
 ### Principios del producto
-
 - El crédito debe estar alineado con el comportamiento real del negocio.
 - La información del cliente es el activo clave del modelo.
+- La automatización debe simplificar y agilizar el proceso de originación del crédito.
 - El negocio debe demostrar que el modelo es rentable y sostenible.
+- La seguridad y el cumplimiento normativo son condiciones no negociables.
 - El producto debe iniciar de forma simple, regulada y medible, para luego escalar.
-
 ### Indicadores de éxito
-
 El producto será exitoso si demuestra que:
 - los clientes usan el crédito,
 - los clientes pagan,
 - el riesgo se evalúa mejor que con modelos tradicionales,
+- la originación del crédito está automatizada,
+- el modelo genera información crediticia de valor para el Grupo Santo Domingo,
 - la operación puede sostenerse financieramente.
