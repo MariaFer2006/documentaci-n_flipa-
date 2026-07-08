@@ -2,7 +2,7 @@
 
 | **Documento** | Visión del Producto |
 |--------------|---------------------|
-| **Proyecto** | FliIpa |
+| **Proyecto** | Fliipa |
 | **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto y Estrategia |
