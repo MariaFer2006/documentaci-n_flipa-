@@ -1,20 +1,21 @@
 # Alcance del Producto
 
-| **Documento** | Alcance del Producto |
-|--------------|----------------------|
-| **Proyecto** | Flipa |
-| **Versión** | 1.0 |
+| Documento | Alcance del Producto |
+|------------|----------------------|
+| **Proyecto** | Fliipa |
+| **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
-| **Última actualización** | 2026-07-07 |
+| **Última actualización** | 2026-07-08 |
 
 ---
 
 # Control de versiones
 
 | Versión | Fecha | Autor | Descripción |
-|----------|------------|-------------------------|--------------------------------------------|
+|---------|-------|--------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
+| 1.1 | 2026-07-08 | María Fernanda Herazo | Corrección del nombre del producto, detalle del proceso de validación biométrica e hipervínculos|
 
 ---
 
@@ -34,11 +35,11 @@ Delimitar el alcance del MVP para validar el modelo de crédito empresarial basa
 
 # Contexto
 
-Flipa es una plataforma de crédito rotativo B2B orientada a micro y pequeñas empresas que realizan compras frecuentes en D1.
+Fliipa es una plataforma de crédito rotativo B2B orientada a micro y pequeñas empresas, especialmente tenderos y comerciantes, diseñada para facilitar el acceso al crédito formal mediante el análisis de información transaccional y comportamiento comercial.
 
-El modelo busca ampliar el acceso al crédito formal mediante el uso de información transaccional y comportamiento comercial, disminuyendo la dependencia exclusiva del historial financiero tradicional.
+Durante el MVP, el crédito estará disponible para ser utilizado en tiendas D1, permitiendo validar el modelo de negocio, la aceptación del mercado y el desempeño del modelo de riesgo antes de su expansión a nuevos comercios y productos financieros.
 
-La primera etapa busca validar la viabilidad del modelo de negocio, la aceptación del mercado y la efectividad del modelo de riesgo.
+La primera etapa busca establecer las bases para una plataforma financiera digital sustentada en datos transaccionales, automatización de procesos y generación de información crediticia.
 
 ---
 
@@ -51,8 +52,8 @@ La primera versión del producto comprende los siguientes procesos de negocio.
 Incluye:
 
 - Contacto inicial con clientes preaprobados.
-- Campañas por correo electrónico.
-- Campañas por WhatsApp.
+- Campañas comerciales.
+- Comunicación mediante WhatsApp.
 - Contacto telefónico.
 - Gestión del interés del cliente.
 - Seguimiento comercial.
@@ -80,7 +81,7 @@ Incluye:
 
 Incluye:
 
-- Biometría mediante proveedor externo.
+- Validación biométrica con posible proveedor externo, aún por confirmar, para verificación de identidad (KYC).
 - Validación automática del resultado.
 - Gestión de casos en revisión.
 - Rechazo automático cuando corresponda.
@@ -92,8 +93,7 @@ Incluye:
 Incluye:
 
 - Consulta de Experian.
-- Consulta de RUES.
-- Consulta del historial transaccional D1.
+- Consulta del historial transaccional de D1.
 - Evaluación automática de reglas de negocio.
 - Cálculo del cupo aprobado.
 - Validación de capacidad de endeudamiento.
@@ -117,11 +117,11 @@ Incluye:
 
 Incluye:
 
-- Cupo rotativo.
+- Administración del cupo rotativo.
 - Consulta del estado del crédito.
 - Consulta del plan de pagos.
-- Consulta del saldo.
-- Liberación automática del cupo cuando el crédito es cancelado.
+- Consulta del saldo disponible.
+- Liberación automática del cupo cuando el crédito sea cancelado.
 
 ---
 
@@ -131,7 +131,7 @@ Incluye:
 
 - Generación del bono D1.
 - Compra en tiendas D1.
-- Bloqueo del cupo remanente.
+- Bloqueo temporal del cupo durante la compra.
 - Evaluación para renovación del cupo.
 
 ---
@@ -143,7 +143,7 @@ Incluye:
 - Débito automático mediante Druo.
 - Pago por PSE.
 - Prepago.
-- Actualización del saldo.
+- Actualización automática del saldo.
 - Liquidación del crédito.
 
 ---
@@ -156,7 +156,7 @@ Incluye:
 - Recordatorios de pago.
 - Bloqueo del cupo.
 - Acuerdos de pago.
-- Reestructuración.
+- Reestructuración de obligaciones.
 - Reporte a centrales de riesgo.
 - Cobro jurídico.
 - Castigo de cartera.
@@ -167,13 +167,12 @@ Incluye:
 
 Incluye:
 
-- Atención mediante IA.
+- Atención mediante asistente virtual basado en IA.
 - Escalamiento a agentes humanos.
-- Atención por WhatsApp.
-- Atención por correo electrónico.
+- Atención mediante WhatsApp.
 - Atención telefónica.
 - Gestión de PQRS.
-- Medición de satisfacción (NPS y CSAT).
+- Medición de satisfacción mediante NPS y CSAT.
 
 ---
 
@@ -181,30 +180,31 @@ Incluye:
 
 Incluye:
 
-- Consulta de clientes.
-- Consulta de solicitudes.
-- Gestión del proceso crediticio.
-- Consulta de resultados del análisis.
-- Seguimiento del estado del crédito.
-- Administración del proceso.
+- Gestión de clientes.
+- Gestión de solicitudes.
+- Seguimiento del onboarding.
+- Consulta del resultado del análisis de riesgo.
+- Administración del proceso de originación.
+- Seguimiento del ciclo de vida del crédito.
+- Gestión de cobranza.
+- Gestión de campañas comerciales.
+- Consulta de indicadores operativos.
 
 ---
 
 # Integraciones incluidas
 
-El MVP contempla integración con:
+El MVP contempla integración con los siguientes sistemas externos. Para información detallada sobre cada integración, incluyendo especificaciones técnicas, costos, riesgos y SLAs, consulte la documentación en la carpeta de Integraciones.
 
-| Sistema | Propósito |
-|----------|-----------|
-| D1 | Información transaccional y uso del bono |
-| Experian | Consulta de riesgo |
-| RUES | Validación empresarial |
-| Druo | Débito automático |
-| Olimpia | Biometría |
-| Correo electrónico | Notificaciones |
-| WhatsApp | Comunicación con clientes |
-| SMS | OTP |
-| Core Bancario | Originación del crédito |
+| Sistema | Propósito | Documentación |
+|----------|-----------|---------------|
+| D1 | Información transaccional y utilización del bono. | [Ver integración](../tecnico/Integraciones/D1.md) |
+| Experian | Consulta de riesgo crediticio. | [Ver integración](../tecnico/Integraciones/Experian.md) |
+| Druo | Débito automático para el recaudo de pagos. | [Ver integración](../tecnico/Integraciones/Druo.md) |
+| Proveedor de biometría (por confirmar) | Validación biométrica y verificación de identidad (KYC). | Pendiente de definir |
+| Zenvia | Gestión de notificaciones y comunicaciones con clientes mediante WhatsApp y otros canales habilitados. | [Ver integración](../tecnico/Integraciones/Zenvia.md) |
+| Google Cloud Platform | Infraestructura y servicios del producto. | [Ver Infraestructura](../tecnico/infraestructura.md) |
+| Core Bancario | Originación y administración del crédito. | [Ver integración](../tecnico/Integraciones/CoreBancario.md) |
 
 ---
 
@@ -218,12 +218,12 @@ No forman parte del MVP:
 - Tarjetas de crédito.
 - Seguros.
 - Marketplace financiero.
-- Fidelización.
+- Programas de fidelización.
 - Múltiples perfiles administrativos.
 - Gestión completa de oficinas.
 - Productos para personas naturales.
-- Analítica avanzada basada en IA.
-- Automatizaciones no relacionadas con el proceso de crédito.
+- Analítica avanzada basada en inteligencia artificial.
+- Consultas en lenguaje natural sobre la base de datos mediante IA.
 
 ---
 
@@ -231,26 +231,24 @@ No forman parte del MVP:
 
 Durante la primera versión:
 
-- El producto estará dirigido únicamente a clientes empresariales.
-- El crédito podrá utilizarse únicamente en D1.
-- Solo existirá un portal administrativo.
-- El proceso estará enfocado en validar el modelo de negocio antes de escalar la operación.
-
----
+- El producto estará dirigido a micro y pequeñas empresas, especialmente tenderos y comerciantes.
+- Durante el MVP, el crédito podrá utilizarse únicamente para realizar compras en tiendas D1.
+- La solución contará con un portal administrativo para uso interno y aplicaciones desarrolladas bajo una arquitectura de microfrontends.
+- El producto estará orientado a validar el modelo de negocio antes de escalar la operación.
 
 # Criterios de priorización
 
-Las funcionalidades serán priorizadas cuando aporten a alguno de los siguientes objetivos:
+Las funcionalidades serán priorizadas cuando aporten a alguno de los siguientes objetivos.
 
 | Prioridad | Objetivo |
-|-----------|-----------|
+|-----------|----------|
 | Alta | Validar el modelo de negocio. |
-| Alta | Reducir fraude. |
+| Alta | Reducir el fraude. |
 | Alta | Disminuir el riesgo crediticio. |
 | Alta | Mejorar la experiencia del cliente. |
 | Alta | Aumentar el uso del crédito. |
 | Alta | Garantizar la sostenibilidad financiera. |
-| Media | Optimizar procesos internos. |
+| Media | Automatizar procesos internos relacionados con la originación del crédito. |
 | Baja | Funcionalidades de mejora continua. |
 
 ---
@@ -259,12 +257,13 @@ Las funcionalidades serán priorizadas cuando aporten a alguno de los siguientes
 
 La implementación del alcance definido permitirá:
 
-- Facilitar el acceso al crédito empresarial.
-- Incrementar la recurrencia de compra en D1.
+- Facilitar el acceso al crédito empresarial para micro y pequeñas empresas.
+- Incrementar la recurrencia de compra en tiendas D1.
 - Aumentar el ticket promedio.
-- Evaluar el riesgo mediante datos transaccionales.
+- Evaluar el riesgo mediante datos transaccionales propios.
 - Disminuir el fraude.
-- Construir historial crediticio para pequeñas empresas.
+- Construir historial crediticio para pequeños comerciantes.
+- Generar información crediticia basada en datos transaccionales que fortalezca la estrategia de datos del Grupo Santo Domingo.
 - Validar un modelo financiero escalable para futuras etapas.
 
 ---
