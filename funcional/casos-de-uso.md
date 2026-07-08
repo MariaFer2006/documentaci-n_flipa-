@@ -1,24 +1,24 @@
-# Casos De Uso
+# Casos de uso
 
 ## Objetivo
 
-Describe el contenido del documento Casos De Uso dentro de la biblioteca Flipa.
+Definir los escenarios principales de interacción entre los actores y el sistema de Flipa.
 
 ## Alcance
 
-Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
+Este documento presenta los casos de uso más relevantes para la primera versión del sistema, especialmente el proceso de gestión de crédito empresarial.
 
 ## Responsable
 
-Pendiente de asignación
+Producto y QA
 
 ## Fecha de actualización
 
-2026-07-06
+2026-07-07
 
 ## Estado
 
-Borrador
+En revisión
 
 ## Documentos relacionados
 
@@ -37,4 +37,37 @@ Borrador
 
 ## Contenido
 
-TODO: completar con la información específica de Flipa para Casos De Uso.
+### Caso de uso 1: registrar una solicitud de crédito
+
+Actor principal: administrador.
+
+Objetivo: capturar una nueva solicitud de crédito para un cliente empresarial.
+
+Flujo principal:
+1. El administrador ingresa a la aplicación.
+2. Crea una nueva solicitud.
+3. Asocia la información del cliente y del negocio.
+4. Registra el estado inicial de la solicitud.
+
+### Caso de uso 2: evaluar riesgo
+
+Actor principal: administrador.
+
+Objetivo: analizar si la solicitud cumple con criterios de negocio y riesgo.
+
+Flujo principal:
+1. El administrador revisa la información del cliente.
+2. Evalúa los datos de comportamiento comercial y transaccional.
+3. Determina si la solicitud procede o requiere revisión adicional.
+
+### Caso de uso 3: decidir aprobación o rechazo
+
+Actor principal: administrador.
+
+Objetivo: tomar una decisión formal sobre la solicitud.
+
+### Caso de uso 4: dar seguimiento al crédito
+
+Actor principal: administrador.
+
+Objetivo: registrar y monitorear el cumplimiento del crédito una vez aprobado.

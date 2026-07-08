@@ -1,24 +1,24 @@
-# Actores
+# Actores del negocio
 
 ## Objetivo
 
-Describe el contenido del documento Actores dentro de la biblioteca Flipa.
+Identificar los principales actores involucrados en el ecosistema de Flipa y su rol dentro del proceso de crédito empresarial.
 
 ## Alcance
 
-Incluye el tema específico de este documento; no incluye otros temas fuera de su alcance.
+Este documento describe a los actores de negocio, operativos y de soporte que interactúan con el producto o se ven impactados por él.
 
 ## Responsable
 
-Pendiente de asignación
+Negocio y operaciones
 
 ## Fecha de actualización
 
-2026-07-06
+2026-07-07
 
 ## Estado
 
-Borrador
+En revisión
 
 ## Documentos relacionados
 
@@ -37,4 +37,15 @@ Borrador
 
 ## Contenido
 
-TODO: completar con la información específica de Flipa para Actores.
+### Actores principales
+
+- Cliente empresarial: micro o pequeña empresa que compra frecuentemente en D1 y solicita financiamiento.
+- Administrador del producto: persona interna que revisa, aprueba, rechaza o gestiona solicitudes.
+- Equipo de negocio y operaciones: responsable de definir criterios, seguimiento y viabilidad del modelo.
+- D1: canal comercial que aporta contexto y relación con el cliente.
+- Zooms: unidad responsable de la operación financiera y del objetivo de sostenibilidad del negocio.
+- Grupo Santo Domingo: entidad estratégica que ve en Flipa una oportunidad de crecimiento financiero.
+
+### Relación entre actores
+
+El cliente accede al producto a través del contexto comercial de D1; el negocio evalúa su riesgo y el administrador gestiona el proceso dentro del sistema. El resultado impacta directamente la relación comercial y la salud financiera del portafolio.
