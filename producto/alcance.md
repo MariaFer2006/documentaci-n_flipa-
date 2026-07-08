@@ -3,10 +3,10 @@
 | Documento | Alcance del Producto |
 |------------|----------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.0 |
+| **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
-| **Última actualización** | 2026-07-07 |
+| **Última actualización** | 2026-07-08 |
 
 ---
 
@@ -15,6 +15,7 @@
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|--------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
+| 1.1 | 2026-07-08 | María Fernanda Herazo | Corrección del nombre del producto, detalle del proceso de validación biométrica e hipervínculos|
 
 ---
 
@@ -80,10 +81,11 @@ Incluye:
 
 Incluye:
 
-- Biometria con posible proveedor externo.
+- Validación biométrica con posible proveedor externo, aún por confirmar, para verificación de identidad (KYC).
 - Validación automática del resultado.
 - Gestión de casos en revisión.
 - Rechazo automático cuando corresponda.
+
 ---
 
 ## 4. Evaluación del riesgo
@@ -192,17 +194,17 @@ Incluye:
 
 # Integraciones incluidas
 
-El MVP contempla integración con:
+El MVP contempla integración con los siguientes sistemas externos. Para información detallada sobre cada integración, incluyendo especificaciones técnicas, costos, riesgos y SLAs, consulte la documentación en la carpeta de Integraciones.
 
-| Sistema | Propósito |
-|----------|-----------|
-| D1 | Información transaccional y utilización del bono. |
-| Experian | Consulta de riesgo crediticio. |
-| Druo | Débito automático para el recaudo de pagos. |
-| Olimpia | Validación biométrica y verificación de identidad (KYC). |
-| Zenvia | Gestión de notificaciones y comunicaciones con clientes mediante WhatsApp y otros canales habilitados. |
-| Google Cloud Platform | Infraestructura y servicios del producto. |
-| Core Bancario | Originación y administración del crédito. |
+| Sistema | Propósito | Documentación |
+|----------|-----------|---------------|
+| D1 | Información transaccional y utilización del bono. | [Ver integración](../tecnico/Integraciones/D1.md) |
+| Experian | Consulta de riesgo crediticio. | [Ver integración](../tecnico/Integraciones/Experian.md) |
+| Druo | Débito automático para el recaudo de pagos. | [Ver integración](../tecnico/Integraciones/Druo.md) |
+| Proveedor de biometría (por confirmar) | Validación biométrica y verificación de identidad (KYC). | Pendiente de definir |
+| Zenvia | Gestión de notificaciones y comunicaciones con clientes mediante WhatsApp y otros canales habilitados. | [Ver integración](../tecnico/Integraciones/Zenvia.md) |
+| Google Cloud Platform | Infraestructura y servicios del producto. | [Ver Infraestructura](../tecnico/infraestructura.md) |
+| Core Bancario | Originación y administración del crédito. | [Ver integración](../tecnico/Integraciones/CoreBancario.md) |
 
 ---
 
@@ -223,7 +225,6 @@ No forman parte del MVP:
 - Analítica avanzada basada en inteligencia artificial.
 - Consultas en lenguaje natural sobre la base de datos mediante IA.
 
-
 ---
 
 # Restricciones
@@ -232,10 +233,8 @@ Durante la primera versión:
 
 - El producto estará dirigido a micro y pequeñas empresas, especialmente tenderos y comerciantes.
 - Durante el MVP, el crédito podrá utilizarse únicamente para realizar compras en tiendas D1.
-- Existirá un único portal administrativo para la operación.
+- La solución contará con un portal administrativo para uso interno y aplicaciones desarrolladas bajo una arquitectura de microfrontends.
 - El producto estará orientado a validar el modelo de negocio antes de escalar la operación.
-
----
 
 # Criterios de priorización
 
@@ -288,11 +287,11 @@ Cada uno de estos temas se desarrolla en la documentación correspondiente.
 
 # Documentos relacionados
 
-- Producto
-- Objetivo
-- Visión
-- Roadmap
-- Negocio
-- Funcional
-- Conocimiento
-- Mapa del Conocimiento
+- [Producto](README.md)
+- [Objetivo](objetivo.md)
+- [Visión](vision.md)
+- [Roadmap](roadmap.md)
+- [Negocio](../negocio/README.md)
+- [Funcional](../funcional/README.md)
+- [Conocimiento](../conocimiento/README.md)
+- [Mapa del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
