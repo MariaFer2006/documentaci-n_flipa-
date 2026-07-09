@@ -30,7 +30,6 @@ Este documento describe qué problema resuelve el negocio, quiénes son sus clie
 ## Documentos relacionados
 
 - [Negocio](README.md)
-- [Flipa - Biblioteca de Conocimiento](../README.md)
 - [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
 - [Onboarding](../ONBOARDING.md)
 - [Convenciones](../CONVENCIONES.md)
