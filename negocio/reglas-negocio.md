@@ -3,10 +3,10 @@
 | Documento | Reglas Negocio |
 |-----------|-----------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Estado** | En revisión |
 | **Responsable** | Negocio y operaciones |
-| **Última actualización** | 2026-07-08 |
+| **Última actualización** | 2026-07-09 |
 
 ---
 
@@ -17,6 +17,7 @@
 | 0.1 | 2026-07-06 | María Fernanda Herazo | Borrador vacío (pendiente de completar). |
 | 1.0 | 2026-07-08 | María Fernanda Herazo | Primera versión completa: reglas de cupo, mora, alivios, escalamiento jurídico, control de riesgo operativo y tipificación de contactos, con base en el Modelo de Cobranza B2B e Investigación B2B. |
 | 1.1 | 2026-07-08 | María Fernanda Herazo | Se agregaron reglas de KYC automático, dispersión (fiducia) y servicio al cliente, con base en los Journeys Colpatria B2B (junio 2026). |
+| 1.2 | 2026-07-09 | María Fernanda Herazo| Se agrega la regla de abono parcial (faltaba como tipo de alivio) y se precisa el plazo máximo del congelamiento de intereses (5 días calendario), con base en el Modelo y Proceso de Cobranza B2B. |
 
 ---
 
@@ -67,9 +68,19 @@ Este documento cubre las reglas asociadas al cupo, la mora, los alivios y negoci
 
 ### Reglas de alivios y negociación
 
+**Abono parcial**
+
+- Objetivo: reactivar el compromiso de pago, evitar el escalamiento de la mora (reporte, visita, proceso jurídico) y mantener al cliente vinculado al modelo.
+- Se ofrece cuando el cliente responde y demuestra intención real de pago, y el negocio está activo (no cerrado).
+- Monto mínimo del abono: 30% del saldo vencido.
+- El saldo restante debe quedar con una fecha límite clara (máximo 5 días calendario) o dentro de un acuerdo de pago firmado.
+- El abono no libera el cupo hasta que el crédito quede al día.
+- Ante incumplimiento del compromiso posterior: se pierde cualquier beneficio otorgado y continúa la cobranza normal (intereses y reporte); si el cliente sigue en mora, se reporta a centrales de riesgo.
+
 **Congelamiento de intereses**
 
 - Disponible desde los 15 días de mora y hasta antes de formalizar el proceso jurídico.
+- El congelamiento tiene un plazo máximo de 5 días calendario por solicitud.
 - Aplica una sola vez por crédito.
 - No se generan intereses durante el periodo acordado.
 - Requiere el pago del 100% del saldo vencido.
@@ -115,6 +126,23 @@ Cada interacción comercial o de cobranza debe clasificarse con una taxonomía e
 - Si el resultado de la biometría queda "en revisión", un analista de riesgo resuelve el caso manualmente; si es rechazado, el proceso termina y se notifica al cliente.
 - La evaluación de riesgo valida automáticamente el score mínimo, la capacidad de endeudamiento y que la tienda habitual declarada coincida con la registrada en el histórico de D1.
 - Cualquier validación fallida (cuenta bancaria inválida, score insuficiente, inconsistencia de datos) termina en rechazo automático de la solicitud.
+
+### Reglas de dispersión de fondos
+
+- Los fondos del crédito se administran a través de una fiducia constituida por el aliado de core bancario (Colpatria), que concentra el origen y el retorno del dinero.
+- El bono se activa cuando se detecta la compra del cliente en D1; el pago posterior del cliente retorna a la fiducia, no directamente a D1.
+- El giro de la fiducia hacia D1 genera un GMF (4x1000) de $4.000 por cada ciclo de $1.000.000 (0,4%); en 12 ciclos anuales sobre el mismo capital, el costo equivale al 4,8% anual. Si la fiducia se constituye en el mismo banco donde ya están los fondos, se ahorra el 4x1000 del fondeo inicial.
+
+### Reglas de servicio al cliente
+
+- El primer nivel de atención lo resuelve un asistente virtual basado en IA; si no puede resolver el caso, escala a un agente humano con el contexto completo de la conversación.
+- Los casos críticos (suplantación, desconocimiento de una compra, uso indebido del cupo) requieren validación de identidad y aprobación manual explícita de un agente; no pueden resolverse de forma autónoma por la IA.
+- Los casos legales o de PQR (tutela, derecho de petición) se enrutan al área legal con un SLA de respuesta inmediata.
+- Todo caso de servicio se registra en el portal administrativo y se mide mediante NPS/CSAT al cierre.
+
+## Fuentes consultadas
+
+- Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
 
 ### Reglas de dispersión de fondos
 
