@@ -3,10 +3,10 @@
 | Documento | Descripción del negocio |
 |-----------|--------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Estado** | En revisión |
 | **Responsable** | Negocio y producto |
-| **Última actualización** | 2026-07-08 |
+| **Última actualización** | 2026-07-09 |
 
 ---
 
@@ -16,6 +16,7 @@
 |---------|-------|-------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
 | 1.1 | 2026-07-08 | María Fernanda Herazo | Se agregó la identidad de marca (arquetipos). |
+| 1.2 | 2026-07-09 | María Fernanda Herazo | Se agrega contexto de mercado/competencia, con base en la Investigación B2B. |
 
 ---
 
@@ -59,11 +60,18 @@ El negocio busca generar ingresos a partir del crédito, pero también tiene un 
 
 La mayor ventaja del proyecto no es solo el crédito: es la capacidad de usar información transaccional y de comportamiento comercial para tomar mejores decisiones de riesgo.
 
+### Contexto de mercado
+
+El modelo de crédito rotativo B2B basado en datos transaccionales no es exclusivo de Fliipa: empresas como Ziro, Xepelin, Finaktiva y Treinta atienden necesidades similares de financiamiento y flujo de caja para pequeños comercios y PyMEs en Colombia y la región, con distintas combinaciones de prevención, automatización y gestión humana en su modelo de recaudo. Fliipa se diferencia al construir su evaluación de riesgo sobre la relación comercial y el histórico transaccional específico con D1, en lugar de depender únicamente de historial bancario o de facturación.
+
 ### Identidad y relación con el cliente
 
 Fliipa no se posiciona como una entidad financiera tradicional, sino como un aliado cercano para los microempresarios. Su identidad de marca se basa en la cercanía, la confianza y el acompañamiento, ofreciendo un trato justo, sencillo y sin tecnicismos. Más que otorgar financiación, busca brindar el respaldo necesario para que los negocios puedan superar momentos de iliquidez y continuar creciendo. Su promesa de marca se centra en acompañar al cliente con soluciones ágiles y accesibles, mediante una comunicación clara, conversacional y libre de jerga financiera, principalmente a través de WhatsApp.
 
-
 ### Implicación estratégica
 
 El producto fue pivotado desde un enfoque orientado a personas naturales hacia un enfoque empresarial debido a factores como menor fraude, mayor volumen de cartera, menor carga operativa y menor riesgo reputacional para D1.
+
+## Fuentes consultadas
+
+- Investigación B2B (`Modelo Cobranza/Investigacion B2B.docx`)
