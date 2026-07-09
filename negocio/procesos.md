@@ -156,4 +156,4 @@ Imágenes de las 10 páginas del documento fuente (*Journeys Fran finales-1.pdf*
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
 - Investigación B2B — *Modelo Cobranza/Investigacion B2B.docx*
-- Reglas Negocio (`negocio/reglas-negocio.md`)
+- Reglas Negocio [Negocio](../negocio/regla-negocio.md)
