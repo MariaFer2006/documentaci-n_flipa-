@@ -3,7 +3,7 @@
 | Documento | Procesos |
 |-----------|----------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Estado** | Borrador para validación |
 | **Responsable** | Negocio y operaciones |
 | **Última actualización** | 2026-07-09 |
@@ -16,7 +16,8 @@
 |---------|-------|-------|-------------|
 | 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
 | 1.0 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Primera versión completa del flujo operacional del crédito, construida a partir del Alcance del Producto, los Journeys Colpatria B2B (junio 2026), el Modelo Comercial B2B y el Modelo y Proceso de Cobranza B2B. Pendiente de validación por negocio y operaciones. |
-| 1.1 | 2026-07-09 | María Fernanda Herazo  | Se actualizan las notas de KYC y alivios tras corregir Actores (proveedor de biometría Olimpia, se agrega Zenvia) y Reglas Negocio (se agrega abono parcial). Se mantiene abierta la nota sobre la discrepancia de plazos de escalamiento jurídico. |
+| 1.1 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Se actualizan las notas de KYC y alivios tras corregir Actores (proveedor de biometría Olimpia, se agrega Zenvia) y Reglas Negocio (se agrega abono parcial). Se mantiene abierta la nota sobre la discrepancia de plazos de escalamiento jurídico. |
+| 1.2 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Se agrega el anexo con las imágenes de las 10 páginas de los Journeys Colpatria B2B (junio 2026), cada una enlazada a su propio archivo. |
 
 ---
 
@@ -113,6 +114,40 @@ El cliente contacta por WhatsApp, correo o llamada (también puede ser un contac
 ### 12. Gobernanza operativa transversal
 
 El Comité de Cartera semanal (con participación, entre otros, de un Senior Credit Strategy Analyst y un Account and Portfolio Specialist / Product Manager) es la instancia que prioriza la gestión de cobro. Los indicadores de comercial y cobranza se comparten entre ambas áreas, y se mantienen tableros semanales y alertas automáticas para el seguimiento de la cartera.
+
+## Anexo: Journeys Colpatria B2B (junio 2026)
+
+Imágenes de las 10 páginas del documento fuente (*Journeys Fran finales-1.pdf*). Cada imagen enlaza a su propio archivo en alta resolución para verla en detalle.
+
+[![Portada — Colpatria B2B, Propuesta Comercial, Journeys, junio 2026](journeys-imagenes/page-01.png)](journeys-imagenes/page-01.png)
+*Página 1 — Portada.*
+
+[![Onboarding (parte 1): ingreso de NIT/CC, ubicación y validación OTP](journeys-imagenes/page-02.png)](journeys-imagenes/page-02.png)
+*Página 2 — Onboarding, parte 1 (secciones 2 y 3 de este documento).*
+
+[![Onboarding (parte 2): PIN de seguridad, biometría, cuenta bancaria y extractos](journeys-imagenes/page-03.png)](journeys-imagenes/page-03.png)
+*Página 3 — Onboarding, parte 2 y validación de identidad (sección 3).*
+
+[![KYC / Riesgo de crédito: consulta Experian, histórico D1, score y aprobación](journeys-imagenes/page-04.png)](journeys-imagenes/page-04.png)
+*Página 4 — Evaluación de riesgo (sección 4).*
+
+[![Firma de contrato (parte 1): condiciones, pagaré y plan de pagos](journeys-imagenes/page-05.png)](journeys-imagenes/page-05.png)
+*Página 5 — Firma de contrato, parte 1 (sección 5).*
+
+[![Firma de contrato (parte 2): código de verificación y activación del bono](journeys-imagenes/page-06.png)](journeys-imagenes/page-06.png)
+*Página 6 — Firma de contrato, parte 2 y activación (sección 5).*
+
+[![Calculadora y cobro del crédito: plan de pagos, prepago y liquidación](journeys-imagenes/page-07.png)](journeys-imagenes/page-07.png)
+*Página 7 — Cobro y pago del crédito (sección 8).*
+
+[![Flujo de dispersión: fiducia Colpatria, GMF 4x1000 y bloqueo de cupo](journeys-imagenes/page-08.png)](journeys-imagenes/page-08.png)
+*Página 8 — Dispersión de fondos (sección 6).*
+
+[![Servicio al cliente: IA de primer nivel y escalamiento a agente humano](journeys-imagenes/page-09.png)](journeys-imagenes/page-09.png)
+*Página 9 — Servicio al cliente (sección 11).*
+
+[![Cobranza: débito automático, reintentos, reporte y escalamiento jurídico](journeys-imagenes/page-10.png)](journeys-imagenes/page-10.png)
+*Página 10 — Gestión de cobranza (sección 9); ver nota de inconsistencia con el esquema de buckets.*
 
 ## Fuentes consultadas
 
