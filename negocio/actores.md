@@ -3,10 +3,10 @@
 | Documento | Actores del negocio |
 |-----------|----------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.2 |
+| **Versión** | 1.3 |
 | **Estado** | En revisión |
 | **Responsable** | Negocio y operaciones |
-| **Última actualización** | 2026-07-08 |
+| **Última actualización** | 2026-07-09 |
 
 ---
 
@@ -15,8 +15,9 @@
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
-| 1.1 | 2026-07-08 | María Fernanda Herazo | Se agregaron actores comerciales, de cobranza y proveedores externos;  |
+| 1.1 | 2026-07-08 | María Fernanda Herazo | Se agregaron actores comerciales, de cobranza y proveedores externos; |
 | 1.2 | 2026-07-08 | María Fernanda Herazo | Se agregaron Colpatria (core bancario/fiducia), analista de riesgo, agente de servicio al cliente y asistente virtual (IA), con base en los Journeys Colpatria B2B. |
+| 1.3 | 2026-07-09 | María Fernanda Herazo | Se actualiza el proveedor de biometría (Olimpia, antes "por confirmar") y se agregan Zenvia y Sendgrid como proveedores externos de notificaciones, con base en los Journeys Colpatria B2B y la documentación técnica de integraciones. |
 
 ---
 
@@ -73,9 +74,19 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 
 - Experian: consulta de riesgo crediticio.
 - Druo: débito automático para el recaudo de pagos.
-- Proveedor de biometría (por confirmar): validación biométrica y verificación de identidad (KYC).
+- Olimpia: validación biométrica y verificación de identidad (KYC).
+- Zenvia: gestión de notificaciones y comunicaciones con clientes (WhatsApp, correo y SMS) durante el onboarding y la operación.
+- Sendgrid: envío de comunicaciones por correo electrónico, en conjunto con Zenvia, durante el onboarding.
 - Colpatria: aliado de core bancario; administra la fiducia que fondea el crédito, concentra el origen y el retorno del dinero, y emite el bono que el cliente usa en D1.
 
 ### Relación entre actores
+
+El cliente accede al producto a través del contexto comercial de D1; el negocio evalúa su riesgo y el administrador gestiona el proceso dentro del sistema. Durante la vida del crédito, el asesor comercial y el analista de cartera acompañan al cliente, y el Comité de Cartera prioriza los casos que requieren gestión especial o escalamiento jurídico. El resultado de esta gestión impacta directamente la relación comercial y la salud financiera del portafolio.
+
+## Fuentes consultadas
+
+- Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
+- Integraciones técnicas — Olimpia y Zenvia (`tecnico/Integraciones/Olimpia.md`, `tecnico/Integraciones/Zenvia.md`)
+- Alcance del Producto (`producto/alcance.md`)
 
 El cliente accede al producto a través del contexto comercial de D1; el negocio evalúa su riesgo y el administrador gestiona el proceso dentro del sistema. Durante la vida del crédito, el asesor comercial y el analista de cartera acompañan al cliente, y el Comité de Cartera prioriza los casos que requieren gestión especial o escalamiento jurídico. El resultado de esta gestión impacta directamente la relación comercial y la salud financiera del portafolio.
