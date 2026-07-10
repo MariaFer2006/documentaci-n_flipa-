@@ -30,7 +30,7 @@
 | Categoría | Actor | Fuente principal |
 |---|---|---|
 | Principal | Cliente empresarial, Administrador del producto, Equipo de negocio y operaciones, D1, Sumz, Grupo Santo Domingo | Modelo Comercial B2B; Alcance del Producto |
-| Comercial y cobranza | Asesor comercial, Hunter/Visitador, Analista de cartera, **Líder de Cartera**, Comité de Cartera, Analista jurídico/Abogado, **Comité Legal** | Modelo Comercial B2B; Modelo y Proceso de Cobranza B2B; Investigación B2B |
+| Comercial y cobranza | Asesor comercial, Analista de cartera, Comité de Cartera, Analista jurídico/Abogado, | Modelo Comercial B2B; Modelo y Proceso de Cobranza B2B; Investigación B2B |
 | Riesgo y servicio al cliente | Analista de riesgo, Asistente virtual (IA), Agente humano de SAC, **Área Legal/PQR**, **Áreas internas (riesgo, cobranza, TI)** | Journeys Colpatria B2B |
 | Proveedores externos | Experian, Druo, Olimpia, Zenvia, Sendgrid, Colpatria, Nebula (sin fuente confirmada) | Journeys Colpatria B2B; Integraciones técnicas |
 
