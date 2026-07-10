@@ -53,13 +53,30 @@
 
 | Actor | Rol | Fuente |
 |---|---|---|
-| Asesor comercial | Realiza la captación por llamada, correo y WhatsApp, aplica el speech comercial y acompaña al cliente durante la originación. | Modelo Comercial B2B |
+| Asesor comercial | Realiza la captación de clientes por los canales comerciales definidos, presenta la oferta de crédito y acompaña al cliente durante el proceso de originación. | Modelo Comercial B2B |
+| Analista de cartera | Ejecuta la gestión de cobranza de acuerdo con la estrategia definida para cada bucket, realizando seguimiento a clientes, gestión de compromisos de pago y actividades de recuperación. | Modelo y Proceso de Cobranza B2B |
+| Líder de cartera | Coordina la operación de cobranza, supervisa la gestión del equipo y participa en la definición de acciones para los casos que requieren escalación. | Investigación B2B *(validar con negocio)* |
+| Analista jurídico | Gestiona los casos que requieren intervención jurídica y ejecuta el proceso legal de recuperación de cartera conforme a las políticas establecidas. | Modelo y Proceso de Cobranza B2B |
 
-| Analista de cartera | Ejecuta la gestión de cobranza por bucket (llamadas, WhatsApp, seguimiento de compromisos de pago). | Modelo y Proceso de Cobranza B2B; Investigación B2B |
-| **Líder de Cartera** *(nuevo)* | Segundo nivel de escalación de cobranza, entre el Analista de cartera y el área Comercial/Jurídica. Investigación B2B lo nombra dentro de la cadena de escalaciones, pero no describe en detalle sus funciones específicas — **pendiente de confirmar con negocio**. | Investigación B2B |
-| Comité de Cartera | Instancia semanal que analiza la cartera y prioriza la gestión de cobro según días de mora (foco en 20+ días), flujo de caja, tipo de negocio, cuotas vencidas, historial/respuesta del cliente y monto adeudado. Integrado, entre otros, por **Iván Aponte** (Senior Credit Strategy Analyst) y **Alejandra Suárez** (Account and Portfolio Specialist / Product Manager). | Modelo y Proceso de Cobranza B2B |
-| Analista jurídico / abogado *(también referido como "Representante Jurídico" en la cadena de escalación de Investigación B2B)* | Gestiona la comunicación directa del área jurídica a partir del bucket 4 (91-120 días de mora) y lleva los casos a proceso legal a partir del bucket 5. | Modelo y Proceso de Cobranza B2B |
-| **Comité Legal** *(nuevo)* | Última instancia de escalación de cobranza según Investigación B2B, posterior al Representante Jurídico; decide el paso a demanda formal. Es una instancia distinta del Comité de Cartera. | Investigación B2B |
+---
+
+### Comité de Cartera
+
+> **Nota:** La composición del comité debe mantenerse actualizada con base en la documentación oficial del negocio.
+
+| Participante | Cargo | Rol en el comité |
+|---|---|---|
+| Iván Aponte | Product Manager  | Analiza el comportamiento de la cartera y propone estrategias de recuperación. |
+| Alejandra Suárez | Account and Portfolio Specialist  | Realiza seguimiento al portafolio y participa en la toma de decisiones sobre la gestión de cartera. |
+| ....... aun por definir| senior credit Strategy analyst | ........|
+
+**Funciones principales del Comité de Cartera**
+
+- Analizar periódicamente el comportamiento de la cartera.
+- Priorizar la gestión de cobranza según el nivel de mora y el riesgo.
+- Definir estrategias de recuperación para clientes con mayor exposición.
+- Dar seguimiento a los indicadores de cartera y a los compromisos adquiridos.
+- Coordinar, cuando corresponda, el escalamiento de casos hacia el área jurídica.
 
 > **Nota de consistencia con otras fuentes:** el Journey Colpatria B2B (ajuste jun. 2026, pág. 10) documenta una escalada jurídica más corta —bloqueo permanente del cupo e inicio de cobro jurídico desde el día 30 de mora—, distinta al esquema de buckets aquí descrito (jurídico entre bucket 3 y bucket 5, es decir 61 a 120+ días). Esto puede afectar en qué momento intervienen el Analista jurídico y el Comité Legal. El detalle de esta discrepancia ya está documentado en [Procesos](procesos.md#9-gestión-de-cobranza-por-bucket-de-mora) y [Reglas Negocio](reglas-negocio.md); se referencia aquí porque impacta directamente a estos dos actores.
 
