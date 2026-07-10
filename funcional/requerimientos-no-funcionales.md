@@ -1,5 +1,24 @@
 # Requerimientos No Funcionales
 
+| Documento | Requerimientos No Funcionales |
+|-----------|--------------------------------|
+| **Proyecto** | Fliipa |
+| **Versión** | 1.0 |
+| **Estado** | En revisión |
+| **Responsable** | Producto, negocio y QA |
+| **Última actualización** | 2026-07-10 |
+
+---
+
+## Control de versiones
+
+| Versión | Fecha | Autor | Descripción |
+|---------|-------|-------|-------------|
+| 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
+| 1.0 | 2026-07-10 | María Fernanda Herazo (con asistencia de Claude) | Primera versión completa: requerimientos de seguridad, auditoría y trazabilidad, disponibilidad/monitoreo y cumplimiento, organizados en tablas por categoría, construidos a partir de las reglas de negocio y una revisión directa del código fuente de `credits-platform-main`. |
+
+---
+
 ## Objetivo
 
 Definir las condiciones de calidad, seguridad, disponibilidad y cumplimiento que el sistema Fliipa debe satisfacer, más allá de sus funcionalidades. Incluye hallazgos de seguridad detectados durante la revisión del código de `credits-platform-main`, que representan brechas entre el comportamiento esperado y el comportamiento actual del sistema.
@@ -7,18 +26,6 @@ Definir las condiciones de calidad, seguridad, disponibilidad y cumplimiento que
 ## Alcance
 
 Cubre seguridad, auditoría y trazabilidad, disponibilidad y monitoreo, y cumplimiento. No incluye requisitos funcionales (ver [Requerimientos Funcionales](requerimientos-funcionales.md)) ni la arquitectura técnica detallada (ver [Seguridad](../tecnico/seguridad.md) y [Arquitectura](../tecnico/arquitectura.md), ambos aún pendientes de completar).
-
-## Responsable
-
-Producto, negocio y QA
-
-## Fecha de actualización
-
-2026-07-10
-
-## Estado
-
-En revisión
 
 ## Documentos relacionados
 
@@ -81,4 +88,3 @@ Cada requerimiento usa el identificador `RNF-XXX`. La columna "Severidad" solo a
 - [Reglas Negocio](../negocio/reglas-negocio.md)
 - [Procesos](../negocio/procesos.md)
 - Inventario funcional del código fuente `credits-platform-main`: `backends/b2b/src/controllers/otp`, `backends/b2b/src/controllers/clients`, `backends/b2b/src/config/constants.ts`, `backends/b2b/src/config/index.ts`, `backends/admin/src/middleware/auth.middleware.ts`, `backends/admin/src/config/cors.ts`, `backends/admin/src/services/*`, `backends/admin/src/controllers/system-*.controller.ts`, realizado como parte de esta actualización.
-
