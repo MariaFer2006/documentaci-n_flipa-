@@ -14,7 +14,7 @@
 
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
-| 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
+| 0.1 | 2026-07-06 | Equipo Fliipa | Borrador vacío (pendiente de completar). |
 | 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: 28 historias de usuario por actor, en línea con Actores y Casos de Uso. |
 | 1.1 | 2026-07-10 | María Fernanda Herazo  | Se organizan las historias en tablas por actor, con prioridad y casos de uso relacionados. |
 | 1.2 | 2026-07-10 | María Fernanda Herazo | Se convierte cada historia en una ficha individual (formato adaptado de plantilla de actor: descripción, criterios de aceptación, relaciones, referencias, autor/fecha/versión y comentarios). |
