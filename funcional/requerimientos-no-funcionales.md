@@ -14,8 +14,8 @@
 
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
-| 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
-| 1.0 | 2026-07-10 | María Fernanda Herazo (con asistencia de Claude) | Primera versión completa: requerimientos de seguridad, auditoría y trazabilidad, disponibilidad/monitoreo y cumplimiento, organizados en tablas por categoría, construidos a partir de las reglas de negocio y una revisión directa del código fuente de `credits-platform-main`. |
+| 0.1 | 2026-07-06 | Maria Fernanda Herazo | Borrador vacío (pendiente de completar). |
+| 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: requerimientos de seguridad, auditoría y trazabilidad, disponibilidad/monitoreo y cumplimiento, organizados en tablas por categoría, construidos a partir de las reglas de negocio y una revisión directa del código fuente de `credits-platform-main`. |
 
 ---
 
