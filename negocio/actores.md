@@ -19,32 +19,9 @@
 | 1.2 | 2026-07-08 | María Fernanda Herazo | Se agregaron Colpatria (core bancario/fiducia), analista de riesgo, agente de servicio al cliente y asistente virtual (IA), con base en los Journeys Colpatria B2B. |
 | 1.3 | 2026-07-09 | María Fernanda Herazo | Se actualiza el proveedor de biometría (Olimpia, antes "por confirmar") y se agregan Zenvia y Sendgrid como proveedores externos de notificaciones, con base en los Journeys Colpatria B2B y la documentación técnica de integraciones. |
 | 1.4 | 2026-07-09 | María Fernanda Herazo | Se corrige el bucket del analista jurídico/abogado (bucket 4, no bucket 3) y se ajustan las descripciones de Hunter/visitador y Analista de cartera para citar de forma precisa la fuente de cada rol, con base en el Modelo y Proceso de Cobranza B2B e Investigación B2B. |
-| 1.5 | 2026-07-10 | María Fernanda Herazo (con apoyo de Claude) | Corrección solicitada por Iván: se elimina la sección "Fuentes consultadas" duplicada y se reubica el párrafo final sin formato dentro de "Flujo de interacción entre actores". Se agregan actores documentados en las fuentes que no estaban en la versión anterior — **Líder de Cartera** y **Comité Legal** (Investigación B2B), y **Área Legal/PQR** y **áreas internas de escalamiento** (Journeys Colpatria B2B, pág. 9). Se precisa el alcance del **Analista de riesgo**: el Journey Colpatria B2B (ajuste jun. 2026) indica que la evaluación de score/cupo ya es 100% automática y que el analista interviene solo cuando la biometría queda "en revisión". Se identifican los integrantes nombrados del Comité de Cartera (Modelo y Proceso de Cobranza B2B). Se marca **Nebula** como proveedor sin respaldo documental en el material revisado. Se agregan tabla resumen de actores y dos diagramas (ecosistema de actores y escalamiento de cobranza por bucket). |
+| 1.5 | 2026-07-10 | María Fernanda Herazo | Corrección solicitada por Iván: se elimina la sección "Fuentes consultadas" duplicada y se reubica el párrafo final sin formato dentro de "Flujo de interacción entre actores". Se agregan actores documentados en las fuentes que no estaban en la versión anterior — **Líder de Cartera** y **Comité Legal** (Investigación B2B), y **Área Legal/PQR** y **áreas internas de escalamiento** (Journeys Colpatria B2B, pág. 9). Se precisa el alcance del **Analista de riesgo**: el Journey Colpatria B2B (ajuste jun. 2026) indica que la evaluación de score/cupo ya es 100% automática y que el analista interviene solo cuando la biometría queda "en revisión". Se identifican los integrantes nombrados del Comité de Cartera (Modelo y Proceso de Cobranza B2B). Se marca **Nebula** como proveedor sin respaldo documental en el material revisado. Se agregan tabla resumen de actores y dos diagramas (ecosistema de actores y escalamiento de cobranza por bucket). |
 
 ---
-
-## Objetivo
-
-Identificar los principales actores involucrados en el ecosistema de Fliipa y su rol dentro del proceso de crédito empresarial.
-
-## Alcance
-
-Este documento describe a los actores de negocio, operativos y de soporte que interactúan con el producto o se ven impactados por él.
-
-## Documentos relacionados
-
-- [Negocio](README.md)
-- [Flipa - Biblioteca de Conocimiento](../README.md)
-- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
-- [Onboarding](../ONBOARDING.md)
-- [Convenciones](../CONVENCIONES.md)
-- [Producto](../producto/README.md)
-- [Funcional](../funcional/README.md)
-- [Qa](../qa/README.md)
-- [Descripcion Negocio](descripcion-negocio.md)
-- [Procesos](procesos.md)
-- [Indicadores](indicadores.md)
-- [Reglas Negocio](reglas-negocio.md)
 
 ## Contenido
 
@@ -65,8 +42,8 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 |---|---|
 | Cliente empresarial | Micro o pequeña empresa que compra frecuentemente en D1 y solicita financiamiento. |
 | Administrador del producto | Persona interna que revisa, aprueba, rechaza o gestiona solicitudes. |
-| Equipo de negocio y operaciones | Responsable de definir criterios, seguimiento y viabilidad del modelo. |
-| D1 | Canal comercial que aporta contexto y relación con el cliente. |
+| Sumz | Responsable de definir criterios, seguimiento y viabilidad del modelo. |
+| fliipa  | Canal comercial que aporta contexto y relación con el cliente. |
 | Sumz | Empresa responsable de la operación financiera y del objetivo de sostenibilidad del negocio. |
 | Grupo Santo Domingo | Entidad estratégica que ve en Flipa una oportunidad de crecimiento financiero. |
 
@@ -77,8 +54,8 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 | Actor | Rol | Fuente |
 |---|---|---|
 | Asesor comercial | Realiza la captación por llamada, correo y WhatsApp, aplica el speech comercial y acompaña al cliente durante la originación. | Modelo Comercial B2B |
-| Hunter / visitador | Realiza la visita de originación en el negocio del cliente, apoyando el KYC y la firma del contrato. Las visitas de confirmación/verificación y de cobro y gestión especial están documentadas como procesos en el Modelo y Proceso de Cobranza B2B, pero esa fuente no asigna explícitamente el rol que las ejecuta; se asume el mismo Hunter/visitador, **pendiente de confirmar con negocio**. | Modelo Comercial B2B; Modelo y Proceso de Cobranza B2B |
-| Analista de cartera | Ejecuta la gestión de cobranza por bucket (llamadas, WhatsApp, seguimiento de compromisos de pago). Aparece nombrado explícitamente como primer nivel de escalación en Investigación B2B. | Modelo y Proceso de Cobranza B2B; Investigación B2B |
+
+| Analista de cartera | Ejecuta la gestión de cobranza por bucket (llamadas, WhatsApp, seguimiento de compromisos de pago). | Modelo y Proceso de Cobranza B2B; Investigación B2B |
 | **Líder de Cartera** *(nuevo)* | Segundo nivel de escalación de cobranza, entre el Analista de cartera y el área Comercial/Jurídica. Investigación B2B lo nombra dentro de la cadena de escalaciones, pero no describe en detalle sus funciones específicas — **pendiente de confirmar con negocio**. | Investigación B2B |
 | Comité de Cartera | Instancia semanal que analiza la cartera y prioriza la gestión de cobro según días de mora (foco en 20+ días), flujo de caja, tipo de negocio, cuotas vencidas, historial/respuesta del cliente y monto adeudado. Integrado, entre otros, por **Iván Aponte** (Senior Credit Strategy Analyst) y **Alejandra Suárez** (Account and Portfolio Specialist / Product Manager). | Modelo y Proceso de Cobranza B2B |
 | Analista jurídico / abogado *(también referido como "Representante Jurídico" en la cadena de escalación de Investigación B2B)* | Gestiona la comunicación directa del área jurídica a partir del bucket 4 (91-120 días de mora) y lleva los casos a proceso legal a partir del bucket 5. | Modelo y Proceso de Cobranza B2B |
@@ -93,7 +70,6 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 | Analista de riesgo | Resuelve manualmente los casos de biometría que quedan "en revisión" durante el KYC (Journey Colpatria B2B, pág. 3). **Precisión de esta versión:** la misma fuente (pág. 4, ajuste jun. 2026) indica que la evaluación de score/cupo vía Experian ya es 100% automática y que "se elimina el estudio manual del analista" en ese paso; el rol manual del analista de riesgo queda acotado a los casos de biometría en revisión, no a la decisión de crédito en general. | Journeys Colpatria B2B |
 | Asistente virtual (IA) | *(largo plazo)* Atiende el primer nivel de servicio al cliente (WhatsApp, correo, llamada), clasifica el caso e intenta resolverlo en el primer contacto. | Journeys Colpatria B2B |
 | Agente humano de servicio al cliente | Recibe el caso con contexto cuando la IA no lo resuelve; valida identidad y aprueba manualmente los casos críticos (suplantación, uso indebido del cupo, desconocimiento de compra), o escala según el tipo de caso. | Journeys Colpatria B2B |
-| **Área Legal / PQR** *(nuevo)* | Recibe los casos de servicio al cliente clasificados como legales, tutela o derecho de petición; se rige por un SLA de respuesta inmediata. | Journeys Colpatria B2B, pág. 9 |
 | **Áreas internas de escalamiento (riesgo, cobranza, TI)** *(nuevo)* | Reciben los casos estándar de servicio al cliente que el agente humano no resuelve autónomamente y los analizan según su especialidad. | Journeys Colpatria B2B, pág. 9 |
 
 ### Proveedores externos
@@ -106,7 +82,7 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 | Zenvia | Gestión de notificaciones y comunicaciones con clientes vía WhatsApp y SMS. |
 | Sendgrid | Envío de comunicaciones por email. |
 | Colpatria | Provee y co-administra la fiducia que fondea el crédito; concentra el origen y el retorno del dinero. |
-| Nebula | Proveedor de llamadas. **Corrección de esta versión:** no se encontró referencia a Nebula en ninguna de las fuentes revisadas (Modelo Comercial B2B, Modelo y Proceso de Cobranza B2B, Investigación B2B, Journeys Colpatria B2B, ni la documentación técnica de integraciones). Se mantiene en el listado porque estaba en versiones previas del documento, pero queda marcado como **sin fuente documentada — pendiente de confirmar con negocio**. |
+| Nebula | Proveedor de llamadas. |
 
 *Fuente: Journeys Colpatria B2B; Integraciones técnicas (Olimpia, Zenvia); Alcance del Producto.*
 
