@@ -63,26 +63,25 @@ Este documento describe a los actores de negocio, operativos y de soporte que in
 - Analista de cartera: ejecuta la gestión de cobranza por bucket descrita en el Modelo y Proceso de Cobranza B2B (llamadas, WhatsApp, seguimiento de compromisos de pago); aparece nombrado explícitamente como primer nivel de escalación en Investigación B2B, antes del Líder de Cartera.
 - Comité de Cartera: instancia semanal que analiza la cartera y prioriza la gestión de cobro. Está conformado, entre otros, por un Senior Credit Strategy Analyst (estrategia de riesgo crediticio) y un Account and Portfolio Specialist / Product Manager (gestión de cuentas y portafolio), según el Modelo y Proceso de Cobranza B2B.
 - Analista jurídico / abogado: gestiona la comunicación directa del área jurídica a partir del bucket 4 (91-120 días de mora, según el Modelo y Proceso de Cobranza B2B) y lleva los casos a proceso legal a partir del bucket 5.
-- Administrador del punto (tienda D1): contacto de escalamiento en el bucket 1 (1-30 días de mora) cuando la gestión por WhatsApp y llamada no logra ubicar al responsable del negocio deudor (Investigación B2B).
+
 
 ### Actores de riesgo y servicio al cliente
 
 - Analista de riesgo: resuelve manualmente los casos de biometría que quedan "en revisión" durante el KYC automático.
-- Asistente virtual (IA): atiende el primer nivel de servicio al cliente (WhatsApp, correo, llamada), clasifica el caso e intenta resolverlo en el primer contacto.
-- Agente humano de servicio al cliente: recibe los casos que la IA no logra resolver, con el contexto completo; valida identidad y aprueba manualmente los casos críticos (suplantación, uso indebido del cupo, desconocimiento de compra).
+- Asistente virtual (IA): (largo plazo )atiende el primer nivel de servicio al cliente (WhatsApp, correo, llamada), clasifica el caso e intenta resolverlo en el primer contacto.
+- Agente humano de servicio al cliente: valida identidad y aprueba manualmente los casos críticos (suplantación, uso indebido del cupo, desconocimiento de compra).
 
 ### Proveedores externos
 
-- Experian: consulta de riesgo crediticio.
-- Druo: débito automático para el recaudo de pagos.
+- Experian: consulta score e historial crediticio y datos de contacto.
+- Druo: pasarela de pago y débito automático.
 - Olimpia: validación biométrica y verificación de identidad (KYC).
-- Zenvia: gestión de notificaciones y comunicaciones con clientes (WhatsApp, correo y SMS) durante el onboarding y la operación.
-- Sendgrid: envío de comunicaciones por correo electrónico, en conjunto con Zenvia, durante el onboarding.
-- Colpatria: aliado de core bancario; administra la fiducia que fondea el crédito, concentra el origen y el retorno del dinero, y emite el bono que el cliente usa en D1.
+- Zenvia: gestión de notificaciones y comunicaciones con clientes via (WhatsApp y SMS).
+- Sendgrid: envío de comunicaciones por Email.
+- Colpatria: provee y co-administra la fiducia que fondea el crédito, concentra el origen y el retorno del dinero.
+- Nebula: proveedor de llamadas 
 
-### Relación entre actores
 
-El cliente accede al producto a través del contexto comercial de D1; el negocio evalúa su riesgo y el administrador gestiona el proceso dentro del sistema. Durante la vida del crédito, el asesor comercial y el analista de cartera acompañan al cliente, y el Comité de Cartera prioriza los casos que requieren gestión especial o escalamiento jurídico. El resultado de esta gestión impacta directamente la relación comercial y la salud financiera del portafolio.
 
 ## Fuentes consultadas
 
