@@ -16,9 +16,9 @@
 
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Versión inicial, como sección 4 del `procesos.md` original (monolítico). |
-| 2.0 | 2026-07-13 | María Fernanda Herazo (con asistencia de Claude) | Reorganización en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | María Fernanda Herazo (con asistencia de Claude) | Corrección solicitada tras validar contra la página 4 de `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026): se separa la evaluación de criterios de KYC (score, endeudamiento, tienda habitual — "reglas de Colpatria") de la validación de la cuenta bancaria contra Experian, como dos decisiones **consecutivas** en el orden correcto (antes aparecían fusionadas en una sola decisión y en el orden invertido). Se agrega el paso inicial de apertura del caso y la cita explícita a "reglas de Colpatria".
+| 1.0 | 2026-07-09 | María Fernanda Herazo| Versión inicial, como sección 4 del `procesos.md` original (monolítico). |
+| 2.0 | 2026-07-13 | María Fernanda Herazo  | Reorganización en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
+| 2.1 | 2026-07-13 | María Fernanda Herazo | Corrección solicitada tras validar contra la página 4 de `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026): se separa la evaluación de criterios de KYC (score, endeudamiento, tienda habitual — "reglas de Colpatria") de la validación de la cuenta bancaria contra Experian, como dos decisiones **consecutivas** en el orden correcto (antes aparecían fusionadas en una sola decisión y en el orden invertido). Se agrega el paso inicial de apertura del caso y la cita explícita a "reglas de Colpatria".
 
 ---
 
