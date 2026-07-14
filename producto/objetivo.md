@@ -3,10 +3,10 @@
 | Documento | Objetivo del Producto |
 |-----------|------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
-| **Última actualización** | 2026-07-08 |
+| **Última actualización** | 2026-07-14 |
 
 ---
 
@@ -20,6 +20,8 @@ Este documento cubre el propósito comercial y estratégico del producto, sus me
 |---------|-------|--------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
 | 1.1 | 2026-07-08 | María Fernanda Herazo | Ajuste de metas, principios e indicadores de éxito para alinear el documento con las observaciones de Francisco Javier Martínez Vargas e Iván Aponte. |
+| 1.2 | 2026-07-14 | María Fernanda Herazo | Corrección tras el Weekly Sync de Producto (10 jul 2026): se reformula el principio de rentabilidad — deja de ser una condición inicial y pasa a ser un objetivo de escalamiento durante el piloto. Se dividen los "Indicadores de éxito" en tres horizontes de tiempo (MVP, Evolución, Largo plazo), acordado en la misma reunión para no duplicar objetivos entre etapas. |
+
 ## Documentos relacionados
 - [Producto](README.md)
 - [Flipa - Biblioteca de Conocimiento](../README.md)
@@ -47,14 +49,20 @@ Fliipa busca ofrecer crédito formal a micro y pequeñas empresas que compran co
 - El crédito debe estar alineado con el comportamiento real del negocio.
 - La información del cliente es el activo clave del modelo.
 - La automatización debe simplificar y agilizar el proceso de originación del crédito.
-- El negocio debe demostrar que el modelo es rentable y sostenible.
+- La rentabilidad es un objetivo de escalamiento, no una condición inicial: durante el piloto no es necesario que el negocio sea rentable; la meta es demostrar una trayectoria clara hacia la sostenibilidad financiera a medida que el producto crece.
 - La seguridad y el cumplimiento normativo son condiciones no negociables.
 - El producto debe iniciar de forma simple, regulada y medible, para luego escalar.
+
 ### Indicadores de éxito
-El producto será exitoso si demuestra que:
-- los clientes usan el crédito,
-- los clientes pagan,
-- el riesgo se evalúa mejor que con modelos tradicionales,
-- la originación del crédito está automatizada,
-- el modelo genera información crediticia de valor para el Grupo Santo Domingo,
-- la operación puede sostenerse financieramente.
+
+El producto será exitoso si demuestra, según el horizonte de madurez:
+
+| Horizonte | El producto será exitoso si... |
+|---|---|
+| **MVP (piloto)** | los clientes usan el crédito; los clientes pagan; la originación del crédito está automatizada. |
+| **Evolución** | el riesgo se evalúa mejor que con modelos tradicionales, a medida que se acumula información transaccional del piloto. |
+| **Largo plazo** | el modelo genera información crediticia de valor para el Grupo Santo Domingo; la operación logra sostenerse financieramente. |
+
+## Fuentes consultadas
+
+- Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada.
