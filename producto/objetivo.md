@@ -1,4 +1,4 @@
-# Objetivo del producto
+#  Objetivo del producto
 
 | Documento | Objetivo del Producto |
 |-----------|------------------------|
@@ -20,7 +20,7 @@ Este documento cubre el propósito comercial y estratégico del producto, sus me
 |---------|-------|--------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
 | 1.1 | 2026-07-08 | María Fernanda Herazo | Ajuste de metas, principios e indicadores de éxito para alinear el documento con las observaciones de Francisco Javier Martínez Vargas e Iván Aponte. |
-| 1.2 | 2026-07-14 | María Fernanda Herazo | Corrección tras el Weekly Sync de Producto (10 jul 2026): se reformula el principio de rentabilidad — deja de ser una condición inicial y pasa a ser un objetivo de escalamiento durante el piloto. Se dividen los "Indicadores de éxito" en tres horizontes de tiempo (MVP, Evolución, Largo plazo), acordado en la misma reunión para no duplicar objetivos entre etapas. |
+| 1.2 | 2026-07-14 | María Fernanda Herazo (con asistencia de Claude) | Corrección tras el Weekly Sync de Producto (10 jul 2026): se reformula el principio de rentabilidad — deja de ser una condición inicial y pasa a ser un objetivo de escalamiento durante el piloto. Se dividen los "Indicadores de éxito" en tres horizontes de tiempo (MVP, Evolución, Largo plazo), acordado en la misma reunión para no duplicar objetivos entre etapas. |
 
 ## Documentos relacionados
 - [Producto](README.md)
@@ -66,3 +66,4 @@ El producto será exitoso si demuestra, según el horizonte de madurez:
 ## Fuentes consultadas
 
 - Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada.
+
