@@ -3,10 +3,10 @@
 | Documento | Indicadores |
 |-----------|-------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1. |
+| **Versión** | 1.1 |
 | **Estado** | Borrador para validación |
 | **Responsable** | Negocio y operaciones |
-| **Última actualización** | 2026-07-09 |
+| **Última actualización** | 2026-07-14 |
 
 ---
 
@@ -15,7 +15,8 @@
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
 | 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
-| 1.0 | 2026-07-09 | María Fernanda Herazo | Primera versión completa de los indicadores de negocio, construida a partir del Objetivo del Producto, el Alcance del Producto, el Modelo Comercial B2B y el Modelo y Proceso de Cobranza B2B. Pendiente de que negocio defina metas numéricas para cada indicador. |
+| 1.0 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Primera versión completa de los indicadores de negocio, construida a partir del Objetivo del Producto, el Alcance del Producto, el Modelo Comercial B2B y el Modelo y Proceso de Cobranza B2B. Pendiente de que negocio defina metas numéricas para cada indicador. |
+| 1.1 | 2026-07-14 | María Fernanda Herazo (con asistencia de Claude) | Corrección tras el Weekly Sync de Producto (10 jul 2026): se agrega la sección "Indicadores por horizonte", que clasifica los grupos de indicadores existentes según MVP, Evolución o Largo plazo, siguiendo el mismo criterio ya aplicado en [Objetivo del Producto](../producto/objetivo.md). Se ajusta la nota sobre rentabilidad para reflejar que es un objetivo de escalamiento, no una condición del piloto. |
 
 ---
 
@@ -39,8 +40,18 @@ Este documento cubre indicadores comerciales, de originación y riesgo, de carte
 - [Qa](../qa/README.md)
 - [Descripcion Negocio](descripcion-negocio.md)
 - [Actores](actores.md)
-- [Procesos](procesos.md)
+- [Procesos](procesos/README.md)
 - [Reglas Negocio](reglas-negocio.md)
+
+## Indicadores por horizonte
+
+Siguiendo lo acordado en el Weekly Sync de Producto (10 jul 2026), los grupos de indicadores de este documento se ubican en tres horizontes, para no duplicar objetivos entre etapas:
+
+| Horizonte | Qué valida | Grupos de indicadores de este documento |
+|---|---|---|
+| **MVP (piloto)** | Que el modelo funciona con los primeros clientes | Comerciales y de captación; Originación y riesgo; Uso del producto |
+| **Evolución** | Que el modelo mejora a medida que crece la base de datos y de clientes | Cartera y cobranza; Servicio al cliente |
+| **Largo plazo** | Que la operación es sostenible y escalable | Financieros y de negocio |
 
 ## Contenido
 
@@ -87,7 +98,7 @@ Este documento cubre indicadores comerciales, de originación y riesgo, de carte
 ### Indicadores financieros y de negocio
 
 - Costo de fondeo por GMF (4x1000): 0,4% por ciclo de giro fiducia → D1 (equivalente a ~4,8% anual sobre el mismo capital en 12 ciclos); ahorro potencial si la fiducia se constituye en el banco donde ya están los fondos.
-- Sostenibilidad financiera de la operación (ingresos por intereses frente a costos operativos y de fondeo) — pendiente de definir metodología y meta.
+- Sostenibilidad financiera de la operación (ingresos por intereses frente a costos operativos y de fondeo) — objetivo de escalamiento a largo plazo, no una condición del piloto; pendiente de definir metodología y meta.
 - Información crediticia generada: número de historiales crediticios nuevos construidos para micro y pequeñas empresas, como aporte al ecosistema de datos del Grupo Santo Domingo.
 - Indicadores de éxito del producto (según Objetivo del Producto): uso efectivo del crédito, tasa de pago, precisión de la evaluación de riesgo frente a modelos tradicionales, y nivel de automatización de la originación.
 
@@ -99,6 +110,13 @@ Este documento cubre indicadores comerciales, de originación y riesgo, de carte
 ## Fuentes consultadas
 
 - Objetivo del Producto (`producto/objetivo.md`)
+- Alcance del Producto (`producto/alcance.md`)
+- Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
+- Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
+- Reglas Negocio (`negocio/reglas-negocio.md`)
+- Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
+- Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada
+
 - Alcance del Producto (`producto/alcance.md`)
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
