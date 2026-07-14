@@ -79,7 +79,7 @@ flowchart LR
 - [Qa](../../qa/README.md)
  - [Descripcion Negocio](../descripcion_negocio/README.md)
  - [Actores](../Actores/README.md)
- - [Indicadores](../indicadores.md)
+ - [Indicadores](../indicadores/README.md)
  - [Reglas Negocio](../reglas-negocio.md)
 
 ## Fuentes consultadas

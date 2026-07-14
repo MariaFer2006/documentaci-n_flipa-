@@ -65,7 +65,7 @@ Ver el detalle de cada actor y cada relación en el diagrama de [ecosistema comp
  - [Descripcion Negocio](../descripcion_negocio/README.md)
 - [Procesos](../procesos/README.md)
 - [Reglas Negocio](../reglas-negocio.md)
-- [Indicadores](../indicadores.md)
+- [Indicadores](../indicadores/README.md)
 
 ## Fuentes consultadas
 

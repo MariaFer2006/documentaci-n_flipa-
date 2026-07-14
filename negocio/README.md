@@ -49,7 +49,7 @@ En revisión
  - [Descripcion Negocio](descripcion_negocio/README.md)
  - [Actores](Actores/README.md)
  - [Procesos](procesos/README.md)
-- [Indicadores](indicadores.md)
+- [Indicadores](indicadores/README.md)
 - [Reglas Negocio](reglas-negocio.md)
 
 ## Contenido
@@ -58,7 +58,7 @@ Esta carpeta contiene los documentos siguientes:
  - [Descripcion Negocio](descripcion_negocio/README.md): contexto y propósito del negocio.
  - [Actores](Actores/README.md): roles clave del ecosistema.
  - [Procesos](procesos/README.md): flujo operacional del crédito, con un archivo por proceso, diagramas Mermaid y tablas.
-- [Indicadores](indicadores.md): métricas de negocio y riesgo, organizadas por horizonte (MVP, Evolución, Largo plazo).
+- [Indicadores](indicadores/README.md): métricas de negocio y riesgo, organizadas por horizonte (MVP, Evolución, Largo plazo).
 - [Reglas Negocio](reglas-negocio.md): principios que deben respetarse.
 
 ## Contexto de negocio

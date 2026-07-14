@@ -42,8 +42,7 @@ Este documento cubre las reglas asociadas al cupo, la mora, los alivios y negoci
  - [Descripcion Negocio](descripcion_negocio/README.md)
  - [Actores](Actores/README.md)
  - [Procesos](procesos/README.md)
- - [Procesos](procesos/README.md)
-- [Indicadores](indicadores.md)
+- [Indicadores](indicadores/README.md)
 
 ## Contenido
 

@@ -17,5 +17,4 @@
 - Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
 - Integraciones técnicas (Olimpia, Zenvia) — `tecnico/Integraciones/Olimpia.md`, `tecnico/Integraciones/Zenvia.md`
 - Alcance del Producto (`producto/alcance.md`)
- - Alcance del Producto (`producto/alcance.md`)
  - Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada — rol de Colpatria en el motor de riesgo.
