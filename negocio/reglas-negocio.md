@@ -39,9 +39,10 @@ Este documento cubre las reglas asociadas al cupo, la mora, los alivios y negoci
 - [Producto](../producto/README.md)
 - [Funcional](../funcional/README.md)
 - [Qa](../qa/README.md)
-- [Descripcion Negocio](descripcion-negocio.md)
-- [Actores](actores.md)
-- [Procesos](procesos.md)
+ - [Descripcion Negocio](descripcion_negocio/README.md)
+ - [Actores](Actores/README.md)
+ - [Procesos](procesos/README.md)
+ - [Procesos](procesos/README.md)
 - [Indicadores](indicadores.md)
 
 ## Contenido
@@ -64,7 +65,7 @@ Este documento cubre las reglas asociadas al cupo, la mora, los alivios y negoci
 - Radicación de la demanda: a partir del bucket 5 (120+ días de mora).
 - El cupo permanece bloqueado durante todo el periodo de mora.
 
-> **Pendiente de validar:** el journey de Colpatria B2B (junio 2026) describe una escalada más corta —bloqueo permanente del cupo y cobro jurídico desde el día 30 de mora—, distinta a los plazos de bucket anteriores (61 a 120+ días). Ambas reglas quedan documentadas hasta que el equipo confirme cuál está vigente. Ver la nota en [Procesos](procesos.md).
+> **Pendiente de validar:** el journey de Colpatria B2B (junio 2026) describe una escalada más corta —bloqueo permanente del cupo y cobro jurídico desde el día 30 de mora—, distinta a los plazos de bucket anteriores (61 a 120+ días). Ambas reglas quedan documentadas hasta que el equipo confirme cuál está vigente. Ver la nota en [Procesos](procesos/09-cobranza.md).
 
 ### Reglas de alivios y negociación
 

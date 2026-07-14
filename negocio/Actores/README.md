@@ -62,7 +62,7 @@ Ver el detalle de cada actor y cada relación en el diagrama de [ecosistema comp
 - [Mapa Del Conocimiento](../../MAPA_DEL_CONOCIMIENTO.md)
 - [Onboarding](../../ONBOARDING.md)
 - [Convenciones](../../CONVENCIONES.md)
-- [Descripcion Negocio](../descripcion-negocio.md)
+ - [Descripcion Negocio](../descripcion_negocio/README.md)
 - [Procesos](../procesos/README.md)
 - [Reglas Negocio](../reglas-negocio.md)
 - [Indicadores](../indicadores.md)

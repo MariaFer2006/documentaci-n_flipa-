@@ -77,10 +77,10 @@ flowchart LR
 - [Producto](../../producto/README.md)
 - [Funcional](../../funcional/README.md)
 - [Qa](../../qa/README.md)
-- [Descripcion Negocio](../descripcion-negocio.md)
-- [Actores](../actores.md)
-- [Indicadores](../indicadores.md)
-- [Reglas Negocio](../reglas-negocio.md)
+ - [Descripcion Negocio](../descripcion_negocio/README.md)
+ - [Actores](../Actores/README.md)
+ - [Indicadores](../indicadores.md)
+ - [Reglas Negocio](../reglas-negocio.md)
 
 ## Fuentes consultadas
 

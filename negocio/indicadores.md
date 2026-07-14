@@ -38,8 +38,8 @@ Este documento cubre indicadores comerciales, de originación y riesgo, de carte
 - [Producto](../producto/README.md)
 - [Funcional](../funcional/README.md)
 - [Qa](../qa/README.md)
-- [Descripcion Negocio](descripcion-negocio.md)
-- [Actores](actores.md)
+- [Descripcion Negocio](descripcion_negocio/README.md)
+- [Actores](Actores/README.md)
 - [Procesos](procesos/README.md)
 - [Reglas Negocio](reglas-negocio.md)
 
@@ -116,14 +116,3 @@ Siguiendo lo acordado en el Weekly Sync de Producto (10 jul 2026), los grupos de
 - Reglas Negocio (`negocio/reglas-negocio.md`)
 - Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
 - Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada
-
-- Alcance del Producto (`producto/alcance.md`)
-- Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
-- Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
-- Reglas Negocio (`negocio/reglas-negocio.md`)
-- Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
-- Alcance del Producto (`producto/alcance.md`)
-- Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
-- Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
-- Reglas Negocio (`negocio/reglas-negocio.md`)
-- Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*

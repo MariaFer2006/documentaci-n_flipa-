@@ -81,10 +81,10 @@ Cada requerimiento usa el identificador `RNF-XXX`. La columna "Severidad" solo a
 |----|----------------|-----------|---------------------------|--------|
 | RNF-015 | Los parámetros financieros del crédito (tasa de interés, comisiones, seguro) deben estar documentados de forma consistente entre el código y la documentación de negocio. | Alta | No conforme: `insuranceRate` está comentado como tasa decimal (ej. "0.03") pero su valor real es `20000` (monto fijo en COP, no una tasa). Pendiente de validar con negocio y finanzas. | `backends/b2b/src/config/constants.ts` |
 | RNF-016 | Los rangos de validación de un mismo campo de negocio (por ejemplo, día de corte del crédito) deben ser consistentes en todos los módulos que lo validan. | Media | No conforme: el panel admin acepta `cutoffDay` entre 0 y 31, mientras redemption exige 1 a 31. | `backends/admin/src/controllers/credit-lines.controller.ts`, `apps/redemption/lib/is-complete-redemption-credit-settings.ts` |
-| RNF-017 | Los reportes a centrales de riesgo y las acciones de escalamiento jurídico deben ejecutarse según un único esquema de plazos de mora aprobado por negocio y jurídico. | Alta | Pendiente de resolver: negocio documenta dos esquemas de plazos distintos (buckets vs. journey Colpatria B2B) sin que el código disponible permita determinar cuál está implementado. | [Procesos](../negocio/procesos.md), [Reglas Negocio](../negocio/reglas-negocio.md) |
+| RNF-017 | Los reportes a centrales de riesgo y las acciones de escalamiento jurídico deben ejecutarse según un único esquema de plazos de mora aprobado por negocio y jurídico. | Alta | Pendiente de resolver: negocio documenta dos esquemas de plazos distintos (buckets vs. journey Colpatria B2B) sin que el código disponible permita determinar cuál está implementado. | [Procesos](../negocio/procesos/09-cobranza.md), [Reglas Negocio](../negocio/reglas-negocio.md) |
 
 ## Fuentes consultadas
 
 - [Reglas Negocio](../negocio/reglas-negocio.md)
-- [Procesos](../negocio/procesos.md)
+- [Procesos](../negocio/procesos/README.md)
 - Inventario funcional del código fuente `credits-platform-main`: `backends/b2b/src/controllers/otp`, `backends/b2b/src/controllers/clients`, `backends/b2b/src/config/constants.ts`, `backends/b2b/src/config/index.ts`, `backends/admin/src/middleware/auth.middleware.ts`, `backends/admin/src/config/cors.ts`, `backends/admin/src/services/*`, `backends/admin/src/controllers/system-*.controller.ts`, realizado como parte de esta actualización.

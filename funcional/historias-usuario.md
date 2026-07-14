@@ -27,7 +27,7 @@ Describir las necesidades de cada actor de Fliipa en lenguaje de negocio, como b
 
 ## Alcance
 
-Cubre historias de usuario para el cliente empresarial (tendero), el asesor comercial, el analista de riesgo, el analista de cartera, el agente de servicio al cliente y el administrador del producto, en línea con los actores descritos en [Actores](../negocio/actores.md) y los casos de uso en [Casos De Uso](casos-de-uso.md). Usa la numeración `HU-XXX` definida en [Convenciones](../CONVENCIONES.md).
+ Cubre historias de usuario para el cliente empresarial (tendero), el asesor comercial, el analista de riesgo, el analista de cartera, el agente de servicio al cliente y el administrador del producto, en línea con los actores descritos en [Actores](../negocio/Actores/README.md) y los casos de uso en [Casos De Uso](casos-de-uso.md). Usa la numeración `HU-XXX` definida en [Convenciones](../CONVENCIONES.md).
 
 ## Documentos relacionados
 
@@ -59,7 +59,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente recibe el enlace por WhatsApp como parte del contacto simultáneo (correo, WhatsApp, llamada). El enlace crea un checkout nuevo o reanuda uno existente en `REQUEST_STARTED` para su documento. |
 | **Relaciones** | Casos de uso: CU-001, CU-002. Historias relacionadas: HU-002, HU-013. |
-| **Referencias** | [Procesos](../negocio/procesos.md#1-captación-comercial); `backends/b2b/src/controllers/checkouts/create-checkout.ts` |
+| **Referencias** | [Procesos](../negocio/procesos/01-captacion-comercial.md); `backends/b2b/src/controllers/checkouts/create-checkout.ts` |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -72,7 +72,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El sistema muestra el cupo preaprobado calculado a partir del histórico de consumo en D1, antes de exigir todos los pasos del onboarding. |
 | **Relaciones** | Casos de uso: CU-002. Requerimiento: RF-005. |
-| **Referencias** | [Procesos](../negocio/procesos.md#2-onboarding-digital) |
+| **Referencias** | [Procesos](../negocio/procesos/02-onboarding-digital.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | RF-005 está marcado como "no verificable" en el código de `backends/b2b` disponible; validar con el equipo técnico dónde vive el cálculo. |
 
@@ -98,7 +98,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente completa la biometría con el proveedor externo y carga certificación bancaria y extractos de los últimos 3 meses, todo desde el flujo móvil de onboarding. |
 | **Relaciones** | Casos de uso: CU-004, CU-005. |
-| **Referencias** | [Procesos](../negocio/procesos.md#3-validación-de-identidad-kyc); `backends/b2b/src/controllers/clients/upload-document.ts` |
+| **Referencias** | [Procesos](../negocio/procesos/03-validacion-kyc.md); `backends/b2b/src/controllers/clients/upload-document.ts` |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | No se encontró en el código el nombre del proveedor de biometría (Olimpia); probablemente vive en un microservicio no incluido en el repositorio revisado. |
 
@@ -163,7 +163,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El sistema debita automáticamente vía Druo en la fecha de corte, o permite prepago voluntario por PSE en cualquier momento antes del corte. |
 | **Relaciones** | Casos de uso: CU-011. Requerimiento: RF-022. |
-| **Referencias** | [Procesos](../negocio/procesos.md#8-cobro-y-pago-del-crédito) |
+| **Referencias** | [Procesos](../negocio/procesos/08-cobro-pago.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | La ejecución real del prepago por PSE no se encontró en el código de `backends/b2b` disponible. |
 
@@ -217,7 +217,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El asesor cuenta con la base de clientes preaprobados y las plantillas de contacto por los tres canales. |
 | **Relaciones** | Casos de uso: CU-001. Requerimiento: RF-001. Historia relacionada: HU-001. |
-| **Referencias** | [Procesos](../negocio/procesos.md#1-captación-comercial) |
+| **Referencias** | [Procesos](../negocio/procesos/01-captacion-comercial.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -230,7 +230,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El asesor da seguimiento al cliente durante el onboarding y coordina, cuando aplica, la visita de originación (hunter/visitador). |
 | **Relaciones** | Casos de uso: CU-001. |
-| **Referencias** | [Actores](../negocio/actores.md#actores-comerciales-y-de-cobranza) |
+| **Referencias** | [Actores](../negocio/Actores/03-actores-comerciales-cobranza.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -243,7 +243,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Media |
 | **Criterios de aceptación** | El asesor recibe o consulta la lista de clientes activados sin uso del cupo a los 7 días. |
 | **Relaciones** | — |
-| **Referencias** | [Procesos](../negocio/procesos.md#1-captación-comercial) |
+| **Referencias** | [Procesos](../negocio/procesos/01-captacion-comercial.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | No se encontró un reporte automatizado de este seguimiento en el código revisado. |
 
@@ -325,7 +325,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Media |
 | **Criterios de aceptación** | Los casos que alcanzan el bucket de escalamiento jurídico se enrutan automáticamente al analista jurídico. |
 | **Relaciones** | — |
-| **Referencias** | [Actores](../negocio/actores.md#actores-comerciales-y-de-cobranza) |
+| **Referencias** | [Actores](../negocio/Actores/03-actores-comerciales-cobranza.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | Depende de resolver primero la discrepancia de plazos de escalamiento (RNF-017). |
 
@@ -426,8 +426,8 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 
 ## Fuentes consultadas
 
-- [Actores](../negocio/actores.md)
-- [Procesos](../negocio/procesos.md)
+- [Actores](../negocio/Actores/README.md)
+- [Procesos](../negocio/procesos/README.md)
 - [Reglas Negocio](../negocio/reglas-negocio.md)
 - [Casos De Uso](casos-de-uso.md)
 - [Requerimientos Funcionales](requerimientos-funcionales.md)

@@ -18,7 +18,7 @@
 |---------|-------|-------|-------------|
 | 1.0 | 2026-07-09 | María Fernanda Herazo| Versión inicial, como sección 12 del `procesos.md` original (monolítico). |
 | 2.0 | 2026-07-13 | María Fernanda Herazo  | Reorganización en archivo independiente, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | María Fernanda Herazo | Corrección tras validar contra [Actores](../actores.md) y [Reglas Negocio](../reglas-negocio.md): se separan Iván Aponte (Product Manager) y Alejandra Suárez (Account and Portfolio Specialist) como participantes distintos, en vez de un solo rol combinado con "/"; se marca explícitamente el "Senior Credit Strategy Analyst" como aún por definir; se completan las 5 funciones del Comité de Cartera (antes solo aparecía una). |
+| 2.1 | 2026-07-13 | María Fernanda Herazo | Corrección tras validar contra [Actores](../Actores/04-comite-cartera.md) y [Reglas Negocio](../reglas-negocio.md): se separan Iván Aponte (Product Manager) y Alejandra Suárez (Account and Portfolio Specialist) como participantes distintos, en vez de un solo rol combinado con "/"; se marca explícitamente el "Senior Credit Strategy Analyst" como aún por definir; se completan las 5 funciones del Comité de Cartera (antes solo aparecía una). |
 
 ---
 
@@ -34,6 +34,6 @@
 
 ## Fuentes consultadas
 
-- [Actores](../actores.md) (composición y funciones del Comité de Cartera)
+- [Actores](../Actores/04-comite-cartera.md) (composición y funciones del Comité de Cartera)
 - [Reglas Negocio](../reglas-negocio.md) (reglas de gestión, escalamiento y control de riesgo operativo)
 

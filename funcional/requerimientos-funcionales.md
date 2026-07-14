@@ -144,5 +144,5 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 
 - [Alcance del Producto](../producto/alcance.md)
 - [Reglas Negocio](../negocio/reglas-negocio.md)
-- [Procesos](../negocio/procesos.md)
+- [Procesos](../negocio/procesos/README.md)
 - Inventario funcional del código fuente `credits-platform-main`: `backends/b2b/src/controllers/*`, `backends/b2b/src/config/*`, `backends/b2b/src/db/models/*`, `backends/admin/src/controllers/*`, `backends/admin/src/services/*`, `apps/checkout`, `apps/redemption`, `apps/admin`, realizado como parte de esta actualización.

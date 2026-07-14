@@ -3,10 +3,10 @@
 | Documento | Alcance del Producto |
 |------------|----------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.2 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de Producto |
-| **Última actualización** | 2026-07-08 |
+| **Última actualización** | 2026-07-14 |
 
 ---
 
@@ -16,6 +16,7 @@
 |---------|-------|--------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
 | 1.1 | 2026-07-08 | María Fernanda Herazo | Corrección del nombre del producto, detalle del proceso de validación biométrica e hipervínculos|
+| 1.2 | 2026-07-14 | (autor) | Corrección tras el Weekly Sync de Producto (10 jul 2026): se reemplazan las 11 secciones narrativas de "Alcance del MVP" por una tabla resumen; se confirma el proveedor de biometría (Olimpia); se agrega marcador de enlace pendiente al Modelo Comercial B2B. |
 
 ---
 
@@ -45,152 +46,24 @@ La primera etapa busca establecer las bases para una plataforma financiera digit
 
 # Alcance del MVP
 
-La primera versión del producto comprende los siguientes procesos de negocio.
+La primera versión del producto comprende los siguientes procesos de negocio. El detalle operativo de cada uno (con diagramas Mermaid) está en [Procesos del negocio](../negocio/procesos/README.md); esta tabla es un resumen para efectos de alcance.
 
-## 1. Captación comercial
+> 📎 **Modelo comercial:** el detalle completo de la captación comercial (canales, guiones y hoja de ruta del piloto) está desarrollado en la presentación *Modelo Comercial B2B*. **Enlace pendiente** — falta agregar aquí la URL de la presentación para no duplicar su contenido en texto.
 
-Incluye:
+| # | Proceso | Incluye |
+|---|---------|---------|
+| 1 | Captación comercial | Contacto inicial con clientes preaprobados; campañas comerciales; comunicación por WhatsApp; contacto telefónico; gestión del interés del cliente; seguimiento comercial. |
+| 2 | Onboarding digital | Acceso mediante enlace único; validación del NIT; registro del representante legal; validación mediante OTP; aceptación de términos y condiciones; registro de ubicación; configuración del PIN de seguridad; vinculación de cuenta bancaria; cargue de certificación y extractos bancarios. |
+| 3 | Validación de identidad | Validación biométrica con Olimpia para verificación de identidad (KYC); validación automática del resultado; gestión de casos en revisión; rechazo automático cuando corresponda. |
+| 4 | Evaluación del riesgo | Consulta de Experian; consulta del histórico transaccional de D1; evaluación automática de reglas de negocio (definidas por Colpatria); cálculo del cupo aprobado; validación de capacidad de endeudamiento. |
+| 5 | Originación del crédito | Aprobación del crédito; comunicación del cupo aprobado; generación del contrato; firma digital; generación del pagaré; activación del cupo. |
+| 6 | Administración del crédito | Administración del cupo rotativo; consulta del estado del crédito, plan de pagos y saldo disponible; liberación automática del cupo al cancelar el crédito. |
+| 7 | Uso del crédito | Generación del bono D1; compra en tiendas D1; bloqueo temporal del cupo durante la compra; evaluación para renovación del cupo. |
+| 8 | Gestión de pagos | Débito automático mediante Druo; pago por PSE; prepago; actualización automática del saldo; liquidación del crédito. |
+| 9 | Cobranza | Reintentos automáticos de débito; recordatorios de pago; bloqueo del cupo; acuerdos de pago; reestructuración de obligaciones; reporte a centrales de riesgo; cobro jurídico; castigo de cartera. |
+| 10 | Servicio al cliente | Atención mediante asistente virtual basado en IA; escalamiento a agentes humanos; atención por WhatsApp y telefónica; gestión de PQRS; medición de satisfacción mediante NPS y CSAT. |
+| 11 | Portal administrativo | Gestión de clientes y solicitudes; seguimiento del onboarding; consulta del análisis de riesgo; administración de la originación; seguimiento del ciclo de vida del crédito; gestión de cobranza y de campañas comerciales; consulta de indicadores operativos. |
 
-- Contacto inicial con clientes preaprobados.
-- Campañas comerciales.
-- Comunicación mediante WhatsApp.
-- Contacto telefónico.
-- Gestión del interés del cliente.
-- Seguimiento comercial.
-
----
-
-## 2. Onboarding digital
-
-Incluye:
-
-- Acceso mediante enlace único.
-- Validación del NIT.
-- Registro del representante legal.
-- Validación mediante OTP.
-- Aceptación de términos y condiciones.
-- Registro de ubicación.
-- Configuración del PIN de seguridad.
-- Vinculación de cuenta bancaria.
-- Cargue de certificación bancaria.
-- Cargue de extractos bancarios.
-
----
-
-## 3. Validación de identidad
-
-Incluye:
-
-- Validación biométrica con posible proveedor externo, aún por confirmar, para verificación de identidad (KYC).
-- Validación automática del resultado.
-- Gestión de casos en revisión.
-- Rechazo automático cuando corresponda.
-
----
-
-## 4. Evaluación del riesgo
-
-Incluye:
-
-- Consulta de Experian.
-- Consulta del historial transaccional de D1.
-- Evaluación automática de reglas de negocio.
-- Cálculo del cupo aprobado.
-- Validación de capacidad de endeudamiento.
-
----
-
-## 5. Originación del crédito
-
-Incluye:
-
-- Aprobación del crédito.
-- Comunicación del cupo aprobado.
-- Generación del contrato.
-- Firma digital.
-- Generación del pagaré.
-- Activación del cupo.
-
----
-
-## 6. Administración del crédito
-
-Incluye:
-
-- Administración del cupo rotativo.
-- Consulta del estado del crédito.
-- Consulta del plan de pagos.
-- Consulta del saldo disponible.
-- Liberación automática del cupo cuando el crédito sea cancelado.
-
----
-
-## 7. Uso del crédito
-
-Incluye:
-
-- Generación del bono D1.
-- Compra en tiendas D1.
-- Bloqueo temporal del cupo durante la compra.
-- Evaluación para renovación del cupo.
-
----
-
-## 8. Gestión de pagos
-
-Incluye:
-
-- Débito automático mediante Druo.
-- Pago por PSE.
-- Prepago.
-- Actualización automática del saldo.
-- Liquidación del crédito.
-
----
-
-## 9. Cobranza
-
-Incluye:
-
-- Reintentos automáticos de débito.
-- Recordatorios de pago.
-- Bloqueo del cupo.
-- Acuerdos de pago.
-- Reestructuración de obligaciones.
-- Reporte a centrales de riesgo.
-- Cobro jurídico.
-- Castigo de cartera.
-
----
-
-## 10. Servicio al cliente
-
-Incluye:
-
-- Atención mediante asistente virtual basado en IA.
-- Escalamiento a agentes humanos.
-- Atención mediante WhatsApp.
-- Atención telefónica.
-- Gestión de PQRS.
-- Medición de satisfacción mediante NPS y CSAT.
-
----
-
-## 11. Portal administrativo
-
-Incluye:
-
-- Gestión de clientes.
-- Gestión de solicitudes.
-- Seguimiento del onboarding.
-- Consulta del resultado del análisis de riesgo.
-- Administración del proceso de originación.
-- Seguimiento del ciclo de vida del crédito.
-- Gestión de cobranza.
-- Gestión de campañas comerciales.
-- Consulta de indicadores operativos.
-
----
 
 # Integraciones incluidas
 
@@ -201,10 +74,10 @@ El MVP contempla integración con los siguientes sistemas externos. Para informa
 | D1 | Información transaccional y utilización del bono. | [Ver integración](../tecnico/Integraciones/D1.md) |
 | Experian | Consulta de riesgo crediticio. | [Ver integración](../tecnico/Integraciones/Experian.md) |
 | Druo | Débito automático para el recaudo de pagos. | [Ver integración](../tecnico/Integraciones/Druo.md) |
-| Proveedor de biometría (por confirmar) | Validación biométrica y verificación de identidad (KYC). | Pendiente de definir |
+| Olimpia | Validación biométrica y verificación de identidad (KYC). | Pendiente de documentación técnica |
 | Zenvia | Gestión de notificaciones y comunicaciones con clientes mediante WhatsApp y otros canales habilitados. | [Ver integración](../tecnico/Integraciones/Zenvia.md) |
 | Google Cloud Platform | Infraestructura y servicios del producto. | [Ver Infraestructura](../tecnico/infraestructura.md) |
-| Core Bancario | Originación y administración del crédito. | [Ver integración](../tecnico/Integraciones/CoreBancario.md) |
+| Colpatria (Core Bancario) | Fondeo, fiducia y políticas de originación del crédito. | [Ver integración](../tecnico/Integraciones/CoreBancario.md) |
 
 ---
 
@@ -295,3 +168,11 @@ Cada uno de estos temas se desarrolla en la documentación correspondiente.
 - [Funcional](../funcional/README.md)
 - [Conocimiento](../conocimiento/README.md)
 - [Mapa del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
+ - [Procesos del negocio](../negocio/procesos/README.md)
+
+---
+
+# Fuentes consultadas
+
+- Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada.
+- Actores del negocio (`negocio/Actores/06-proveedores-externos.md`) — confirmación del proveedor de biometría (Olimpia) y del rol de Colpatria en las reglas de originación.
