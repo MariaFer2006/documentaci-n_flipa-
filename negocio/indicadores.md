@@ -3,7 +3,7 @@
 | Documento | Indicadores |
 |-----------|-------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.0 |
+| **Versión** | 1. |
 | **Estado** | Borrador para validación |
 | **Responsable** | Negocio y operaciones |
 | **Última actualización** | 2026-07-09 |
@@ -15,7 +15,7 @@
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
 | 0.1 | 2026-07-06 | Equipo Flipa | Borrador vacío (pendiente de completar). |
-| 1.0 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Primera versión completa de los indicadores de negocio, construida a partir del Objetivo del Producto, el Alcance del Producto, el Modelo Comercial B2B y el Modelo y Proceso de Cobranza B2B. Pendiente de que negocio defina metas numéricas para cada indicador. |
+| 1.0 | 2026-07-09 | María Fernanda Herazo | Primera versión completa de los indicadores de negocio, construida a partir del Objetivo del Producto, el Alcance del Producto, el Modelo Comercial B2B y el Modelo y Proceso de Cobranza B2B. Pendiente de que negocio defina metas numéricas para cada indicador. |
 
 ---
 
@@ -99,6 +99,11 @@ Este documento cubre indicadores comerciales, de originación y riesgo, de carte
 ## Fuentes consultadas
 
 - Objetivo del Producto (`producto/objetivo.md`)
+- Alcance del Producto (`producto/alcance.md`)
+- Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
+- Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
+- Reglas Negocio (`negocio/reglas-negocio.md`)
+- Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
 - Alcance del Producto (`producto/alcance.md`)
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
