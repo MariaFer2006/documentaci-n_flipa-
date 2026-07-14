@@ -22,12 +22,15 @@
 
 ---
 
-| Instancia | Frecuencia | Participantes | Función |
-|-----------|------------|------------------|---------|
-| Comité de Cartera | Semanal | Iván Aponte (Product Manager); Alejandra Suárez (Account and Portfolio Specialist); Senior Credit Strategy Analyst *(aún por definir)* | Analizar el comportamiento de la cartera; priorizar la gestión según nivel de mora y riesgo; definir estrategias de recuperación; dar seguimiento a indicadores y compromisos; coordinar el escalamiento hacia el área jurídica |
-| Tableros y alertas | Semanal / automático | Comercial y cobranza | Seguimiento de la cartera |
+| Instancia | Frecuencia | Participante | Rol | Función |
+|-----------|------------|--------------|-----|----------|
+| Comité de Cartera | Semanal | Iván Aponte | Product Manager | Analizar el comportamiento de la cartera, priorizar la gestión según el nivel de mora y riesgo, definir estrategias de recuperación, hacer seguimiento a indicadores y compromisos, y coordinar los casos que requieran escalamiento al área jurídica. |
+| | | Alejandra Suárez | Account and Portfolio Specialist | |
+| | | Senior Credit Strategy Analyst *(por definir)* | Credit Strategy Analyst | |
 
-Los indicadores de comercial y cobranza se comparten entre ambas áreas, para evitar que un cliente quede sin ningún contacto durante el ciclo del crédito.
+| Instancia | Frecuencia | Participantes | Función |
+|-----------|------------|---------------|----------|
+| Tableros y alertas | Seguimiento semanal y monitoreo automático | • Equipo Comercial<br>• Equipo de Cobranza | Monitorear el desempeño de la cartera mediante indicadores y alertas compartidas entre las áreas Comercial y de Cobranza, facilitando el seguimiento operativo, la toma de decisiones y asegurando que ningún cliente quede sin gestión durante el ciclo del crédito. |
 
 ## Fuentes consultadas
 
