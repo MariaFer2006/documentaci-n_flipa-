@@ -1,135 +1,194 @@
-# 5. Firma de contrato y activaciÃ³n
+# 5. Firma de contrato y activación
 
 ## Objetivo
 
-Completar la firma del contrato y activar el crÃ©dito de forma que el cliente pueda recibir el bono D1 y usar el cupo aprobado.
+Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma y activar el crédito para que el cliente pueda utilizar su cupo y recibir el bono D1 asociado al producto.
+
+---
 
 ## Journey
 
-El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
+![Journey Colpatria B2B — página 5](imagenes/page-05.png)
+
+![Journey Colpatria B2B — página 6](imagenes/page-06.png)
+
+**Figura 5. Journey de Firma de Contrato y Activación del Crédito.**
 
 
+---
 
-![Journey Colpatria B2B â€” pÃ¡gina 5](imagenes/page-05.png)
+## Descripción general
 
-![Journey Colpatria B2B â€” pÃ¡gina 6](imagenes/page-06.png)
+Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad, revisa las condiciones del crédito y los documentos legales, y finalmente confirma la firma utilizando un código de verificación enviado a su correo electrónico.
 
-- PÃ¡ginas 5 y 6 del journey Colpatria B2B (junio 2026): firma del contrato, pagarÃ©, validaciÃ³n y activaciÃ³n del bono.
-- Fuente visual de respaldo para validar la secuencia documentada en este proceso.
+Cuando la firma se completa correctamente, el sistema genera los documentos firmados, activa el crédito, asigna el bono D1 y notifica al cliente que el proceso ha finalizado exitosamente.
+
+---
 
 ## Explicación del Journey
 
-1. HabilitaciÃ³n del crÃ©dito por el core bancario
-   - QuÃ© sucede: el crÃ©dito aprobado queda habilitado para la firma.
-   - QuÃ© actor interviene: core bancario y core de crÃ©dito-originaciÃ³n.
-   - QuÃ© sistema participa: core bancario.
-   - QuÃ© informaciÃ³n se utiliza: aprobaciÃ³n del crÃ©dito y estado del caso.
-   - QuÃ© decisiÃ³n se toma: si el crÃ©dito estÃ¡ listo para continuar.
-   - QuÃ© ocurre si el resultado es positivo: se solicita al cliente continuar la firma.
-   - QuÃ© ocurre si el resultado es negativo: la firma no inicia.
+### 1. Habilitación del crédito
 
-2. Solicitud de continuaciÃ³n de la firma
-   - QuÃ© sucede: se contacta al cliente por correo, mensaje o llamada para continuar con la firma.
-   - QuÃ© actor interviene: sistema y cliente.
-   - QuÃ© sistema participa: canal de notificaciÃ³n.
-   - QuÃ© informaciÃ³n se utiliza: estado del crÃ©dito aprobado.
-   - QuÃ© decisiÃ³n se toma: si el cliente acepta seguir el proceso.
-   - QuÃ© ocurre si el resultado es positivo: el cliente recibe el link.
-   - QuÃ© ocurre si el resultado es negativo: la firma queda pendiente o se cancela.
+El proceso inicia cuando el Core Bancario habilita el crédito previamente aprobado para que pueda continuar con la etapa de formalización. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
 
-3. RecepciÃ³n del link por correo
-   - QuÃ© sucede: el cliente accede al link de continuaciÃ³n.
-   - QuÃ© actor interviene: cliente empresarial.
-   - QuÃ© sistema participa: correo y web de firma.
-   - QuÃ© informaciÃ³n se utiliza: correo del cliente e identificaciÃ³n del caso.
-   - QuÃ© decisiÃ³n se toma: si el cliente entra a la firma.
-   - QuÃ© ocurre si el resultado es positivo: se solicita NIT y PIN.
-   - QuÃ© ocurre si el resultado es negativo: no se inicia la firma.
+---
 
-4. ValidaciÃ³n de NIT y PIN
-   - QuÃ© sucede: el cliente ingresa su NIT y PIN de seguridad para confirmar su identidad.
-   - QuÃ© actor interviene: cliente empresarial y sistema.
-   - QuÃ© sistema participa: autenticaciÃ³n de la cuenta.
-   - QuÃ© informaciÃ³n se utiliza: NIT y PIN.
-   - QuÃ© decisiÃ³n se toma: si la identidad del cliente es vÃ¡lida.
-   - QuÃ© ocurre si el resultado es positivo: entra a la bienvenida y a la revisiÃ³n de condiciones.
-   - QuÃ© ocurre si el resultado es negativo: puede pasar a soporte si olvidÃ³ el PIN.
+### 2. Invitación para continuar con la firma
 
-5. RecuperaciÃ³n de PIN
-   - QuÃ© sucede: si el cliente olvidÃ³ el PIN, se deriva al canal de soporte.
-   - QuÃ© actor interviene: cliente empresarial y soporte.
-   - QuÃ© sistema participa: canal de soporte.
-   - QuÃ© informaciÃ³n se utiliza: identidad del cliente y acceso a la cuenta.
-   - QuÃ© decisiÃ³n se toma: si se reanuda la firma luego de recuperar el acceso.
-   - QuÃ© ocurre si el resultado es positivo: se retoma el proceso de firma.
-   - QuÃ© ocurre si el resultado es negativo: la firma no continÃºa.
+El sistema contacta al cliente mediante los canales definidos (correo electrónico, mensaje o llamada) e informa que el crédito fue aprobado y que puede continuar con la firma electrónica.
 
-6. PresentaciÃ³n de condiciones generales y detalle del crÃ©dito
-   - QuÃ© sucede: el sistema presenta el monto aprobado, las condiciones generales y el detalle del crÃ©dito.
-   - QuÃ© actor interviene: sistema y cliente.
-   - QuÃ© sistema participa: aplicaciÃ³n de firma.
-   - QuÃ© informaciÃ³n se utiliza: monto, plan de pagos, valor, fecha, tasa y vigencia del cupo.
-   - QuÃ© decisiÃ³n se toma: si el cliente acepta las condiciones.
-   - QuÃ© ocurre si el resultado es positivo: se pasa al contrato y pagarÃ©.
-   - QuÃ© ocurre si el resultado es negativo: el proceso se detiene o se cancela.
+Posteriormente se envía un correo con el enlace que permite ingresar nuevamente al proceso.
 
-7. Lectura del contrato y el pagarÃ©
-   - QuÃ© sucede: el cliente revisa los documentos legales y financieros para dar continuidad.
-   - QuÃ© actor interviene: cliente empresarial.
-   - QuÃ© sistema participa: vista de documentos legales.
-   - QuÃ© informaciÃ³n se utiliza: contrato, pagarÃ© y condiciones del crÃ©dito.
-   - QuÃ© decisiÃ³n se toma: si el cliente estÃ¡ listo para firmar.
-   - QuÃ© ocurre si el resultado es positivo: se avanza a la verificaciÃ³n por cÃ³digo.
-   - QuÃ© ocurre si el resultado es negativo: la firma queda pendiente.
+---
 
-8. VerificaciÃ³n por cÃ³digo
-   - QuÃ© sucede: se envÃ­a un cÃ³digo de verificaciÃ³n al correo y el cliente lo ingresa.
-   - QuÃ© actor interviene: sistema y cliente.
-   - QuÃ© sistema participa: envÃ­o de cÃ³digo y validaciÃ³n.
-   - QuÃ© informaciÃ³n se utiliza: correo del cliente y cÃ³digo recibido.
-   - QuÃ© decisiÃ³n se toma: si la verificaciÃ³n es correcta.
-   - QuÃ© ocurre si el resultado es positivo: se generan los documentos firmados.
-   - QuÃ© ocurre si el resultado es negativo: se deriva a servicio al cliente.
+### 3. Autenticación del cliente
 
-9. GeneraciÃ³n de documentos firmados y activaciÃ³n del bono
-   - QuÃ© sucede: se generan contrato y pagarÃ© firmados, se asigna el bono D1 y se notifica al cliente.
-   - QuÃ© actor interviene: sistema, D1 y cliente.
-   - QuÃ© sistema participa: generaciÃ³n de documentos y activaciÃ³n del bono.
-   - QuÃ© informaciÃ³n se utiliza: contrato firmado y estado de aprobaciÃ³n del crÃ©dito.
-   - QuÃ© decisiÃ³n se toma: si el crÃ©dito queda aprobado y operativo.
-   - QuÃ© ocurre si el resultado es positivo: el cliente puede ver el cÃ³digo del bono y usarlo.
-   - QuÃ© ocurre si el resultado es negativo: se interrumpe la activaciÃ³n o se requiere soporte.
+Al acceder al enlace, el cliente ingresa su NIT y posteriormente introduce el PIN de seguridad creado durante el proceso de onboarding.
+
+Esta autenticación permite verificar que quien realiza la firma corresponde al titular de la solicitud.
+
+Si el cliente olvidó el PIN, el sistema lo redirige al canal de soporte para recuperar el acceso antes de continuar.
+
+---
+
+### 4. Bienvenida y presentación del crédito
+
+Una vez autenticado, el sistema da la bienvenida al cliente y presenta la información principal del crédito aprobado.
+
+En esta etapa se comunica el monto aprobado y las condiciones generales del producto, incluyendo beneficios asociados al crédito y las condiciones de uso del cupo.
+
+Posteriormente se presenta el detalle completo del crédito, donde el cliente puede revisar información como:
+
+- Cupo aprobado.
+- Plan de pagos.
+- Valor total a pagar.
+- Fecha de pago.
+- Tasa de interés.
+- Momento en el que podrá utilizar el cupo.
+
+---
+
+### 5. Aceptación de condiciones
+
+Después de revisar la información presentada, el cliente acepta las condiciones del crédito para continuar con la formalización.
+
+Esta aceptación es obligatoria antes de acceder a los documentos legales.
+
+---
+
+### 6. Revisión del contrato y pagaré
+
+El sistema presenta el contrato de crédito y el pagaré para que el cliente pueda leerlos completamente antes de realizar la firma electrónica.
+
+El cliente revisa toda la documentación legal y, una vez conforme con su contenido, continúa con el proceso de validación.
+
+---
+
+### 7. Verificación mediante código
+
+Para completar la firma electrónica, el sistema envía un código de verificación al correo electrónico registrado por el cliente.
+
+El cliente ingresa el código recibido.
+
+- Si el código es válido, la firma continúa normalmente.
+- Si el código es incorrecto o expira, el cliente puede solicitar un nuevo envío o contactar al servicio de atención al cliente para recibir asistencia.
+
+---
+
+### 8. Generación de documentos firmados
+
+Una vez validado el código, el sistema genera automáticamente el contrato y el pagaré firmados electrónicamente.
+
+Una copia de ambos documentos es enviada al correo electrónico del cliente como constancia de la operación realizada.
+
+Al mismo tiempo el cliente recibe la confirmación de que la firma fue exitosa.
+
+---
+
+### 9. Activación del bono D1
+
+Con la firma completada, el sistema asigna automáticamente el bono D1 asociado al crédito aprobado.
+
+Posteriormente el cliente recibe una notificación indicando que el bono ya se encuentra disponible dentro de su cuenta.
+
+Desde la aplicación el cliente puede visualizar el código correspondiente al bono para utilizarlo durante sus compras.
+
+---
+
+### 10. Activación definitiva del crédito
+
+Como último paso del proceso, el crédito queda oficialmente activado y disponible para su utilización.
+
+Con esta acción finaliza el proceso de originación y el cliente puede comenzar a utilizar el cupo aprobado junto con el bono D1 asignado.
+
+---
 
 ## Reglas de negocio
 
-- El crÃ©dito debe estar habilitado por el core bancario antes de iniciar la firma.
-- El cliente debe validar su identidad con NIT y PIN antes de continuar.
-- El cliente debe aceptar las condiciones generales antes de revisar el detalle del crÃ©dito.
-- El cliente debe leer el contrato y el pagarÃ© antes de firmar.
-- El cÃ³digo de verificaciÃ³n es un requisito para completar la firma.
+- El crédito debe haber sido aprobado previamente antes de iniciar la firma.
+- El cliente debe autenticarse mediante NIT y PIN para acceder al proceso.
+- Si el cliente olvida el PIN, deberá recuperar el acceso antes de continuar.
+- La aceptación de las condiciones del crédito es obligatoria.
+- El contrato y el pagaré deben visualizarse antes de la firma electrónica.
+- La firma solo se completa cuando el código de verificación es validado correctamente.
+- Una vez finalizada la firma, el sistema genera automáticamente los documentos legales firmados.
+- El bono D1 únicamente se asigna cuando la firma ha sido completada exitosamente.
+- Solo después de la activación final el cliente puede utilizar el cupo de crédito.
+
+---
 
 ## Entradas
 
-- CrÃ©dito aprobado y habilitado.
-- Datos del cliente y acceso a la cuenta.
-- InformaciÃ³n del monto, plan de pagos, tasa y fecha de corte.
-- Correo del cliente para recibir el link y el cÃ³digo.
+- Crédito aprobado.
+- Datos de autenticación del cliente (NIT y PIN).
+- Condiciones del crédito.
+- Contrato y pagaré.
+- Correo electrónico registrado.
+- Código de verificación.
+
+---
 
 ## Salidas
 
-- Contrato y pagarÃ© firmados.
-- Bono D1 asignado y notificado al cliente.
-- CrÃ©dito aprobado y listo para uso del cupo.
+- Contrato firmado electrónicamente.
+- Pagaré firmado electrónicamente.
+- Confirmación de firma exitosa.
+- Bono D1 asignado.
+- Crédito activado.
+- Cupo disponible para utilización.
+
+---
 
 ## Excepciones
 
-- El cliente olvida el PIN y no puede continuar.
-- El cÃ³digo de verificaciÃ³n falla.
-- El cliente no acepta las condiciones o no completa la lectura del contrato.
-- La firma no se completa por error de integraciÃ³n o de sistema.
-- Se detecta un problema en la activaciÃ³n del bono.
+- El cliente no accede al enlace enviado por correo.
+- El cliente olvidó el PIN.
+- El código de verificación es incorrecto o expira.
+- El cliente no acepta las condiciones del crédito.
+- Se presenta un error durante la generación del contrato o del pagaré.
+- No es posible asignar el bono D1.
+- Se produce un error durante la activación del crédito.
+
+---
+
+## Consideraciones
+
+- La autenticación mediante NIT y PIN busca garantizar que únicamente el titular pueda acceder al proceso de firma.
+- La firma electrónica requiere una validación adicional mediante código enviado al correo electrónico del cliente.
+- El contrato y el pagaré se generan automáticamente una vez finaliza la firma.
+- El cliente recibe una copia de los documentos firmados para su consulta posterior.
+- La asignación del bono D1 y la activación del crédito ocurren únicamente después de completar exitosamente todo el proceso de firma.
+
+---
 
 ## Pendientes de validación
 
-> **Pendiente de validar con el dueño del proceso.**
+> **Pendiente de validar con el dueño del proceso:** confirmar el mecanismo definitivo de firma electrónica y autenticación (correo + PIN u otro mecanismo de no repudio), el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración.
 
+---
+
+## Fuentes consultadas
+
+- *Journeys Colpatria B2B* (junio de 2026), páginas 5 y 6.
+- Documento funcional del proceso de originación.
+- Documento de Alcance del Producto.
