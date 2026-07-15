@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 10](../journeys-imagenes/page-10.png)
+![Journey Colpatria B2B â€” pÃ¡gina 10](imagenes/page-10.png)
 
 - PÃ¡gina 10 del journey Colpatria B2B (junio 2026): cobranza, reintentos, reporte y escalamiento jurÃ­dico.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

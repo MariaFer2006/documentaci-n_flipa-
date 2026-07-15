@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 1](../journeys-imagenes/page-01.png)
+![Journey Colpatria B2B â€” pÃ¡gina 1](imagenes/page-01.png)
 
 - PÃ¡gina 1 del journey Colpatria B2B (junio 2026): contexto general del recorrido del crÃ©dito y la captaciÃ³n comercial.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

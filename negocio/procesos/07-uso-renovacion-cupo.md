@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 8](../journeys-imagenes/page-08.png)
+![Journey Colpatria B2B â€” pÃ¡gina 8](imagenes/page-08.png)
 
 - PÃ¡gina 8 del journey Colpatria B2B (junio 2026): uso del bono, pago del crÃ©dito y decisiÃ³n de renovaciÃ³n del cupo.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

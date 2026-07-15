@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 7](../journeys-imagenes/page-07.png)
+![Journey Colpatria B2B â€” pÃ¡gina 7](imagenes/page-07.png)
 
 - PÃ¡gina 7 del journey Colpatria B2B (junio 2026): calculadora, plan de pagos, prepago y liquidaciÃ³n del crÃ©dito.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

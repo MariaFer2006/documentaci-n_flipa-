@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 9](../journeys-imagenes/page-09.png)
+![Journey Colpatria B2B â€” pÃ¡gina 9](imagenes/page-09.png)
 
 - PÃ¡gina 9 del journey Colpatria B2B (junio 2026): servicio al cliente, IA de primer nivel y escalamiento humano.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

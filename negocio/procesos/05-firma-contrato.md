@@ -10,9 +10,9 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 5](../journeys-imagenes/page-05.png)
+![Journey Colpatria B2B â€” pÃ¡gina 5](imagenes/page-05.png)
 
-![Journey Colpatria B2B â€” pÃ¡gina 6](../journeys-imagenes/page-06.png)
+![Journey Colpatria B2B â€” pÃ¡gina 6](imagenes/page-06.png)
 
 - PÃ¡ginas 5 y 6 del journey Colpatria B2B (junio 2026): firma del contrato, pagarÃ©, validaciÃ³n y activaciÃ³n del bono.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

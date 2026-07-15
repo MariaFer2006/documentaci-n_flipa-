@@ -10,7 +10,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 
 
 
-![Journey Colpatria B2B â€” pÃ¡gina 3](../journeys-imagenes/page-03.png)
+![Journey Colpatria B2B â€” pÃ¡gina 3](imagenes/page-03.png)
 
 - PÃ¡gina 3 del journey Colpatria B2B (junio 2026): biometrÃ­a, cuenta bancaria y validaciÃ³n de identidad.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.

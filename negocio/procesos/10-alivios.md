@@ -8,7 +8,7 @@ Ofrecer alternativas de alivio a los clientes que atraviesan mora, de forma que 
 
 El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
-![Journey Colpatria B2B — página 10](../journeys-imagenes/page-10.png)
+![Journey Colpatria B2B — página 10](imagenes/page-10.png)
 
 ## Explicación del Journey
 
