@@ -1,4 +1,4 @@
-# 5. Firma de contrato y activación
+# 4. Firma de contrato y activación
 
 ## Objetivo
 
