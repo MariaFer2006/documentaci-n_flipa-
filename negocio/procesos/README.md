@@ -19,6 +19,7 @@
 | 1.1 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Actualización de KYC y alivios; corrección de Actores y Reglas Negocio. |
 | 1.2 | 2026-07-09 | María Fernanda Herazo (con asistencia de Claude) | Anexo con las 10 páginas de los Journeys Colpatria B2B (junio 2026). |
 | 2.0 | 2026-07-13 | María Fernanda Herazo (con asistencia de Claude) | Reorganización: un archivo por etapa, con diagramas Mermaid y tablas en lugar de texto narrativo. |
+| 2.1 | 2026-07-15 | María Fernanda Herazo | Referencias visuales incorporadas directamente en los procesos y eliminación del anexo independiente de journeys. |
 
 ---
 
@@ -65,7 +66,6 @@ flowchart LR
 | 10 | Alivios y negociación | Abono parcial, congelamiento de intereses, condonación. | [10-alivios.md](10-alivios.md) |
 | 11 | Servicio al cliente | IA de primer nivel con escalamiento a agente humano. | [11-servicio-cliente.md](11-servicio-cliente.md) |
 | 12 | Gobernanza operativa transversal | Comité de Cartera semanal, indicadores y tableros. | [12-gobernanza.md](12-gobernanza.md) |
-| — | Anexo — Journeys Colpatria B2B (junio 2026) | 10 páginas del documento fuente, una por etapa. | [anexo-journeys.md](anexo-journeys.md) |
 
 ## Documentos relacionados
 
