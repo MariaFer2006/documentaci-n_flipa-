@@ -15,7 +15,7 @@
 | Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
 | 1.0 | 2026-07-07 | María Fernanda Herazo | Creación inicial del documento. |
-| 1.1 | 2026-07-14 | María Fernanda Herazo ( | Corrección tras el Weekly Sync de Producto (10 jul 2026): el enlace de Procesos ahora apunta a la carpeta `procesos/README.md` (con diagramas Mermaid y tablas por proceso) en vez del archivo monolítico `procesos.md`, que queda duplicado y debe eliminarse del repositorio para evitar desactualización. |
+| 1.1 | 2026-07-14 | María Fernanda Herazo | Corrección tras el Weekly Sync de Producto (10 jul 2026): el enlace de Procesos ahora apunta a la carpeta `procesos/README.md` (con diagramas Mermaid y tablas por proceso) en vez del archivo monolítico `procesos.md`, que queda duplicado y debe eliminarse del repositorio para evitar desactualización. |
 
 ## Objetivo
 
@@ -50,7 +50,7 @@ En revisión
  - [Actores](Actores/README.md)
  - [Procesos](procesos/README.md)
 - [Indicadores](indicadores/README.md)
-- [Reglas Negocio](reglas-negocio.md)
+- [Reglas Negocio](reglas-negocio/README.md)
 
 ## Contenido
 
@@ -59,7 +59,7 @@ Esta carpeta contiene los documentos siguientes:
  - [Actores](Actores/README.md): roles clave del ecosistema.
  - [Procesos](procesos/README.md): flujo operacional del crédito, con un archivo por proceso, diagramas Mermaid y tablas.
 - [Indicadores](indicadores/README.md): métricas de negocio y riesgo, organizadas por horizonte (MVP, Evolución, Largo plazo).
-- [Reglas Negocio](reglas-negocio.md): principios que deben respetarse.
+- [Reglas Negocio](reglas-negocio/README.md): principios que deben respetarse.
 
 ## Contexto de negocio
 

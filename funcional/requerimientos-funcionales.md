@@ -74,7 +74,7 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 | ID | Nombre | Descripción | Actor(es) | Prioridad | Estado | Fuente |
 |----|--------|--------------|-----------|-----------|--------|--------|
 | RF-010 | Consulta de riesgo crediticio | Consultar Experian y el histórico transaccional de D1 para evaluar el riesgo del cliente. | Sistema (automático) | Alta | Parcialmente verificable: existen variables de configuración de Experian y endpoints de consulta de empresa/score, pero la lógica de invocación real no está en el código disponible. | `backends/b2b/src/config/index.ts`, `companies/lookup-company.ts`, `institutions/get-advance-score.ts` |
-| RF-011 | Rechazo automático por riesgo | Rechazar automáticamente una solicitud cuando la cuenta bancaria sea inválida, el score sea insuficiente o exista inconsistencia de datos. | Sistema (automático) | Alta | No verificable directamente; regla documentada en negocio, pendiente de confirmar en el código de evaluación de riesgo. | [Reglas Negocio](../negocio/reglas-negocio.md) |
+| RF-011 | Rechazo automático por riesgo | Rechazar automáticamente una solicitud cuando la cuenta bancaria sea inválida, el score sea insuficiente o exista inconsistencia de datos. | Sistema (automático) | Alta | No verificable directamente; regla documentada en negocio, pendiente de confirmar en el código de evaluación de riesgo. | [Reglas Negocio](../negocio/reglas-negocio/README.md) |
 | RF-012 | Decisión de aprobación y ajuste de cupo | Consultar el estado de crédito y aplicar las reglas del core bancario para decidir la aprobación o el ajuste del cupo. | Sistema (automático), analista de riesgo | Alta | Implementado (consulta) | `credit-line/get-credit-status.ts` |
 
 ### Originación del crédito
@@ -143,6 +143,6 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 ## Fuentes consultadas
 
 - [Alcance del Producto](../producto/alcance.md)
-- [Reglas Negocio](../negocio/reglas-negocio.md)
+- [Reglas Negocio](../negocio/reglas-negocio/README.md)
 - [Procesos](../negocio/procesos/README.md)
 - Inventario funcional del código fuente `credits-platform-main`: `backends/b2b/src/controllers/*`, `backends/b2b/src/config/*`, `backends/b2b/src/db/models/*`, `backends/admin/src/controllers/*`, `backends/admin/src/services/*`, `apps/checkout`, `apps/redemption`, `apps/admin`, realizado como parte de esta actualización.

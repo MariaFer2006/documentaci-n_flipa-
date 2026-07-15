@@ -63,7 +63,7 @@ El journey de Colpatria B2B (junio 2026) describe un flujo **más corto** que el
 | Día 16–30: reestructuración o acuerdo de pago (o castigo parcial con cancelación de cupo); si no acepta, reporte a centrales de riesgo (día 15 de mora / día 45 del crédito) | Bucket 1: aviso previo final día 30 |
 | Cliente continúa sin pagar → **castigo de cartera según política**; bloqueo permanente de cupo (día 30 de mora); se inicia cobro jurídico | Escalamiento jurídico entre bucket 3 y 5, es decir **61 a 120+ días** |
 
-Ambos flujos quedan documentados hasta que negocio y operaciones confirmen cuál está vigente (la misma nota aplica en [Reglas Negocio](../reglas-negocio.md)).
+Ambos flujos quedan documentados hasta que negocio y operaciones confirmen cuál está vigente (la misma nota aplica en [Reglas Negocio](../reglas-negocio/02-mora-buckets.md)).
 
 ## Fuentes consultadas
 

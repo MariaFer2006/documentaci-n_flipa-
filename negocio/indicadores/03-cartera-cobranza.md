@@ -32,5 +32,5 @@ En cada bucket se hace seguimiento a: % de cartera en ese bucket (monto y volume
 ## Fuentes consultadas
 
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
-- Reglas Negocio (`negocio/reglas-negocio.md`)
+- Reglas Negocio (`negocio/reglas-negocio/02-mora-buckets.md`)
 - Procesos — [09. Gestión de cobranza por bucket de mora](../procesos/09-cobranza.md)

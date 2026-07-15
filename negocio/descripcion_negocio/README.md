@@ -51,7 +51,7 @@ Este documento describe qué problema resuelve el negocio, quiénes son sus clie
 - [Actores](../Actores/README.md)
 - [Procesos](../procesos/README.md)
 - [Indicadores](../indicadores/README.md)
-- [Reglas Negocio](../reglas-negocio.md)
+- [Reglas Negocio](../reglas-negocio/README.md)
 
 ## Fuentes consultadas
 

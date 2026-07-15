@@ -25,7 +25,7 @@ Presentar quién participa en el ecosistema de Fliipa — clientes, equipo inter
 
 ## Alcance
 
-Cubre la identificación de actores, sus roles y fuentes, el Comité de Cartera, los diagramas de ecosistema y de escalamiento de cobranza, y la ruta de escalación operativa. No incluye las reglas de negocio que rigen sus decisiones (ver [Reglas Negocio](../reglas-negocio.md)) ni el detalle paso a paso de los procesos en los que participan (ver [Procesos](../procesos/README.md)).
+Cubre la identificación de actores, sus roles y fuentes, el Comité de Cartera, los diagramas de ecosistema y de escalamiento de cobranza, y la ruta de escalación operativa. No incluye las reglas de negocio que rigen sus decisiones (ver [Reglas Negocio](../reglas-negocio/README.md)) ni el detalle paso a paso de los procesos en los que participan (ver [Procesos](../procesos/README.md)).
 
 ## Mapa de categorías
 
@@ -64,7 +64,7 @@ Ver el detalle de cada actor y cada relación en el diagrama de [ecosistema comp
 - [Convenciones](../../CONVENCIONES.md)
  - [Descripcion Negocio](../descripcion_negocio/README.md)
 - [Procesos](../procesos/README.md)
-- [Reglas Negocio](../reglas-negocio.md)
+- [Reglas Negocio](../reglas-negocio/README.md)
 - [Indicadores](../indicadores/README.md)
 
 ## Fuentes consultadas
@@ -75,4 +75,4 @@ Ver el detalle de cada actor y cada relación en el diagrama de [ecosistema comp
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
 - Investigación B2B — *Modelo Cobranza/Investigacion B2B.docx*
-- [Procesos](../procesos/README.md) y [Reglas Negocio](../reglas-negocio.md) — referenciados para la nota de consistencia sobre plazos de escalamiento jurídico
+- [Procesos](../procesos/README.md) y [Reglas Negocio](../reglas-negocio/README.md) — referenciados para la nota de consistencia sobre plazos de escalamiento jurídico

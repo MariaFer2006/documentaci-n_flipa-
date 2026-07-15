@@ -25,7 +25,7 @@ Definir los indicadores clave (KPIs) que permiten medir el desempeño comercial,
 
 ## Alcance
 
-Este documento cubre indicadores comerciales, de originación y riesgo, de cartera y cobranza, de uso del producto, de servicio al cliente, y financieros/de negocio. No define las metas de negocio de más alto nivel (ver [Objetivo del Producto](../../producto/objetivo.md)) ni las reglas que determinan cada estado de mora (ver [Reglas Negocio](../reglas-negocio.md)).
+Este documento cubre indicadores comerciales, de originación y riesgo, de cartera y cobranza, de uso del producto, de servicio al cliente, y financieros/de negocio. No define las metas de negocio de más alto nivel (ver [Objetivo del Producto](../../producto/objetivo.md)) ni las reglas que determinan cada estado de mora (ver [Reglas Negocio](../reglas-negocio/README.md)).
 
 ## Diagrama: indicadores por horizonte
 
@@ -73,7 +73,7 @@ flowchart LR
 - [Descripcion Negocio](../descripcion_negocio/README.md)
 - [Actores](../Actores/README.md)
 - [Procesos](../procesos/README.md)
-- [Reglas Negocio](../reglas-negocio.md)
+- [Reglas Negocio](../reglas-negocio/README.md)
 
 ## Fuentes consultadas
 
@@ -81,6 +81,6 @@ flowchart LR
 - Alcance del Producto (`producto/alcance.md`)
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
-- Reglas Negocio (`negocio/reglas-negocio.md`)
+- Reglas Negocio (`negocio/reglas-negocio/README.md`)
 - Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
 - Notas de la reunión "Producto: Weekly Sync" (10 jul 2026) y su transcripción asociada

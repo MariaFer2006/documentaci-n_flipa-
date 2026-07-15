@@ -28,7 +28,7 @@ Mostrar el flujo operacional del crédito Fliipa, de la captación comercial al 
 
 ## Alcance
 
-Cubre los procesos de negocio: captación comercial, onboarding, KYC, evaluación de riesgo, firma y activación, dispersión de fondos, uso y pago, cobranza y escalamiento jurídico, y servicio al cliente. No incluye reglas específicas (ver [Reglas Negocio](../reglas-negocio.md)) ni especificaciones técnicas (ver [Técnico](../../tecnico/README.md)).
+Cubre los procesos de negocio: captación comercial, onboarding, KYC, evaluación de riesgo, firma y activación, dispersión de fondos, uso y pago, cobranza y escalamiento jurídico, y servicio al cliente. No incluye reglas específicas (ver [Reglas Negocio](../reglas-negocio/README.md)) ni especificaciones técnicas (ver [Técnico](../../tecnico/README.md)).
 
 ## Mapa del flujo
 
@@ -80,7 +80,7 @@ flowchart LR
  - [Descripcion Negocio](../descripcion_negocio/README.md)
  - [Actores](../Actores/README.md)
  - [Indicadores](../indicadores/README.md)
- - [Reglas Negocio](../reglas-negocio.md)
+ - [Reglas Negocio](../reglas-negocio/README.md)
 
 ## Fuentes consultadas
 
@@ -89,4 +89,4 @@ flowchart LR
 - Modelo Comercial B2B — *Modelo Comercial B2B.pptx*
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx* y *Modelo Cobranza/Modelo y gestion de cobranza.docx*
 - Investigación B2B — *Modelo Cobranza/Investigacion B2B.docx*
-- Reglas Negocio — [Reglas Negocio](../reglas-negocio.md)
+- Reglas Negocio — [Reglas Negocio](../reglas-negocio/README.md)

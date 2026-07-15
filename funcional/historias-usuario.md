@@ -111,7 +111,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente recibe notificación de aprobación o rechazo dentro de las 72 horas siguientes a completar la validación de identidad. |
 | **Relaciones** | Casos de uso: CU-006. Requerimientos: RF-010, RF-011, RF-012. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-del-cupo-y-el-crédito) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/01-cupo-credito.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | La lógica de invocación real a Experian no se encontró en el código de `backends/b2b` disponible. |
 
@@ -176,7 +176,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente puede acceder a abono parcial, congelamiento de intereses o condonación, según las condiciones y topes definidos por bucket de mora. |
 | **Relaciones** | Casos de uso: CU-013. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-alivios-y-negociación) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/03-alivios-negociacion.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -189,7 +189,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | Un asistente virtual atiende el primer contacto y, si no resuelve el caso, escala a un agente humano con el contexto completo. |
 | **Relaciones** | Casos de uso: CU-014. Requerimientos: RF-028, RF-029. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-servicio-al-cliente) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/09-servicio-cliente.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | No se encontró un módulo de asistente de IA en el código de `backends` revisado; puede residir en una herramienta externa. |
 
@@ -258,7 +258,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El analista visualiza los casos "en revisión" y registra la decisión (continuar o rechazar), notificando al cliente. |
 | **Relaciones** | Casos de uso: CU-005. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-kyc-y-evaluación-de-riesgo) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/07-kyc-evaluacion-riesgo.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -286,7 +286,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El analista consulta la cartera agrupada en pago anticipado y buckets 1 a 5, con los datos necesarios para priorizar su gestión. |
 | **Relaciones** | Casos de uso: CU-012. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-mora-y-buckets) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/02-mora-buckets.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | Existe una discrepancia documentada entre el esquema de buckets y el journey de Colpatria B2B sobre los plazos de escalamiento (ver RNF-017). |
 
@@ -312,7 +312,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El comité visualiza semanalmente los casos priorizados según días de mora, flujo de caja, cuotas vencidas, historial y monto adeudado. |
 | **Relaciones** | Casos de uso: CU-012, CU-013. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-gestión-y-escalamiento) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/04-gestion-escalamiento.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | No se encontró un tablero de priorización automatizado en el código revisado. |
 
@@ -340,7 +340,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | Cuando la IA escala un caso, el agente humano ve el historial completo de la conversación antes de responder. |
 | **Relaciones** | Casos de uso: CU-014. Requerimiento: RF-028. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-servicio-al-cliente) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/09-servicio-cliente.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | No verificable en el código de `backends` disponible. |
 
@@ -353,7 +353,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | Los casos críticos requieren validación de identidad y aprobación manual explícita del agente antes de cerrarse. |
 | **Relaciones** | Casos de uso: CU-014. Requerimiento: RF-029. |
-| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio.md#reglas-de-servicio-al-cliente) |
+| **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/09-servicio-cliente.md) |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | — |
 
@@ -428,7 +428,7 @@ Cada historia se documenta como una ficha individual, con el mismo espíritu de 
 
 - [Actores](../negocio/Actores/README.md)
 - [Procesos](../negocio/procesos/README.md)
-- [Reglas Negocio](../negocio/reglas-negocio.md)
+- [Reglas Negocio](../negocio/reglas-negocio/README.md)
 - [Casos De Uso](casos-de-uso.md)
 - [Requerimientos Funcionales](requerimientos-funcionales.md)
 - [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
