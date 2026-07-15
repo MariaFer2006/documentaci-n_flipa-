@@ -1,20 +1,8 @@
-﻿# 2. Onboarding digital
-
-[â† Volver a Procesos](README.md)
+# 2. Onboarding digital
 
 ## Objetivo
 
 Registrar al cliente empresarial en la plataforma de Fliipa y preparar el recorrido de origen del crÃ©dito para que pueda avanzar a validaciÃ³n de identidad y riesgo.
-
-## DescripciÃ³n general
-
-El proceso empieza cuando el cliente recibe un correo con un link Ãºnico de invitaciÃ³n y accede a la plataforma para completar la informaciÃ³n inicial. Durante el onboarding, el sistema identifica el cupo preaprobado segÃºn el consumo en D1, solicita ubicaciÃ³n, valida si el cliente es un NIT o un caso de cÃ©dula/CC y recoge la informaciÃ³n del representante legal. Luego se valida el telÃ©fono mediante OTP, se confirma el correo, se crea el PIN de seguridad y se genera la cuenta de socio D1. Cuando la informaciÃ³n estÃ¡ completa, el flujo continÃºa a validaciÃ³n de identidad y KYC.
-
-## Actores involucrados
-
-- Cliente empresarial: completa la informaciÃ³n inicial, valida su telÃ©fono y correo, y crea el PIN.
-- Sistema de onboarding: identifica el cupo, solicita datos, valida OTP y crea la cuenta de socio D1.
-- D1: aporta el contexto de consumo que permite identificar el cupo preaprobado.
 
 ## Journey
 
@@ -139,14 +127,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - La validaciÃ³n interna contra la base de datos no confirma al representante legal.
 - La cuenta no se activa correctamente y el proceso se detiene.
 
-## Consideraciones
+## Pendientes de validación
 
-- El proceso original se reordena para priorizar la captura inicial y la validaciÃ³n de OTP antes de avanzar a KYC.
-- El PIN de seguridad se documenta aquÃ­ para evitar duplicidad con el proceso de KYC.
-- El tiempo estimado del onboarding es de aproximadamente 3 minutos.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La secuencia del tipo de cliente y la validaciÃ³n interna contra la base de datos deben confirmarse con la fuente oficial del journey.
-
+> **Pendiente de validar con el dueño del proceso.**
 

@@ -1,28 +1,8 @@
-﻿# 3. ValidaciÃ³n de identidad (KYC)
-
-[â† Volver a Procesos](README.md)
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n de los cambios |
-|----------|------------|----------------------|----------------------------|
-| 1.0 | 2026-07-07 | Equipo de Producto | CreaciÃ³n inicial del documento de validaciÃ³n de identidad (KYC). |
-| 1.1 | 2026-07-13 | MarÃ­a Fernanda Herazo | ReorganizaciÃ³n del flujo segÃºn el journey oficial de junio de 2026. Se retirÃ³ el paso del PIN de seguridad (documentado en Onboarding Digital), se ajustÃ³ la secuencia para que la vinculaciÃ³n de cuenta bancaria, certificaciÃ³n bancaria y selecciÃ³n de localidad ocurran Ãºnicamente despuÃ©s de una biometrÃ­a exitosa o aprobada manualmente, y se trasladÃ³ la nota de respuesta en dos dÃ­as al envÃ­o a asesor para anÃ¡lisis de crÃ©dito. |
+# 3. ValidaciÃ³n de identidad (KYC)
 
 ## Objetivo
 
 Validar la identidad del cliente y completar la informaciÃ³n necesaria para que el caso pueda avanzar a evaluaciÃ³n de riesgo y originaciÃ³n.
-
-## DescripciÃ³n general
-
-El proceso inicia cuando el cliente recibe un link de biometrÃ­a gestionado por Olimpia. Dependiendo del resultado, el flujo puede terminar, pasar a revisiÃ³n manual por analista de riesgo o continuar con la vinculaciÃ³n de cuenta bancaria, certificaciÃ³n bancaria, selecciÃ³n de localidad y envÃ­o de informaciÃ³n al asesor. La informaciÃ³n recopilada sirve como base para la evaluaciÃ³n de riesgo automatizada del proceso siguiente.
-
-## Actores involucrados
-
-- Cliente empresarial: realiza la biometrÃ­a y aporta la informaciÃ³n de cuenta bancaria, certificaciÃ³n bancaria y localidad habitual.
-- Proveedor de biometrÃ­a Olimpia: ejecuta la validaciÃ³n biomÃ©trica externa.
-- Analista de riesgo: revisa manualmente los casos marcados como "en revisiÃ³n".
-- Sistema de onboarding y riesgo: recibe la informaciÃ³n y la encadena con la evaluaciÃ³n automatizada.
 
 ## Journey
 
@@ -139,13 +119,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - La informaciÃ³n documental es incompleta.
 - El caso no alcanza la evaluaciÃ³n de riesgo por falta de datos o por rechazo manual.
 
-## Consideraciones
+## Pendientes de validación
 
-- El ajuste de junio de 2026 elimina la revisiÃ³n manual del analista en la etapa de score y cupo.
-- El analista de riesgo interviene Ãºnicamente en la revisiÃ³n de la biometrÃ­a y no en la evaluaciÃ³n de riesgo automatizada.
-- El tiempo de respuesta esperado despuÃ©s del envÃ­o al asesor es de 2 dÃ­as.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La integraciÃ³n exacta con Olimpia y la polÃ­tica de revisiÃ³n manual deben confirmarse con negocio y riesgo.
+> **Pendiente de validar con el dueño del proceso.**
 

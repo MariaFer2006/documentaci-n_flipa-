@@ -1,39 +1,8 @@
-﻿# 4. EvaluaciÃ³n de riesgo
-
-[â† Volver a Procesos](README.md)
-
-| Documento | EvaluaciÃ³n de riesgo |
-|-----------|------------------------|
-| **Proyecto** | Fliipa |
-| **VersiÃ³n** | 2.1 |
-| **Estado** | Borrador para validaciÃ³n |
-| **Responsable** | Riesgo y crÃ©dito |
-| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
-
----
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
-|---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo| VersiÃ³n inicial, como secciÃ³n 4 del `procesos.md` original (monolÃ­tico). |
-| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo  | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo | CorrecciÃ³n solicitada tras validar contra la pÃ¡gina 4 de `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026): se separa la evaluaciÃ³n de criterios de KYC (score, endeudamiento, tienda habitual â€” "reglas de Colpatria") de la validaciÃ³n de la cuenta bancaria contra Experian, como dos decisiones **consecutivas** en el orden correcto (antes aparecÃ­an fusionadas en una sola decisiÃ³n y en el orden invertido). Se agrega el paso inicial de apertura del caso y la cita explÃ­cita a "reglas de Colpatria".
+# 4. EvaluaciÃ³n de riesgo
 
 ## Objetivo
 
 Determinar si el cliente cumple con los criterios de riesgo para aprobar, ajustar o rechazar el crÃ©dito antes de continuar a la firma de contrato.
-
-## DescripciÃ³n general
-
-El proceso empieza cuando el caso es abierto en el admin y el sistema consulta Experian y el histÃ³rico transaccional de D1. Luego evalÃºa automÃ¡ticamente los criterios de KYC con base en las reglas de Colpatria y decide si el cliente cumple con el score mÃ­nimo, la capacidad de endeudamiento y la tienda habitual. Si pasa esa primera validaciÃ³n, se revisa la cuenta bancaria reportada en Experian. Si la cuenta es vÃ¡lida, se aprueba o ajusta el cupo; si no, se rechaza el crÃ©dito y se emite una alarma.
-
-## Actores involucrados
-
-- Sistema de riesgo: ejecuta la evaluaciÃ³n automatizada y toma la decisiÃ³n inicial.
-- Experian y D1: aportan la informaciÃ³n de score, historial y cuenta bancaria.
-- Cliente empresarial: recibe la notificaciÃ³n de aprobaciÃ³n o rechazo.
-- Admin: abre el caso y da entrada al proceso.
 
 ## Journey
 
@@ -122,13 +91,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - El sistema no encuentra suficiente informaciÃ³n para evaluar.
 - La decisiÃ³n final obliga a rechazar el crÃ©dito.
 
-## Consideraciones
+## Pendientes de validación
 
-- La evaluaciÃ³n se ajusta a la lÃ³gica de junio de 2026 en la que se elimina el estudio manual del analista.
-- La etapa de riesgo estÃ¡ conectada con la validaciÃ³n de identidad y con la firma del contrato.
-- Se recomienda mantener alineadas las reglas de riesgo con la documentaciÃ³n de negocio y funcional.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La regla exacta de score y capacidad de endeudamiento debe confirmarse con negocio y riesgo.
+> **Pendiente de validar con el dueño del proceso.**
 

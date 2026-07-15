@@ -1,40 +1,8 @@
-﻿# 8. Cobro y pago del crÃ©dito
-
-[â† Volver a Procesos](README.md)
-
-| Documento | Cobro y pago del crÃ©dito |
-|-----------|------------------------------|
-| **Proyecto** | Fliipa |
-| **VersiÃ³n** | 2.1 |
-| **Estado** | Borrador para validaciÃ³n |
-| **Responsable** | Riesgo y crÃ©dito |
-| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
-
----
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
-|---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo | VersiÃ³n inicial, como secciÃ³n 8 del `procesos.md` original (monolÃ­tico). |
-| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo  | CorrecciÃ³n solicitada tras validar contra la pÃ¡gina 7 de `Journeys Fran finales.pdf`: se agrega el origen del proceso (worker periÃ³dico detecta el uso del bono, cliente accede a su bono, calculadora inicia cÃ¡lculos); se agregan los dos pasos del cliente entre el plan de pagos y la decisiÃ³n de prepago (visualiza saldo y fecha, decide cÃ³mo pagar); se precisa que al liquidar tambiÃ©n se liquida el crÃ©dito, no solo se libera el cupo. |
+# 8. Cobro y pago del crÃ©dito
 
 ## Objetivo
 
 Generar el plan de pagos del crÃ©dito, registrar los pagos del cliente y actualizar el estado del saldo hasta liquidar o mover el caso a cobranza cuando no se cumpla con el pago.
-
-## DescripciÃ³n general
-
-El proceso se activa cuando un worker periÃ³dico detecta el uso del bono en D1. A partir de ahÃ­, el cliente accede a su bono en la plataforma web, la calculadora genera el plan de pagos y el cliente visualiza el saldo y la fecha de pago para decidir si paga por prepago o espera el cobro automÃ¡tico al cierre del ciclo. El pago se registra, se amortiza el crÃ©dito y se actualiza el saldo; si el crÃ©dito queda al dÃ­a, se liquida por completo y se libera el cupo; si no, el caso pasa a cobranza.
-
-## Actores involucrados
-
-- Cliente: accede al bono, visualiza el plan de pagos y decide cÃ³mo pagar.
-- Calculadora: genera el plan de pagos y los cÃ¡lculos del crÃ©dito.
-- Plataforma web: muestra saldo, fecha y medios de pago.
-- PSE y Druo: reciben los pagos o el cobro automÃ¡tico.
-- Riesgo y cobranza: reciben el caso cuando el crÃ©dito no queda al dÃ­a.
 
 ## Journey
 
@@ -121,16 +89,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - El crÃ©dito no queda al dÃ­a al cierre del ciclo.
 - El cupo no se libera porque la liquidaciÃ³n no concluye.
 
-## Consideraciones
+## Pendientes de validación
 
-- El disparador operativo del proceso se conecta con [06-dispersion-fondos.md](06-dispersion-fondos.md).
-- El flujo de pago es clave para la continuidad del cupo y para definir si el cliente debe pasar a cobranza.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La regla exacta de cÃ¡lculo del plan de pagos y de los plazos de cobro automÃ¡tico deben confirmarse con negocio y operaciones.
-
-## Fuentes consultadas
-
-- `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026), pÃ¡gina 7 ("Calculadora / cobro del crÃ©dito", swimlanes Cliente / Calculadora / Medios de pago)
+> **Pendiente de validar con el dueño del proceso.**
 

@@ -1,29 +1,8 @@
-﻿# 1. CaptaciÃ³n comercial
-
-[â† Volver a Procesos](README.md)
+# 1. CaptaciÃ³n comercial
 
 ## Objetivo
 
 Iniciar la oportunidad de crÃ©dito Fliipa a partir de una base de clientes preaprobados de D1 y convertir esa interacciÃ³n inicial en una solicitud vÃ¡lida de originaciÃ³n.
-
-## DescripciÃ³n general
-
-El proceso comienza cuando D1 aporta una base de clientes preaprobados y el equipo comercial activa un contacto simultÃ¡neo por correo, WhatsApp y llamada. La intenciÃ³n es generar interÃ©s, recibir la respuesta del cliente y canalizarlo hacia la solicitud inicial con el apoyo del asesor. Si el cliente muestra interÃ©s, el asesor comparte el link de solicitud y acompaÃ±a el recorrido hasta que la oportunidad avanza a KYC, evaluaciÃ³n de riesgo y firma de contrato. Si no responde o no completa la solicitud, la oportunidad queda pendiente de seguimiento o se descarta segÃºn el criterio comercial.
-
-### Canales de contacto inicial
-
-| Canal | Tono | Contenido |
-|-------|------|-----------|
-| Correo | Informativo | Informa el cupo preaprobado y el link de solicitud |
-| WhatsApp | Cercano | Canal principal; la conversaciÃ³n migra aquÃ­ para la originaciÃ³n |
-| Llamada | Conversacional | Speech comercial |
-
-## Actores involucrados
-
-- Cliente empresarial: responde al contacto inicial y completa la solicitud cuando estÃ¡ interesado.
-- Asesor comercial: inicia el contacto, acompaÃ±a al cliente y da seguimiento a la oportunidad.
-- D1: aporta la base de clientes preaprobados sobre la cual se activa la captaciÃ³n.
-- Sistema de comunicaciones y web de solicitud: soporta el envÃ­o de los mensajes iniciales y la captura de la solicitud.
 
 ## Journey
 
@@ -166,14 +145,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - El caso no avanza por datos incompletos o rechazo en riesgo.
 - Se detecta una oportunidad de seguimiento posterior en vez de cierre inmediato.
 
-## Consideraciones
+## Pendientes de validación
 
-- El proceso forma parte de la fase piloto inicial del producto.
-- El documento contempla un piloto con los primeros 300 tenderos.
-- La métrica de éxito del proceso incluye tasa de respuesta por canal, conversiÃ³n y uso del cupo.
-- La ruta de activaciÃ³n se conecta con los procesos de KYC, riesgo, contrato y uso del cupo.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** El seguimiento a primera compra y la definiciÃ³n precisa del canal mÃ¡s efectivo para la captaciÃ³n aÃºn requieren mediciÃ³n en el piloto.
+> **Pendiente de validar con el dueño del proceso.**
 

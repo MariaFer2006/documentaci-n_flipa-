@@ -1,39 +1,8 @@
-﻿# 7. Uso y renovaciÃ³n del cupo
-
-[â† Volver a Procesos](README.md)
-
-| Documento | Uso y renovaciÃ³n del cupo |
-|-----------|------------------------------|
-| **Proyecto** | Fliipa |
-| **VersiÃ³n** | 2.1 |
-| **Estado** | Borrador para validaciÃ³n |
-| **Responsable** | Riesgo y crÃ©dito |
-| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
-
----
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
-|---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo  | VersiÃ³n inicial, como secciÃ³n 7 del `procesos.md` original (monolÃ­tico). |
-| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo  | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo | Se valida contra la pÃ¡gina 8 de `Journeys Fran finales.pdf`: el contenido ya era correcto, sin cambios de flujo. Se agrega esta tabla de control de versiones y la referencia cruzada a [06-dispersion-fondos.md](06-dispersion-fondos.md), que documenta la misma decisiÃ³n de renovaciÃ³n dentro del flujo de dispersiÃ³n. |
+# 7. Uso y renovaciÃ³n del cupo
 
 ## Objetivo
 
 Definir si un cliente califica para recibir un nuevo cupo despuÃ©s de usar el bono y cumplir con el comportamiento esperado de pago.
-
-## DescripciÃ³n general
-
-Una vez el cliente usa el bono en D1 y paga su crÃ©dito, se evalÃºa si la relaciÃ³n continua y si existe capacidad de cupo disponible para otorgar una renovaciÃ³n. La decisiÃ³n final depende de dos condiciones: buen comportamiento de pago y disponibilidad de cupo.
-
-## Actores involucrados
-
-- Cliente: usa el bono y paga el crÃ©dito.
-- D1: registra el uso del bono y confirma el consumo.
-- Riesgo y crÃ©dito: evalÃºa la renovaciÃ³n del cupo.
-- Sistema: ejecuta la decisiÃ³n de renovaciÃ³n y actualiza el estado del cupo.
 
 ## Journey
 
@@ -98,16 +67,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - No existe cupo disponible para renovar.
 - El caso queda fuera de la polÃ­tica actual de renovaciÃ³n.
 
-## Consideraciones
+## Pendientes de validación
 
-- Esta decisiÃ³n tambiÃ©n aparece en [06-dispersion-fondos.md](06-dispersion-fondos.md), porque el flujo de dispersiÃ³n y el flujo de renovaciÃ³n comparten el mismo punto de decisiÃ³n.
-- La polÃ­tica exacta de renovaciÃ³n debe mantenerse alineada con negocio y riesgo.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La regla exacta de renovaciÃ³n del cupo y los criterios de disponibilidad deben confirmarse con negocio y riesgo.
-
-## Fuentes consultadas
-
-- `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026), pÃ¡gina 8 ("Flujo de dispersiÃ³n", swimlane Cliente)
+> **Pendiente de validar con el dueño del proceso.**
 

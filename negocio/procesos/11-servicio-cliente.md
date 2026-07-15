@@ -1,39 +1,8 @@
-﻿# 11. Servicio al cliente
-
-[â† Volver a Procesos](README.md)
-
-| Documento | Servicio al cliente |
-|-----------|------------------------|
-| **Proyecto** | Fliipa |
-| **VersiÃ³n** | 2.1 |
-| **Estado** | Borrador para validaciÃ³n |
-| **Responsable** | Servicio al cliente / Riesgo |
-| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
-
----
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
-|---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo (con asistencia de Claude) | VersiÃ³n inicial, como secciÃ³n 11 del `procesos.md` original (monolÃ­tico). |
-| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo (con asistencia de Claude) | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo (con asistencia de Claude) | CorrecciÃ³n de fondo tras validar contra la pÃ¡gina 9 de `Journeys Fran finales.pdf`: la decisiÃ³n final no es binaria "caso crÃ­tico vs. legal/PQR" â€” es un enrutamiento de 3 salidas (resoluciÃ³n autÃ³noma, escalaciÃ³n a un Ã¡rea responsable, o legal/PQR). La validaciÃ³n de identidad para casos crÃ­ticos se reubica como una acciÃ³n previa del agente al recibir el caso, no como una salida alternativa a "Legal/PQR". Se agregan los nombres de las Ã¡reas de escalaciÃ³n (riesgo, cobranza, TI). |
+# 11. Servicio al cliente
 
 ## Objetivo
 
 Atender los casos del cliente de forma rÃ¡pida y responsable, resolviendo de primera lÃ­nea o derivando correctamente a las Ã¡reas competentes cuando el tema requiere intervenciÃ³n humana.
-
-## DescripciÃ³n general
-
-Todo caso del cliente puede llegar por WhatsApp, correo o llamada outbound. El asistente virtual intenta resolverlo en primer contacto; si no lo logra, un agente humano recibe el caso con contexto y decide si se resuelve de forma autÃ³noma, se escalada a riesgo, cobranza o TI, o se deriva a legal/PQR. Los casos crÃ­ticos requieren validaciÃ³n de identidad y aprobaciÃ³n manual antes de avanzar.
-
-## Actores involucrados
-
-- Cliente: reporta el caso y recibe la respuesta final.
-- IA: clasifica y trata de resolver el caso en primer contacto.
-- Agente humano: recibe el caso, valida identidad en casos crÃ­ticos y decide el enrutamiento.
-- Ãreas internas: riesgo, cobranza y TI, ademÃ¡s de legal/PQR cuando aplica.
 
 ## Journey
 
@@ -110,16 +79,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - El caso corresponde a legal/PQR y necesita SLA inmediato.
 - Se detecta un fraude o uso indebido de cupo.
 
-## Consideraciones
+## Pendientes de validación
 
-- El asistente virtual es una funcionalidad de largo plazo, pero el proceso ya contempla su uso en primer contacto.
-- La decisiÃ³n de enrutar el caso a riesgo, cobranza o TI debe mantenerse alineada con la estructura interna.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La polÃ­tica exacta de escalaciÃ³n y los SLAs de legal/PQR deben confirmarse con operaciones y servicio al cliente.
-
-## Fuentes consultadas
-
-- `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026), pÃ¡gina 9 ("Servicio al cliente", swimlanes Cliente / IA / Agente humano / Ãreas internas)
+> **Pendiente de validar con el dueño del proceso.**
 

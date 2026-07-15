@@ -1,39 +1,8 @@
-﻿# 5. Firma de contrato y activaciÃ³n
-
-[â† Volver a Procesos](README.md)
-
-| Documento | Firma de contrato y activaciÃ³n |
-|-----------|----------------------------------|
-| **Proyecto** | Fliipa |
-| **VersiÃ³n** | 2.1 |
-| **Estado** | Borrador para validaciÃ³n |
-| **Responsable** | Riesgo y crÃ©dito |
-| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
-
----
-
-## Control de versiones
-
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
-|---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo | VersiÃ³n inicial, como secciÃ³n 5 del `procesos.md` original (monolÃ­tico). |
-| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo  | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo  | CorrecciÃ³n solicitada tras validar contra las pÃ¡ginas 5 y 6 de `Journeys Fran finales.pdf`: se agrega el arranque del proceso (habilitaciÃ³n del crÃ©dito, solicitud de continuar la firma, link por correo); se corrige el orden â€” el cliente **acepta condiciones** (resumen general) antes de que el sistema muestre el detalle y el cliente **lea el contrato y el pagarÃ©** (paso nuevo de junio 2026), no al revÃ©s; se agregan las bifurcaciones de PIN olvidado y de cÃ³digo de verificaciÃ³n fallido; se agregan los pasos finales de notificaciÃ³n del bono y visualizaciÃ³n del cÃ³digo, que faltaban antes de "se aprueba el crÃ©dito". |
+# 5. Firma de contrato y activaciÃ³n
 
 ## Objetivo
 
 Completar la firma del contrato y activar el crÃ©dito de forma que el cliente pueda recibir el bono D1 y usar el cupo aprobado.
-
-## DescripciÃ³n general
-
-El proceso inicia cuando el crÃ©dito ya fue aprobado y el core bancario habilita la firma. Luego se solicita al cliente continuar con la firma, se le envÃ­a un link por correo y se valida su identidad con NIT y PIN. DespuÃ©s de aceptar condiciones, revisar el contrato y el pagarÃ©, y validar un cÃ³digo de verificaciÃ³n, se generan los documentos firmados, se asigna el bono D1 y se notifica al cliente para que pueda ver el cÃ³digo y usar el cupo.
-
-## Actores involucrados
-
-- Cliente empresarial: completa la firma, acepta condiciones y valida el cÃ³digo de verificaciÃ³n.
-- Core bancario y core de crÃ©dito-originaciÃ³n: habilitan el crÃ©dito y validan la aprobaciÃ³n.
-- Sistema de firma y activaciÃ³n: gestiona el link, el PIN, la firma y la activaciÃ³n del bono.
-- D1: recibe el bono y habilita su uso.
 
 ## Journey
 
@@ -160,13 +129,7 @@ El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del jo
 - La firma no se completa por error de integraciÃ³n o de sistema.
 - Se detecta un problema en la activaciÃ³n del bono.
 
-## Consideraciones
+## Pendientes de validación
 
-- El proceso incorpora el detalle del contrato y el pagarÃ© como parte de la experiencia de firma.
-- El bono D1 se asigna despuÃ©s de la firma y se hace visible en la cuenta del cliente.
-- El flujo de activaciÃ³n se conecta con el uso del cupo y con la recepciÃ³n del bono.
-
-## Pendientes de validaciÃ³n
-
-> **Pendiente de validar con el dueÃ±o del proceso.** La polÃ­tica exacta de activaciÃ³n del bono y la experiencia final de visualizaciÃ³n del cÃ³digo deben confirmarse con negocio y tecnologÃ­a.
+> **Pendiente de validar con el dueño del proceso.**
 
