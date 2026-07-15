@@ -1,18 +1,16 @@
 # 2. Onboarding digital
 
 ## Objetivo
-
-Registrar al cliente empresarial en la plataforma de Fliipa y preparar el recorrido de origen del crÃ©dito para que pueda avanzar a validaciÃ³n de identidad y riesgo.
+Registrar y validar los datos básicos del cliente empresarial de forma completamente digital y en el menor tiempo posible, identificando su cupo preaprobado, confirmando su identidad de contacto (teléfono y correo) y creando su cuenta de Socio D1, como puerta de entrada a la validación de identidad (KYC) y la evaluación de riesgo.
 
 ## Journey
 
-El recorrido se explica a continuación en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
 
 
 ![Journey Colpatria B2B â€” pÃ¡gina 2](imagenes/page-02.png)
 
-- PÃ¡gina 2 del journey Colpatria B2B (junio 2026): onboarding, NIT/CC, ubicaciÃ³n y OTP.
+- Pagina 2 del journey Colpatria B2B (junio 2026): onboarding, NIT/CC, ubicación y OTP.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.
 
 ## Explicación paso a paso
