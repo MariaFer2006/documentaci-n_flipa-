@@ -33,22 +33,7 @@ Cubre los procesos de negocio: captación comercial, onboarding, KYC, evaluació
 
 ## Mapa del flujo
 
-```mermaid
-flowchart LR
-    A["1. Captación\ncomercial"] --> B["2. Onboarding\ndigital"]
-    B --> C["3. Validación de\nidentidad (KYC)"]
-    C --> D["4. Evaluación\nde riesgo"]
-    D --> E["5. Firma de\ncontrato y activación"]
-    E --> F["6. Dispersión\nde fondos"]
-    F --> G["7. Uso y renovación\ndel cupo"]
-    G --> H["8. Cobro y pago\ndel crédito"]
-    H -->|mora| I["9. Gestión de\ncobranza"]
-    I --> J["10. Alivios y\nnegociación"]
-    H -->|pagado| G
-    K["11. Servicio\nal cliente"] -.transversal.- A
-    K -.transversal.- H
-    L["12. Gobernanza\noperativa"] -.transversal.- I
-```
+El conjunto de documentos del proceso se organiza de forma secuencial, desde la captación comercial hasta la gobernanza operativa. Cada etapa está descrita en texto narrativo y acompañada por la imagen del journey correspondiente cuando aplica.
 
 ## Etapas del proceso
 

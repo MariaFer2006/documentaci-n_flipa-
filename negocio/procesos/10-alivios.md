@@ -1,84 +1,80 @@
-# 10. Alivios y negociación
+﻿# 10. Alivios y negociaciÃ³n
 
-[← Volver a Procesos](README.md)
+[â† Volver a Procesos](README.md)
 
-| Documento | Alivios y negociación |
+| Documento | Alivios y negociaciÃ³n |
 |-----------|--------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 2.1 |
-| **Estado** | Borrador para validación |
+| **VersiÃ³n** | 2.1 |
+| **Estado** | Borrador para validaciÃ³n |
 | **Responsable** | Cobranza y cartera |
-| **Última actualización** | 2026-07-13 |
+| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
 
 ---
 
 ## Control de versiones
 
-| Versión | Fecha | Autor | Descripción |
+| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
 |---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | María Fernanda Herazo  | Versión inicial, como sección 10 del `procesos.md` original (monolítico), con tres tipos de alivio. |
-| 2.0 | 2026-07-13 | María Fernanda Herazo  | Reorganización en archivo independiente, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | María Fernanda Herazo  | Se agrega **Refinanciación** como cuarto tipo de alivio, con base en `Speech llamada cobranza B2B.xlsx` y `Tipificaciòn.xlsx`, y en que ya aparecía citada en la tipificación de contactos de [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md) sin estar en esta lista. Se marca como pendiente de definir por negocio, porque ninguna de las fuentes revisadas especifica sus condiciones (monto mínimo, plazo, tratamiento de intereses o qué pasa ante incumplimiento), a diferencia de los otros tres tipos. |
+| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo  | VersiÃ³n inicial, como secciÃ³n 10 del `procesos.md` original (monolÃ­tico), con tres tipos de alivio. |
+| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo  | ReorganizaciÃ³n en archivo independiente, dentro del split de `negocio/procesos/`. |
+| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo  | Se agrega **RefinanciaciÃ³n** como cuarto tipo de alivio, con base en `Speech llamada cobranza B2B.xlsx` y `TipificaciÃ²n.xlsx`, y en que ya aparecÃ­a citada en la tipificaciÃ³n de contactos de [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md) sin estar en esta lista. Se marca como pendiente de definir por negocio, porque ninguna de las fuentes revisadas especifica sus condiciones (monto mÃ­nimo, plazo, tratamiento de intereses o quÃ© pasa ante incumplimiento), a diferencia de los otros tres tipos. |
 
 ## Objetivo
 
-Ofrecer alternativas de alivio a los clientes que atraviesan mora, de forma que se pueda negociar una solución y evitar que el caso siga escalando sin una ruta definida.
+Ofrecer alternativas de alivio a los clientes que atraviesan mora, de forma que se pueda negociar una soluciÃ³n y evitar que el caso siga escalando sin una ruta definida.
 
-## Descripción general
+## DescripciÃ³n general
 
-Durante la gestión de mora se pueden ofrecer cuatro tipos de alivio: abono parcial, congelamiento de intereses, condonación y refinanciación. Los tres primeros tienen reglas más claras y están documentados en Reglas de Negocio; la refinanciación, en cambio, se mantiene como una opción pendiente de definir por negocio porque no existen condiciones completas en las fuentes revisadas.
+Durante la gestiÃ³n de mora se pueden ofrecer cuatro tipos de alivio: abono parcial, congelamiento de intereses, condonaciÃ³n y refinanciaciÃ³n. Los tres primeros tienen reglas mÃ¡s claras y estÃ¡n documentados en Reglas de Negocio; la refinanciaciÃ³n, en cambio, se mantiene como una opciÃ³n pendiente de definir por negocio porque no existen condiciones completas en las fuentes revisadas.
 
 ## Actores involucrados
 
 - Cliente: solicita o acepta una alternativa de alivio.
-- Cobranza y cartera: evalúan la propuesta y definen la ruta de negociación.
-- Comité de Cartera: recibe los casos de refinanciación o escalamiento.
-- Negocio: define las condiciones definitivas de la refinanciación.
+- Cobranza y cartera: evalÃºan la propuesta y definen la ruta de negociaciÃ³n.
+- ComitÃ© de Cartera: recibe los casos de refinanciaciÃ³n o escalamiento.
+- Negocio: define las condiciones definitivas de la refinanciaciÃ³n.
 
-## Flujo del proceso
+## Journey
 
-```mermaid
-flowchart TD
-    A[Cliente entra en mora] --> B{Se evalúa alivio?}
-    B -->|Sí| C[Abono parcial / congelación / condonación / refinanciación]
-    B -->|No| D[Se continúa con la gestión de cobranza]
-    C --> E[Se acuerda o se escalada la solución]
-```
+El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
-## Explicación paso a paso
+![Journey Colpatria B2B — página 10](../journeys-imagenes/page-10.png)
 
-1. Identificación del caso en mora
-   - Qué sucede: el cliente presenta retrasos de pago y entra en un proceso de negociación.
-   - Qué actor interviene: cobranza y cliente.
-   - Qué sistema participa: registros de cartera y seguimiento.
-   - Qué información se utiliza: estado de mora y comportamiento de pago.
-   - Qué decisión se toma: si es viable ofrecer un alivio.
-   - Qué ocurre si el resultado es positivo: se evalúa la propuesta.
-   - Qué ocurre si el resultado es negativo: el caso sigue con la gestión ordinaria.
+## Explicación del Journey
 
-2. Evaluación del tipo de alivio
-   - Qué sucede: la cartera define si corresponde abono parcial, congelamiento, condonación o refinanciación.
-   - Qué actor interviene: cobranza y cartera.
-   - Qué sistema participa: gestión de cartera y documentos de negociación.
-   - Qué información se utiliza: saldo, antigüedad y capacidad de pago del cliente.
-   - Qué decisión se toma: si se ofrece una alternativa de alivio.
-   - Qué ocurre si el resultado es positivo: se acuerda la solución.
-   - Qué ocurre si el resultado es negativo: se mantiene la ruta de cobranza.
+1. IdentificaciÃ³n del caso en mora
+   - QuÃ© sucede: el cliente presenta retrasos de pago y entra en un proceso de negociaciÃ³n.
+   - QuÃ© actor interviene: cobranza y cliente.
+   - QuÃ© sistema participa: registros de cartera y seguimiento.
+   - QuÃ© informaciÃ³n se utiliza: estado de mora y comportamiento de pago.
+   - QuÃ© decisiÃ³n se toma: si es viable ofrecer un alivio.
+   - QuÃ© ocurre si el resultado es positivo: se evalÃºa la propuesta.
+   - QuÃ© ocurre si el resultado es negativo: el caso sigue con la gestiÃ³n ordinaria.
+
+2. EvaluaciÃ³n del tipo de alivio
+   - QuÃ© sucede: la cartera define si corresponde abono parcial, congelamiento, condonaciÃ³n o refinanciaciÃ³n.
+   - QuÃ© actor interviene: cobranza y cartera.
+   - QuÃ© sistema participa: gestiÃ³n de cartera y documentos de negociaciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: saldo, antigÃ¼edad y capacidad de pago del cliente.
+   - QuÃ© decisiÃ³n se toma: si se ofrece una alternativa de alivio.
+   - QuÃ© ocurre si el resultado es positivo: se acuerda la soluciÃ³n.
+   - QuÃ© ocurre si el resultado es negativo: se mantiene la ruta de cobranza.
 
 3. Acuerdo o escalamiento
-   - Qué sucede: el alivio se concreta o se eleva al Comité de Cartera cuando no existe una política completa.
-   - Qué actor interviene: comité de cartera y negocio.
-   - Qué sistema participa: registro y seguimiento de acuerdos.
-   - Qué información se utiliza: términos de la negociación y política vigente.
-   - Qué decisión se toma: si se aprueba o no el alivio.
-   - Qué ocurre si el resultado es positivo: se cierra la negociación.
-   - Qué ocurre si el resultado es negativo: se mantiene la gestión de cobranza o se reevalúa el caso.
+   - QuÃ© sucede: el alivio se concreta o se eleva al ComitÃ© de Cartera cuando no existe una polÃ­tica completa.
+   - QuÃ© actor interviene: comitÃ© de cartera y negocio.
+   - QuÃ© sistema participa: registro y seguimiento de acuerdos.
+   - QuÃ© informaciÃ³n se utiliza: tÃ©rminos de la negociaciÃ³n y polÃ­tica vigente.
+   - QuÃ© decisiÃ³n se toma: si se aprueba o no el alivio.
+   - QuÃ© ocurre si el resultado es positivo: se cierra la negociaciÃ³n.
+   - QuÃ© ocurre si el resultado es negativo: se mantiene la gestiÃ³n de cobranza o se reevalÃºa el caso.
 
 ## Reglas de negocio
 
-- Se pueden ofrecer cuatro tipos de alivio: abono parcial, congelación de intereses, condonación y refinanciación.
-- Abono parcial, congelamiento y condonación cuentan con reglas más claras documentadas en [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md).
-- La refinanciación debe escalarse al Comité de Cartera hasta que negocio defina sus condiciones.
+- Se pueden ofrecer cuatro tipos de alivio: abono parcial, congelaciÃ³n de intereses, condonaciÃ³n y refinanciaciÃ³n.
+- Abono parcial, congelamiento y condonaciÃ³n cuentan con reglas mÃ¡s claras documentadas en [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md).
+- La refinanciaciÃ³n debe escalarse al ComitÃ© de Cartera hasta que negocio defina sus condiciones.
 
 ## Entradas
 
@@ -88,21 +84,22 @@ flowchart TD
 
 ## Salidas
 
-- Acuerdo de alivio o negociación.
-- Escalación al comité de cartera cuando aplica.
-- Continuación o cierre del caso de cobranza.
+- Acuerdo de alivio o negociaciÃ³n.
+- EscalaciÃ³n al comitÃ© de cartera cuando aplica.
+- ContinuaciÃ³n o cierre del caso de cobranza.
 
 ## Excepciones
 
 - El cliente no necesita o no acepta un alivio.
-- La refinanciación no puede ofrecerse sin condiciones claras.
+- La refinanciaciÃ³n no puede ofrecerse sin condiciones claras.
 - El caso no puede resolver con un alivio y debe continuar a cobranza.
 
 ## Consideraciones
 
-- La refinanciación sigue siendo una opción pendiente de definir por negocio.
-- El detalle de condiciones de abono parcial, congelamiento y condonación está en [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md).
+- La refinanciaciÃ³n sigue siendo una opciÃ³n pendiente de definir por negocio.
+- El detalle de condiciones de abono parcial, congelamiento y condonaciÃ³n estÃ¡ en [Reglas Negocio](../reglas-negocio/03-alivios-negociacion.md).
 
-## Pendientes de validación
+## Pendientes de validaciÃ³n
 
-> **Pendiente de validar con el dueño del proceso.** Las condiciones concretas de refinanciación deben definirse con negocio y cartera.
+> **Pendiente de validar con el dueÃ±o del proceso.** Las condiciones concretas de refinanciaciÃ³n deben definirse con negocio y cartera.
+

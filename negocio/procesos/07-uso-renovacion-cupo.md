@@ -1,118 +1,113 @@
-# 7. Uso y renovación del cupo
+﻿# 7. Uso y renovaciÃ³n del cupo
 
-[← Volver a Procesos](README.md)
+[â† Volver a Procesos](README.md)
 
-| Documento | Uso y renovación del cupo |
+| Documento | Uso y renovaciÃ³n del cupo |
 |-----------|------------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 2.1 |
-| **Estado** | Borrador para validación |
-| **Responsable** | Riesgo y crédito |
-| **Última actualización** | 2026-07-13 |
+| **VersiÃ³n** | 2.1 |
+| **Estado** | Borrador para validaciÃ³n |
+| **Responsable** | Riesgo y crÃ©dito |
+| **Ãšltima actualizaciÃ³n** | 2026-07-13 |
 
 ---
 
 ## Control de versiones
 
-| Versión | Fecha | Autor | Descripción |
+| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
 |---------|-------|-------|-------------|
-| 1.0 | 2026-07-09 | María Fernanda Herazo  | Versión inicial, como sección 7 del `procesos.md` original (monolítico). |
-| 2.0 | 2026-07-13 | María Fernanda Herazo  | Reorganización en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
-| 2.1 | 2026-07-13 | María Fernanda Herazo | Se valida contra la página 8 de `Journeys Fran finales.pdf`: el contenido ya era correcto, sin cambios de flujo. Se agrega esta tabla de control de versiones y la referencia cruzada a [06-dispersion-fondos.md](06-dispersion-fondos.md), que documenta la misma decisión de renovación dentro del flujo de dispersión. |
+| 1.0 | 2026-07-09 | MarÃ­a Fernanda Herazo  | VersiÃ³n inicial, como secciÃ³n 7 del `procesos.md` original (monolÃ­tico). |
+| 2.0 | 2026-07-13 | MarÃ­a Fernanda Herazo  | ReorganizaciÃ³n en archivo independiente con diagrama Mermaid, dentro del split de `negocio/procesos/`. |
+| 2.1 | 2026-07-13 | MarÃ­a Fernanda Herazo | Se valida contra la pÃ¡gina 8 de `Journeys Fran finales.pdf`: el contenido ya era correcto, sin cambios de flujo. Se agrega esta tabla de control de versiones y la referencia cruzada a [06-dispersion-fondos.md](06-dispersion-fondos.md), que documenta la misma decisiÃ³n de renovaciÃ³n dentro del flujo de dispersiÃ³n. |
 
 ## Objetivo
 
-Definir si un cliente califica para recibir un nuevo cupo después de usar el bono y cumplir con el comportamiento esperado de pago.
+Definir si un cliente califica para recibir un nuevo cupo despuÃ©s de usar el bono y cumplir con el comportamiento esperado de pago.
 
-## Descripción general
+## DescripciÃ³n general
 
-Una vez el cliente usa el bono en D1 y paga su crédito, se evalúa si la relación continua y si existe capacidad de cupo disponible para otorgar una renovación. La decisión final depende de dos condiciones: buen comportamiento de pago y disponibilidad de cupo.
+Una vez el cliente usa el bono en D1 y paga su crÃ©dito, se evalÃºa si la relaciÃ³n continua y si existe capacidad de cupo disponible para otorgar una renovaciÃ³n. La decisiÃ³n final depende de dos condiciones: buen comportamiento de pago y disponibilidad de cupo.
 
 ## Actores involucrados
 
-- Cliente: usa el bono y paga el crédito.
+- Cliente: usa el bono y paga el crÃ©dito.
 - D1: registra el uso del bono y confirma el consumo.
-- Riesgo y crédito: evalúa la renovación del cupo.
-- Sistema: ejecuta la decisión de renovación y actualiza el estado del cupo.
+- Riesgo y crÃ©dito: evalÃºa la renovaciÃ³n del cupo.
+- Sistema: ejecuta la decisiÃ³n de renovaciÃ³n y actualiza el estado del cupo.
 
-## Flujo del proceso
+## Journey
 
-```mermaid
-flowchart TD
-    A[Cliente usa el bono\nen tiendas D1] --> B[Paga el crédito]
-    B --> C{Evaluación de\nrenovación}
-    C -->|Buen comportamiento\ny cupo disponible| D[Se otorga\nnuevo cupo]
-    C -->|Mal comportamiento o\nbaja disponibilidad| E[Proceso termina\nsin renovación]
-```
+El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
-## Referencia visual del journey
 
-![Journey Colpatria B2B — página 8](../journeys-imagenes/page-08.png)
 
-- Página 8 del journey Colpatria B2B (junio 2026): uso del bono, pago del crédito y decisión de renovación del cupo.
+![Journey Colpatria B2B â€” pÃ¡gina 8](../journeys-imagenes/page-08.png)
+
+- PÃ¡gina 8 del journey Colpatria B2B (junio 2026): uso del bono, pago del crÃ©dito y decisiÃ³n de renovaciÃ³n del cupo.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.
 
-## Explicación paso a paso
+## Explicación del Journey
 
 1. Uso del bono en D1
-   - Qué sucede: el cliente usa el bono en las tiendas D1.
-   - Qué actor interviene: cliente y D1.
-   - Qué sistema participa: plataforma de consumo del bono.
-   - Qué información se utiliza: uso del bono y estado del cupo.
-   - Qué decisión se toma: si el crédito se moviliza de forma válida.
-   - Qué ocurre si el resultado es positivo: se continúa a la evaluación de pago.
-   - Qué ocurre si el resultado es negativo: no se activa la renovación.
+   - QuÃ© sucede: el cliente usa el bono en las tiendas D1.
+   - QuÃ© actor interviene: cliente y D1.
+   - QuÃ© sistema participa: plataforma de consumo del bono.
+   - QuÃ© informaciÃ³n se utiliza: uso del bono y estado del cupo.
+   - QuÃ© decisiÃ³n se toma: si el crÃ©dito se moviliza de forma vÃ¡lida.
+   - QuÃ© ocurre si el resultado es positivo: se continÃºa a la evaluaciÃ³n de pago.
+   - QuÃ© ocurre si el resultado es negativo: no se activa la renovaciÃ³n.
 
-2. Pago del crédito
-   - Qué sucede: el cliente paga su obligación según el plan de pagos.
-   - Qué actor interviene: cliente.
-   - Qué sistema participa: flujo de pagos y recaudo.
-   - Qué información se utiliza: historia de pagos y saldo del crédito.
-   - Qué decisión se toma: si el cliente demuestra buen comportamiento.
-   - Qué ocurre si el resultado es positivo: entra a la evaluación de renovación.
-   - Qué ocurre si el resultado es negativo: se cierra la posibilidad de renovación.
+2. Pago del crÃ©dito
+   - QuÃ© sucede: el cliente paga su obligaciÃ³n segÃºn el plan de pagos.
+   - QuÃ© actor interviene: cliente.
+   - QuÃ© sistema participa: flujo de pagos y recaudo.
+   - QuÃ© informaciÃ³n se utiliza: historia de pagos y saldo del crÃ©dito.
+   - QuÃ© decisiÃ³n se toma: si el cliente demuestra buen comportamiento.
+   - QuÃ© ocurre si el resultado es positivo: entra a la evaluaciÃ³n de renovaciÃ³n.
+   - QuÃ© ocurre si el resultado es negativo: se cierra la posibilidad de renovaciÃ³n.
 
-3. Evaluación de renovación
-   - Qué sucede: se valida si el cliente mantiene un buen comportamiento de pago y si hay cupo disponible.
-   - Qué actor interviene: riesgo y crédito.
-   - Qué sistema participa: motor de renovación del cupo.
-   - Qué información se utiliza: historial de pagos y capacidad de cupo.
-   - Qué decisión se toma: si se otorga nuevo cupo.
-   - Qué ocurre si el resultado es positivo: se otorga el nuevo cupo.
-   - Qué ocurre si el resultado es negativo: se termina el proceso sin renovación.
+3. EvaluaciÃ³n de renovaciÃ³n
+   - QuÃ© sucede: se valida si el cliente mantiene un buen comportamiento de pago y si hay cupo disponible.
+   - QuÃ© actor interviene: riesgo y crÃ©dito.
+   - QuÃ© sistema participa: motor de renovaciÃ³n del cupo.
+   - QuÃ© informaciÃ³n se utiliza: historial de pagos y capacidad de cupo.
+   - QuÃ© decisiÃ³n se toma: si se otorga nuevo cupo.
+   - QuÃ© ocurre si el resultado es positivo: se otorga el nuevo cupo.
+   - QuÃ© ocurre si el resultado es negativo: se termina el proceso sin renovaciÃ³n.
 
 ## Reglas de negocio
 
-- La renovación depende del comportamiento de pago.
-- La renovación requiere cupo disponible.
-- Si el comportamiento es deficiente o el cupo no está disponible, no se otorga renovación.
+- La renovaciÃ³n depende del comportamiento de pago.
+- La renovaciÃ³n requiere cupo disponible.
+- Si el comportamiento es deficiente o el cupo no estÃ¡ disponible, no se otorga renovaciÃ³n.
 
 ## Entradas
 
 - Uso del bono registrado en D1.
-- Pago del crédito realizado por el cliente.
+- Pago del crÃ©dito realizado por el cliente.
 - Estado del cupo disponible.
 
 ## Salidas
 
 - Nuevo cupo otorgado o no otorgado.
-- Continuidad o terminación de la relación de crédito.
+- Continuidad o terminaciÃ³n de la relaciÃ³n de crÃ©dito.
 
 ## Excepciones
 
 - El cliente no paga o incurre en mal comportamiento.
 - No existe cupo disponible para renovar.
-- El caso queda fuera de la política actual de renovación.
+- El caso queda fuera de la polÃ­tica actual de renovaciÃ³n.
 
 ## Consideraciones
 
-- Esta decisión también aparece en [06-dispersion-fondos.md](06-dispersion-fondos.md), porque el flujo de dispersión y el flujo de renovación comparten el mismo punto de decisión.
-- La política exacta de renovación debe mantenerse alineada con negocio y riesgo.
+- Esta decisiÃ³n tambiÃ©n aparece en [06-dispersion-fondos.md](06-dispersion-fondos.md), porque el flujo de dispersiÃ³n y el flujo de renovaciÃ³n comparten el mismo punto de decisiÃ³n.
+- La polÃ­tica exacta de renovaciÃ³n debe mantenerse alineada con negocio y riesgo.
 
-## Pendientes de validación
+## Pendientes de validaciÃ³n
 
-> **Pendiente de validar con el dueño del proceso.** La regla exacta de renovación del cupo y los criterios de disponibilidad deben confirmarse con negocio y riesgo.
+> **Pendiente de validar con el dueÃ±o del proceso.** La regla exacta de renovaciÃ³n del cupo y los criterios de disponibilidad deben confirmarse con negocio y riesgo.
 
 ## Fuentes consultadas
 
-- `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026), página 8 ("Flujo de dispersión", swimlane Cliente)
+- `Journeys Fran finales.pdf` (Journeys Colpatria B2B, junio 2026), pÃ¡gina 8 ("Flujo de dispersiÃ³n", swimlane Cliente)
+

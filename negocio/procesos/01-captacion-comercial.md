@@ -1,180 +1,168 @@
-# 1. Captación comercial
+﻿# 1. CaptaciÃ³n comercial
 
-[← Volver a Procesos](README.md)
+[â† Volver a Procesos](README.md)
 
 ## Objetivo
 
-Iniciar la oportunidad de crédito Fliipa a partir de una base de clientes preaprobados de D1 y convertir esa interacción inicial en una solicitud válida de originación.
+Iniciar la oportunidad de crÃ©dito Fliipa a partir de una base de clientes preaprobados de D1 y convertir esa interacciÃ³n inicial en una solicitud vÃ¡lida de originaciÃ³n.
 
-## Descripción general
+## DescripciÃ³n general
 
-El proceso comienza cuando D1 aporta una base de clientes preaprobados y el equipo comercial activa un contacto simultáneo por correo, WhatsApp y llamada. La intención es generar interés, recibir la respuesta del cliente y canalizarlo hacia la solicitud inicial con el apoyo del asesor. Si el cliente muestra interés, el asesor comparte el link de solicitud y acompaña el recorrido hasta que la oportunidad avanza a KYC, evaluación de riesgo y firma de contrato. Si no responde o no completa la solicitud, la oportunidad queda pendiente de seguimiento o se descarta según el criterio comercial.
+El proceso comienza cuando D1 aporta una base de clientes preaprobados y el equipo comercial activa un contacto simultÃ¡neo por correo, WhatsApp y llamada. La intenciÃ³n es generar interÃ©s, recibir la respuesta del cliente y canalizarlo hacia la solicitud inicial con el apoyo del asesor. Si el cliente muestra interÃ©s, el asesor comparte el link de solicitud y acompaÃ±a el recorrido hasta que la oportunidad avanza a KYC, evaluaciÃ³n de riesgo y firma de contrato. Si no responde o no completa la solicitud, la oportunidad queda pendiente de seguimiento o se descarta segÃºn el criterio comercial.
 
 ### Canales de contacto inicial
 
 | Canal | Tono | Contenido |
 |-------|------|-----------|
 | Correo | Informativo | Informa el cupo preaprobado y el link de solicitud |
-| WhatsApp | Cercano | Canal principal; la conversación migra aquí para la originación |
+| WhatsApp | Cercano | Canal principal; la conversaciÃ³n migra aquÃ­ para la originaciÃ³n |
 | Llamada | Conversacional | Speech comercial |
 
 ## Actores involucrados
 
-- Cliente empresarial: responde al contacto inicial y completa la solicitud cuando está interesado.
-- Asesor comercial: inicia el contacto, acompaña al cliente y da seguimiento a la oportunidad.
-- D1: aporta la base de clientes preaprobados sobre la cual se activa la captación.
-- Sistema de comunicaciones y web de solicitud: soporta el envío de los mensajes iniciales y la captura de la solicitud.
+- Cliente empresarial: responde al contacto inicial y completa la solicitud cuando estÃ¡ interesado.
+- Asesor comercial: inicia el contacto, acompaÃ±a al cliente y da seguimiento a la oportunidad.
+- D1: aporta la base de clientes preaprobados sobre la cual se activa la captaciÃ³n.
+- Sistema de comunicaciones y web de solicitud: soporta el envÃ­o de los mensajes iniciales y la captura de la solicitud.
 
-## Flujo del proceso
+## Journey
 
-```mermaid
-flowchart TD
-    A[Base de clientes\npreaprobados D1] --> B[Contacto simultáneo:\ncorreo + WhatsApp + llamada]
-    B --> C{Asesor monitorea\nrespuesta}
-    C -->|Cliente interesado| D[Recibe link de solicitud\npor WhatsApp]
-    D --> E[Completa solicitud:\nNIT, negocio, rep. legal]
-    E --> F[Asesor acompaña\nel proceso]
-    F --> G[KYC y evaluación\nde riesgo]
-    G -->|Aprobado| H[Asesor notifica al cliente\ndentro de 72h]
-    H --> I[Firma de contrato]
-    I --> J[Cupo activo en D1]
-    J -->|Sin uso en 7 días| K[Asesor da seguimiento\na primera compra]
-```
+El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
-## Referencia visual del journey
 
-![Journey Colpatria B2B — página 1](../journeys-imagenes/page-01.png)
 
-- Página 1 del journey Colpatria B2B (junio 2026): contexto general del recorrido del crédito y la captación comercial.
+![Journey Colpatria B2B â€” pÃ¡gina 1](../journeys-imagenes/page-01.png)
+
+- PÃ¡gina 1 del journey Colpatria B2B (junio 2026): contexto general del recorrido del crÃ©dito y la captaciÃ³n comercial.
 - Fuente visual de respaldo para validar la secuencia documentada en este proceso.
 
-## Explicación paso a paso
+## Explicación del Journey
 
 1. Base de clientes preaprobados de D1
-   - Qué sucede: se toma la base de clientes elegibles para recibir una propuesta de crédito.
-   - Qué actor interviene: D1.
-   - Qué sistema participa: fuente de datos comercial de D1.
-   - Qué información se utiliza: clientes preaprobados, historial comercial y segmentación de negocio.
-   - Qué decisión se toma: se define si el cliente entra al piloto o al proceso de captación.
-   - Qué ocurre si el resultado es positivo: se activa el contacto inicial.
-   - Qué ocurre si el resultado es negativo: la oportunidad no se inicia.
+   - QuÃ© sucede: se toma la base de clientes elegibles para recibir una propuesta de crÃ©dito.
+   - QuÃ© actor interviene: D1.
+   - QuÃ© sistema participa: fuente de datos comercial de D1.
+   - QuÃ© informaciÃ³n se utiliza: clientes preaprobados, historial comercial y segmentaciÃ³n de negocio.
+   - QuÃ© decisiÃ³n se toma: se define si el cliente entra al piloto o al proceso de captaciÃ³n.
+   - QuÃ© ocurre si el resultado es positivo: se activa el contacto inicial.
+   - QuÃ© ocurre si el resultado es negativo: la oportunidad no se inicia.
 
-2. Contacto simultáneo por correo, WhatsApp y llamada
-   - Qué sucede: se lanza la interacción inicial sobre la base seleccionada.
-   - Qué actor interviene: asesor comercial.
-   - Qué sistema participa: canales de comunicación y plantillas de mensaje.
-   - Qué información se utiliza: cupo preaprobado y link de solicitud.
-   - Qué decisión se toma: se prioriza el canal más efectivo para captar respuesta.
-   - Qué ocurre si el resultado es positivo: el cliente responde y entra al flujo de solicitud.
-   - Qué ocurre si el resultado es negativo: el cliente no responde y la oportunidad queda abierta a seguimiento.
+2. Contacto simultÃ¡neo por correo, WhatsApp y llamada
+   - QuÃ© sucede: se lanza la interacciÃ³n inicial sobre la base seleccionada.
+   - QuÃ© actor interviene: asesor comercial.
+   - QuÃ© sistema participa: canales de comunicaciÃ³n y plantillas de mensaje.
+   - QuÃ© informaciÃ³n se utiliza: cupo preaprobado y link de solicitud.
+   - QuÃ© decisiÃ³n se toma: se prioriza el canal mÃ¡s efectivo para captar respuesta.
+   - QuÃ© ocurre si el resultado es positivo: el cliente responde y entra al flujo de solicitud.
+   - QuÃ© ocurre si el resultado es negativo: el cliente no responde y la oportunidad queda abierta a seguimiento.
 
 3. Monitoreo de respuesta
-   - Qué sucede: el asesor supervisa si el cliente muestra interés.
-   - Qué actor interviene: asesor comercial.
-   - Qué sistema participa: canal de comunicación y registro de interacción.
-   - Qué información se utiliza: respuesta del cliente, canal elegido y nivel de interés.
-   - Qué decisión se toma: si el cliente está dispuesto a continuar.
-   - Qué ocurre si el resultado es positivo: se comparte el link de solicitud.
-   - Qué ocurre si el resultado es negativo: se deja pendiente o se descarta la oportunidad.
+   - QuÃ© sucede: el asesor supervisa si el cliente muestra interÃ©s.
+   - QuÃ© actor interviene: asesor comercial.
+   - QuÃ© sistema participa: canal de comunicaciÃ³n y registro de interacciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: respuesta del cliente, canal elegido y nivel de interÃ©s.
+   - QuÃ© decisiÃ³n se toma: si el cliente estÃ¡ dispuesto a continuar.
+   - QuÃ© ocurre si el resultado es positivo: se comparte el link de solicitud.
+   - QuÃ© ocurre si el resultado es negativo: se deja pendiente o se descarta la oportunidad.
 
-4. Recepción del link de solicitud
-   - Qué sucede: el cliente ingresa al proceso de solicitud desde el canal que prefirió.
-   - Qué actor interviene: cliente empresarial.
-   - Qué sistema participa: web de solicitud.
-   - Qué información se utiliza: cupo preaprobado, datos de negocio y enlace único.
-   - Qué decisión se toma: se decide si el cliente continúa con la captura de datos.
-   - Qué ocurre si el resultado es positivo: el cliente completa la solicitud.
-   - Qué ocurre si el resultado es negativo: la solicitud no se inicia o queda incompleta.
+4. RecepciÃ³n del link de solicitud
+   - QuÃ© sucede: el cliente ingresa al proceso de solicitud desde el canal que prefiriÃ³.
+   - QuÃ© actor interviene: cliente empresarial.
+   - QuÃ© sistema participa: web de solicitud.
+   - QuÃ© informaciÃ³n se utiliza: cupo preaprobado, datos de negocio y enlace Ãºnico.
+   - QuÃ© decisiÃ³n se toma: se decide si el cliente continÃºa con la captura de datos.
+   - QuÃ© ocurre si el resultado es positivo: el cliente completa la solicitud.
+   - QuÃ© ocurre si el resultado es negativo: la solicitud no se inicia o queda incompleta.
 
 5. Completar la solicitud inicial
-   - Qué sucede: el cliente registra información básica de la solicitud.
-   - Qué actor interviene: cliente empresarial y asesor comercial.
-   - Qué sistema participa: web de solicitud.
-   - Qué información se utiliza: NIT, negocio y representante legal.
-   - Qué decisión se toma: si la información mínima está completa para avanzar.
-   - Qué ocurre si el resultado es positivo: se pasa a acompañamiento y validación posterior.
-   - Qué ocurre si el resultado es negativo: se solicita completar la información faltante.
+   - QuÃ© sucede: el cliente registra informaciÃ³n bÃ¡sica de la solicitud.
+   - QuÃ© actor interviene: cliente empresarial y asesor comercial.
+   - QuÃ© sistema participa: web de solicitud.
+   - QuÃ© informaciÃ³n se utiliza: NIT, negocio y representante legal.
+   - QuÃ© decisiÃ³n se toma: si la informaciÃ³n mÃ­nima estÃ¡ completa para avanzar.
+   - QuÃ© ocurre si el resultado es positivo: se pasa a acompaÃ±amiento y validaciÃ³n posterior.
+   - QuÃ© ocurre si el resultado es negativo: se solicita completar la informaciÃ³n faltante.
 
-6. Acompañamiento del asesor
-   - Qué sucede: el asesor apoya el avance del cliente durante la originación.
-   - Qué actor interviene: asesor comercial.
-   - Qué sistema participa: canal de comunicación y CRM de seguimiento.
-   - Qué información se utiliza: estado de la solicitud y datos del cliente.
-   - Qué decisión se toma: si el caso sigue viable para avanzar a KYC y riesgo.
-   - Qué ocurre si el resultado es positivo: la oportunidad sigue al siguiente proceso.
-   - Qué ocurre si el resultado es negativo: se detiene o se reprograma el seguimiento.
+6. AcompaÃ±amiento del asesor
+   - QuÃ© sucede: el asesor apoya el avance del cliente durante la originaciÃ³n.
+   - QuÃ© actor interviene: asesor comercial.
+   - QuÃ© sistema participa: canal de comunicaciÃ³n y CRM de seguimiento.
+   - QuÃ© informaciÃ³n se utiliza: estado de la solicitud y datos del cliente.
+   - QuÃ© decisiÃ³n se toma: si el caso sigue viable para avanzar a KYC y riesgo.
+   - QuÃ© ocurre si el resultado es positivo: la oportunidad sigue al siguiente proceso.
+   - QuÃ© ocurre si el resultado es negativo: se detiene o se reprograma el seguimiento.
 
-7. KYC y evaluación de riesgo
-   - Qué sucede: el caso avanza a la validación de identidad y riesgo.
-   - Qué actor interviene: sistema y equipo de riesgo.
-   - Qué sistema participa: flujo de validación de identidad y evaluación.
-   - Qué información se utiliza: datos de la solicitud y el contexto del cliente.
-   - Qué decisión se toma: si el cliente es aprobado para continuar.
-   - Qué ocurre si el resultado es positivo: se notifica la aprobación dentro de 72 horas.
-   - Qué ocurre si el resultado es negativo: el proceso de originación se rechaza o detiene.
+7. KYC y evaluaciÃ³n de riesgo
+   - QuÃ© sucede: el caso avanza a la validaciÃ³n de identidad y riesgo.
+   - QuÃ© actor interviene: sistema y equipo de riesgo.
+   - QuÃ© sistema participa: flujo de validaciÃ³n de identidad y evaluaciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: datos de la solicitud y el contexto del cliente.
+   - QuÃ© decisiÃ³n se toma: si el cliente es aprobado para continuar.
+   - QuÃ© ocurre si el resultado es positivo: se notifica la aprobaciÃ³n dentro de 72 horas.
+   - QuÃ© ocurre si el resultado es negativo: el proceso de originaciÃ³n se rechaza o detiene.
 
-8. Notificación de aprobación
-   - Qué sucede: se comunica al cliente el resultado de la evaluación.
-   - Qué actor interviene: asesor comercial.
-   - Qué sistema participa: canal de notificación.
-   - Qué información se utiliza: resultado del análisis de riesgo y estado del caso.
-   - Qué decisión se toma: si se continúa a firma de contrato.
-   - Qué ocurre si el resultado es positivo: el cliente avanza a firma.
-   - Qué ocurre si el resultado es negativo: se notifica el rechazo.
+8. NotificaciÃ³n de aprobaciÃ³n
+   - QuÃ© sucede: se comunica al cliente el resultado de la evaluaciÃ³n.
+   - QuÃ© actor interviene: asesor comercial.
+   - QuÃ© sistema participa: canal de notificaciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: resultado del anÃ¡lisis de riesgo y estado del caso.
+   - QuÃ© decisiÃ³n se toma: si se continÃºa a firma de contrato.
+   - QuÃ© ocurre si el resultado es positivo: el cliente avanza a firma.
+   - QuÃ© ocurre si el resultado es negativo: se notifica el rechazo.
 
 9. Firma de contrato
-   - Qué sucede: se continúa con la activación del crédito formal.
-   - Qué actor interviene: cliente empresarial y asesor comercial.
-   - Qué sistema participa: proceso de firma y activación.
-   - Qué información se utiliza: resultado de aprobación y condiciones del crédito.
-   - Qué decisión se toma: si se avanza a activación del cupo.
-   - Qué ocurre si el resultado es positivo: se activa el cupo en D1.
-   - Qué ocurre si el resultado es negativo: la etapa queda bloqueada o se cancela.
+   - QuÃ© sucede: se continÃºa con la activaciÃ³n del crÃ©dito formal.
+   - QuÃ© actor interviene: cliente empresarial y asesor comercial.
+   - QuÃ© sistema participa: proceso de firma y activaciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: resultado de aprobaciÃ³n y condiciones del crÃ©dito.
+   - QuÃ© decisiÃ³n se toma: si se avanza a activaciÃ³n del cupo.
+   - QuÃ© ocurre si el resultado es positivo: se activa el cupo en D1.
+   - QuÃ© ocurre si el resultado es negativo: la etapa queda bloqueada o se cancela.
 
 10. Cupo activo en D1
-   - Qué sucede: el crédito queda operativo y disponible para uso.
-   - Qué actor interviene: cliente empresarial y D1.
-   - Qué sistema participa: plataforma de crédito y canal de uso del cupo.
-   - Qué información se utiliza: cupo aprobado y estado de activación.
-   - Qué decisión se toma: si se requiere seguimiento adicional.
-   - Qué ocurre si el resultado es positivo: se mantiene la relación comercial.
-   - Qué ocurre si el resultado es negativo: se detecta baja activación o abandono.
+   - QuÃ© sucede: el crÃ©dito queda operativo y disponible para uso.
+   - QuÃ© actor interviene: cliente empresarial y D1.
+   - QuÃ© sistema participa: plataforma de crÃ©dito y canal de uso del cupo.
+   - QuÃ© informaciÃ³n se utiliza: cupo aprobado y estado de activaciÃ³n.
+   - QuÃ© decisiÃ³n se toma: si se requiere seguimiento adicional.
+   - QuÃ© ocurre si el resultado es positivo: se mantiene la relaciÃ³n comercial.
+   - QuÃ© ocurre si el resultado es negativo: se detecta baja activaciÃ³n o abandono.
 
 11. Seguimiento a primera compra
-   - Qué sucede: el asesor revisa si el cliente usó el cupo dentro de los primeros 7 días.
-   - Qué actor interviene: asesor comercial.
-   - Qué sistema participa: seguimiento comercial y reportes de activación.
-   - Qué información se utiliza: uso del cupo y fecha de activación.
-   - Qué decisión se toma: si se necesita acción comercial adicional.
-   - Qué ocurre si el resultado es positivo: se consolida la primera compra.
-   - Qué ocurre si el resultado es negativo: se dispara seguimiento comercial o reactivación.
+   - QuÃ© sucede: el asesor revisa si el cliente usÃ³ el cupo dentro de los primeros 7 dÃ­as.
+   - QuÃ© actor interviene: asesor comercial.
+   - QuÃ© sistema participa: seguimiento comercial y reportes de activaciÃ³n.
+   - QuÃ© informaciÃ³n se utiliza: uso del cupo y fecha de activaciÃ³n.
+   - QuÃ© decisiÃ³n se toma: si se necesita acciÃ³n comercial adicional.
+   - QuÃ© ocurre si el resultado es positivo: se consolida la primera compra.
+   - QuÃ© ocurre si el resultado es negativo: se dispara seguimiento comercial o reactivaciÃ³n.
 
 ## Reglas de negocio
 
-- El contacto inicial debe hacerse de forma simultánea por correo, WhatsApp y llamada.
+- El contacto inicial debe hacerse de forma simultÃ¡nea por correo, WhatsApp y llamada.
 - El canal principal de continuidad es WhatsApp.
 - El cliente puede responder por el canal que prefiera.
-- El asesor acompaña la solicitud hasta avanzar a validación y riesgo.
-- El resultado esperado es una notificación de aprobación dentro de 72 horas.
+- El asesor acompaÃ±a la solicitud hasta avanzar a validaciÃ³n y riesgo.
+- El resultado esperado es una notificaciÃ³n de aprobaciÃ³n dentro de 72 horas.
 
 ## Entradas
 
 - Base de clientes preaprobados de D1.
 - Cupo preaprobado asociado al cliente.
-- Información mínima de la solicitud: NIT, negocio y representante legal.
+- InformaciÃ³n mÃ­nima de la solicitud: NIT, negocio y representante legal.
 - Plantillas de contacto y speech comercial.
 
 ## Salidas
 
-- Oportunidad de crédito registrada y enviada a la etapa de originación.
-- Solicitud inicial completa para continuar con KYC, evaluación de riesgo y firma.
-- Cliente activado hacia el siguiente paso del proceso de crédito.
+- Oportunidad de crÃ©dito registrada y enviada a la etapa de originaciÃ³n.
+- Solicitud inicial completa para continuar con KYC, evaluaciÃ³n de riesgo y firma.
+- Cliente activado hacia el siguiente paso del proceso de crÃ©dito.
 
 ## Excepciones
 
 - El cliente no responde a los canales iniciales.
 - La solicitud queda incompleta o con datos insuficientes.
-- El cliente no muestra interés en continuar.
+- El cliente no muestra interÃ©s en continuar.
 - El caso no avanza por datos incompletos o rechazo en riesgo.
 - Se detecta una oportunidad de seguimiento posterior en vez de cierre inmediato.
 
@@ -182,9 +170,10 @@ flowchart TD
 
 - El proceso forma parte de la fase piloto inicial del producto.
 - El documento contempla un piloto con los primeros 300 tenderos.
-- La métrica de éxito del proceso incluye tasa de respuesta por canal, conversión y uso del cupo.
-- La ruta de activación se conecta con los procesos de KYC, riesgo, contrato y uso del cupo.
+- La métrica de éxito del proceso incluye tasa de respuesta por canal, conversiÃ³n y uso del cupo.
+- La ruta de activaciÃ³n se conecta con los procesos de KYC, riesgo, contrato y uso del cupo.
 
-## Pendientes de validación
+## Pendientes de validaciÃ³n
 
-> **Pendiente de validar con el dueño del proceso.** El seguimiento a primera compra y la definición precisa del canal más efectivo para la captación aún requieren medición en el piloto.
+> **Pendiente de validar con el dueÃ±o del proceso.** El seguimiento a primera compra y la definiciÃ³n precisa del canal mÃ¡s efectivo para la captaciÃ³n aÃºn requieren mediciÃ³n en el piloto.
+
