@@ -14,7 +14,6 @@ Formalizar la aceptación del crédito aprobado mediante la firma electrónica d
 
 **Figura 5. Journey de Firma de Contrato y Activación del Crédito.**
 
-Las imágenes muestran el proceso completo que inicia cuando el crédito ha sido aprobado y finaliza con la activación del cupo y la asignación del bono D1. El flujo incluye la autenticación del cliente, la aceptación de las condiciones del crédito, la firma electrónica del contrato y del pagaré, la validación mediante código de verificación y la activación definitiva del crédito.
 
 ---
 
