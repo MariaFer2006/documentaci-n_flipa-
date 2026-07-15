@@ -5,7 +5,7 @@
 | Actor | Rol |
 |---|---|
 | Cliente empresarial | Micro o pequeña empresa que compra frecuentemente en D1 y solicita financiamiento. |
-| Administrador del producto | Usuario interno de Sumz que utiliza la plataforma para revisar, aprobar, rechazar y gestionar las solicitudes de crédito, así como realizar el seguimiento operativo del producto de acuerdo con las políticas definidas. |
+| Fliipa | equipo interno de Sumz que desarrolla y opera el producto de crédito |
 | D1 | Aliado comercial que aporta la base de clientes preaprobados y el contexto transaccional de los clientes. No participa en la operación del crédito, en la evaluación del riesgo ni en las actividades de cobranza. |
 | Grupo Santo Domingo | Aliado estratégico que impulsa la iniciativa y acompaña el crecimiento del modelo de negocio. |
 
