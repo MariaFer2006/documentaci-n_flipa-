@@ -12,15 +12,15 @@ Validar automáticamente la identidad del cliente y evaluar si cumple los criter
 
 **Figura 4. Journey de Validación de Identidad (KYC) y Evaluación Inicial de Riesgo.**
 
-Este journey representa el proceso de validación automática de identidad y riesgo que se ejecuta una vez finalizado el onboarding digital. Durante esta etapa el sistema consulta la información disponible en Experian y el historial transaccional del cliente en D1, aplica las reglas automáticas de KYC y valida la cuenta bancaria antes de decidir si la solicitud continúa hacia la firma del contrato o es rechazada.
+Este journey representa el proceso de validación automática de identidad y riesgo que se ejecuta una vez finalizado el onboarding digital. Durante esta etapa el sistema consulta información en Experian y el historial transaccional de D1, aplica las reglas de negocio definidas para el KYC, valida la cuenta bancaria registrada y determina si la solicitud puede continuar hacia la firma del contrato o si debe ser rechazada.
 
 ---
 
 ## Descripción general
 
-Después de completar el onboarding digital, la solicitud ingresa automáticamente al proceso de Validación de Identidad (KYC). En esta etapa el sistema centraliza la información obtenida durante el onboarding y realiza consultas adicionales a fuentes externas como Experian y la información transaccional de D1.
+Una vez el cliente finaliza el proceso de onboarding digital, la solicitud ingresa automáticamente al proceso de Validación de Identidad (KYC). En esta etapa el sistema recopila la información obtenida durante el onboarding, consulta fuentes externas como Experian y el historial transaccional de D1, y ejecuta de forma automática las reglas de negocio establecidas para evaluar la elegibilidad del cliente.
 
-Con esta información se ejecutan automáticamente las reglas de negocio definidas para el proceso KYC. Si el cliente cumple los criterios mínimos establecidos, el sistema valida la consistencia de la cuenta bancaria registrada y determina si la solicitud puede continuar hacia la firma del contrato. Si alguna validación falla, la solicitud es rechazada automáticamente y el cliente recibe la notificación correspondiente.
+Si el cliente cumple con todos los criterios definidos, el sistema valida la cuenta bancaria registrada y aprueba o ajusta el cupo de crédito antes de continuar con la firma del contrato. En caso de que alguna validación falle, la solicitud es rechazada automáticamente y el cliente recibe una notificación por correo electrónico.
 
 ---
 
@@ -28,97 +28,90 @@ Con esta información se ejecutan automáticamente las reglas de negocio definid
 
 ### 1. Recepción de la solicitud
 
-Una vez finalizado el onboarding digital, el sistema recibe la solicitud y crea automáticamente el caso dentro del módulo administrativo para iniciar el proceso de validación.
-
-Esta etapa marca el inicio del análisis automático de identidad y riesgo.
+Una vez finalizado el onboarding digital, el sistema recibe la solicitud y crea automáticamente el caso dentro del módulo administrativo. A partir de este momento inicia el proceso de Validación de Identidad (KYC) sin intervención del cliente.
 
 ---
 
-### 2. Consulta de información externa
+### 2. Consulta de información en Experian y D1
 
-El sistema consulta simultáneamente la información disponible en Experian y el historial transaccional del cliente registrado en D1.
-
-Estas consultas permiten complementar la información recopilada durante el onboarding y obtener los datos necesarios para ejecutar las validaciones automáticas.
+El sistema consulta la información disponible en Experian y el historial transaccional del cliente en D1. Estas consultas permiten complementar la información obtenida durante el onboarding y proporcionan los datos necesarios para ejecutar la evaluación automática del riesgo.
 
 ---
 
 ### 3. Evaluación automática de criterios KYC
 
-Con la información obtenida, el sistema ejecuta automáticamente las reglas de negocio definidas para el proceso de Validación de Identidad (KYC).
+Con la información recopilada, el sistema aplica automáticamente las reglas de negocio definidas para el proceso KYC.
 
 Entre los criterios evaluados se encuentran:
 
-- Score mínimo requerido.
+- Puntaje mínimo requerido.
 - Capacidad de endeudamiento.
-- Información transaccional del cliente.
+- Historial transaccional del cliente en D1.
 - Tienda habitual registrada.
-- Reglas definidas para el producto.
+- Reglas de riesgo definidas para el producto.
 
-Toda esta evaluación se realiza sin intervención manual.
+Esta evaluación se realiza completamente de forma automática.
 
 ---
 
-### 4. Validación de cumplimiento
+### 4. Verificación de cumplimiento de requisitos
 
-Una vez finalizada la evaluación automática, el sistema determina si el cliente cumple los requisitos mínimos para continuar.
+Una vez ejecutadas las reglas de negocio, el sistema determina si el cliente cumple con los requisitos mínimos para continuar.
 
-Si el cliente no cumple alguno de los criterios establecidos, la solicitud es rechazada automáticamente y se genera una alerta para registrar la decisión.
+Si el cliente no cumple alguno de los criterios establecidos, la solicitud es rechazada automáticamente y se genera una alerta dentro del sistema.
 
-Si cumple los requisitos, el proceso continúa con la validación de la cuenta bancaria.
+Si cumple todos los requisitos, el proceso continúa con la validación de la cuenta bancaria.
 
 ---
 
 ### 5. Validación de la cuenta bancaria
 
-El sistema compara la cuenta bancaria registrada durante el onboarding con la información reportada por Experian y otros productos financieros asociados al cliente.
+El sistema compara la cuenta bancaria registrada durante el onboarding con la información reportada en Experian y otros productos financieros asociados al cliente.
 
-Esta validación busca garantizar la consistencia de la información bancaria antes de continuar con el proceso de originación.
+Esta validación busca confirmar que la cuenta registrada corresponde al cliente y que la información es consistente antes de continuar con la originación del crédito.
 
 ---
 
-### 6. Verificación de la cuenta
+### 6. Verificación de la cuenta bancaria
 
 El sistema determina si la cuenta bancaria es válida.
 
-Si la validación es exitosa, la solicitud continúa.
-
-Si la información presenta inconsistencias, el crédito es rechazado automáticamente.
-
----
-
-### 7. Ajuste del cupo y aprobación
-
-Cuando todas las validaciones son satisfactorias, el sistema aprueba la solicitud o ajusta el cupo de crédito de acuerdo con los resultados obtenidos durante la evaluación.
-
-Posteriormente el proceso continúa hacia la firma del contrato.
+- Si la validación es exitosa, la solicitud continúa hacia la aprobación o ajuste del cupo de crédito.
+- Si la validación falla, el crédito es rechazado automáticamente y el proceso finaliza.
 
 ---
 
-### 8. Rechazo del crédito
+### 7. Aprobación o ajuste del cupo de crédito
 
-Si cualquiera de las validaciones automáticas falla, el sistema rechaza la solicitud y registra una alerta dentro del proceso.
+Cuando todas las validaciones son satisfactorias, el sistema aprueba la solicitud o ajusta el cupo de crédito de acuerdo con las reglas de negocio y los resultados obtenidos durante la evaluación.
 
-Posteriormente el cliente recibe una notificación informando que su solicitud no fue aprobada.
+Posteriormente, la solicitud continúa hacia la firma del contrato.
+
+---
+
+### 8. Rechazo automático del crédito
+
+Si cualquiera de las validaciones automáticas falla durante el proceso, el sistema rechaza la solicitud y registra una alerta para mantener la trazabilidad de la decisión.
 
 ---
 
 ### 9. Notificación al cliente
 
-Cuando el crédito es rechazado, el sistema envía automáticamente una notificación al cliente mediante correo electrónico.
+Cuando el crédito es rechazado, el sistema envía automáticamente una notificación al cliente por correo electrónico informando que la solicitud no fue aprobada.
 
-Con esta notificación finaliza el proceso de Validación de Identidad (KYC).
+Con esta acción finaliza el proceso de Validación de Identidad (KYC).
 
 ---
 
 ## Reglas de negocio
 
 - El proceso KYC se ejecuta completamente de forma automática.
-- La información de Experian y el historial transaccional de D1 son obligatorios para realizar la evaluación.
-- El cliente debe cumplir el score mínimo definido por el producto.
-- Se valida automáticamente la capacidad de endeudamiento del cliente.
+- La consulta a Experian y al historial transaccional de D1 es obligatoria.
+- El cliente debe cumplir el puntaje mínimo definido para el producto.
+- Se evalúa automáticamente la capacidad de endeudamiento del cliente.
 - La tienda habitual registrada hace parte de las reglas de evaluación.
-- La cuenta bancaria debe coincidir con la información reportada en Experian.
-- Si cualquier validación falla, la solicitud es rechazada automáticamente.
+- La cuenta bancaria debe coincidir con la información reportada por Experian.
+- Si cualquiera de las validaciones falla, la solicitud es rechazada automáticamente.
 - Solo las solicitudes aprobadas continúan hacia la firma del contrato.
 
 ---
@@ -126,11 +119,11 @@ Con esta notificación finaliza el proceso de Validación de Identidad (KYC).
 ## Entradas
 
 - Información del cliente registrada durante el onboarding.
-- Resultado de la biometría.
+- Resultado de la validación biométrica.
 - Historial transaccional de D1.
-- Información de Experian.
-- Cuenta bancaria registrada.
-- Reglas de negocio del motor KYC.
+- Información consultada en Experian.
+- Cuenta bancaria registrada por el cliente.
+- Reglas de negocio definidas para el proceso KYC.
 
 ---
 
@@ -146,34 +139,36 @@ Con esta notificación finaliza el proceso de Validación de Identidad (KYC).
 
 ## Excepciones
 
-- El cliente no cumple el score mínimo requerido.
-- La capacidad de endeudamiento no cumple las políticas del producto.
-- La información de Experian presenta inconsistencias.
-- La cuenta bancaria no coincide con la información consultada.
-- Error en la consulta de Experian.
-- Error en la consulta del historial transaccional de D1.
-- Error en la validación automática de las reglas KYC.
+- El cliente no cumple el puntaje mínimo requerido.
+- La capacidad de endeudamiento supera los límites permitidos.
+- La información consultada en Experian presenta inconsistencias.
+- La cuenta bancaria registrada no coincide con la información validada.
+- Error durante la consulta a Experian.
+- Error durante la consulta del historial transaccional de D1.
+- Error en la ejecución de las reglas automáticas del proceso KYC.
 
 ---
 
 ## Consideraciones
 
-- El proceso KYC es completamente automático y no requiere intervención manual del analista.
-- La biometría se realiza durante el proceso de onboarding y su resultado es utilizado como insumo para esta evaluación.
-- La aprobación obtenida en esta etapa permite continuar con la firma del contrato.
+- El proceso de Validación de Identidad (KYC) es completamente automático y no requiere intervención manual.
+- El resultado de la biometría obtenida durante el onboarding es uno de los insumos utilizados en esta evaluación.
+- La validación de la cuenta bancaria se realiza antes de aprobar definitivamente el cupo de crédito.
 - Cualquier validación fallida genera el rechazo automático de la solicitud.
+- Las reglas de evaluación pueden modificarse conforme evolucione la estrategia de riesgo del producto.
 
 ---
 
 ## Pendientes de validación
 
-> **Pendiente de validar con el dueño del proceso:** confirmar si el ajuste del cupo se realiza mediante reglas completamente automáticas o si existe alguna parametrización adicional antes de la firma del contrato.
+> **Pendiente de validar con el dueño del proceso:** confirmar si el ajuste del cupo de crédito puede realizarse mediante reglas parametrizadas adicionales antes de la firma del contrato y validar si existen criterios complementarios no reflejados en el journey.
 
 ---
 
 ## Fuentes consultadas
 
 - *Journeys Colpatria B2B* (junio de 2026), página 4.
-- Documento de reglas de negocio KYC.
-- Documentación funcional del producto.
+- Documentación funcional del proceso KYC.
+- Documento de reglas de negocio del producto.
+- Documento de Alcance del Producto.
 
