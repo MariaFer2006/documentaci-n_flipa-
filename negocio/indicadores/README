@@ -3,7 +3,7 @@
 | Documento | Indicadores |
 |-----------|-------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 2.0 |
+| **Versión** | 2.0|
 | **Estado** | Borrador para validación |
 | **Responsable** | Negocio y operaciones |
 | **Última actualización** | 2026-07-14 |
