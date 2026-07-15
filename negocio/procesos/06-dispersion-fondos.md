@@ -1,105 +1,157 @@
-# 6. DispersiÃ³n de fondos
+# 6. Dispersión de fondos
 
 ## Objetivo
 
-Gestionar el desembolso de fondos, la activaciÃ³n del bono y el retorno del pago para que el crÃ©dito quede operativo y, cuando aplique, se evalÃºe la renovaciÃ³n del cupo.
+Gestionar el desembolso de los recursos del crédito desde la fiducia hacia D1, emitir el bono correspondiente al cupo aprobado, registrar el uso del crédito por parte del cliente y administrar el retorno de los pagos para evaluar la renovación del cupo en futuros ciclos.
+
+---
 
 ## Journey
 
-El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
+El recorrido se explica a continuación en texto narrativo y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
 
+![Journey Colpatria B2B — página 8](imagenes/page-08.png)
 
+**Figura 8. Journey de Dispersión de Fondos.**
 
-![Journey Colpatria B2B â€” pÃ¡gina 8](imagenes/page-08.png)
+Este journey describe el flujo financiero del crédito una vez ha sido aprobado y firmado. Durante esta etapa se administran los recursos del crédito mediante una cuenta fiduciaria, se realiza el desembolso hacia D1, se emite el bono para el cliente, se registra el pago del crédito y finalmente se evalúa si el cliente puede recibir una renovación de su cupo.
 
-- PÃ¡gina 8 del journey Colpatria B2B (junio 2026): dispersiÃ³n de fondos, fiducia, GMF 4x1000 y bloqueo de cupo.
-- Fuente visual de respaldo para validar la secuencia documentada en este proceso.
+---
 
-## Explicación del Journey
+## Descripción general
 
-1. CreaciÃ³n y fondeo de la cuenta fiducia
-   - QuÃ© sucede: Colpatria crea la cuenta fiducia y la fondea con los recursos del piloto.
-   - QuÃ© actor interviene: Colpatria.
-   - QuÃ© sistema participa: cuentas de fiducia y operaciÃ³n de tesorerÃ­a.
-   - QuÃ© informaciÃ³n se utiliza: monto del piloto y condiciones del crÃ©dito.
-   - QuÃ© decisiÃ³n se toma: si la cuenta estÃ¡ lista para operar.
-   - QuÃ© ocurre si el resultado es positivo: se concentra el dinero del crÃ©dito.
-   - QuÃ© ocurre si el resultado es negativo: el desembolso no se ejecuta.
+Una vez el contrato ha sido firmado y el crédito queda activo, Colpatria crea y fondea una cuenta fiduciaria desde donde se administran los recursos del piloto. Posteriormente la fiducia desembolsa el dinero a D1 para emitir el bono correspondiente al valor del cupo utilizado.
 
-2. ConcentraciÃ³n de fondos por la fiducia
-   - QuÃ© sucede: la fiducia concentra la fuente y el retorno del dinero del crÃ©dito.
-   - QuÃ© actor interviene: fiducia.
-   - QuÃ© sistema participa: operaciÃ³n de tesorerÃ­a y cuentas de recaudo.
-   - QuÃ© informaciÃ³n se utiliza: originaciÃ³n y retorno del crÃ©dito.
-   - QuÃ© decisiÃ³n se toma: si el flujo financiero estÃ¡ listo para girar fondos.
-   - QuÃ© ocurre si el resultado es positivo: se ejecuta el desembolso a D1.
-   - QuÃ© ocurre si el resultado es negativo: la operaciÃ³n queda pendiente.
+Cuando el cliente utiliza el bono en una tienda D1, el sistema registra la utilización del crédito y bloquea el cupo remanente hasta finalizar el ciclo de pago. Posteriormente el cliente paga su obligación y el dinero retorna nuevamente a la fiducia como cuenta de recaudo. Finalmente, el sistema analiza el comportamiento de pago para determinar si el cliente puede recibir una renovación de su cupo de crédito.
 
-3. Desembolso y emisiÃ³n del bono
-   - QuÃ© sucede: la fiducia gira los fondos a D1 y este emite el bono asociado al cupo utilizado.
-   - QuÃ© actor interviene: D1 y fiducia.
-   - QuÃ© sistema participa: proceso de desembolso y activaciÃ³n del bono.
-   - QuÃ© informaciÃ³n se utiliza: valor del cupo utilizado y estado de la operaciÃ³n.
-   - QuÃ© decisiÃ³n se toma: si el bono se activa correctamente.
-   - QuÃ© ocurre si el resultado es positivo: el cliente recibe el bono.
-   - QuÃ© ocurre si el resultado es negativo: se detiene la activaciÃ³n del cupo.
+---
 
-4. Uso del bono por parte del cliente
-   - QuÃ© sucede: el cliente recibe el bono y lo usa en D1.
-   - QuÃ© actor interviene: cliente y D1.
-   - QuÃ© sistema participa: plataforma de uso del bono.
-   - QuÃ© informaciÃ³n se utiliza: bono emitido y transacciÃ³n del cliente.
-   - QuÃ© decisiÃ³n se toma: si la compra se registra como uso del crÃ©dito.
-   - QuÃ© ocurre si el resultado es positivo: el cupo remanente se bloquea automÃ¡ticamente.
-   - QuÃ© ocurre si el resultado es negativo: la operaciÃ³n no se consolida.
+## Explicación paso a paso
 
-5. Pago del crÃ©dito
-   - QuÃ© sucede: el cliente paga su crÃ©dito despuÃ©s de haber usado el bono.
-   - QuÃ© actor interviene: cliente.
-   - QuÃ© sistema participa: flujo de recaudo y pagos.
-   - QuÃ© informaciÃ³n se utiliza: saldo del crÃ©dito y fecha de pago.
-   - QuÃ© decisiÃ³n se toma: si el pago se registra adecuadamente.
-   - QuÃ© ocurre si el resultado es positivo: el dinero retorna a la fiducia.
-   - QuÃ© ocurre si el resultado es negativo: se activa seguimiento de cobranza.
+### 1. Creación y fondeo de la cuenta fiduciaria
 
-6. EvaluaciÃ³n de renovaciÃ³n del cupo
-   - QuÃ© sucede: el sistema evalÃºa si se otorga un nuevo cupo segÃºn el comportamiento de pago y la disponibilidad del cupo.
-   - QuÃ© actor interviene: sistema y riesgo.
-   - QuÃ© sistema participa: motor de renovaciÃ³n del cupo.
-   - QuÃ© informaciÃ³n se utiliza: comportamiento de pago y disponibilidad del cupo.
-   - QuÃ© decisiÃ³n se toma: si el cliente califica para una nueva asignaciÃ³n.
-   - QuÃ© ocurre si el resultado es positivo: se otorga nuevo cupo.
-   - QuÃ© ocurre si el resultado es negativo: finaliza el proceso sin renovaciÃ³n.
+El proceso inicia cuando Colpatria crea una cuenta fiduciaria destinada exclusivamente a administrar los recursos del piloto. En esta cuenta se depositan los fondos que posteriormente serán utilizados para realizar los desembolsos de los créditos aprobados.
+
+La fiducia centraliza tanto la salida del dinero hacia D1 como el retorno de los pagos realizados por los clientes.
+
+---
+
+### 2. Concentración de los fondos
+
+Una vez creada la cuenta fiduciaria, todos los recursos del crédito quedan concentrados en esta cuenta. Desde aquí se administra el origen del dinero para cada desembolso y posteriormente el recaudo de los pagos efectuados por los clientes.
+
+De acuerdo con el journey, este diseño reduce el impacto del GMF (4x1000), ya que únicamente se genera el movimiento correspondiente entre la fiducia y D1.
+
+---
+
+### 3. Desembolso hacia D1 y emisión del bono
+
+Cuando el crédito queda disponible, la fiducia realiza el desembolso del valor aprobado hacia D1.
+
+Posteriormente D1 recibe los recursos y genera un bono equivalente al valor del cupo utilizado, el cual queda disponible para que el cliente pueda realizar su compra.
+
+En esta etapa todavía no existe una obligación financiera activa hasta que el bono sea utilizado.
+
+---
+
+### 4. Uso del bono por parte del cliente
+
+El cliente recibe el bono y realiza la compra en una tienda D1.
+
+Una vez el bono es utilizado, el sistema registra la utilización efectiva del crédito y comienza formalmente el ciclo de vida de la obligación financiera.
+
+Según el journey, después del primer uso el sistema bloquea automáticamente el cupo remanente para evitar compras adicionales durante el mismo ciclo de crédito.
+
+---
+
+### 5. Pago del crédito
+
+Cuando llega la fecha de pago, el cliente realiza el pago correspondiente a su obligación.
+
+El dinero no retorna a D1, sino que es consignado nuevamente en la cuenta fiduciaria, la cual funciona como cuenta de recaudo del producto.
+
+Este pago permite cerrar correctamente el ciclo financiero del crédito.
+
+---
+
+### 6. Evaluación para renovación del cupo
+
+Una vez registrado el pago, el sistema analiza el comportamiento del cliente para determinar si puede otorgarse una nueva disponibilidad de crédito.
+
+Si el cliente presenta un buen comportamiento de pago y existe disponibilidad de cupo, el sistema puede renovar automáticamente su línea de crédito para un nuevo ciclo.
+
+En caso contrario, el proceso finaliza sin renovación.
+
+---
 
 ## Reglas de negocio
 
-- La cuenta fiducia debe crearse y fondearse antes del desembolso.
-- El giro de fondos va de la fiducia a D1 para activar el bono.
-- El pago del crÃ©dito retorna a la fiducia, no a D1.
-- El cupo remanente se bloquea automÃ¡ticamente tras el primer uso.
-- La renovaciÃ³n del cupo depende del comportamiento de pago y de la disponibilidad de cupo.
+- Colpatria debe crear y fondear la cuenta fiduciaria antes de realizar cualquier desembolso.
+- Todos los desembolsos del piloto se realizan desde la cuenta fiduciaria hacia D1.
+- D1 únicamente recibe los recursos para emitir el bono correspondiente al cliente.
+- El bono representa el valor del cupo utilizado por el cliente.
+- El crédito se considera utilizado únicamente cuando el bono es redimido en una tienda D1.
+- Después del primer uso del bono, el sistema bloquea el cupo remanente hasta finalizar el ciclo.
+- Los pagos del cliente retornan siempre a la cuenta fiduciaria.
+- La renovación del cupo depende del comportamiento de pago y de la disponibilidad definida por la política de crédito.
+
+---
 
 ## Entradas
 
-- Fondos para el piloto y cuenta fiducia creada.
-- Monto del cupo utilizado y estado del crÃ©dito.
-- Compra del cliente en D1 para activar el bono.
-- Pago del cliente y estado de la cartera.
+- Crédito aprobado y firmado.
+- Recursos disponibles para el piloto.
+- Cuenta fiduciaria creada.
+- Valor del cupo aprobado.
+- Información del cliente.
+- Compra realizada en D1.
+- Pago realizado por el cliente.
+
+---
 
 ## Salidas
 
-- Desembolso ejecutado y bono emitido.
-- Pago del crÃ©dito retornado a la fiducia.
-- DecisiÃ³n de renovaciÃ³n del cupo segÃºn la polÃ­tica vigente.
+- Recursos desembolsados hacia D1.
+- Bono emitido al cliente.
+- Crédito activado mediante el uso del bono.
+- Pago recibido por la fiducia.
+- Decisión sobre la renovación del cupo.
+
+---
 
 ## Excepciones
 
-- La cuenta fiducia no se crea o no se fondea.
-- No se ejecuta el desembolso a D1.
-- El cliente no usa el bono o no paga el crÃ©dito.
-- La renovaciÃ³n del cupo no aplica por mal comportamiento o falta de disponibilidad.
+- La cuenta fiduciaria no puede ser creada o fondeada.
+- El desembolso hacia D1 falla.
+- El bono no puede emitirse correctamente.
+- El cliente no utiliza el bono.
+- El cliente no realiza el pago del crédito.
+- El pago no retorna correctamente a la fiducia.
+- El cliente no cumple las políticas para renovar el cupo.
 
-## Pendientes de validación
+---
 
-> **Pendiente de validar con el dueño del proceso.**
+## Consideraciones
+
+- La cuenta fiduciaria concentra tanto el origen como el recaudo de los recursos del crédito.
+- El journey indica que este modelo reduce el impacto del GMF (4x1000) durante la operación.
+- El crédito inicia efectivamente cuando el bono es utilizado por el cliente.
+- El bloqueo del cupo remanente evita nuevas compras durante el mismo ciclo.
+- La renovación del cupo corresponde a una evaluación posterior al pago y depende de las políticas vigentes.
+
+---
+
+## Notas
+
+- El cálculo del GMF mostrado en el journey corresponde al diseño financiero del piloto y puede modificarse en futuras versiones del producto.
+- Las políticas de renovación del cupo deberán confirmarse con el equipo de Riesgo antes de la versión definitiva de la documentación.
+- El monto del fondo fiduciario y las reglas de renovación son parámetros sujetos a cambios durante la evolución del producto.
+
+---
+
+## Fuentes consultadas
+
+- *Journeys Colpatria B2B* (junio de 2026), página 8.
+- Documentación del modelo operativo del producto.
+- Documento de alcance del producto.
 
