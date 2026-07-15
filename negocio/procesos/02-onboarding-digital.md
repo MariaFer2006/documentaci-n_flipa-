@@ -16,220 +16,290 @@ Registrar al cliente empresarial mediante un proceso completamente digital, iden
 
 **Figura 3. Journey de Onboarding Digital (Parte 2).**
 
+En el journey, las cajas en color morado corresponden a pasos nuevos o ajustados en junio de 2026 (leyenda "Ajuste · jun 2026"); las cajas en gris corresponden a pasos ya existentes del flujo.
 
 ---
 
-# Descripción general
+## Descripción general
 
 El onboarding digital constituye el primer contacto del cliente con el producto y concentra todas las actividades necesarias para crear su perfil dentro de la plataforma.
 
-El proceso inicia cuando el cliente recibe una invitación personalizada para acceder al producto. A partir de este momento registra la información básica del negocio, suministra los datos del representante legal y valida el número telefónico mediante un código OTP. Posteriormente configura un PIN de seguridad, realiza la validación biométrica utilizando un proveedor externo, registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos, adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada para el análisis de crédito, dejando la solicitud preparada para continuar con el proceso de Validación de Identidad (KYC).
+El proceso inicia cuando el cliente recibe una invitación personalizada por correo electrónico, SMS o WhatsApp (a través de Sendgrid y Zenvia) para acceder al producto. A partir de este momento registra la información básica del negocio, suministra los datos del representante legal y valida el número telefónico mediante un código OTP. Posteriormente ingresa un segundo código de verificación enviado a su correo electrónico, configura un PIN de seguridad, realiza la validación biométrica con el proveedor externo Olimpia, registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos (validada ante Drúo), adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada al asesor encargado del análisis de crédito, quien responde en un plazo informado de hasta dos días, dejando la solicitud preparada para continuar con el proceso de Validación de Identidad (KYC).
 
 ---
 
-# Explicación paso a paso
+## Explicación paso a paso
 
-## 1. Recepción de la invitación
+### 1. Recepción de la invitación
 
-El sistema envía al cliente un enlace personalizado por correo electrónico o WhatsApp para iniciar el proceso de onboarding digital.
+**Actor:** Cliente.
 
-Este enlace identifica al cliente y permite iniciar el proceso de forma segura.
+**Sistemas involucrados:** Sendgrid (correo electrónico) y Zenvia (SMS/WhatsApp).
 
----
+**Información utilizada:** Correo electrónico y/o número de teléfono del cliente.
 
-## 2. Registro del documento de identificación
+**Resultado:** El cliente recibe un enlace único de invitación por correo, SMS o WhatsApp para iniciar el onboarding de forma segura.
 
-El cliente accede al enlace e ingresa su NIT o número de cédula, según corresponda.
-
-Esta información permite identificar el tipo de cliente y recuperar la información previamente disponible.
+> **Nota técnica (Ajuste · jun 2026):** el journey marca este paso como nuevo/ajustado en la integración de envío con Sendgrid y Zenvia.
 
 ---
 
-## 3. Identificación del cupo preaprobado
+### 2. Registro del documento de identificación
 
-Con la información registrada, el sistema consulta la información transaccional disponible en D1 para calcular el cupo preaprobado que podrá ofrecer al cliente.
+**Actor:** Cliente.
 
-Esta evaluación corresponde únicamente a una preaprobación y no representa la aprobación definitiva del crédito.
+**Sistemas involucrados:** Plataforma web de onboarding.
 
----
+**Información utilizada:** NIT o número de cédula de ciudadanía.
 
-## 4. Registro de ubicación
+**Resultado:** El sistema identifica el tipo de cliente y recupera la información previamente disponible.
 
-El cliente registra la ciudad o municipio y la dirección donde desarrolla su actividad comercial.
-
-Esta información hace parte del perfil inicial del negocio.
+> **Nota técnica (Ajuste · jun 2026):** el journey señala en este paso la necesidad de cambiar la URL de la página; validar con Tecnología si ya fue implementado.
 
 ---
 
-## 5. Clasificación del tipo de cliente
+### 3. Identificación del cupo preaprobado
 
-El sistema determina si el flujo continuará como Persona Jurídica (NIT) o Persona Natural (CC).
+**Actor:** Web (sistema).
 
-> **Pendiente de validación:** La lógica mostrada en el journey debe ser revisada con el dueño del proceso para confirmar el comportamiento definitivo del flujo.
+**Sistemas involucrados:** Información transaccional de D1.
 
----
+**Información utilizada:** NIT o cédula registrada; historial de consumo en D1.
 
-## 6. Validación del representante legal
+**Decisión:** ¿La identificación del cupo fue exitosa?
 
-Cuando el flujo corresponde a una empresa, el sistema solicita la validación del representante legal antes de continuar.
+- **Exitoso:** el flujo continúa hacia el registro de ubicación.
+- **Fallido:** el cliente vuelve a la pantalla de ingreso del NIT o identificación para intentarlo de nuevo.
 
----
-
-## 7. Aceptación de términos y condiciones
-
-El cliente acepta los términos y condiciones del producto.
-
-Esta aceptación es obligatoria para continuar con la solicitud.
+**Resultado:** Cupo preaprobado calculado a partir de criterios preliminares de consumo en D1. Esta evaluación corresponde únicamente a una preaprobación y no representa la aprobación definitiva del crédito.
 
 ---
 
-## 8. Registro del representante legal
+### 4. Registro de ubicación
 
-El cliente registra la información solicitada del representante legal, incluyendo documento de identidad y número de teléfono.
+**Actor:** Cliente.
 
----
+**Información utilizada:** Ciudad o municipio y dirección donde desarrolla su actividad comercial.
 
-## 9. Envío del código OTP
-
-El sistema genera un código OTP y lo envía al número telefónico registrado.
-
-Este código permitirá validar la titularidad del número.
+**Resultado:** La información queda registrada como parte del perfil inicial del negocio.
 
 ---
 
-## 10. Validación del código OTP
+### 5. Clasificación del tipo de cliente
 
-El cliente ingresa el código recibido.
+**Actor:** Sistema.
 
-Si el código es correcto el proceso continúa.
+**Decisión:** ¿Tipo de cliente: NIT o CC?
 
-Si el código no es válido o no llega, el cliente puede solicitar un nuevo envío.
+- **NIT (persona jurídica):** el flujo continúa hacia el reconocimiento del representante legal.
+- **CC (persona natural):** el flujo continúa directamente hacia la aceptación de términos y condiciones.
 
----
+**Resultado:** Según el journey, en el flujo CC esta validación "pasa por detrás", es decir, se verifica automáticamente contra la base de datos, sin una pantalla adicional visible para el cliente.
 
-## 11. Creación del PIN de seguridad
-
-Una vez validado el teléfono, el cliente crea un PIN de cuatro dígitos.
-
-El sistema verifica que el PIN cumpla las políticas de seguridad definidas para evitar combinaciones inseguras.
+> **Pendiente de validación:** confirmar con el dueño del proceso el comportamiento definitivo de esta bifurcación y qué información exacta se valida contra la base de datos en el flujo CC.
 
 ---
 
-## 12. Confirmación de creación de la cuenta
+### 6. Validación del representante legal (flujo NIT)
 
-Después de registrar correctamente el PIN, el sistema informa que la cuenta del cliente ha sido creada exitosamente y habilita la siguiente etapa del proceso.
+**Actor:** Cliente.
 
----
-
-## 13. Envío del enlace para biometría
-
-El sistema genera un enlace seguro hacia el proveedor externo encargado de realizar la validación biométrica y lo envía al cliente.
-
-La biometría se realiza fuera de la aplicación.
+**Resultado:** Cuando el flujo corresponde a una empresa (NIT), el cliente confirma en pantalla que es el representante legal antes de continuar hacia la aceptación de términos y condiciones.
 
 ---
 
-## 14. Validación biométrica
+### 7. Aceptación de términos y condiciones
 
-El cliente realiza el proceso biométrico mediante el proveedor externo.
+**Actor:** Cliente.
 
-El resultado puede ser:
-
-- Aprobado.
-- En revisión.
-- Rechazado.
+**Resultado:** El cliente acepta los términos y condiciones del producto. Esta aceptación es obligatoria para continuar con la solicitud, tanto en el flujo NIT como en el flujo CC.
 
 ---
 
-## 15. Gestión del resultado biométrico
+### 8. Registro del representante legal
 
-Si la biometría es aprobada, el cliente continúa automáticamente.
+**Actor:** Cliente.
 
-Si queda en revisión, un analista de riesgo evalúa el caso.
+**Información utilizada:** Cédula de ciudadanía y número de teléfono del representante legal.
 
-Si la biometría es rechazada, la solicitud finaliza.
-
----
-
-## 16. Revisión manual por analista de riesgo
-
-Cuando el resultado queda en revisión, el analista de riesgo revisa la evidencia disponible.
-
-Si aprueba el caso, el flujo continúa.
-
-Si rechaza la solicitud, el proceso finaliza.
+**Resultado:** Queda registrada la información del representante legal necesaria para continuar con la validación del número telefónico.
 
 ---
 
-## 17. Vinculación de la cuenta bancaria
+### 9. Envío del código OTP
 
-El cliente selecciona la entidad financiera e ingresa la cuenta bancaria que utilizará para autorizar el débito automático.
+**Actor:** Web (sistema).
 
-La información es validada mediante la integración con Druo.
+**Información utilizada:** Número de teléfono registrado del representante legal.
 
----
-
-## 18. Carga de documentación bancaria
-
-El cliente adjunta:
-
-- Certificación bancaria.
-- Extractos bancarios correspondientes a los últimos tres meses.
-
-Esta documentación será utilizada durante el análisis crediticio.
+**Resultado:** El sistema genera y envía un código OTP al número telefónico registrado para validar su titularidad.
 
 ---
 
-## 19. Selección de localidad habitual
+### 10. Validación del código OTP
 
-El cliente selecciona la localidad donde realiza habitualmente sus compras.
+**Actor:** Cliente.
 
-Esta información complementa el perfil comercial utilizado durante la evaluación del crédito.
+**Decisión:** ¿El código OTP ingresado es válido?
 
----
+- **Exitoso:** el flujo continúa hacia la siguiente etapa (Figura 3).
+- **Fallido:** el cliente vuelve a la pantalla de ingreso del código para intentarlo de nuevo.
 
-## 20. Envío al análisis de crédito
-
-Una vez completado el onboarding, el sistema envía toda la información recopilada al equipo encargado del análisis de crédito.
-
-Se informa al cliente que deberá esperar la respuesta del estudio crediticio.
+**Resultado:** El cliente puede solicitar el reenvío del código si no lo recibe.
 
 ---
 
-## 21. Continuación hacia KYC
+### 11. Envío y validación del código de verificación al correo electrónico
 
-Después del análisis inicial, la solicitud continúa con el proceso de Validación de Identidad (KYC), donde se realizan las verificaciones correspondientes antes de la originación del crédito.
+**Actor:** Cliente y Web (sistema).
+
+**Información utilizada:** Correo electrónico registrado por el cliente.
+
+**Resultado:** El sistema envía un segundo código de verificación al correo electrónico del cliente; este lo ingresa y el sistema lo valida antes de continuar hacia la creación del PIN de seguridad. El cliente puede solicitar el código nuevamente si no llega.
+
+> **Nota:** este código de verificación por correo es distinto del OTP telefónico de los pasos 9 y 10; el journey lo presenta como una validación adicional previa a la creación del PIN.
 
 ---
 
-# Reglas de negocio
+### 12. Creación del PIN de seguridad
 
-- Cada cliente inicia el proceso mediante un enlace único.
-- El cupo preaprobado se calcula utilizando información transaccional de D1.
-- La aceptación de términos y condiciones es obligatoria.
-- El número telefónico debe validarse mediante OTP.
-- El cliente puede solicitar un nuevo código OTP cuando sea necesario.
-- El cliente debe crear un PIN de cuatro dígitos.
-- La biometría se realiza mediante un proveedor externo.
-- Si la biometría queda en revisión, el caso es evaluado por un analista de riesgo.
-- Si la biometría es rechazada, la solicitud finaliza.
-- La cuenta bancaria debe validarse antes de autorizar el débito automático.
-- El cliente debe adjuntar certificación bancaria y extractos bancarios.
+**Actor:** Cliente.
+
+**Información utilizada:** PIN de cuatro dígitos definido por el cliente.
+
+**Resultado:** El sistema verifica el PIN contra condiciones de seguridad antifraude definidas para evitar combinaciones inseguras.
+
+---
+
+### 13. Confirmación de creación de la cuenta
+
+**Actor:** Web (sistema).
+
+**Resultado:** El sistema notifica que la cuenta de socio D1 fue creada exitosamente y habilita la siguiente etapa del proceso.
+
+> **Pendiente de producto:** el journey incluye una nota de diseño para agregar un texto (copy) que indique al cliente que debe revisar su correo para continuar.
+
+---
+
+### 14. Envío del enlace para biometría
+
+**Actor:** Web (sistema).
+
+**Sistemas involucrados:** Olimpia (proveedor externo de biometría).
+
+**Resultado:** El sistema genera un correo con el enlace de biometría de Olimpia y lo envía al cliente. La biometría se realiza fuera de la aplicación.
+
+> **Nota (Ajuste · jun 2026):** este paso reemplaza la biometría in-house que antes se realizaba mediante foto de cédula, selfie y verificación manual.
+
+---
+
+### 15. Validación biométrica
+
+**Actor:** Cliente y proveedor externo (Olimpia).
+
+**Resultado:** El cliente realiza el proceso biométrico con el tercero. El resultado puede ser Aprobado (exitoso), En revisión o Rechazado.
+
+---
+
+### 16. Gestión del resultado biométrico
+
+**Actor:** Sistema.
+
+**Decisión:** ¿Cuál es el resultado de la biometría?
+
+- **Exitoso:** el flujo continúa automáticamente hacia la vinculación de la cuenta bancaria.
+- **En revisión o Rechazado:** el caso pasa a un analista de riesgo para revisión manual.
+
+> **Pendiente de validación:** el journey muestra tanto "en revisión" como "rechazado" convergiendo hacia la revisión del analista; confirmar con el dueño del proceso si todo rechazo automático pasa siempre por revisión manual o si existen rechazos definitivos sin intervención del analista.
+
+---
+
+### 17. Revisión manual por analista de riesgo
+
+**Actor:** Analista de riesgo.
+
+**Información utilizada:** Evidencia del proceso biométrico.
+
+**Decisión:** ¿El analista aprueba o rechaza el caso?
+
+- **Aprueba:** el flujo continúa hacia la vinculación de la cuenta bancaria.
+- **Rechaza:** la solicitud finaliza.
+
+---
+
+### 18. Vinculación de la cuenta bancaria
+
+**Actor:** Cliente.
+
+**Sistemas involucrados:** Drúo.
+
+**Información utilizada:** Entidad financiera y número de cuenta bancaria.
+
+**Resultado:** El cliente selecciona el banco e ingresa su cuenta; el sistema valida la información ante Drúo antes de autorizar el débito automático.
+
+---
+
+### 19. Carga de documentación bancaria
+
+**Actor:** Cliente.
+
+**Información utilizada:** Certificación bancaria y extractos bancarios de los últimos tres meses.
+
+**Resultado:** La documentación queda adjunta como insumo para el análisis crediticio.
+
+---
+
+### 20. Selección de localidad habitual
+
+**Actor:** Cliente.
+
+**Información utilizada:** Localidad donde realiza habitualmente sus compras.
+
+**Resultado:** Esta información complementa el perfil comercial utilizado durante la evaluación del crédito.
+
+---
+
+### 21. Envío al análisis de crédito
+
+**Actor:** Web (sistema).
+
+**Resultado:** El sistema envía toda la información recopilada al asesor encargado del análisis de crédito e informa al cliente que debe esperar respuesta en los próximos dos días.
+
+---
+
+### 22. Continuación hacia KYC
+
+**Resultado:** La solicitud continúa con el proceso de Validación de Identidad (KYC), donde se realizan las verificaciones correspondientes antes de la originación del crédito.
+
+---
+
+## Reglas de negocio
+
+- Cada cliente inicia el proceso mediante un enlace único enviado por Sendgrid o Zenvia.
+- El cupo preaprobado se calcula utilizando información transaccional de D1; si la identificación falla, el cliente debe reintentar el ingreso de su NIT o identificación.
+- La aceptación de términos y condiciones es obligatoria, tanto en el flujo NIT como en el flujo CC.
+- El número telefónico debe validarse mediante OTP; el cliente puede solicitar un nuevo código cuando sea necesario.
+- El cliente debe validar un segundo código de verificación enviado a su correo electrónico antes de crear el PIN de seguridad.
+- El cliente debe crear un PIN de cuatro dígitos, verificado contra condiciones de seguridad antifraude.
+- La biometría se realiza mediante el proveedor externo Olimpia, fuera de la aplicación.
+- Los resultados de biometría "en revisión" y "rechazado" son evaluados por un analista de riesgo, quien determina la aprobación o el rechazo final.
+- La cuenta bancaria debe validarse ante Drúo antes de autorizar el débito automático.
+- El cliente debe adjuntar certificación bancaria y extractos bancarios de los últimos tres meses.
+- El equipo de análisis de crédito informa su respuesta en un plazo de hasta dos días.
 - Solo las solicitudes que completen exitosamente el onboarding continúan hacia KYC.
 
 ---
 
-# Entradas
+## Entradas
 
 - Enlace de invitación.
 - Correo electrónico.
 - Número de teléfono.
-- Documento de identidad.
-- NIT (cuando aplique).
-- Ciudad.
-- Dirección.
-- Información del representante legal.
-- Código OTP.
+- Documento de identidad (NIT o CC).
+- Ciudad y dirección.
+- Información del representante legal (cédula de ciudadanía y teléfono).
+- Código OTP (teléfono).
+- Código de verificación (correo electrónico).
 - PIN de seguridad.
 - Cuenta bancaria.
 - Certificación bancaria.
@@ -238,59 +308,60 @@ Después del análisis inicial, la solicitud continúa con el proceso de Validac
 
 ---
 
-# Salidas
+## Salidas
 
 - Cliente registrado.
-- Cuenta creada.
+- Cuenta de socio D1 creada.
 - Cupo preaprobado identificado.
-- Teléfono validado.
+- Teléfono y correo electrónico validados.
 - PIN registrado.
-- Biometría completada.
-- Cuenta bancaria vinculada.
+- Biometría completada (con o sin revisión manual).
+- Cuenta bancaria vinculada y validada ante Drúo.
 - Documentación bancaria registrada.
-- Solicitud enviada para análisis de crédito.
+- Solicitud enviada al asesor de análisis de crédito.
 - Proceso preparado para continuar con KYC.
 
 ---
 
-# Excepciones
+## Excepciones
 
 - El cliente no abre la invitación.
 - El cliente abandona el proceso.
+- La identificación del cupo preaprobado falla y el cliente debe reintentar.
 - No acepta los términos y condiciones.
-- El código OTP expira o es incorrecto.
-- La biometría es rechazada.
-- La biometría queda en revisión y posteriormente es rechazada.
-- Error durante la validación biométrica.
-- Error en la validación de la cuenta bancaria.
+- El código OTP o el código de verificación por correo expiran o son incorrectos.
+- La biometría es rechazada o queda en revisión y el analista de riesgo la rechaza.
+- Error durante la validación biométrica con Olimpia.
+- Error en la validación de la cuenta bancaria ante Drúo.
 - No se adjunta la documentación bancaria.
-- Error de integración con Druo.
-- Error de integración con el proveedor biométrico.
 
 ---
 
-# Consideraciones
+## Consideraciones
 
 - El onboarding corresponde a un proceso completamente digital.
 - La identificación del cupo corresponde únicamente a una preaprobación.
-- La biometría se realiza mediante un proveedor externo.
-- La validación manual únicamente ocurre cuando la biometría queda en revisión.
+- La biometría se realiza mediante el proveedor externo Olimpia y reemplaza la validación in-house (foto de cédula, selfie y verificación manual).
+- La validación manual del analista de riesgo aplica cuando la biometría queda "en revisión" o "rechazada".
+- La cuenta bancaria se valida ante Drúo antes de autorizar el débito automático.
 - La documentación bancaria hace parte de los insumos para el análisis crediticio.
+- El plazo de respuesta del análisis de crédito (hasta dos días) es un dato operativo sujeto a cambios.
 - El onboarding finaliza cuando la solicitud queda preparada para continuar con KYC.
 
 ---
 
-# Notas
+## Notas
 
 - Los tiempos de aprobación, número de cuotas y demás parámetros operativos pueden modificarse durante la evolución del producto.
 - La lógica de la bifurcación entre NIT y CC debe validarse con el dueño del proceso.
-- La integración con proveedores externos puede variar según la evolución del producto.
+- Quedan pendientes dos ajustes técnicos señalados en el journey: cambiar la URL de la página en el paso de registro del documento de identificación, y agregar un copy que indique al cliente revisar su correo tras la confirmación de cuenta.
+- Debe confirmarse con el dueño del proceso si todo rechazo automático de biometría pasa por revisión manual del analista de riesgo.
+- La integración con proveedores externos (Sendgrid, Zenvia, Olimpia, Drúo) puede variar según la evolución del producto.
 
 ---
 
-# Fuentes consultadas
+## Fuentes consultadas
 
 - *Journeys Colpatria B2B* (junio de 2026), páginas 2 y 3.
-- Documentación de integraciones.
-- Documento de Alcance del Producto.
+- Documentación de integraciones (Sendgrid, Zenvia, Olimpia, Drúo).
 - Documento de Alcance del Producto.
