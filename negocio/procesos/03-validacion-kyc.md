@@ -12,7 +12,7 @@ Validar automáticamente la identidad del cliente y evaluar si cumple los criter
 
 **Figura 4. Journey de Validación de Identidad (KYC) y Evaluación Inicial de Riesgo.**
 
-Este journey representa el proceso de validación automática de identidad y riesgo que se ejecuta una vez finalizado el onboarding digital. Durante esta etapa el sistema consulta información en Experian y el historial transaccional de D1, aplica las reglas de negocio definidas para el KYC, valida la cuenta bancaria registrada y determina si la solicitud puede continuar hacia la firma del contrato o si debe ser rechazada.
+
 
 ---
 
