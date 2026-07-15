@@ -1,125 +1,179 @@
-# 3. ValidaciÃ³n de identidad (KYC)
+# 3. Validación de identidad (KYC)
 
 ## Objetivo
 
-Validar la identidad del cliente y completar la informaciÃ³n necesaria para que el caso pueda avanzar a evaluaciÃ³n de riesgo y originaciÃ³n.
+Validar automáticamente la identidad del cliente y evaluar si cumple los criterios mínimos de riesgo utilizando información proveniente de Experian, el historial transaccional de D1 y las reglas de negocio definidas para el producto. Al finalizar este proceso se determina si la solicitud continúa hacia la firma del contrato o si el crédito es rechazado.
+
+---
 
 ## Journey
 
-El recorrido se explica a continuaciÃ³n en texto narrativo, y la imagen del journey sirve como referencia visual para validar la secuencia operativa.
+![Journey Colpatria B2B — página 4](imagenes/page-04.png)
 
+**Figura 4. Journey de Validación de Identidad (KYC) y Evaluación Inicial de Riesgo.**
 
+Este journey representa el proceso de validación automática de identidad y riesgo que se ejecuta una vez finalizado el onboarding digital. Durante esta etapa el sistema consulta la información disponible en Experian y el historial transaccional del cliente en D1, aplica las reglas automáticas de KYC y valida la cuenta bancaria antes de decidir si la solicitud continúa hacia la firma del contrato o es rechazada.
 
-![Journey Colpatria B2B â€” pÃ¡gina 3](imagenes/page-03.png)
+---
 
-- PÃ¡gina 3 del journey Colpatria B2B (junio 2026): biometrÃ­a, cuenta bancaria y validaciÃ³n de identidad.
-- Fuente visual de respaldo para validar la secuencia documentada en este proceso.
+## Descripción general
+
+Después de completar el onboarding digital, la solicitud ingresa automáticamente al proceso de Validación de Identidad (KYC). En esta etapa el sistema centraliza la información obtenida durante el onboarding y realiza consultas adicionales a fuentes externas como Experian y la información transaccional de D1.
+
+Con esta información se ejecutan automáticamente las reglas de negocio definidas para el proceso KYC. Si el cliente cumple los criterios mínimos establecidos, el sistema valida la consistencia de la cuenta bancaria registrada y determina si la solicitud puede continuar hacia la firma del contrato. Si alguna validación falla, la solicitud es rechazada automáticamente y el cliente recibe la notificación correspondiente.
+
+---
 
 ## Explicación del Journey
 
-1. EnvÃ­o del link de biometrÃ­a
-   - QuÃ© sucede: el cliente recibe una invitaciÃ³n para completar la validaciÃ³n biomÃ©trica con Olimpia.
-   - QuÃ© actor interviene: cliente empresarial y proveedor Olimpia.
-   - QuÃ© sistema participa: canal de biometrÃ­a y flujo de onboarding.
-   - QuÃ© informaciÃ³n se utiliza: datos del cliente y enlace de verificaciÃ³n.
-   - QuÃ© decisiÃ³n se toma: si se inicia la validaciÃ³n.
-   - QuÃ© ocurre si el resultado es positivo: continÃºa el proceso.
-   - QuÃ© ocurre si el resultado es negativo: se termina el proceso o se notifica el caso.
+### 1. Recepción de la solicitud
 
-2. Resultado de la biometrÃ­a
-   - QuÃ© sucede: el sistema o el proveedor informa si la biometrÃ­a fue exitosa, rechazada o queda en revisiÃ³n.
-   - QuÃ© actor interviene: proveedor Olimpia y sistema.
-   - QuÃ© sistema participa: integraciÃ³n con biometrÃ­a.
-   - QuÃ© informaciÃ³n se utiliza: resultado de la validaciÃ³n biomÃ©trica.
-   - QuÃ© decisiÃ³n se toma: si se continÃºa, se revisa manualmente o se detiene.
-   - QuÃ© ocurre si el resultado es positivo: se continÃºa con la vinculaciÃ³n de cuenta bancaria.
-   - QuÃ© ocurre si el resultado es negativo: el proceso se detiene o se deriva a revisiÃ³n manual.
+Una vez finalizado el onboarding digital, el sistema recibe la solicitud y crea automáticamente el caso dentro del módulo administrativo para iniciar el proceso de validación.
 
-3. RevisiÃ³n manual por analista de riesgo
-   - QuÃ© sucede: el caso queda en revisiÃ³n para validar identidad o fraude.
-   - QuÃ© actor interviene: analista de riesgo.
-   - QuÃ© sistema participa: flujo de casos en revisiÃ³n.
-   - QuÃ© informaciÃ³n se utiliza: resultado de biometrÃ­a y contexto del cliente.
-   - QuÃ© decisiÃ³n se toma: si se aprueba o rechaza el caso.
-   - QuÃ© ocurre si el resultado es positivo: se continÃºa con el flujo.
-   - QuÃ© ocurre si el resultado es negativo: se notifica el rechazo y se finaliza el proceso.
+Esta etapa marca el inicio del análisis automático de identidad y riesgo.
 
-4. VinculaciÃ³n de cuenta bancaria
-   - QuÃ© sucede: si la biometrÃ­a fue exitosa o aprobada, se vincula la cuenta bancaria para dÃ©bito automÃ¡tico.
-   - QuÃ© actor interviene: cliente empresarial y sistema.
-   - QuÃ© sistema participa: integraciÃ³n con Druo.
-   - QuÃ© informaciÃ³n se utiliza: cuenta bancaria del cliente y estado de la biometrÃ­a.
-   - QuÃ© decisiÃ³n se toma: si la cuenta puede integrarse al proceso.
-   - QuÃ© ocurre si el resultado es positivo: se avanza a documentaciÃ³n bancaria.
-   - QuÃ© ocurre si el resultado es negativo: el proceso queda bloqueado o requiere correcciÃ³n.
+---
 
-5. CertificaciÃ³n bancaria y extractos
-   - QuÃ© sucede: se adjunta la certificaciÃ³n bancaria y los extractos de los Ãºltimos 3 meses.
-   - QuÃ© actor interviene: cliente empresarial.
-   - QuÃ© sistema participa: captura documental y carga de archivos.
-   - QuÃ© informaciÃ³n se utiliza: informaciÃ³n bancaria y estados de cuenta.
-   - QuÃ© decisiÃ³n se toma: si la informaciÃ³n es suficiente para continuar.
-   - QuÃ© ocurre si el resultado es positivo: se pasa a la selecciÃ³n de localidad.
-   - QuÃ© ocurre si el resultado es negativo: se solicita informaciÃ³n adicional.
+### 2. Consulta de información externa
 
-6. SelecciÃ³n de localidad habitual
-   - QuÃ© sucede: el cliente selecciona la localidad donde realiza sus compras habituales.
-   - QuÃ© actor interviene: cliente empresarial.
-   - QuÃ© sistema participa: formulario de onboarding.
-   - QuÃ© informaciÃ³n se utiliza: datos de negocio y contexto comercial.
-   - QuÃ© decisiÃ³n se toma: si la informaciÃ³n de localidad es vÃ¡lida.
-   - QuÃ© ocurre si el resultado es positivo: se envÃ­a la informaciÃ³n al asesor.
-   - QuÃ© ocurre si el resultado es negativo: se solicita corregir o completar.
+El sistema consulta simultáneamente la información disponible en Experian y el historial transaccional del cliente registrado en D1.
 
-7. EnvÃ­o a asesor para anÃ¡lisis de crÃ©dito
-   - QuÃ© sucede: la informaciÃ³n se comparte con el asesor para el anÃ¡lisis de crÃ©dito.
-   - QuÃ© actor interviene: asesor y sistema.
-   - QuÃ© sistema participa: flujo de asignaciÃ³n y envÃ­o de informaciÃ³n.
-   - QuÃ© informaciÃ³n se utiliza: datos de KYC, cuenta bancaria y localidad.
-   - QuÃ© decisiÃ³n se toma: si el caso continÃºa a evaluaciÃ³n de riesgo automatizada.
-   - QuÃ© ocurre si el resultado es positivo: se espera respuesta en 2 dÃ­as.
-   - QuÃ© ocurre si el resultado es negativo: el caso se detiene o requiere revisiÃ³n adicional.
+Estas consultas permiten complementar la información recopilada durante el onboarding y obtener los datos necesarios para ejecutar las validaciones automáticas.
 
-8. ContinuaciÃ³n a evaluaciÃ³n de riesgo
-   - QuÃ© sucede: el proceso pasa a la evaluaciÃ³n automatizada de riesgo.
-   - QuÃ© actor interviene: sistema de riesgo.
-   - QuÃ© sistema participa: motor de evaluaciÃ³n de riesgo.
-   - QuÃ© informaciÃ³n se utiliza: datos convalidados del KYC.
-   - QuÃ© decisiÃ³n se toma: si se aprueba o rechaza el crÃ©dito.
-   - QuÃ© ocurre si el resultado es positivo: continÃºa el proceso de originaciÃ³n.
-   - QuÃ© ocurre si el resultado es negativo: el cliente recibe notificaciÃ³n de rechazo.
+---
+
+### 3. Evaluación automática de criterios KYC
+
+Con la información obtenida, el sistema ejecuta automáticamente las reglas de negocio definidas para el proceso de Validación de Identidad (KYC).
+
+Entre los criterios evaluados se encuentran:
+
+- Score mínimo requerido.
+- Capacidad de endeudamiento.
+- Información transaccional del cliente.
+- Tienda habitual registrada.
+- Reglas definidas para el producto.
+
+Toda esta evaluación se realiza sin intervención manual.
+
+---
+
+### 4. Validación de cumplimiento
+
+Una vez finalizada la evaluación automática, el sistema determina si el cliente cumple los requisitos mínimos para continuar.
+
+Si el cliente no cumple alguno de los criterios establecidos, la solicitud es rechazada automáticamente y se genera una alerta para registrar la decisión.
+
+Si cumple los requisitos, el proceso continúa con la validación de la cuenta bancaria.
+
+---
+
+### 5. Validación de la cuenta bancaria
+
+El sistema compara la cuenta bancaria registrada durante el onboarding con la información reportada por Experian y otros productos financieros asociados al cliente.
+
+Esta validación busca garantizar la consistencia de la información bancaria antes de continuar con el proceso de originación.
+
+---
+
+### 6. Verificación de la cuenta
+
+El sistema determina si la cuenta bancaria es válida.
+
+Si la validación es exitosa, la solicitud continúa.
+
+Si la información presenta inconsistencias, el crédito es rechazado automáticamente.
+
+---
+
+### 7. Ajuste del cupo y aprobación
+
+Cuando todas las validaciones son satisfactorias, el sistema aprueba la solicitud o ajusta el cupo de crédito de acuerdo con los resultados obtenidos durante la evaluación.
+
+Posteriormente el proceso continúa hacia la firma del contrato.
+
+---
+
+### 8. Rechazo del crédito
+
+Si cualquiera de las validaciones automáticas falla, el sistema rechaza la solicitud y registra una alerta dentro del proceso.
+
+Posteriormente el cliente recibe una notificación informando que su solicitud no fue aprobada.
+
+---
+
+### 9. Notificación al cliente
+
+Cuando el crédito es rechazado, el sistema envía automáticamente una notificación al cliente mediante correo electrónico.
+
+Con esta notificación finaliza el proceso de Validación de Identidad (KYC).
+
+---
 
 ## Reglas de negocio
 
-- La biometrÃ­a es un paso obligatorio para avanzar con la validaciÃ³n de identidad.
-- La cuenta bancaria solo se vincula si la biometrÃ­a fue exitosa o aprobada manualmente.
-- La certificaciÃ³n bancaria y los extractos de 3 meses deben adjuntarse para completar el KYC.
-- El analista de riesgo interviene solo cuando la biometrÃ­a queda en revisiÃ³n.
-- El proceso avanza a evaluaciÃ³n de riesgo automatizada despuÃ©s del envÃ­o al asesor.
+- El proceso KYC se ejecuta completamente de forma automática.
+- La información de Experian y el historial transaccional de D1 son obligatorios para realizar la evaluación.
+- El cliente debe cumplir el score mínimo definido por el producto.
+- Se valida automáticamente la capacidad de endeudamiento del cliente.
+- La tienda habitual registrada hace parte de las reglas de evaluación.
+- La cuenta bancaria debe coincidir con la información reportada en Experian.
+- Si cualquier validación falla, la solicitud es rechazada automáticamente.
+- Solo las solicitudes aprobadas continúan hacia la firma del contrato.
+
+---
 
 ## Entradas
 
-- Link de biometrÃ­a enviado por el sistema.
-- Datos del cliente y del representante legal.
-- Cuenta bancaria para dÃ©bito automÃ¡tico.
-- CertificaciÃ³n bancaria y extractos de los Ãºltimos 3 meses.
-- InformaciÃ³n de localidad habitual.
+- Información del cliente registrada durante el onboarding.
+- Resultado de la biometría.
+- Historial transaccional de D1.
+- Información de Experian.
+- Cuenta bancaria registrada.
+- Reglas de negocio del motor KYC.
+
+---
 
 ## Salidas
 
-- Caso de KYC validado o rechazado.
-- InformaciÃ³n completa enviada al asesor para anÃ¡lisis de crÃ©dito.
-- Continuidad al proceso de evaluaciÃ³n de riesgo automatizada.
+- Cliente aprobado para continuar con la firma del contrato.
+- Cupo de crédito aprobado o ajustado.
+- Solicitud rechazada.
+- Alerta registrada en el sistema.
+- Notificación enviada al cliente.
+
+---
 
 ## Excepciones
 
-- La biometrÃ­a es rechazada.
-- La biometrÃ­a queda en revisiÃ³n y requiere aprobaciÃ³n manual.
-- La vinculaciÃ³n de la cuenta bancaria falla.
-- La informaciÃ³n documental es incompleta.
-- El caso no alcanza la evaluaciÃ³n de riesgo por falta de datos o por rechazo manual.
+- El cliente no cumple el score mínimo requerido.
+- La capacidad de endeudamiento no cumple las políticas del producto.
+- La información de Experian presenta inconsistencias.
+- La cuenta bancaria no coincide con la información consultada.
+- Error en la consulta de Experian.
+- Error en la consulta del historial transaccional de D1.
+- Error en la validación automática de las reglas KYC.
+
+---
+
+## Consideraciones
+
+- El proceso KYC es completamente automático y no requiere intervención manual del analista.
+- La biometría se realiza durante el proceso de onboarding y su resultado es utilizado como insumo para esta evaluación.
+- La aprobación obtenida en esta etapa permite continuar con la firma del contrato.
+- Cualquier validación fallida genera el rechazo automático de la solicitud.
+
+---
 
 ## Pendientes de validación
 
-> **Pendiente de validar con el dueño del proceso.**
+> **Pendiente de validar con el dueño del proceso:** confirmar si el ajuste del cupo se realiza mediante reglas completamente automáticas o si existe alguna parametrización adicional antes de la firma del contrato.
+
+---
+
+## Fuentes consultadas
+
+- *Journeys Colpatria B2B* (junio de 2026), página 4.
+- Documento de reglas de negocio KYC.
+- Documentación funcional del producto.
 
