@@ -16,7 +16,6 @@ Registrar al cliente empresarial mediante un proceso completamente digital, iden
 
 **Figura 3. Journey de Onboarding Digital (Parte 2).**
 
-Este journey describe el recorrido completo que realiza el cliente desde que recibe la invitación al producto hasta que finaliza el proceso de onboarding digital. Durante este recorrido se registra la información básica del cliente y del negocio, se identifica el cupo preaprobado, se valida el número telefónico mediante un código OTP, se configura el PIN de seguridad, se realiza la validación biométrica, se registra la cuenta bancaria para débito automático y se recopila la información necesaria para iniciar el análisis crediticio antes de continuar con el proceso de Validación de Identidad (KYC).
 
 ---
 
