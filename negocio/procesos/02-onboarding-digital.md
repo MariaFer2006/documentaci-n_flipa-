@@ -167,7 +167,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Información utilizada:** PIN de cuatro dígitos definido por el cliente.
 
-**Resultado:** El sistema verifica el PIN contra condiciones de seguridad antifraude definidas para evitar combinaciones inseguras.
+**Resultado:** El pin queda guardado en base de datos para autenticaciòn futura.
 
 ---
 
