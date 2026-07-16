@@ -48,7 +48,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Actor:** Cliente.
 
-**Sistemas involucrados:** Plataforma web de onboarding.
+**Sistemas involucrados:** Plataforma web.
 
 **Información utilizada:** NIT o número de cédula de ciudadanía.
 
