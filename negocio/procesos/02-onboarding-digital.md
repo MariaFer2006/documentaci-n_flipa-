@@ -38,7 +38,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Información utilizada:** Correo electrónico y/o número de teléfono del cliente.
 
-**Resultado:** El cliente recibe un enlace único de invitación por correo, SMS o WhatsApp para iniciar el onboarding de forma segura.
+**Resultado:** El cliente recibe un enlace de invitación por correo, SMS o WhatsApp para iniciar el onboarding de forma segura.
 
 > **Nota técnica (Ajuste · jun 2026):** el journey marca este paso como nuevo/ajustado en la integración de envío con Sendgrid y Zenvia.
 
