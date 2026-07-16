@@ -175,7 +175,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Actor:** Web (sistema).
 
-**Resultado:** El sistema notifica que la cuenta de socio D1 fue creada exitosamente y habilita la siguiente etapa del proceso.
+**Resultado:** El sistema notifica que la cuenta de socio D1 fue creada exitosamente y habilita la siguiente etapa del proceso. El cliente pasa a estado de biometrìa pendiente.
 
 > **Pendiente de producto:** el journey incluye una nota de diseño para agregar un texto (copy) que indique al cliente que debe revisar su correo para continuar.
 
@@ -187,13 +187,13 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Sistemas involucrados:** Olimpia (proveedor externo de biometría).
 
-**Resultado:** El sistema genera un correo con el enlace de biometría de Olimpia y lo envía al cliente. La biometría se realiza fuera de la aplicación.
+**Resultado:** El sistema genera un correo con el enlace unico de biometría de Olimpia y lo envía al cliente. La biometría se realiza fuera de la aplicación.
 
 > **Nota (Ajuste · jun 2026):** este paso reemplaza la biometría in-house que antes se realizaba mediante foto de cédula, selfie y verificación manual.
 
 ---
 
-### 15. Validación biométrica
+### 15. Validación biométrica (placeholder)
 
 **Actor:** Cliente y proveedor externo (Olimpia).
 
@@ -201,9 +201,9 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 16. Gestión del resultado biométrico
+### 16. Gestión del resultado biométrico (placeholder)
 
-**Actor:** Sistema.
+**Actor:** Sistema-webhook.
 
 **Decisión:** ¿Cuál es el resultado de la biometría?
 
@@ -214,7 +214,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 17. Revisión manual por analista de riesgo
+### 17. Revisión manual por analista de riesgo (placeholder)
 
 **Actor:** Analista de riesgo.
 
@@ -249,7 +249,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 20. Selección de localidad habitual
+### 20. Selección de localidad habitual (placeholder)
 
 **Actor:** Cliente.
 
@@ -263,29 +263,29 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Actor:** Web (sistema).
 
-**Resultado:** El sistema envía toda la información recopilada al asesor encargado del análisis de crédito e informa al cliente que debe esperar respuesta en los próximos dos días.
+**Resultado:** El sistema envía toda la información recopilada al asesor encargado del análisis de crédito e informa al cliente que debe esperar respuesta en los próximos 1 día.
 
 ---
 
-### 22. Continuación hacia KYC
+### 22. Continuación hacia KYC 
 
-**Resultado:** La solicitud continúa con el proceso de Validación de Identidad (KYC), donde se realizan las verificaciones correspondientes antes de la originación del crédito.
+**Resultado:** La solicitud continúa con el proceso de Validación de Identidad (KYC mas motor de riesgo), donde se realizan las verificaciones correspondientes antes de la originación del crédito.
 
 ---
 
 ## Reglas de negocio
 
-- Cada cliente inicia el proceso mediante un enlace único enviado por Sendgrid o Zenvia.
+- Cada cliente inicia el proceso mediante un enlace enviado por Sendgrid y Zenvia.
 - El cupo preaprobado se calcula utilizando información transaccional de D1; si la identificación falla, el cliente debe reintentar el ingreso de su NIT o identificación.
 - La aceptación de términos y condiciones es obligatoria, tanto en el flujo NIT como en el flujo CC.
 - El número telefónico debe validarse mediante OTP; el cliente puede solicitar un nuevo código cuando sea necesario.
 - El cliente debe validar un segundo código de verificación enviado a su correo electrónico antes de crear el PIN de seguridad.
-- El cliente debe crear un PIN de cuatro dígitos, verificado contra condiciones de seguridad antifraude.
-- La biometría se realiza mediante el proveedor externo Olimpia, fuera de la aplicación.
+- El cliente debe crear un PIN de cuatro dígitos.
+- La biometría se realiza mediante el proveedor externo *Olimpia*, fuera de la aplicación.
 - Los resultados de biometría "en revisión" y "rechazado" son evaluados por un analista de riesgo, quien determina la aprobación o el rechazo final.
 - La cuenta bancaria debe validarse ante Drúo antes de autorizar el débito automático.
-- El cliente debe adjuntar certificación bancaria y extractos bancarios de los últimos tres meses.
-- El equipo de análisis de crédito informa su respuesta en un plazo de hasta dos días.
+- *El cliente debe adjuntar certificación bancaria *(saldo actual)* y extractos bancarios de los últimos tres meses.*
+- El equipo de análisis de crédito informa su respuesta en un plazo de hasta 1 día.
 - Solo las solicitudes que completen exitosamente el onboarding continúan hacia KYC.
 
 ---
@@ -297,7 +297,9 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - Número de teléfono.
 - Documento de identidad (NIT o CC).
 - Ciudad y dirección.
-- Información del representante legal (cédula de ciudadanía y teléfono).
+- Nombre del representante legal 
+- cédula de ciudadanía del representante legal
+- teléfono del representante legal
 - Código OTP (teléfono).
 - Código de verificación (correo electrónico).
 - PIN de seguridad.
@@ -311,14 +313,13 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 ## Salidas
 
 - Cliente registrado.
-- Cuenta de socio D1 creada.
 - Cupo preaprobado identificado.
 - Teléfono y correo electrónico validados.
 - PIN registrado.
 - Biometría completada (con o sin revisión manual).
-- Cuenta bancaria vinculada y validada ante Drúo.
+- Cuenta bancaria enviada a validaciòn ante Drúo.
 - Documentación bancaria registrada.
-- Solicitud enviada al asesor de análisis de crédito.
+- Notificaciòn del funnel
 - Proceso preparado para continuar con KYC.
 
 ---
@@ -327,11 +328,11 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 - El cliente no abre la invitación.
 - El cliente abandona el proceso.
-- La identificación del cupo preaprobado falla y el cliente debe reintentar.
+- La identificación del cupo preaprobado falla.
 - No acepta los términos y condiciones.
 - El código OTP o el código de verificación por correo expiran o son incorrectos.
-- La biometría es rechazada o queda en revisión y el analista de riesgo la rechaza.
-- Error durante la validación biométrica con Olimpia.
+- *La biometría es rechazada o queda en revisión y el analista de riesgo la rechaza.*
+- *Error durante la validación biométrica con Olimpia.*
 - Error en la validación de la cuenta bancaria ante Drúo.
 - No se adjunta la documentación bancaria.
 
@@ -345,18 +346,18 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - La validación manual del analista de riesgo aplica cuando la biometría queda "en revisión" o "rechazada".
 - La cuenta bancaria se valida ante Drúo antes de autorizar el débito automático.
 - La documentación bancaria hace parte de los insumos para el análisis crediticio.
-- El plazo de respuesta del análisis de crédito (hasta dos días) es un dato operativo sujeto a cambios.
-- El onboarding finaliza cuando la solicitud queda preparada para continuar con KYC.
+- El plazo de respuesta del análisis de crédito (hasta 1 día).
+- Para un cliente que tenga todos los datos requeridos, el proceso de Onboarding no debe tardar mas de 5 minutos.
+- El onboarding finaliza exitosamente cuando la solicitud queda preparada para continuar con KYC.
 
 ---
 
 ## Notas
 
 - Los tiempos de aprobación, número de cuotas y demás parámetros operativos pueden modificarse durante la evolución del producto.
-- La lógica de la bifurcación entre NIT y CC debe validarse con el dueño del proceso.
 - Quedan pendientes dos ajustes técnicos señalados en el journey: cambiar la URL de la página en el paso de registro del documento de identificación, y agregar un copy que indique al cliente revisar su correo tras la confirmación de cuenta.
 - Debe confirmarse con el dueño del proceso si todo rechazo automático de biometría pasa por revisión manual del analista de riesgo.
-- La integración con proveedores externos (Sendgrid, Zenvia, Olimpia, Drúo) puede variar según la evolución del producto.
+
 
 ---
 
