@@ -52,7 +52,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Información utilizada:** NIT o número de cédula de ciudadanía.
 
-**Resultado:** El sistema identifica el tipo de cliente y recupera la información previamente disponible.
+**Resultado:** El sistema identifica el tipo de cliente y recupera la información previamente disponible de las bases de datos.
 
 > **Nota técnica (Ajuste · jun 2026):** el journey señala en este paso la necesidad de cambiar la URL de la página; validar con Tecnología si ya fue implementado.
 
