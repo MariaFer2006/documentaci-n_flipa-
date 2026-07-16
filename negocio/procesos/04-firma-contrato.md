@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma y activar el crédito para que el cliente pueda utilizar su cupo y recibir el bono D1 asociado al producto.
+Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma, asignar el bono D1 y obtener la aprobación final de Core de Crédito/Originación que activa el crédito y da inicio al funcionamiento de la calculadora.
 
 ---
 
@@ -14,14 +14,15 @@ Formalizar la aceptación del crédito aprobado mediante la firma electrónica d
 
 **Figura 5. Journey de Firma de Contrato y Activación del Crédito.**
 
+En el journey, las cajas moradas ("Lee el contrato y el pagaré", "Se genera contrato y pagaré firmados y se envía copia al cliente vía email" y "Se aprueba el crédito") corresponden a pasos ajustados en junio de 2026 (leyenda "Ajuste · jun 2026"); las demás cajas corresponden a pasos ya existentes del flujo.
 
 ---
 
 ## Descripción general
 
-Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad, revisa las condiciones del crédito y los documentos legales, y finalmente confirma la firma utilizando un código de verificación enviado a su correo electrónico.
+Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad, y recibe la bienvenida a su cuenta junto con una primera comunicación sobre el crédito aprobado (funcionamiento en circuito cerrado, posibilidad de un próximo préstamo mayor, beneficios y congelación del cupo en caso de mora). Después de aceptar las condiciones, el cliente recibe una segunda comunicación con el detalle completo del crédito (cupo, plan de pagos, valor, fecha, tasa e inicio de uso), revisa el contrato y el pagaré, y confirma la firma mediante un código de verificación enviado a su correo electrónico.
 
-Cuando la firma se completa correctamente, el sistema genera los documentos firmados, activa el crédito, asigna el bono D1 y notifica al cliente que el proceso ha finalizado exitosamente.
+Cuando la firma se completa correctamente, el sistema genera los documentos firmados, envía copia al correo del cliente, asigna el bono D1 y notifica al cliente que ya puede visualizar el código del bono desde su cuenta. Finalmente, un actor distinto al Core Bancario —Core de Crédito/Originación— aprueba el crédito, lo que da inicio al funcionamiento de la calculadora y continúa hacia la recepción y uso del bono.
 
 ---
 
@@ -29,97 +30,192 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 ### 1. Habilitación del crédito
 
-El proceso inicia cuando el Core Bancario habilita el crédito previamente aprobado para que pueda continuar con la etapa de formalización. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
+**Actor:** Core Bancario.
+
+**Resultado:** El Core Bancario habilita el crédito previamente aprobado para que pueda continuar con la etapa de formalización. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
 
 ---
 
-### 2. Invitación para continuar con la firma
+### 2. Solicitud de continuar con la firma del contrato
 
-El sistema contacta al cliente mediante los canales definidos (correo electrónico, mensaje o llamada) e informa que el crédito fue aprobado y que puede continuar con la firma electrónica.
+**Actor:** Web (sistema).
 
-Posteriormente se envía un correo con el enlace que permite ingresar nuevamente al proceso.
+**Sistemas involucrados:** Canales de contacto (correo electrónico, mensaje o llamada).
 
----
-
-### 3. Autenticación del cliente
-
-Al acceder al enlace, el cliente ingresa su NIT y posteriormente introduce el PIN de seguridad creado durante el proceso de onboarding.
-
-Esta autenticación permite verificar que quien realiza la firma corresponde al titular de la solicitud.
-
-Si el cliente olvidó el PIN, el sistema lo redirige al canal de soporte para recuperar el acceso antes de continuar.
+**Resultado:** El sistema contacta al cliente mediante correo electrónico, mensaje o llamada e informa que el crédito fue aprobado y que puede continuar con la firma electrónica.
 
 ---
 
-### 4. Bienvenida y presentación del crédito
+### 3. Recepción del correo con el enlace
 
-Una vez autenticado, el sistema da la bienvenida al cliente y presenta la información principal del crédito aprobado.
+**Actor:** Cliente.
 
-En esta etapa se comunica el monto aprobado y las condiciones generales del producto, incluyendo beneficios asociados al crédito y las condiciones de uso del cupo.
+**Resultado:** El cliente recibe un correo con el enlace que permite ingresar nuevamente al proceso de firma.
 
-Posteriormente se presenta el detalle completo del crédito, donde el cliente puede revisar información como:
+---
+
+### 4. Autenticación mediante NIT
+
+**Actor:** Cliente.
+
+**Información utilizada:** NIT del cliente.
+
+**Resultado:** El cliente ingresa su NIT como primer factor de autenticación.
+
+---
+
+### 5. Autenticación mediante PIN de seguridad
+
+**Actor:** Cliente.
+
+**Información utilizada:** PIN de seguridad creado durante el onboarding.
+
+**Resultado:** El cliente ingresa su PIN para verificar que quien realiza la firma corresponde al titular de la solicitud.
+
+> **Excepción prevista en el journey:** si el cliente olvidó su PIN, el sistema lo redirige al canal de soporte; una vez recuperado el acceso, el cliente vuelve a recibir el correo con el enlace para continuar el proceso.
+
+---
+
+### 6. Bienvenida y primera comunicación del crédito aprobado
+
+**Actor:** Web (sistema).
+
+**Resultado:** El sistema da la bienvenida al cliente a su cuenta y comunica el monto del crédito aprobado junto con sus condiciones generales, incluyendo:
+
+- Circuito cerrado.
+- El próximo préstamo puede ser mayor.
+- Beneficios de sacar el crédito.
+- Congelación del cupo si hay retrasos del pago.
+
+---
+
+### 7. Aceptación de condiciones
+
+**Actor:** Cliente.
+
+**Resultado:** El cliente acepta las condiciones del crédito para continuar con la formalización. Esta aceptación es obligatoria antes de recibir el detalle completo del crédito.
+
+---
+
+### 8. Comunicación detallada de las condiciones del crédito
+
+**Actor:** Web (sistema).
+
+**Resultado:** El sistema comunica al cliente el detalle completo del crédito:
 
 - Cupo aprobado.
 - Plan de pagos.
-- Valor total a pagar.
+- Valor a pagar.
 - Fecha de pago.
 - Tasa de interés.
-- Momento en el que podrá utilizar el cupo.
+- Cuándo podrá usarlo.
 
 ---
 
-### 5. Aceptación de condiciones
+### 9. Comunicación de siguientes pasos
 
-Después de revisar la información presentada, el cliente acepta las condiciones del crédito para continuar con la formalización.
+**Actor:** Web (sistema, vía app).
 
-Esta aceptación es obligatoria antes de acceder a los documentos legales.
-
----
-
-### 6. Revisión del contrato y pagaré
-
-El sistema presenta el contrato de crédito y el pagaré para que el cliente pueda leerlos completamente antes de realizar la firma electrónica.
-
-El cliente revisa toda la documentación legal y, una vez conforme con su contenido, continúa con el proceso de validación.
+**Resultado:** La aplicación comunica al cliente los siguientes pasos: la firma del contrato y del pagaré.
 
 ---
 
-### 7. Verificación mediante código
+### 10. Revisión del contrato y pagaré
 
-Para completar la firma electrónica, el sistema envía un código de verificación al correo electrónico registrado por el cliente.
+**Actor:** Cliente.
 
-El cliente ingresa el código recibido.
+**Resultado:** El cliente lee el contrato y el pagaré antes de continuar hacia la verificación de la firma electrónica.
 
-- Si el código es válido, la firma continúa normalmente.
-- Si el código es incorrecto o expira, el cliente puede solicitar un nuevo envío o contactar al servicio de atención al cliente para recibir asistencia.
-
----
-
-### 8. Generación de documentos firmados
-
-Una vez validado el código, el sistema genera automáticamente el contrato y el pagaré firmados electrónicamente.
-
-Una copia de ambos documentos es enviada al correo electrónico del cliente como constancia de la operación realizada.
-
-Al mismo tiempo el cliente recibe la confirmación de que la firma fue exitosa.
+> **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
 
 ---
 
-### 9. Activación del bono D1
+### 11. Envío del código de verificación
 
-Con la firma completada, el sistema asigna automáticamente el bono D1 asociado al crédito aprobado.
+**Actor:** Web (sistema).
 
-Posteriormente el cliente recibe una notificación indicando que el bono ya se encuentra disponible dentro de su cuenta.
+**Información utilizada:** Correo electrónico registrado por el cliente.
 
-Desde la aplicación el cliente puede visualizar el código correspondiente al bono para utilizarlo durante sus compras.
+**Resultado:** El sistema envía un código de verificación al correo electrónico del cliente para completar la firma electrónica. El flujo continúa en la página siguiente del journey.
 
 ---
 
-### 10. Activación definitiva del crédito
+### 12. Ingreso del código de verificación
 
-Como último paso del proceso, el crédito queda oficialmente activado y disponible para su utilización.
+**Actor:** Cliente.
 
-Con esta acción finaliza el proceso de originación y el cliente puede comenzar a utilizar el cupo aprobado junto con el bono D1 asignado.
+**Decisión:** ¿El código ingresado es válido?
+
+- **Exitoso:** el proceso continúa hacia la generación de los documentos firmados.
+- **Fallido:** el cliente es dirigido a contactar el servicio al cliente.
+
+**Resultado:** El cliente tiene la opción de reenviar el código si no lo recibe.
+
+---
+
+### 13. Gestión de código fallido
+
+**Actor:** Web (sistema) / Cliente.
+
+**Resultado:** Cuando el código es incorrecto o expira, el sistema dirige al cliente a contactar al servicio de atención al cliente; desde allí el cliente puede volver a ingresar el código de verificación.
+
+---
+
+### 14. Generación de documentos firmados
+
+**Actor:** Web (sistema).
+
+**Resultado:** Una vez validado el código, el sistema genera automáticamente el contrato y el pagaré firmados electrónicamente y envía una copia de ambos documentos al correo electrónico del cliente como constancia de la operación.
+
+> **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
+
+---
+
+### 15. Confirmación de firma exitosa
+
+**Actor:** Cliente.
+
+**Resultado:** El cliente recibe la confirmación de que la firma del contrato y el pagaré fue exitosa.
+
+---
+
+### 16. Asignación del bono D1
+
+**Actor:** Web (sistema).
+
+**Resultado:** El sistema asigna automáticamente el bono D1 asociado al crédito aprobado.
+
+---
+
+### 17. Notificación del bono asignado
+
+**Actor:** Web (sistema).
+
+**Resultado:** El cliente recibe, a través de su cuenta, la notificación de que el bono ya se encuentra asignado.
+
+---
+
+### 18. Visualización del código del bono
+
+**Actor:** Cliente.
+
+**Resultado:** El cliente ve, a través de su cuenta, el código correspondiente al bono para utilizarlo durante sus compras.
+
+---
+
+### 19. Aprobación del crédito por Core de Crédito/Originación
+
+**Actor:** Core de Crédito/Originación.
+
+**Resultado:** Este actor —distinto del Core Bancario que habilitó el proceso en el paso 1— aprueba el crédito. Con esta aprobación se da inicio al funcionamiento de la calculadora.
+
+> **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
+
+---
+
+### 20. Cierre del journey
+
+**Resultado:** Con la aprobación del crédito finaliza el journey de firma de contrato y activación. El flujo continúa hacia la recepción y uso del bono, y hacia el proceso de Calculadora y Cobro del Crédito.
 
 ---
 
@@ -127,13 +223,15 @@ Con esta acción finaliza el proceso de originación y el cliente puede comenzar
 
 - El crédito debe haber sido aprobado previamente antes de iniciar la firma.
 - El cliente debe autenticarse mediante NIT y PIN para acceder al proceso.
-- Si el cliente olvida el PIN, deberá recuperar el acceso antes de continuar.
-- La aceptación de las condiciones del crédito es obligatoria.
+- Si el cliente olvida el PIN, deberá recuperar el acceso a través del canal de soporte antes de continuar.
+- La comunicación de las condiciones del crédito ocurre en dos momentos distintos: una primera comunicación general antes de la aceptación (circuito cerrado, próximo préstamo mayor, beneficios, congelación del cupo por mora) y una segunda comunicación con el detalle operativo después de la aceptación (cupo, plan de pagos, valor, fecha, tasa, inicio de uso).
+- La aceptación de las condiciones del crédito es obligatoria antes de acceder al detalle completo y a los documentos legales.
 - El contrato y el pagaré deben visualizarse antes de la firma electrónica.
-- La firma solo se completa cuando el código de verificación es validado correctamente.
-- Una vez finalizada la firma, el sistema genera automáticamente los documentos legales firmados.
+- La firma solo se completa cuando el código de verificación es validado correctamente; si falla, el cliente puede reintentar o contactar al servicio al cliente.
+- Una vez finalizada la firma, el sistema genera automáticamente los documentos legales firmados y envía copia al correo del cliente.
 - El bono D1 únicamente se asigna cuando la firma ha sido completada exitosamente.
-- Solo después de la activación final el cliente puede utilizar el cupo de crédito.
+- La aprobación final del crédito la realiza Core de Crédito/Originación, un actor distinto del Core Bancario que habilita el proceso al inicio.
+- La aprobación de Core de Crédito/Originación da inicio al funcionamiento de la calculadora.
 
 ---
 
@@ -154,7 +252,8 @@ Con esta acción finaliza el proceso de originación y el cliente puede comenzar
 - Pagaré firmado electrónicamente.
 - Confirmación de firma exitosa.
 - Bono D1 asignado.
-- Crédito activado.
+- Crédito aprobado por Core de Crédito/Originación.
+- Inicio del funcionamiento de la calculadora.
 - Cupo disponible para utilización.
 
 ---
@@ -163,27 +262,32 @@ Con esta acción finaliza el proceso de originación y el cliente puede comenzar
 
 - El cliente no accede al enlace enviado por correo.
 - El cliente olvidó el PIN.
-- El código de verificación es incorrecto o expira.
+- El código de verificación es incorrecto o expira, y el cliente debe contactar al servicio al cliente o reintentar.
 - El cliente no acepta las condiciones del crédito.
 - Se presenta un error durante la generación del contrato o del pagaré.
 - No es posible asignar el bono D1.
-- Se produce un error durante la activación del crédito.
+- Se produce un error durante la aprobación del crédito por parte de Core de Crédito/Originación.
 
 ---
 
 ## Consideraciones
 
 - La autenticación mediante NIT y PIN busca garantizar que únicamente el titular pueda acceder al proceso de firma.
+- El journey distingue dos actores del Core distintos: Core Bancario, que habilita el proceso al inicio, y Core de Crédito/Originación, que aprueba el crédito al final y da inicio a la calculadora.
 - La firma electrónica requiere una validación adicional mediante código enviado al correo electrónico del cliente.
-- El contrato y el pagaré se generan automáticamente una vez finaliza la firma.
-- El cliente recibe una copia de los documentos firmados para su consulta posterior.
-- La asignación del bono D1 y la activación del crédito ocurren únicamente después de completar exitosamente todo el proceso de firma.
+- El contrato y el pagaré se generan automáticamente una vez finaliza la firma, y se envía copia al correo del cliente.
+- La asignación del bono D1 y la aprobación final del crédito ocurren únicamente después de completar exitosamente todo el proceso de firma.
 
 ---
 
 ## Pendientes de validación
 
-> **Pendiente de validar con el dueño del proceso:** confirmar el mecanismo definitivo de firma electrónica y autenticación (correo + PIN u otro mecanismo de no repudio), el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración.
+> **Pendiente de validar con el dueño del proceso:**
+>
+> - Confirmar el mecanismo definitivo de firma electrónica y autenticación (correo + PIN u otro mecanismo de no repudio).
+> - Confirmar el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración.
+> - Confirmar la diferencia funcional y de sistema entre Core Bancario y Core de Crédito/Originación.
+> - Confirmar el contenido definitivo y la variabilidad de los mensajes "circuito cerrado" y "congelación del cupo si hay retrasos del pago".
 
 ---
 
