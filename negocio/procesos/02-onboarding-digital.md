@@ -64,9 +64,9 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Sistemas involucrados:** Información transaccional de D1.
 
-**Información utilizada:** NIT o cédula registrada; historial de consumo en D1.
+**Información utilizada:** NIT o cédula registrada; cupo pre-aprobado por colpatria.
 
-**Decisión:** ¿La identificación del cupo fue exitosa?
+**Decisión:** ¿La validaciòn del cupo fue exitosa?
 
 - **Exitoso:** el flujo continúa hacia el registro de ubicación.
 - **Fallido:** el cliente vuelve a la pantalla de ingreso del NIT o identificación para intentarlo de nuevo.
