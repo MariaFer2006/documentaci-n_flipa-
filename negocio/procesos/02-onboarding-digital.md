@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Registrar al cliente empresarial mediante un proceso completamente digital (aplicación web), identificar su cupo preaprobado utilizando la información transaccional ya disponible en base de datos, recopilar la información básica del negocio y del representante legal, validar los mecanismos de autenticación y seguridad, realizar la validación biométrica, registrar la cuenta bancaria para el débito automático y recopilar la documentación necesaria para dejar la solicitud lista para el análisis crediticio automatizado y el proceso de Validación de Identidad (KYC).
+Registrar al cliente empresarial mediante un proceso completamente digital, identificar su cupo preaprobado utilizando la información transaccional disponible, recopilar la información básica del negocio y del representante legal, validar los mecanismos de autenticación y seguridad, realizar la validación biométrica, registrar la cuenta bancaria para el débito automático y recopilar la documentación necesaria para dejar la solicitud preparada para el análisis crediticio y continuar con el proceso de Validación de Identidad (KYC).
 
 > **Actualización (Check-in 16 jul 2026):** el estudio de crédito inicial queda completamente automatizado a través del motor de riesgo; no interviene un asesor humano en esta etapa. El flujo final del onboarding queda enfocado en dejar la solicitud lista para KYC + motor de riesgo.
 
@@ -24,9 +24,10 @@ En el journey, las cajas en color morado corresponden a pasos nuevos o ajustados
 
 ## Descripción general
 
-El onboarding digital constituye el primer contacto del cliente con el producto y concentra todas las actividades necesarias para crear su perfil dentro de la plataforma web (responsive, no aplicación móvil descargable).
 
-El proceso inicia cuando el cliente recibe, de forma automática, un enlace a la **landing page** de onboarding por correo electrónico (Sendgrid), SMS o WhatsApp (Zenvia). A partir de este momento registra su documento de identificación (NIT o CC), con lo cual el sistema consulta el cupo preaprobado **ya calculado y almacenado** a partir del historial transaccional de D1 (no se recalcula en este momento). Luego registra su ubicación comercial (departamento y ciudad mediante listas desplegables, y dirección en texto libre), suministra los datos del representante legal y valida el número telefónico mediante un código OTP. Posteriormente ingresa un segundo código de verificación enviado a su correo electrónico, configura un PIN de seguridad de cuatro dígitos (sin reglas adicionales de combinaciones inseguras, por decisión de simplificación para el piloto), realiza la validación biométrica con el proveedor externo *Olimpia* (por fuera de la web, mediante enlace enviado por correo), registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos (validada de forma asíncrona ante Drúo), adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada de forma automática al proceso de Validación de Identidad (KYC) y al motor de riesgo.
+El onboarding digital constituye el primer contacto del cliente con el producto y concentra todas las actividades necesarias para crear su perfil dentro de la plataforma.
+
+El proceso inicia cuando el cliente recibe una invitación personalizada por correo electrónico(Sendgrid), SMS o WhatsApp ( Zenvia) para acceder al producto. A partir de este momento registra la información básica del negocio, suministra los datos del representante legal y valida el número telefónico mediante un código OTP. Posteriormente ingresa un segundo código de verificación enviado a su correo electrónico, configura un PIN de seguridad, realiza la validación biométrica con el proveedor externo *Olimpia*, registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos (validada ante Drúo), adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada al proceso de Validación de Identidad (KYC).
 
 > **Nota de estado:** tras la creación de la cuenta, el cliente queda en el estado **"pendiente de biometría"**, visible para seguimiento interno del funnel.
 
@@ -34,7 +35,7 @@ El proceso inicia cuando el cliente recibe, de forma automática, un enlace a la
 
 ## Explicación paso a paso
 
-Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **tiempo estimado** de referencia. Estos tiempos son estimaciones de planeación para UX, pendientes de validar con Producto/Tecnología; el único dato confirmado en el check-in del 16 de julio de 2026 es que, para un cliente con toda su información lista, el onboarding no debe superar los **5 minutos** de interacción activa (sin contar esperas externas como entrega de OTP, biometría con Olimpia o revisión de analista, que ocurren fuera de la sesión del cliente).
+
 
 ### 1. Recepción de la invitación
 
@@ -82,7 +83,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 **Proceso:** El cupo preaprobado **no se calcula en este momento**: corresponde a un valor ya calculado previamente a partir del historial de consumos en D1 y almacenado en base de datos. En este paso el sistema únicamente consulta y recupera ese valor.
 
-**Decisión:** ¿La consulta del cupo fue exitosa?
+**Decisión:** ¿La validación del cupo fue exitosa?
 
 - **Exitoso:** el flujo continúa hacia el registro de ubicación.
 - **Fallido:** el cliente vuelve a la pantalla de ingreso del NIT o identificación para intentarlo de nuevo.
@@ -124,7 +125,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 ---
 
-### 6. Reconocimiento como representante legal (flujo NIT)
+### 6. Validación del representante legal (flujo NIT)
 
 **Actor:** Cliente.
 
