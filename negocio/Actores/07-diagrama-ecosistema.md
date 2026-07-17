@@ -9,14 +9,13 @@ graph TD
         SUMZ["Sumz"]
     end
 
-    subgraph Comercial["Canal y captación comercial"]
+    subgraph Comercial["Canal y captación comercial (digital)"]
         D1["D1"]
-        ASESOR["Asesor comercial"]
-        HUNTER["Hunter / Visitador"]
+        ASESOR["Asesor de servicio al cliente<br/>(canales digitales)"]
     end
 
     CLIENTE["Cliente empresarial"]
-    ADMIN["Administrador del producto"]
+    FLIIPA["Fliipa"]
 
     subgraph RiesgoKYC["Riesgo y cumplimiento"]
         RIESGO["Analista de riesgo"]
@@ -48,15 +47,14 @@ graph TD
         SENDGRID["Sendgrid"]
     end
 
-    GSD --> SUMZ --> ADMIN
+    GSD --> SUMZ --> FLIIPA
     D1 --> CLIENTE
     ASESOR --> CLIENTE
-    HUNTER --> CLIENTE
     CLIENTE --> RIESGO
     RIESGO --> EXPERIAN
     RIESGO --> OLIMPIA
-    RIESGO --> ADMIN
-    ADMIN --> CARTERA
+    RIESGO --> FLIIPA
+    FLIIPA --> CARTERA
     CARTERA --> LIDER --> COMCARTERA
     COMCARTERA --> JURIDICO --> COMLEGAL
     CLIENTE --> IA --> AGENTE --> LEGALPQR
@@ -66,6 +64,9 @@ graph TD
     SENDGRID --> CLIENTE
 ```
 
+> **Nota (Check-in de Producto, 15 jul 2026):** se renombró el nodo "Administrador del producto" a **Fliipa**, se eliminó el nodo "Hunter / Visitador" (perfil no existente en el modelo 100% digital) y se renombró "Asesor comercial" a **"Asesor de servicio al cliente (canales digitales)"**, consistente con los ajustes de rol acordados en esa reunión.
+
 ## Fuentes consultadas
 
 - Elaboración propia a partir de Modelo Comercial B2B, Modelo y Proceso de Cobranza B2B, Investigación B2B y Journeys Colpatria B2B.
+- Notas de la reunión "Producto: Check-in" (15 jul 2026) y su transcripción asociada.
