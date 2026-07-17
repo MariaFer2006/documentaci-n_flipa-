@@ -8,7 +8,8 @@
 |---|---|---|
 | Iván Aponte | Product Manager | Analiza el comportamiento de la cartera y propone estrategias de recuperación. |
 | Alejandra Suárez | Account and Portfolio Specialist | Realiza seguimiento al portafolio y participa en la toma de decisiones sobre la gestión de cartera. |
-| *(aún por definir)* | Senior Credit Strategy Analyst | *(sin descripción disponible)* |
+
+> **Nota (Check-in de Producto, 15 jul 2026):** se eliminó el perfil "Senior Credit Strategy Analyst", que figuraba como pendiente de definir sin descripción disponible. La composición definitiva del Comité de Cartera está pendiente y se definirá próximamente **con la participación de Colpatria**; este documento debe actualizarse cuando esa definición quede cerrada.
 
 ## Funciones principales del Comité de Cartera
 
@@ -26,3 +27,4 @@ El Journey Colpatria B2B (ajuste jun. 2026, pág. 10) documenta una escalada jur
 
 - Modelo y Proceso de Cobranza B2B — *Modelo Cobranza/Modelo_de_Cobranza_B2B_.pptx*
 - `Mensajes WhatsApp B2B.xlsx` y `Journeys Fran finales.pdf` (nota de consistencia)
+- Notas de la reunión "Producto: Check-in" (15 jul 2026) y su transcripción asociada — eliminación del perfil Senior Credit Strategy Analyst; Comité de Cartera pendiente de definir con Colpatria.
