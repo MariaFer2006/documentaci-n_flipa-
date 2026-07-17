@@ -1,4 +1,4 @@
-# 4. Diferenciador principal y contexto de mercado
+# 2. Diferenciador principal y contexto de mercado
 
 [← Volver a Descripción del negocio](README.md)
 

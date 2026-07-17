@@ -1,4 +1,4 @@
-# 6. Identidad y relación con el cliente
+# 3. Identidad y relación con el cliente
 
 ← Volver a Descripción del negocio
 
