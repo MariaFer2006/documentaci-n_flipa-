@@ -4,6 +4,8 @@
 
 Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma, asignar el bono D1 y obtener la aprobación final de Core de Crédito/Originación que activa el crédito y da inicio al funcionamiento de la calculadora.
 
+> **Referencia comercial:** según el *Modelo Comercial B2B* (portal del cliente), la firma de contrato debe completarse de forma **digital, desde el celular, en minutos** — este journey detalla técnicamente cómo se logra esa experiencia.
+
 ---
 
 ## Journey
@@ -16,23 +18,31 @@ Formalizar la aceptación del crédito aprobado mediante la firma electrónica d
 
 En el journey, las cajas moradas ("Lee el contrato y el pagaré", "Se genera contrato y pagaré firmados y se envía copia al cliente vía email" y "Se aprueba el crédito") corresponden a pasos ajustados en junio de 2026 (leyenda "Ajuste · jun 2026"); las demás cajas corresponden a pasos ya existentes del flujo.
 
+*Los elementos marcados con asterisco (\*) corresponden a puntos aún no definidos técnicamente o pendientes de confirmación con el dueño del proceso; se detallan en cada paso y se listan de forma consolidada en "Pendientes de validación".*
+
 ---
 
 ## Descripción general
 
-Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad, y recibe la bienvenida a su cuenta junto con una primera comunicación sobre el crédito aprobado (funcionamiento en circuito cerrado, posibilidad de un próximo préstamo mayor, beneficios y congelación del cupo en caso de mora). Después de aceptar las condiciones, el cliente recibe una segunda comunicación con el detalle completo del crédito (cupo, plan de pagos, valor, fecha, tasa e inicio de uso), revisa el contrato y el pagaré, y confirma la firma mediante un código de verificación enviado a su correo electrónico.
+Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad (creado durante el onboarding), y recibe la bienvenida a su cuenta junto con una primera comunicación sobre el crédito aprobado (funcionamiento en circuito cerrado, posibilidad de un próximo préstamo mayor, beneficios y congelación del cupo en caso de mora). Después de aceptar las condiciones, el cliente recibe una segunda comunicación con el detalle completo del crédito (cupo, plan de pagos, valor, fecha, tasa e inicio de uso), revisa el contrato y el pagaré, y confirma la firma mediante un código de verificación enviado a su correo electrónico.
 
-Cuando la firma se completa correctamente, el sistema genera los documentos firmados, envía copia al correo del cliente, asigna el bono D1 y notifica al cliente que ya puede visualizar el código del bono desde su cuenta. Finalmente, un actor distinto al Core Bancario —Core de Crédito/Originación— aprueba el crédito, lo que da inicio al funcionamiento de la calculadora y continúa hacia la recepción y uso del bono.
+Cuando la firma se completa correctamente, el sistema genera los documentos firmados, envía copia al correo del cliente, asigna el bono D1 y notifica al cliente que ya puede visualizar el código del bono desde su cuenta. Finalmente, un actor distinto al Core Bancario —Core de Crédito/Originación*— aprueba el crédito, lo que da inicio al funcionamiento de la calculadora y continúa hacia la recepción y uso del bono.
 
 ---
 
-## Explicación del Journey
+## Explicación paso a paso
+
+Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **tiempo estimado** de referencia. Estos tiempos son estimaciones de planeación para UX, consistentes con la meta comercial de que la firma se complete "en minutos, desde el celular" (*Modelo Comercial B2B*), y están pendientes de validar con Producto/Tecnología.
 
 ### 1. Habilitación del crédito
 
 **Actor:** Core Bancario.
 
-**Resultado:** El Core Bancario habilita el crédito previamente aprobado para que pueda continuar con la etapa de formalización. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
+**Proceso:** Tras la aprobación del crédito en el proceso de KYC/riesgo (documento 3), el Core Bancario habilita la operación correspondiente para que el caso pueda continuar hacia la etapa de formalización. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
+
+**Resultado:** Crédito habilitado para iniciar la firma. A partir de este momento el sistema puede solicitar al cliente la firma del contrato.
+
+**Tiempo estimado:** Instantáneo (disparado automáticamente al recibir la aprobación de KYC/riesgo).
 
 ---
 
@@ -40,9 +50,15 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Sistemas involucrados:** Canales de contacto (correo electrónico, mensaje o llamada).
+**Sistemas involucrados:** Canales de contacto (correo electrónico, mensaje o llamada)*.
 
-**Resultado:** El sistema contacta al cliente mediante correo electrónico, mensaje o llamada e informa que el crédito fue aprobado y que puede continuar con la firma electrónica.
+**Proceso:** El sistema contacta al cliente mediante correo electrónico, mensaje o llamada, informando que el crédito fue aprobado y que puede continuar con la firma electrónica.
+
+**Resultado:** Cliente contactado con la invitación a continuar el proceso de firma.
+
+**Tiempo estimado:** Instantáneo del lado del sistema; la recepción depende del canal y es asíncrona.
+
+**Placeholder\*:** no está definida la plataforma técnica exacta usada para este contacto (¿Sendgrid/Zenvia, igual que en onboarding y captación comercial, u otro proveedor para mensaje/llamada?), ni el criterio para elegir entre correo, mensaje o llamada.
 
 ---
 
@@ -50,7 +66,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Resultado:** El cliente recibe un correo con el enlace que permite ingresar nuevamente al proceso de firma.
+**Proceso:** El cliente recibe el correo enviado en el paso anterior y hace clic en el enlace, lo que lo redirige nuevamente a la plataforma web para retomar el proceso en el punto de la firma.
+
+**Resultado:** El cliente ingresa nuevamente al proceso de firma.
+
+**Tiempo estimado:** Asíncrono (depende de cuándo el cliente revisa su correo).
 
 ---
 
@@ -60,7 +80,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Información utilizada:** NIT del cliente.
 
-**Resultado:** El cliente ingresa su NIT como primer factor de autenticación.
+**Proceso:** El cliente ingresa su NIT como primer factor de autenticación; el sistema lo valida contra el registro creado durante el onboarding.
+
+**Resultado:** Primer factor de autenticación validado.
+
+**Tiempo estimado:** ~15 segundos.
 
 ---
 
@@ -68,11 +92,17 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Información utilizada:** PIN de seguridad creado durante el onboarding.
+**Información utilizada:** PIN de seguridad creado durante el onboarding (paso 12 del documento 2).
 
-**Resultado:** El cliente ingresa su PIN para verificar que quien realiza la firma corresponde al titular de la solicitud.
+**Proceso:** El cliente ingresa su PIN de cuatro dígitos; el sistema lo verifica para confirmar que quien realiza la firma corresponde al titular de la solicitud.
+
+**Resultado:** Segundo factor de autenticación validado.
+
+**Tiempo estimado:** ~10 segundos.
 
 > **Excepción prevista en el journey:** si el cliente olvidó su PIN, el sistema lo redirige al canal de soporte; una vez recuperado el acceso, el cliente vuelve a recibir el correo con el enlace para continuar el proceso.
+
+**Placeholder\*:** no está definido el procedimiento exacto de recuperación de PIN en el canal de soporte (¿validación de identidad adicional?, ¿tiempo de resolución?).
 
 ---
 
@@ -80,12 +110,18 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Resultado:** El sistema da la bienvenida al cliente a su cuenta y comunica el monto del crédito aprobado junto con sus condiciones generales, incluyendo:
+**Proceso:** El sistema da la bienvenida al cliente a su cuenta y comunica el monto del crédito aprobado junto con sus condiciones generales:
 
 - Circuito cerrado.
 - El próximo préstamo puede ser mayor.
 - Beneficios de sacar el crédito.
 - Congelación del cupo si hay retrasos del pago.
+
+**Resultado:** Cliente informado de las condiciones generales del crédito aprobado.
+
+**Tiempo estimado:** ~20-30 segundos de lectura.
+
+**Placeholder\*:** el contenido definitivo y la variabilidad de los mensajes de "circuito cerrado" y "congelación del cupo por mora" aún no están confirmados.
 
 ---
 
@@ -93,7 +129,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Resultado:** El cliente acepta las condiciones del crédito para continuar con la formalización. Esta aceptación es obligatoria antes de recibir el detalle completo del crédito.
+**Proceso:** El cliente revisa y acepta las condiciones del crédito comunicadas en el paso anterior. Esta aceptación es obligatoria antes de recibir el detalle completo del crédito; si no acepta, el flujo no permite continuar.
+
+**Resultado:** Condiciones generales aceptadas.
+
+**Tiempo estimado:** ~10 segundos.
 
 ---
 
@@ -101,7 +141,7 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Resultado:** El sistema comunica al cliente el detalle completo del crédito:
+**Proceso:** El sistema comunica al cliente el detalle operativo completo del crédito:
 
 - Cupo aprobado.
 - Plan de pagos.
@@ -110,13 +150,21 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 - Tasa de interés.
 - Cuándo podrá usarlo.
 
+**Resultado:** Cliente informado del detalle completo del crédito.
+
+**Tiempo estimado:** ~20-30 segundos de lectura.
+
 ---
 
 ### 9. Comunicación de siguientes pasos
 
 **Actor:** Web (sistema, vía app).
 
-**Resultado:** La aplicación comunica al cliente los siguientes pasos: la firma del contrato y del pagaré.
+**Proceso:** La aplicación web comunica al cliente los siguientes pasos del proceso: la firma del contrato y del pagaré.
+
+**Resultado:** Cliente informado de que debe continuar hacia la revisión y firma de los documentos legales.
+
+**Tiempo estimado:** Instantáneo.
 
 ---
 
@@ -124,7 +172,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Resultado:** El cliente lee el contrato y el pagaré antes de continuar hacia la verificación de la firma electrónica.
+**Proceso:** El cliente lee el contrato y el pagaré desplegados en la plataforma antes de continuar hacia la verificación de la firma electrónica.
+
+**Resultado:** Contrato y pagaré revisados por el cliente.
+
+**Tiempo estimado:** Variable según la disposición del cliente a leer el documento completo; no contabilizado dentro de un tiempo fijo por tratarse de un paso de lectura libre.
 
 > **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
 
@@ -136,7 +188,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Información utilizada:** Correo electrónico registrado por el cliente.
 
-**Resultado:** El sistema envía un código de verificación al correo electrónico del cliente para completar la firma electrónica. El flujo continúa en la página siguiente del journey.
+**Proceso:** El sistema envía un código de verificación al correo electrónico del cliente para completar la firma electrónica. El flujo continúa en la página siguiente del journey (Figura 6).
+
+**Resultado:** Código de verificación enviado.
+
+**Tiempo estimado:** Instantáneo del lado del sistema; recepción asíncrona según el proveedor de correo.
 
 ---
 
@@ -144,12 +200,18 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
+**Proceso:** El cliente ingresa el código recibido; el sistema valida su vigencia y coincidencia. Tiene la opción de reenviar el código si no lo recibe.
+
 **Decisión:** ¿El código ingresado es válido?
 
 - **Exitoso:** el proceso continúa hacia la generación de los documentos firmados.
 - **Fallido:** el cliente es dirigido a contactar el servicio al cliente.
 
-**Resultado:** El cliente tiene la opción de reenviar el código si no lo recibe.
+**Resultado:** Titularidad del correo confirmada para efectos de la firma.
+
+**Tiempo estimado:** ~30-45 segundos (depende de la entrega del correo).
+
+**Placeholder\*:** no está definido el número máximo de reenvíos del código ni el tiempo de vigencia antes de su expiración.
 
 ---
 
@@ -157,7 +219,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema) / Cliente.
 
-**Resultado:** Cuando el código es incorrecto o expira, el sistema dirige al cliente a contactar al servicio de atención al cliente; desde allí el cliente puede volver a ingresar el código de verificación.
+**Proceso:** Cuando el código es incorrecto o expira, el sistema dirige al cliente a contactar al servicio de atención al cliente (documento 7); desde allí el cliente puede volver a ingresar el código de verificación.
+
+**Resultado:** Cliente atendido por el canal de soporte para poder continuar con la firma.
+
+**Tiempo estimado:** Depende del tiempo de atención del servicio al cliente (asíncrono, fuera del control directo de este journey).
 
 ---
 
@@ -165,9 +231,15 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Resultado:** Una vez validado el código, el sistema genera automáticamente el contrato y el pagaré firmados electrónicamente y envía una copia de ambos documentos al correo electrónico del cliente como constancia de la operación.
+**Proceso:** Una vez validado el código, el sistema genera automáticamente el contrato y el pagaré firmados electrónicamente, aplicando el mecanismo de firma/no repudio definido para el producto*, y envía una copia de ambos documentos al correo electrónico del cliente como constancia de la operación.
+
+**Resultado:** Contrato y pagaré firmados electrónicamente, con copia enviada al cliente.
+
+**Tiempo estimado:** Instantáneo (generación automática).
 
 > **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
+
+**Placeholder\*:** el mecanismo definitivo de firma electrónica y no repudio (más allá de correo + PIN) todavía no está confirmado. El journey señala la necesidad de **revisar referencias de mercado como Dineria** para validar qué mecanismo de no repudio usar; pendiente de definición técnica y legal.
 
 ---
 
@@ -175,7 +247,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Resultado:** El cliente recibe la confirmación de que la firma del contrato y el pagaré fue exitosa.
+**Proceso:** El cliente recibe en pantalla la confirmación de que la firma del contrato y el pagaré fue exitosa.
+
+**Resultado:** Firma confirmada.
+
+**Tiempo estimado:** Instantáneo.
 
 ---
 
@@ -183,7 +259,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Resultado:** El sistema asigna automáticamente el bono D1 asociado al crédito aprobado.
+**Proceso:** El sistema asigna automáticamente el bono D1 asociado al valor del crédito aprobado, quedando disponible para su uso en tienda.
+
+**Resultado:** Bono D1 asignado.
+
+**Tiempo estimado:** Instantáneo.
 
 ---
 
@@ -191,7 +271,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Web (sistema).
 
-**Resultado:** El cliente recibe, a través de su cuenta, la notificación de que el bono ya se encuentra asignado.
+**Proceso:** El sistema notifica al cliente, a través de su cuenta, que el bono ya se encuentra asignado y disponible para consulta.
+
+**Resultado:** Cliente notificado de la asignación del bono.
+
+**Tiempo estimado:** Instantáneo.
 
 ---
 
@@ -199,29 +283,43 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 **Actor:** Cliente.
 
-**Resultado:** El cliente ve, a través de su cuenta, el código correspondiente al bono para utilizarlo durante sus compras.
+**Proceso:** El cliente ingresa a su cuenta y visualiza el código numérico correspondiente al bono, el cual podrá canjear en cualquier tienda D1 (consistente con el paso 6 del portal del cliente descrito en *Modelo Comercial B2B*: "Usa su cupo — código numérico para canjear en cualquier tienda D1").
+
+**Resultado:** Código del bono visible y disponible para su uso.
+
+**Tiempo estimado:** ~10 segundos.
 
 ---
 
 ### 19. Aprobación del crédito por Core de Crédito/Originación
 
-**Actor:** Core de Crédito/Originación.
+**Actor:** Core de Crédito/Originación*.
 
-**Resultado:** Este actor —distinto del Core Bancario que habilitó el proceso en el paso 1— aprueba el crédito. Con esta aprobación se da inicio al funcionamiento de la calculadora.
+**Proceso:** Este actor —distinto del Core Bancario que habilitó el proceso en el paso 1— aprueba formalmente el crédito ya firmado. Con esta aprobación se da inicio al funcionamiento de la calculadora (documento 5).
+
+**Resultado:** Crédito aprobado por Core de Crédito/Originación; inicio del funcionamiento de la calculadora.
+
+**Tiempo estimado:** Instantáneo, si el proceso es automático (pendiente de confirmar).
 
 > **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
+
+**Placeholder\*:** no está definida con precisión la diferencia funcional y de sistema entre **Core Bancario** (paso 1) y **Core de Crédito/Originación** (este paso): qué reglas aplica cada uno, si esta aprobación es automática o requiere alguna validación adicional, y qué ocurriría si Core de Crédito/Originación no aprobara un crédito que ya fue firmado por el cliente.
 
 ---
 
 ### 20. Cierre del journey
 
-**Resultado:** Con la aprobación del crédito finaliza el journey de firma de contrato y activación. El flujo continúa hacia la recepción y uso del bono, y hacia el proceso de Calculadora y Cobro del Crédito.
+**Proceso:** Con la aprobación de Core de Crédito/Originación finaliza el journey de firma de contrato y activación.
+
+**Resultado:** El flujo continúa hacia la recepción y uso del bono (documento 6, Dispersión de fondos) y hacia el proceso de Calculadora y Cobro del Crédito (documento 5).
+
+**Tiempo estimado:** Instantáneo (transición automática entre procesos).
 
 ---
 
 ## Reglas de negocio
 
-- El crédito debe haber sido aprobado previamente antes de iniciar la firma.
+- El crédito debe haber sido aprobado previamente (KYC + riesgo) antes de iniciar la firma.
 - El cliente debe autenticarse mediante NIT y PIN para acceder al proceso.
 - Si el cliente olvida el PIN, deberá recuperar el acceso a través del canal de soporte antes de continuar.
 - La comunicación de las condiciones del crédito ocurre en dos momentos distintos: una primera comunicación general antes de la aceptación (circuito cerrado, próximo préstamo mayor, beneficios, congelación del cupo por mora) y una segunda comunicación con el detalle operativo después de la aceptación (cupo, plan de pagos, valor, fecha, tasa, inicio de uso).
@@ -229,9 +327,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 - El contrato y el pagaré deben visualizarse antes de la firma electrónica.
 - La firma solo se completa cuando el código de verificación es validado correctamente; si falla, el cliente puede reintentar o contactar al servicio al cliente.
 - Una vez finalizada la firma, el sistema genera automáticamente los documentos legales firmados y envía copia al correo del cliente.
+- El mecanismo de firma electrónica debe garantizar el no repudio de la operación; se debe validar contra referencias de mercado (p. ej. Dineria) antes de confirmarlo como definitivo.
 - El bono D1 únicamente se asigna cuando la firma ha sido completada exitosamente.
 - La aprobación final del crédito la realiza Core de Crédito/Originación, un actor distinto del Core Bancario que habilita el proceso al inicio.
 - La aprobación de Core de Crédito/Originación da inicio al funcionamiento de la calculadora.
+- Según el modelo comercial del producto, todo el proceso de firma debe poder completarse de forma digital, desde el celular, en minutos.
 
 ---
 
@@ -273,10 +373,11 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 ## Consideraciones
 
 - La autenticación mediante NIT y PIN busca garantizar que únicamente el titular pueda acceder al proceso de firma.
-- El journey distingue dos actores del Core distintos: Core Bancario, que habilita el proceso al inicio, y Core de Crédito/Originación, que aprueba el crédito al final y da inicio a la calculadora.
-- La firma electrónica requiere una validación adicional mediante código enviado al correo electrónico del cliente.
+- El journey distingue dos actores del Core distintos: Core Bancario, que habilita el proceso al inicio, y Core de Crédito/Originación, que aprueba el crédito al final y da inicio a la calculadora. Esta distinción es uno de los principales placeholders del proceso.
+- La firma electrónica requiere una validación adicional mediante código enviado al correo electrónico del cliente; el mecanismo de no repudio definitivo aún debe validarse contra referencias de mercado como Dineria.
 - El contrato y el pagaré se generan automáticamente una vez finaliza la firma, y se envía copia al correo del cliente.
 - La asignación del bono D1 y la aprobación final del crédito ocurren únicamente después de completar exitosamente todo el proceso de firma.
+- El objetivo comercial (firma digital, desde el celular, en minutos) debe validarse frente a los tiempos estimados detallados en este documento una vez el flujo esté implementado.
 
 ---
 
@@ -284,10 +385,12 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 
 > **Pendiente de validar con el dueño del proceso:**
 >
-> - Confirmar el mecanismo definitivo de firma electrónica y autenticación (correo + PIN u otro mecanismo de no repudio).
-> - Confirmar el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración.
-> - Confirmar la diferencia funcional y de sistema entre Core Bancario y Core de Crédito/Originación.
-> - Confirmar el contenido definitivo y la variabilidad de los mensajes "circuito cerrado" y "congelación del cupo si hay retrasos del pago".
+> - Confirmar el mecanismo definitivo de firma electrónica y autenticación (correo + PIN u otro mecanismo de no repudio), incluyendo la revisión de referencias de mercado como **Dineria**. *(placeholder — paso 14)*
+> - Confirmar la plataforma técnica exacta usada para el contacto inicial del paso 2 (correo, mensaje o llamada) y el criterio de selección de canal. *(placeholder — paso 2)*
+> - Confirmar el procedimiento de recuperación de PIN vía canal de soporte. *(placeholder — paso 5)*
+> - Confirmar el contenido definitivo y la variabilidad de los mensajes "circuito cerrado" y "congelación del cupo si hay retrasos del pago". *(placeholder — paso 6)*
+> - Confirmar el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración. *(placeholder — paso 12)*
+> - Confirmar la diferencia funcional y de sistema entre Core Bancario y Core de Crédito/Originación, y si la aprobación final (paso 19) es automática o requiere validación adicional. *(placeholder — paso 19)*
 
 ---
 
@@ -296,3 +399,4 @@ Cuando la firma se completa correctamente, el sistema genera los documentos firm
 - *Journeys Colpatria B2B* (junio de 2026), páginas 5 y 6.
 - Documento funcional del proceso de originación.
 - Documento de Alcance del Producto.
+- *Modelo Comercial B2B.pptx* (Sumz, junio de 2026) — diapositiva 8, "El portal: simple, digital, en WhatsApp".
