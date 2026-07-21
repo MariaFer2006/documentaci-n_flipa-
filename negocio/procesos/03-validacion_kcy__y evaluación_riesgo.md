@@ -1,8 +1,9 @@
+
 # 3. Validación de identidad (KYC)
 
 ## Objetivo
 
-Validar automáticamente la identidad del cliente y evaluar si cumple los criterios mínimos de riesgo utilizando información proveniente de Experian, el historial transaccional de D1 y las reglas de negocio (reglas de Colpatria)* definidas para el producto. Al finalizar este proceso se determina si la solicitud continúa hacia la firma del contrato o si el crédito es rechazado.
+Validar automáticamente la identidad del cliente y evaluar si cumple los criterios mínimos de riesgo utilizando información proveniente de Experian, RUES*, el historial transaccional de D1 y las reglas de negocio (reglas de Colpatria)* definidas para el producto. Al finalizar este proceso se determina si la solicitud continúa hacia la firma del contrato o si el crédito es rechazado.
 
 *Los elementos marcados con asterisco (\*) corresponden a puntos aún no definidos técnicamente o pendientes de confirmación con el dueño del proceso; se detallan en cada paso y se listan de forma consolidada en "Pendientes de validación".*
 
@@ -20,9 +21,9 @@ En el journey, las dos cajas moradas ("Evalúa criterios de KYC automáticamente
 
 ## Descripción general
 
-Una vez el cliente finaliza el proceso de onboarding digital, la solicitud ingresa automáticamente al proceso de Validación de Identidad (KYC). En esta etapa el sistema recibe el caso en el Admin, consulta y almacena información de fuentes externas —Experian, RUES* y el historial transaccional de D1— y ejecuta de forma automática las reglas de negocio de Colpatria* establecidas para evaluar la elegibilidad del cliente. El resultado de la validación biométrica obtenida durante el onboarding, realizada por el proveedor externo (Olimpia)*, también queda registrado en el Admin y hace parte del expediente consultado en esta etapa.
+Una vez el cliente finaliza el proceso de onboarding digital, la solicitud ingresa automáticamente al proceso de Validación de Identidad (KYC). En esta etapa el sistema recibe el caso en el Admin, consulta y almacena información de fuentes externas Experian,  y el historial transaccional de D1— y ejecuta de forma automática las reglas de negocio de Colpatria* establecidas para evaluar la elegibilidad del cliente. El resultado de la validación biométrica obtenida durante el onboarding, realizada por el proveedor externo (Olimpia)*, también queda registrado en la base de datos del producto. 
 
-Si el cliente cumple con todos los criterios definidos, el sistema valida la cuenta bancaria registrada contra los productos financieros reportados en Experian y aprueba o ajusta* el cupo de crédito antes de continuar con la firma del contrato. En caso de que alguna validación falle —ya sea el cumplimiento de requisitos o la validez de la cuenta—, la solicitud es rechazada automáticamente, el sistema emite una alarma* y el cliente recibe una notificación por correo electrónico. Este proceso de KYC es 100% automático y elimina el estudio manual que anteriormente realizaba un analista.
+Si el cliente cumple con todos los criterios definidos, el sistema valida la cuenta bancaria registrada contra los productos financieros reportados en Experian y aprueba o ajusta* el cupo de crédito antes de continuar con la firma del contrato. En caso de que alguna validación falle ya sea el cumplimiento de requisitos o la validez de la cuenta, la solicitud es rechazada automáticamente, el sistema emite una alarma* y el cliente recibe una notificación por correo electrónico. Este proceso de estudio de credito es 100% automático y elimina el estudio manual que anteriormente realizaba un analista.
 
 ---
 
@@ -36,7 +37,7 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 **Información utilizada:** Solicitud finalizada durante el onboarding digital.
 
-**Proceso:** Al cerrarse exitosamente el onboarding (solicitud enviada en el paso 21 del journey de Onboarding), el sistema dispara automáticamente la apertura de un caso nuevo en el Admin, sin que el cliente deba realizar ninguna acción adicional. Este caso queda como el contenedor donde se centraliza toda la información consultada durante el KYC.
+**Proceso:** Al cerrarse exitosamente el onboarding, el sistema dispara el motor de riesgo y adicionalme lanza una alerta al canal de slack, sin que el cliente deba realizar ninguna acción adicional. 
 
 **Resultado:** El sistema recibe la solicitud y abre automáticamente el caso dentro del Admin. A partir de este momento inicia el proceso de KYC.
 
@@ -56,7 +57,7 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 **Resultado:** El sistema consulta y almacena en el Admin la información de Experian, RUES y el historial transaccional de D1, junto con el resultado biométrico del onboarding.
 
-**Tiempo estimado:** Depende del tiempo de respuesta de las APIs externas (Experian y RUES); procesamiento automático, sin intervención humana.
+**Tiempo estimado:**procesamiento automático.
 
 > **Placeholder\*:** el alcance exacto de la consulta a RUES (qué campos específicos se traen y cómo se usan en la evaluación) aún no está definido; pendiente de confirmar con el dueño del proceso.
 
@@ -72,14 +73,16 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 **Información utilizada:**
 
-- Score (puntaje) mínimo requerido*.
+- Score (puntaje) mínimo requerido tanto de persona juridica y persona natural (acalaración de CC)*.
 - Capacidad de endeudamiento*.
-- Tienda habitual declarada por el cliente durante el onboarding, comparada de forma automática contra la tienda habitual registrada en el histórico transaccional de D1*.
-- Reglas de riesgo definidas para el producto*.
+- Datos de contacto reportados ante expirian vs datos de contacto resportados durante el proceso de Onboarding.
+- Localidad habitual declarada por el cliente durante el onboarding, comparada de forma automática contra la tienda habitual registrada en el histórico transaccional de D1*.
+- Comparación de la cuenta bancaria ingresada con el cliente vs el servició "historia de credito" de expirian
 
 **Proceso:** El motor de reglas toma la información consolidada en el paso 2 (Experian, RUES, D1 y biometría) y la evalúa de forma automática contra los criterios de riesgo configurados para el producto. Este paso fue ajustado en junio de 2026 para incorporar la comparación automática entre la tienda habitual declarada y la registrada en D1.
 
-**Resultado:** El sistema aplica automáticamente las reglas de Colpatria definidas para el proceso KYC y determina si el cliente cumple o no los criterios.
+**Resultado:** El sistema aplica automáticamente las reglas de Colpatria definidas para el proceso de estudio de credito y determina si el cliente cumple o no los criterios.
+
 
 **Tiempo estimado:** Instantáneo a segundos (procesamiento interno del motor de reglas).
 
@@ -97,14 +100,14 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 **Decisión:** ¿El cliente cumple con los requisitos?
 
-- **Sí:** el proceso continúa hacia la validación de la cuenta bancaria.
-- **No:** el proceso continúa hacia el rechazo del crédito y la emisión de la alarma (paso 8).
+- **Sí:** si el cliente es aprobado se le envia un correo de forma automatica confirmando su aprobación.
+- **No:** si el cliente es rechazado se envia una alerta al canal de operaciones de el equipo para que alguien lo revise.
 
 **Tiempo estimado:** Instantáneo.
 
 ---
 
-### 5. Validación de la cuenta bancaria contra Experian
+### 5. Validación de la cuenta bancaria contra Experian (Historia de credito)
 
 **Actor:** Sistema.
 
@@ -116,7 +119,7 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 **Resultado:** Confirmación de que la cuenta bancaria corresponde al cliente evaluado.
 
-**Tiempo estimado:** Depende del tiempo de respuesta de la API de Experian.
+**Tiempo estimado:** Automatico.
 
 > **Placeholder\*:** no está definido el detalle exacto de qué campos de "productos financieros reportados en Experian" se usan para el cruce (¿tipo de producto, titularidad, antigüedad?) ni el criterio de coincidencia mínima aceptado. Pendiente de definición técnica.
 
@@ -153,13 +156,13 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 ---
 
-### 8. Rechazo del crédito y emisión de alarma
+### 8. Rechazo del crédito y emisión de alerta
 
 **Actor:** Sistema.
 
-**Proceso:** Cuando el cliente no cumple los requisitos evaluados en el paso 4, o cuando la cuenta bancaria no es válida en el paso 6, el sistema ejecuta el rechazo automático de la solicitud y genera una alarma* interna para mantener la trazabilidad de la decisión. Ambos caminos ("No" del paso 4 y "No" del paso 6) confluyen en este mismo paso.
+**Proceso:** Cuando el cliente no cumple los requisitos evaluados en el paso 4, o cuando la cuenta bancaria no es válida en el paso 6, el sistema ejecuta el rechazo automático de la solicitud y genera una alerta* interna para mantener la trazabilidad de la decisión. Ambos caminos ("No" del paso 4 y "No" del paso 6) confluyen en este mismo paso, por ultimo se guarda en la base de datos del producto el rechazo con sus causales.
 
-**Resultado:** Crédito rechazado y alarma emitida y registrada en el sistema.
+**Resultado:** Crédito rechazado, alerta emitida, registrada en el sistema y causal de rechazo guardada.
 
 **Tiempo estimado:** Instantáneo.
 
@@ -167,13 +170,14 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 ---
 
+
 ### 9. Notificación al cliente
 
 **Actor:** Sistema.
 
-**Sistemas involucrados:** Correo electrónico.
+**Sistemas involucrados:** Sendgrid.
 
-**Proceso:** Tras registrarse el rechazo y la alarma en el paso 8, el sistema dispara automáticamente un correo electrónico al cliente informando que la solicitud no fue aprobada. Con esta acción finaliza el proceso de Validación de Identidad (KYC) para ese caso.
+**Proceso:** Tras registrarse el rechazo y la alerta en el paso 8, el sistema dispara automáticamente un correo electrónico al cliente informando que la solicitud no fue aprobada. Con esta acción finaliza el proceso de Validación de Identidad (KYC).
 
 **Resultado:** Notificación de rechazo enviada al cliente por correo electrónico.
 
@@ -185,14 +189,14 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 
 ## Reglas de negocio
 
-- El proceso KYC se ejecuta completamente de forma automática; esto elimina el estudio manual que antes realizaba un analista.
+- El proceso KYC se ejecuta completamente de forma automática; 
 - La consulta a Experian, RUES* y al historial transaccional de D1 es obligatoria, y el resultado se almacena en el Admin junto con el resultado de la biometría del onboarding.
 - El cliente debe cumplir el puntaje mínimo definido para el producto*.
 - Se evalúa automáticamente la capacidad de endeudamiento del cliente*.
-- La tienda habitual declarada por el cliente se compara automáticamente contra la tienda habitual registrada en el histórico transaccional de D1*.
+- La localidad habitual declarada por el cliente se compara automáticamente contra la tienda habitual registrada en el histórico transaccional de D1*.
 - La evaluación de criterios de KYC se realiza mediante las reglas de Colpatria*.
 - La cuenta bancaria debe coincidir con los productos financieros reportados en Experian*.
-- Si el cliente no cumple los requisitos o la cuenta bancaria no es válida, el sistema rechaza el crédito y emite una alarma*.
+- Si el cliente no cumple los requisitos o la cuenta bancaria no es válida, el sistema rechaza el crédito y emite una alerta*.
 - Solo las solicitudes aprobadas continúan hacia la firma del contrato.
 
 ---
@@ -205,7 +209,7 @@ Si el cliente cumple con todos los criterios definidos, el sistema valida la cue
 - Información consultada en Experian.
 - Información consultada en RUES.
 - Cuenta bancaria registrada por el cliente.
-- Reglas de negocio de Colpatria definidas para el proceso KYC.
+- Reglas de negocio de Colpatria definidas para el proceso de estudio de credito.
 
 ---
 
