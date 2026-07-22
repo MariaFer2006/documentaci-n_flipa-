@@ -1,6 +1,6 @@
 # 4. Firma de contrato y activación
 
-*Versión corregida para alinear el documento con el estándar de trazabilidad por Slack y el manejo de excepciones acordados en la reunión "Producto: Check-in" del 21 de julio de 2026, y para resolver una inconsistencia de formato en el uso de asteriscos.*
+
 
 ## Objetivo
 
