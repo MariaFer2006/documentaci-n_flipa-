@@ -1,6 +1,5 @@
 # 3. Validación de identidad (KYC)
 
-*Versión actualizada tras la reunión de producto "Check-in" del 21 de julio de 2026.*
 
 ## Objetivo
 
