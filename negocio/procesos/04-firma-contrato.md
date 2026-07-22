@@ -1,8 +1,10 @@
 # 4. Firma de contrato y activación
 
+
+
 ## Objetivo
 
-Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma, asignar el bono D1 y obtener la aprobación final de Core de Crédito/Originación que activa el crédito y da inicio al funcionamiento de la calculadora.
+Formalizar la aceptación del crédito aprobado mediante la firma electrónica del contrato y el pagaré, validar la identidad del cliente durante el proceso de firma, asignar el bono D1 y obtener la aprobación final de Core de Crédito/Originación* que activa el crédito y da inicio al funcionamiento de la calculadora.
 
 > **Referencia comercial:** según el *Modelo Comercial B2B* (portal del cliente), la firma de contrato debe completarse de forma **digital, desde el celular, en minutos** — este journey detalla técnicamente cómo se logra esa experiencia.
 
@@ -27,6 +29,8 @@ En el journey, las cajas moradas ("Lee el contrato y el pagaré", "Se genera con
 Una vez el crédito ha sido aprobado durante la evaluación de riesgo, el Core Bancario habilita la operación para iniciar el proceso de firma electrónica. El cliente recibe una invitación para continuar con la firma, autentica su identidad mediante su NIT y PIN de seguridad (creado durante el onboarding), y recibe la bienvenida a su cuenta junto con una primera comunicación sobre el crédito aprobado (funcionamiento en circuito cerrado, posibilidad de un próximo préstamo mayor, beneficios y congelación del cupo en caso de mora). Después de aceptar las condiciones, el cliente recibe una segunda comunicación con el detalle completo del crédito (cupo, plan de pagos, valor, fecha, tasa e inicio de uso), revisa el contrato y el pagaré, y confirma la firma mediante un código de verificación enviado a su correo electrónico.
 
 Cuando la firma se completa correctamente, el sistema genera los documentos firmados, envía copia al correo del cliente, asigna el bono D1 y notifica al cliente que ya puede visualizar el código del bono desde su cuenta. Finalmente, un actor distinto al Core Bancario —Core de Crédito/Originación*— aprueba el crédito, lo que da inicio al funcionamiento de la calculadora y continúa hacia la recepción y uso del bono.
+
+En consistencia con el estándar de trazabilidad definido para el ciclo del crédito, el sistema notifica por Slack al equipo de operaciones los eventos relevantes de este proceso: firma exitosa, fallas de verificación reiteradas, y cualquier caso en que el crédito firmado no sea finalmente aprobado por Core de Crédito/Originación.
 
 ---
 
@@ -205,13 +209,13 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 **Decisión:** ¿El código ingresado es válido?
 
 - **Exitoso:** el proceso continúa hacia la generación de los documentos firmados.
-- **Fallido:** el cliente es dirigido a contactar el servicio al cliente.
+- **Fallido:** el cliente es dirigido a contactar el servicio al cliente, y el sistema envía una alerta al canal de Slack de operaciones para dar trazabilidad al caso.
 
 **Resultado:** Titularidad del correo confirmada para efectos de la firma.
 
 **Tiempo estimado:** ~30-45 segundos (depende de la entrega del correo).
 
-**Placeholder\*:** no está definido el número máximo de reenvíos del código ni el tiempo de vigencia antes de su expiración.
+**Placeholder\*:** no está definido el número máximo de reenvíos del código ni el tiempo de vigencia antes de su expiración, ni si toda falla debe alertar por Slack o solo a partir de cierto número de intentos fallidos.
 
 ---
 
@@ -219,7 +223,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 **Actor:** Web (sistema) / Cliente.
 
-**Proceso:** Cuando el código es incorrecto o expira, el sistema dirige al cliente a contactar al servicio de atención al cliente (documento 7); desde allí el cliente puede volver a ingresar el código de verificación.
+**Proceso:** Cuando el código es incorrecto o expira, el sistema dirige al cliente a contactar al servicio de atención al cliente (documento 7); desde allí el cliente puede volver a ingresar el código de verificación. La alerta enviada por Slack en el paso 12 permite al equipo de operaciones hacer seguimiento del caso mientras el cliente es atendido.
 
 **Resultado:** Cliente atendido por el canal de soporte para poder continuar con la firma.
 
@@ -247,7 +251,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 **Actor:** Cliente.
 
-**Proceso:** El cliente recibe en pantalla la confirmación de que la firma del contrato y el pagaré fue exitosa.
+**Proceso:** El cliente recibe en pantalla la confirmación de que la firma del contrato y el pagaré fue exitosa. El sistema envía adicionalmente una alerta al canal de Slack de operaciones confirmando la firma exitosa, en línea con el estándar de trazabilidad del ciclo del crédito.
 
 **Resultado:** Firma confirmada.
 
@@ -297,13 +301,18 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 **Proceso:** Este actor —distinto del Core Bancario que habilitó el proceso en el paso 1— aprueba formalmente el crédito ya firmado. Con esta aprobación se da inicio al funcionamiento de la calculadora (documento 5).
 
-**Resultado:** Crédito aprobado por Core de Crédito/Originación; inicio del funcionamiento de la calculadora.
+**Decisión:** ¿Core de Crédito/Originación aprueba el crédito firmado?
+
+- **Sí:** se da inicio al funcionamiento de la calculadora y el flujo continúa hacia el cierre del journey (paso 20).
+- **No:** el sistema envía una alerta al canal de Slack de operaciones para que el equipo revise el caso; **el flujo de resolución para un crédito firmado que no es aprobado por Core de Crédito/Originación no está definido** y debe confirmarse con el dueño del proceso (ver Pendientes de validación).
+
+**Resultado:** Crédito aprobado por Core de Crédito/Originación; inicio del funcionamiento de la calculadora. En caso de no aprobación, caso escalado por Slack a la espera de definición de flujo.
 
 **Tiempo estimado:** Instantáneo, si el proceso es automático (pendiente de confirmar).
 
 > **Nota (Ajuste · jun 2026):** este paso está marcado en el journey como un paso ajustado en junio de 2026.
 
-**Placeholder\*:** no está definida con precisión la diferencia funcional y de sistema entre **Core Bancario** (paso 1) y **Core de Crédito/Originación** (este paso): qué reglas aplica cada uno, si esta aprobación es automática o requiere alguna validación adicional, y qué ocurriría si Core de Crédito/Originación no aprobara un crédito que ya fue firmado por el cliente.
+**Placeholder\*:** no está definida con precisión la diferencia funcional y de sistema entre **Core Bancario** (paso 1) y **Core de Crédito/Originación** (este paso): qué reglas aplica cada uno, si esta aprobación es automática o requiere alguna validación adicional, y qué ocurriría —y qué pasos concretos seguiría el flujo— si Core de Crédito/Originación no aprobara un crédito que ya fue firmado por el cliente.
 
 ---
 
@@ -332,6 +341,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - La aprobación final del crédito la realiza Core de Crédito/Originación, un actor distinto del Core Bancario que habilita el proceso al inicio.
 - La aprobación de Core de Crédito/Originación da inicio al funcionamiento de la calculadora.
 - Según el modelo comercial del producto, todo el proceso de firma debe poder completarse de forma digital, desde el celular, en minutos.
+- En línea con el estándar de trazabilidad acordado para el ciclo del crédito, toda falla de verificación, la firma exitosa, y cualquier caso de no aprobación por parte de Core de Crédito/Originación se notifican en tiempo real por el canal de Slack de operaciones.
 
 ---
 
@@ -355,6 +365,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - Crédito aprobado por Core de Crédito/Originación.
 - Inicio del funcionamiento de la calculadora.
 - Cupo disponible para utilización.
+- Alertas registradas en Slack (fallas de verificación, firma exitosa, no aprobación de Core de Crédito/Originación).
 
 ---
 
@@ -362,22 +373,24 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 - El cliente no accede al enlace enviado por correo.
 - El cliente olvidó el PIN.
-- El código de verificación es incorrecto o expira, y el cliente debe contactar al servicio al cliente o reintentar.
+- El código de verificación es incorrecto o expira, y el cliente debe contactar al servicio al cliente o reintentar (con alerta Slack asociada).
 - El cliente no acepta las condiciones del crédito.
 - Se presenta un error durante la generación del contrato o del pagaré.
 - No es posible asignar el bono D1.
 - Se produce un error durante la aprobación del crédito por parte de Core de Crédito/Originación.
+- Core de Crédito/Originación no aprueba un crédito ya firmado por el cliente (caso alertado por Slack; flujo de resolución pendiente de definir).
 
 ---
 
 ## Consideraciones
 
 - La autenticación mediante NIT y PIN busca garantizar que únicamente el titular pueda acceder al proceso de firma.
-- El journey distingue dos actores del Core distintos: Core Bancario, que habilita el proceso al inicio, y Core de Crédito/Originación, que aprueba el crédito al final y da inicio a la calculadora. Esta distinción es uno de los principales placeholders del proceso.
+- El journey distingue dos actores del Core distintos: Core Bancario, que habilita el proceso al inicio, y Core de Crédito/Originación*, que aprueba el crédito al final y da inicio a la calculadora. Esta distinción es uno de los principales placeholders del proceso.
 - La firma electrónica requiere una validación adicional mediante código enviado al correo electrónico del cliente; el mecanismo de no repudio definitivo aún debe validarse contra referencias de mercado como Dineria.
 - El contrato y el pagaré se generan automáticamente una vez finaliza la firma, y se envía copia al correo del cliente.
 - La asignación del bono D1 y la aprobación final del crédito ocurren únicamente después de completar exitosamente todo el proceso de firma.
 - El objetivo comercial (firma digital, desde el celular, en minutos) debe validarse frente a los tiempos estimados detallados en este documento una vez el flujo esté implementado.
+- Por consistencia con el proceso de KYC (documento 3), se incorporó la trazabilidad por Slack para los eventos críticos de este journey; sin embargo, a diferencia de KYC —que ya cuenta con un estado de "posible rechazo" y revisión manual definidos— este documento aún no define un flujo concreto para el caso en que Core de Crédito/Originación no apruebe un crédito ya firmado. Se recomienda evaluar con el dueño del proceso si aplica un patrón similar (estado intermedio + revisión manual) para mantener consistencia entre ambos journeys.
 
 ---
 
@@ -389,8 +402,8 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 > - Confirmar la plataforma técnica exacta usada para el contacto inicial del paso 2 (correo, mensaje o llamada) y el criterio de selección de canal. *(placeholder — paso 2)*
 > - Confirmar el procedimiento de recuperación de PIN vía canal de soporte. *(placeholder — paso 5)*
 > - Confirmar el contenido definitivo y la variabilidad de los mensajes "circuito cerrado" y "congelación del cupo si hay retrasos del pago". *(placeholder — paso 6)*
-> - Confirmar el número máximo de reenvíos del código de verificación y el tiempo de vigencia del código antes de su expiración. *(placeholder — paso 12)*
-> - Confirmar la diferencia funcional y de sistema entre Core Bancario y Core de Crédito/Originación, y si la aprobación final (paso 19) es automática o requiere validación adicional. *(placeholder — paso 19)*
+> - Confirmar el número máximo de reenvíos del código de verificación, el tiempo de vigencia del código antes de su expiración, y si toda falla de verificación debe alertar por Slack o solo a partir de cierto número de intentos. *(placeholder — paso 12)*
+> - Confirmar la diferencia funcional y de sistema entre Core Bancario y Core de Crédito/Originación, si la aprobación final (paso 19) es automática o requiere validación adicional, y **definir el flujo de resolución cuando Core de Crédito/Originación no apruebe un crédito ya firmado** (posible alineación con el patrón de "posible rechazo" usado en KYC). *(placeholder — paso 19)*
 
 ---
 
@@ -400,3 +413,4 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - Documento funcional del proceso de originación.
 - Documento de Alcance del Producto.
 - *Modelo Comercial B2B.pptx* (Sumz, junio de 2026) — diapositiva 8, "El portal: simple, digital, en WhatsApp".
+- Estándar de trazabilidad por Slack y manejo de excepciones (posible rechazo/revisión manual) acordado en la reunión "Producto: Check-in" (21 de julio de 2026), aplicado por consistencia a este documento.
