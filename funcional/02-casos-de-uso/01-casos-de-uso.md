@@ -22,18 +22,18 @@ En revisión
 
 ## Documentos relacionados
 
-- [Funcional](README.md)
-- [Flipa - Biblioteca de Conocimiento](../README.md)
-- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
-- [Onboarding](../ONBOARDING.md)
-- [Convenciones](../CONVENCIONES.md)
-- [Negocio](../negocio/README.md)
-- [Tecnico](../tecnico/README.md)
-- [Qa](../qa/README.md)
-- [Documento Funcional](documento-funcional.md)
-- [Historias Usuario](historias-usuario.md)
-- [Requerimientos Funcionales](requerimientos-funcionales.md)
-- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+- [Funcional](../README.md)
+- [Flipa - Biblioteca de Conocimiento](../../README.md)
+- [Mapa Del Conocimiento](../../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../../ONBOARDING.md)
+- [Convenciones](../../CONVENCIONES.md)
+- [Negocio](../../negocio/README.md)
+- [Tecnico](../../tecnico/README.md)
+- [Qa](../../qa/README.md)
+- [Documento Funcional](../01-marco-funcional/01-documento-funcional.md)
+- [Historias Usuario](../03-historias-usuario/01-historias-usuario.md)
+- [Requerimientos Funcionales](../04-requerimientos/01-requerimientos-funcionales.md)
+- [Requerimientos No Funcionales](../04-requerimientos/02-requerimientos-no-funcionales.md)
 
 ## Contenido
 

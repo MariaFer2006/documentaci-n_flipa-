@@ -14,7 +14,7 @@ Equipo de producto, negocio y QA
 
 ## Fecha de actualización
 
-2026-07-07
+2026-07-22
 
 ## Estado
 
@@ -29,20 +29,18 @@ En revisión
 - [Negocio](../negocio/README.md)
 - [Tecnico](../tecnico/README.md)
 - [Qa](../qa/README.md)
-- [Documento Funcional](documento-funcional.md)
-- [Casos De Uso](casos-de-uso.md)
-- [Historias Usuario](historias-usuario.md)
-- [Requerimientos Funcionales](requerimientos-funcionales.md)
-- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+- [Marco Funcional](01-marco-funcional/README.md)
+- [Casos De Uso](02-casos-de-uso/README.md)
+- [Historias Usuario](03-historias-usuario/README.md)
+- [Requerimientos](04-requerimientos/README.md)
 
 ## Contenido
 
 Esta carpeta contiene los documentos siguientes:
-- [Documento Funcional](documento-funcional.md): visión integral del producto.
-- [Casos De Uso](casos-de-uso.md): escenarios de interacción principales.
-- [Historias Usuario](historias-usuario.md): necesidades del usuario en lenguaje de negocio.
-- [Requerimientos Funcionales](requerimientos-funcionales.md): capacidades que debe cubrir el sistema.
-- [Requerimientos No Funcionales](requerimientos-no-funcionales.md): restricciones técnicas y de calidad.
+- [Marco Funcional](01-marco-funcional/README.md): visión integral del producto y lineamientos funcionales base.
+- [Casos De Uso](02-casos-de-uso/README.md): escenarios de interacción principales.
+- [Historias Usuario](03-historias-usuario/README.md): necesidades del usuario en lenguaje de negocio por actor.
+- [Requerimientos](04-requerimientos/README.md): requerimientos funcionales y no funcionales.
 
 ## Contexto funcional
 

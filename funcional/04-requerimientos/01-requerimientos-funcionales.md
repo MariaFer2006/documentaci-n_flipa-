@@ -16,7 +16,7 @@
 |---------|-------|-------|-------------|
 | 0.1 | 2026-07-06 | Maria Fernanda Herazo | Borrador vacío (pendiente de completar). |
 | 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: 35 requerimientos funcionales organizados en tablas por módulo, con estado de implementación verificado contra el código fuente de `credits-platform-main`. |
-| 1.1 | 2026-07-10 | María Fernanda Herazo  | Se amplía cada requerimiento con nombre corto, descripción detallada, actor(es) involucrados y prioridad, según los criterios de priorización de [Alcance del Producto](../producto/alcance.md#criterios-de-priorización). |
+| 1.1 | 2026-07-10 | María Fernanda Herazo  | Se amplía cada requerimiento con nombre corto, descripción detallada, actor(es) involucrados y prioridad, según los criterios de priorización de [Alcance del Producto](../../producto/alcance.md#criterios-de-priorización). |
 
 ---
 
@@ -26,22 +26,22 @@ Enumerar las capacidades que el sistema Fliipa debe cubrir, agrupadas por módul
 
 ## Alcance
 
-Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto/alcance.md). Cada requerimiento usa el identificador `RF-XXX` de [Convenciones](../CONVENCIONES.md). La columna "Prioridad" sigue los criterios de priorización del alcance del producto (Alta: valida el modelo de negocio, reduce fraude, disminuye riesgo, mejora experiencia del cliente, aumenta uso del crédito o garantiza sostenibilidad financiera; Media: automatiza procesos internos; Baja: mejora continua). La columna "Estado" indica si el requerimiento está implementado, parcialmente implementado o pendiente, según lo verificado en el repositorio de código; cuando no fue posible confirmarlo (por ejemplo, lógica que vive en microservicios no incluidos en el repositorio revisado) se indica explícitamente. No incluye requisitos de calidad, seguridad o desempeño (ver [Requerimientos No Funcionales](requerimientos-no-funcionales.md)).
+Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../../producto/alcance.md). Cada requerimiento usa el identificador `RF-XXX` de [Convenciones](../../CONVENCIONES.md). La columna "Prioridad" sigue los criterios de priorización del alcance del producto (Alta: valida el modelo de negocio, reduce fraude, disminuye riesgo, mejora experiencia del cliente, aumenta uso del crédito o garantiza sostenibilidad financiera; Media: automatiza procesos internos; Baja: mejora continua). La columna "Estado" indica si el requerimiento está implementado, parcialmente implementado o pendiente, según lo verificado en el repositorio de código; cuando no fue posible confirmarlo (por ejemplo, lógica que vive en microservicios no incluidos en el repositorio revisado) se indica explícitamente. No incluye requisitos de calidad, seguridad o desempeño (ver [Requerimientos No Funcionales](02-requerimientos-no-funcionales.md)).
 
 ## Documentos relacionados
 
-- [Funcional](README.md)
-- [Flipa - Biblioteca de Conocimiento](../README.md)
-- [Mapa Del Conocimiento](../MAPA_DEL_CONOCIMIENTO.md)
-- [Onboarding](../ONBOARDING.md)
-- [Convenciones](../CONVENCIONES.md)
-- [Negocio](../negocio/README.md)
-- [Tecnico](../tecnico/README.md)
-- [Qa](../qa/README.md)
-- [Documento Funcional](documento-funcional.md)
-- [Casos De Uso](casos-de-uso.md)
-- [Historias Usuario](historias-usuario.md)
-- [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
+- [Funcional](../README.md)
+- [Flipa - Biblioteca de Conocimiento](../../README.md)
+- [Mapa Del Conocimiento](../../MAPA_DEL_CONOCIMIENTO.md)
+- [Onboarding](../../ONBOARDING.md)
+- [Convenciones](../../CONVENCIONES.md)
+- [Negocio](../../negocio/README.md)
+- [Tecnico](../../tecnico/README.md)
+- [Qa](../../qa/README.md)
+- [Documento Funcional](../01-marco-funcional/01-documento-funcional.md)
+- [Casos De Uso](../02-casos-de-uso/01-casos-de-uso.md)
+- [Historias Usuario](../03-historias-usuario/01-historias-usuario.md)
+- [Requerimientos No Funcionales](02-requerimientos-no-funcionales.md)
 
 ## Contenido
 
@@ -64,7 +64,7 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 
 | ID | Nombre | Descripción | Actor(es) | Prioridad | Estado | Fuente |
 |----|--------|--------------|-----------|-----------|--------|--------|
-| RF-006 | Validación por OTP | Enviar y validar códigos OTP para teléfono, correo y firma de contrato, con reintentos y tiempo de bloqueo configurables. | Cliente empresarial, sistema | Alta | Implementado (ver hallazgo de seguridad en [RNF-001](requerimientos-no-funcionales.md#seguridad)) | `backends/b2b/src/controllers/otp/*.ts`, `backends/b2b/src/config/constants.ts` |
+| RF-006 | Validación por OTP | Enviar y validar códigos OTP para teléfono, correo y firma de contrato, con reintentos y tiempo de bloqueo configurables. | Cliente empresarial, sistema | Alta | Implementado (ver hallazgo de seguridad en [RNF-001](02-requerimientos-no-funcionales.md#seguridad)) | `backends/b2b/src/controllers/otp/*.ts`, `backends/b2b/src/config/constants.ts` |
 | RF-007 | Carga de documentos de soporte | Permitir cargar documento de identidad y certificación bancaria, restringiendo los tipos de archivo aceptados a `id_document` y `bank_certificate`. | Cliente empresarial | Alta | Implementado | `clients/upload-document.ts` |
 | RF-008 | Validación biométrica (KYC) | Ejecutar la validación biométrica del representante legal y derivar a revisión manual los casos ambiguos ("en revisión"). | Cliente empresarial, analista de riesgo | Alta | No verificable: no se encontró referencia al proveedor de biometría en los controladores revisados; probablemente reside en un microservicio de evaluaciones separado. | — |
 | RF-009 | Registro y validación del representante legal | Permitir registrar y validar al representante legal asociado al checkout (documento, teléfono, correo). | Cliente empresarial | Alta | Implementado | `clients/add-legal-representative.ts`, `clients/validate-legal-representative.ts` |
@@ -74,7 +74,7 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 | ID | Nombre | Descripción | Actor(es) | Prioridad | Estado | Fuente |
 |----|--------|--------------|-----------|-----------|--------|--------|
 | RF-010 | Consulta de riesgo crediticio | Consultar Experian y el histórico transaccional de D1 para evaluar el riesgo del cliente. | Sistema (automático) | Alta | Parcialmente verificable: existen variables de configuración de Experian y endpoints de consulta de empresa/score, pero la lógica de invocación real no está en el código disponible. | `backends/b2b/src/config/index.ts`, `companies/lookup-company.ts`, `institutions/get-advance-score.ts` |
-| RF-011 | Rechazo automático por riesgo | Rechazar automáticamente una solicitud cuando la cuenta bancaria sea inválida, el score sea insuficiente o exista inconsistencia de datos. | Sistema (automático) | Alta | No verificable directamente; regla documentada en negocio, pendiente de confirmar en el código de evaluación de riesgo. | [Reglas Negocio](../negocio/reglas-negocio/README.md) |
+| RF-011 | Rechazo automático por riesgo | Rechazar automáticamente una solicitud cuando la cuenta bancaria sea inválida, el score sea insuficiente o exista inconsistencia de datos. | Sistema (automático) | Alta | No verificable directamente; regla documentada en negocio, pendiente de confirmar en el código de evaluación de riesgo. | [Reglas Negocio](../../negocio/reglas-negocio/README.md) |
 | RF-012 | Decisión de aprobación y ajuste de cupo | Consultar el estado de crédito y aplicar las reglas del core bancario para decidir la aprobación o el ajuste del cupo. | Sistema (automático), analista de riesgo | Alta | Implementado (consulta) | `credit-line/get-credit-status.ts` |
 
 ### Originación del crédito
@@ -142,7 +142,7 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../producto
 
 ## Fuentes consultadas
 
-- [Alcance del Producto](../producto/alcance.md)
-- [Reglas Negocio](../negocio/reglas-negocio/README.md)
-- [Procesos](../negocio/procesos/README.md)
+- [Alcance del Producto](../../producto/alcance.md)
+- [Reglas Negocio](../../negocio/reglas-negocio/README.md)
+- [Procesos](../../negocio/procesos/README.md)
 - Inventario funcional del código fuente `credits-platform-main`: `backends/b2b/src/controllers/*`, `backends/b2b/src/config/*`, `backends/b2b/src/db/models/*`, `backends/admin/src/controllers/*`, `backends/admin/src/services/*`, `apps/checkout`, `apps/redemption`, `apps/admin`, realizado como parte de esta actualización.

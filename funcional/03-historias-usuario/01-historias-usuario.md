@@ -3,31 +3,31 @@
 | Documento | Historias Usuario |
 |-----------|---------------------|
 | **Proyecto** | Fliipa |
-| **VersiÃ³n** | 1.2 |
-| **Estado** | En revisiÃ³n |
+| **Versión** | 1.2 |
+| **Estado** | En revisión |
 | **Responsable** | Producto y negocio |
-| **Ãšltima actualizaciÃ³n** | 2026-07-10 |
+| **Última actualización** | 2026-07-10 |
 
 ---
 
 ## Control de versiones
 
-| VersiÃ³n | Fecha | Autor | DescripciÃ³n |
+| Versión | Fecha | Autor | Descripción |
 |---------|-------|-------|-------------|
-| 0.1 | 2026-07-06 | Maria Fernanda Herazo | Borrador vacÃ­o (pendiente de completar). |
-| 1.0 | 2026-07-10 | MarÃ­a Fernanda Herazo | Primera versiÃ³n completa: 28 historias de usuario por actor, en lÃ­nea con Actores y Casos de Uso. |
-| 1.1 | 2026-07-10 | MarÃ­a Fernanda Herazo  | Se organizan las historias en tablas por actor, con prioridad y casos de uso relacionados. |
-| 1.2 | 2026-07-10 | MarÃ­a Fernanda Herazo | Se convierte cada historia en una ficha individual (formato adaptado de plantilla de actor: descripciÃ³n, criterios de aceptaciÃ³n, relaciones, referencias, autor/fecha/versiÃ³n y comentarios). |
+| 0.1 | 2026-07-06 | Maria Fernanda Herazo | Borrador vacío (pendiente de completar). |
+| 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: 28 historias de usuario por actor, en línea con Actores y Casos de Uso. |
+| 1.1 | 2026-07-10 | María Fernanda Herazo  | Se organizan las historias en tablas por actor, con prioridad y casos de uso relacionados. |
+| 1.2 | 2026-07-10 | María Fernanda Herazo | Se convierte cada historia en una ficha individual (formato adaptado de plantilla de actor: descripción, criterios de aceptación, relaciones, referencias, autor/fecha/versión y comentarios). |
 
 ---
 
 ## Objetivo
 
-Describir las necesidades de cada actor de Fliipa en lenguaje de negocio, como base para la priorizaciÃ³n y el desarrollo de las funcionalidades del sistema.
+Describir las necesidades de cada actor de Fliipa en lenguaje de negocio, como base para la priorización y el desarrollo de las funcionalidades del sistema.
 
 ## Alcance
 
- Cubre historias de usuario para el cliente empresarial (tendero), el asesor comercial, el analista de riesgo, el analista de cartera, el agente de servicio al cliente y el administrador del producto, en lÃ­nea con los actores descritos en [Actores](../../negocio/Actores/README.md) y los casos de uso en [Casos De Uso](../02-casos-de-uso/01-casos-de-uso.md). Usa la numeraciÃ³n `HU-XXX` definida en [Convenciones](../../CONVENCIONES.md).
+ Cubre historias de usuario para el cliente empresarial (tendero), el asesor comercial, el analista de riesgo, el analista de cartera, el agente de servicio al cliente y el administrador del producto, en línea con los actores descritos en [Actores](../../negocio/actores/README.md) y los casos de uso en [Casos De Uso](../02-casos-de-uso/01-casos-de-uso.md). Usa la numeración `HU-XXX` definida en [Convenciones](../../CONVENCIONES.md).
 
 ## Documentos relacionados
 
@@ -46,11 +46,11 @@ Describir las necesidades de cada actor de Fliipa en lenguaje de negocio, como b
 
 ## Contenido
 
-Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu de la plantilla de especificaciÃ³n de actor: identificador, descripciÃ³n, criterios de aceptaciÃ³n (equivalente a "caracterÃ­sticas"), relaciones con otros elementos del desarrollo, referencias de origen, control de autor/fecha/versiÃ³n y comentarios adicionales.
+Cada historia se documenta como una ficha individual, con el mismo espíritu de la plantilla de especificación de actor: identificador, descripción, criterios de aceptación (equivalente a "características"), relaciones con otros elementos del desarrollo, referencias de origen, control de autor/fecha/versión y comentarios adicionales.
 
 ### Cliente empresarial (tendero)
 
-#### HU-001: Recibir enlace Ãºnico de solicitud
+#### HU-001: Recibir enlace único de solicitud
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -61,11 +61,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero recibir un enlace Ãºnico de solicitud por WhatsApp, para poder iniciar mi proceso de crÃ©dito sin tener que buscarlo.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero recibir un enlace único de solicitud por WhatsApp, para poder iniciar mi proceso de crédito sin tener que buscarlo.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe el enlace por WhatsApp como parte del contacto simultÃ¡neo (correo, WhatsApp, llamada). El enlace crea un checkout nuevo o reanuda uno existente en <code>REQUEST_STARTED</code> para su documento.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe el enlace por WhatsApp como parte del contacto simultáneo (correo, WhatsApp, llamada). El enlace crea un checkout nuevo o reanuda uno existente en <code>REQUEST_STARTED</code> para su documento.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -77,7 +77,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -101,8 +101,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-002: Ver cupo preaprobado antes de completar el formulario
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -114,24 +113,63 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero ver mi cupo preaprobado antes de completar todo el formulario, para decidir si vale la pena continuar. | 
-| **Prioridad** | Alta |
-| **Criterios de aceptaciÃ³n** | El sistema muestra el cupo preaprobado calculado a partir del histÃ³rico de consumo en D1, antes de exigir todos los pasos del onboarding. |
-| **Relaciones** | Casos de uso: CU-002. Requerimiento: RF-005. |
-| **Referencias** | <a href="../../negocio/procesos/02-onboarding-digital.md">Procesos</a> |
-| **Autor / Fecha / VersiÃ³n** | MarÃ­a Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | RF-005 estÃ¡ marcado como "no verificable" en el cÃ³digo de <code>backends/b2b</code> disponible; validar con el equipo tÃ©cnico dÃ³nde vive el cÃ¡lculo. |
-
-#### HU-003: Confirmar identidad por OTP
-
-| Campo | Detalle |
-|-------|---------|
-| **Actor** | Cliente empresarial |
-| **Historia** | Como cliente empresarial, quiero confirmar mi identidad con un cÃ³digo enviado por WhatsApp, correo o SMS, para proteger mi cuenta sin procesos complicados.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero ver mi cupo preaprobado antes de completar todo el formulario, para decidir si vale la pena continuar.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe un OTP por el canal elegido y puede solicitar reenvÃ­o tras 60 segundos, con un mÃ¡ximo de 3 intentos.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El sistema muestra el cupo preaprobado calculado a partir del histórico de consumo en D1, antes de exigir todos los pasos del onboarding.</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Casos de uso: CU-002. Requerimiento: RF-005.</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Referencias</th>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;"><a href="../../negocio/procesos/02-onboarding-digital.md">Procesos</a></td>
+  </tr>
+  <tr style="background-color:#fff9eb;">
+    <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
+    <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
+    <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
+  </tr>
+  <tr style="background-color:#fffdf5;">
+    <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Version</th>
+    <td colspan="3" style="border:1px solid #e7d9ad; padding:8px;">1.0</td>
+  </tr>
+</table>
+
+<table style="width:100%; border-collapse:collapse; margin:8px 0 12px 0; font-size:14px;">
+  <tr style="background-color:#f3ebff;">
+    <th style="border:1px solid #d7c9ec; padding:8px; text-align:left; width:22%;">Nombre</th>
+    <th style="border:1px solid #d7c9ec; padding:8px; text-align:left;">Descripcion</th>
+    <th style="border:1px solid #d7c9ec; padding:8px; text-align:left; width:22%;">Tipo</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid #d7c9ec; padding:8px;">Prioridad</td>
+    <td style="border:1px solid #d7c9ec; padding:8px;">Alta</td>
+    <td style="border:1px solid #d7c9ec; padding:8px;">Clasificacion</td>
+  </tr>
+</table>
+
+**Comentarios**  
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">RF-005 está marcado como "no verificable" en el código de <code>backends/b2b</code> disponible; validar con el equipo técnico dónde vive el cálculo.</div>
+#### HU-003: Confirmar identidad por OTP
+
+<table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
+  <tr style="background-color:#e8f4ff;">
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Actor</th>
+    <td style="border:1px solid #c7d7eb; padding:8px; width:42%;">Cliente empresarial</td>
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Identificador</th>
+    <td style="border:1px solid #c7d7eb; padding:8px; width:22%;">HU-003</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero confirmar mi identidad con un código enviado por WhatsApp, correo o SMS, para proteger mi cuenta sin procesos complicados.</td>
+  </tr>
+  <tr>
+    <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe un OTP por el canal elegido y puede solicitar reenvío tras 60 segundos, con un máximo de 3 intentos.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -143,7 +181,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -167,8 +205,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Ver hallazgo de seguridad RNF-001 (cÃ³digo comodÃ­n de OTP) y RNF-007 (canal SMS no envÃ­a realmente el mensaje).</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Ver hallazgo de seguridad RNF-001 (código comodín de OTP) y RNF-007 (canal SMS no envía realmente el mensaje).</div>
 #### HU-004: Completar KYC y cargar soportes desde el celular
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -180,11 +217,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero completar la validaciÃ³n biomÃ©trica y cargar mis extractos bancarios desde el celular, para no tener que ir a una oficina.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero completar la validación biométrica y cargar mis extractos bancarios desde el celular, para no tener que ir a una oficina.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente completa la biometrÃ­a con el proveedor externo y carga certificaciÃ³n bancaria y extractos de los Ãºltimos 3 meses, todo desde el flujo mÃ³vil de onboarding.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente completa la biometría con el proveedor externo y carga certificación bancaria y extractos de los últimos 3 meses, todo desde el flujo móvil de onboarding.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -196,7 +233,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -220,9 +257,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontrÃ³ en el cÃ³digo el nombre del proveedor de biometrÃ­a (Olimpia); probablemente vive en un microservicio no incluido en el repositorio revisado.</div>
-
-#### HU-005: Conocer el resultado en mÃ¡ximo 72 horas
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontró en el código el nombre del proveedor de biometría (Olimpia); probablemente vive en un microservicio no incluido en el repositorio revisado.</div>
+#### HU-005: Conocer el resultado en máximo 72 horas
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -233,11 +269,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero conocer el resultado de mi solicitud en mÃ¡ximo 72 horas, para poder planear mis compras en D1.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero conocer el resultado de mi solicitud en máximo 72 horas, para poder planear mis compras en D1.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe notificaciÃ³n de aprobaciÃ³n o rechazo dentro de las 72 horas siguientes a completar la validaciÃ³n de identidad.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente recibe notificación de aprobación o rechazo dentro de las 72 horas siguientes a completar la validación de identidad.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -249,7 +285,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -273,9 +309,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La lÃ³gica de invocaciÃ³n real a Experian no se encontrÃ³ en el cÃ³digo de <code>backends/b2b</code> disponible.</div>
-
-#### HU-006: Firmar contrato y pagarÃ© desde el celular
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La lógica de invocación real a Experian no se encontró en el código de <code>backends/b2b</code> disponible.</div>
+#### HU-006: Firmar contrato y pagaré desde el celular
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -286,11 +321,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero firmar mi contrato y pagarÃ© desde el celular con un cÃ³digo de verificaciÃ³n, para activar mi cupo sin papeleo fÃ­sico.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero firmar mi contrato y pagaré desde el celular con un código de verificación, para activar mi cupo sin papeleo físico.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente revisa el contrato y el pagarÃ©, recibe un OTP de firma vÃ¡lido por 24 horas, y el sistema genera el PDF firmado y lo envÃ­a por correo.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente revisa el contrato y el pagaré, recibe un OTP de firma válido por 24 horas, y el sistema genera el PDF firmado y lo envía por correo.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -302,7 +337,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -327,7 +362,6 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 
 **Comentarios**  
 <div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La firma se bloquea 24 horas tras agotar los intentos (RNF-013).</div>
-
 #### HU-007: Consultar cupo, plan de pagos y movimientos
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -339,11 +373,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero consultar mi cupo disponible, mi plan de pagos y mis movimientos, para saber cuÃ¡nto puedo usar y cuÃ¡nto debo.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero consultar mi cupo disponible, mi plan de pagos y mis movimientos, para saber cuánto puedo usar y cuánto debo.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente accede al dashboard de redenciÃ³n y visualiza cupo disponible, plan de pagos y movimientos, solo si su lÃ­nea de crÃ©dito estÃ¡ en estado <code>approved</code> o <code>active</code>.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente accede al dashboard de redención y visualiza cupo disponible, plan de pagos y movimientos, solo si su línea de crédito está en estado <code>approved</code> o <code>active</code>.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -355,7 +389,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -379,8 +413,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-008: Usar el cupo en tienda D1
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -392,11 +425,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero generar un cÃ³digo QR o un cÃ³digo de compra para usar mi cupo en la tienda D1, para pagar mi mercancÃ­a sin dinero en efectivo.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero generar un código QR o un código de compra para usar mi cupo en la tienda D1, para pagar mi mercancía sin dinero en efectivo.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente genera un QR con TTL o revela un cÃ³digo de compra, y el punto de venta D1 lo valida para aplicar el cupo a la compra.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente genera un QR con TTL o revela un código de compra, y el punto de venta D1 lo valida para aplicar el cupo a la compra.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -408,7 +441,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -432,9 +465,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Coexisten dos mecanismos de canje (QR y cÃ³digo de compra); pendiente de definir con negocio cuÃ¡l es el vigente.</div>
-
-#### HU-009: Pagar por dÃ©bito automÃ¡tico o prepago
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Coexisten dos mecanismos de canje (QR y código de compra); pendiente de definir con negocio cuál es el vigente.</div>
+#### HU-009: Pagar por débito automático o prepago
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -445,11 +477,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero que mi cuota se debite automÃ¡ticamente o poder prepagar por PSE, para no tener que hacer trÃ¡mites adicionales de pago.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como cliente empresarial, quiero que mi cuota se debite automáticamente o poder prepagar por PSE, para no tener que hacer trámites adicionales de pago.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El sistema debita automÃ¡ticamente vÃ­a Druo en la fecha de corte, o permite prepago voluntario por PSE en cualquier momento antes del corte.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El sistema debita automáticamente vía Druo en la fecha de corte, o permite prepago voluntario por PSE en cualquier momento antes del corte.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -461,7 +493,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -485,8 +517,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La ejecuciÃ³n real del prepago por PSE no se encontrÃ³ en el cÃ³digo de <code>backends/b2b</code> disponible.</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La ejecución real del prepago por PSE no se encontró en el código de <code>backends/b2b</code> disponible.</div>
 #### HU-010: Recibir alivios ante dificultades de pago
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -502,7 +533,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente puede acceder a abono parcial, congelamiento de intereses o condonaciÃ³n, segÃºn las condiciones y topes definidos por bucket de mora.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El cliente puede acceder a abono parcial, congelamiento de intereses o condonación, según las condiciones y topes definidos por bucket de mora.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -514,7 +545,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -538,8 +569,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-011: Resolver dudas por WhatsApp con respuesta inmediata
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -567,7 +597,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -591,8 +621,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontrÃ³ un mÃ³dulo de asistente de IA en el cÃ³digo de <code>backends</code> revisado; puede residir en una herramienta externa.</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontró un módulo de asistente de IA en el código de <code>backends</code> revisado; puede residir en una herramienta externa.</div>
 #### HU-012: Recuperar PIN o desbloquear la cuenta
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -620,7 +649,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -644,11 +673,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
-### Asesor comercial
-
-#### HU-013: Contacto simultÃ¡neo multicanal
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
+#### HU-013: Contacto simultáneo multicanal
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -659,7 +685,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero contactar simultÃ¡neamente por correo, WhatsApp y llamada a los clientes preaprobados, para maximizar la tasa de respuesta.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero contactar simultáneamente por correo, WhatsApp y llamada a los clientes preaprobados, para maximizar la tasa de respuesta.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
@@ -675,7 +701,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -699,9 +725,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
-#### HU-014: AcompaÃ±ar la originaciÃ³n del cliente
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
+#### HU-014: Acompañar la originación del cliente
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -712,11 +737,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero acompaÃ±ar al cliente durante la originaciÃ³n (dudas, visita de confirmaciÃ³n), para reducir el abandono del proceso.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero acompañar al cliente durante la originación (dudas, visita de confirmación), para reducir el abandono del proceso.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El asesor da seguimiento al cliente durante el onboarding y coordina, cuando aplica, la visita de originaciÃ³n (hunter/visitador).</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El asesor da seguimiento al cliente durante el onboarding y coordina, cuando aplica, la visita de originación (hunter/visitador).</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -724,11 +749,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Referencias</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;"><a href="../../negocio/Actores/03-actores-comerciales-cobranza.md">Actores</a></td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;"><a href="../../negocio/actores/03-actores-comerciales-cobranza.md">Actores</a></td>
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -752,8 +777,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-015: Seguimiento de primera compra
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -765,15 +789,15 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero identificar a los clientes que no han usado su cupo 7 dÃ­as despuÃ©s de la activaciÃ³n, para hacer seguimiento de primera compra.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como asesor comercial, quiero identificar a los clientes que no han usado su cupo 7 días después de la activación, para hacer seguimiento de primera compra.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El asesor recibe o consulta la lista de clientes activados sin uso del cupo a los 7 dÃ­as.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El asesor recibe o consulta la lista de clientes activados sin uso del cupo a los 7 días.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">â€”</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">—</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Referencias</th>
@@ -781,7 +805,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -805,11 +829,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontrÃ³ un reporte automatizado de este seguimiento en el cÃ³digo revisado.</div>
-
-### Analista de riesgo
-
-#### HU-016: Resolver manualmente casos de biometrÃ­a en revisiÃ³n
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontró un reporte automatizado de este seguimiento en el código revisado.</div>
+#### HU-016: Resolver manualmente casos de biometría en revisión
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -820,11 +841,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de riesgo, quiero revisar manualmente los casos de biometrÃ­a marcados "en revisiÃ³n", para decidir si el cliente puede continuar el proceso.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de riesgo, quiero revisar manualmente los casos de biometría marcados "en revisión", para decidir si el cliente puede continuar el proceso.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista visualiza los casos "en revisiÃ³n" y registra la decisiÃ³n (continuar o rechazar), notificando al cliente.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista visualiza los casos "en revisión" y registra la decisión (continuar o rechazar), notificando al cliente.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -836,7 +857,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -860,9 +881,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
-#### HU-017: Ver score, Experian e histÃ³rico D1 en un solo lugar
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
+#### HU-017: Ver score, Experian e histórico D1 en un solo lugar
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -873,11 +893,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de riesgo, quiero ver en un solo lugar el resultado de Experian, el histÃ³rico transaccional de D1 y el score calculado, para validar o ajustar la decisiÃ³n automÃ¡tica.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de riesgo, quiero ver en un solo lugar el resultado de Experian, el histórico transaccional de D1 y el score calculado, para validar o ajustar la decisión automática.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista consulta, para un cliente dado, el resultado de Experian, el histÃ³rico D1 y el score consolidado antes de aprobar o rechazar.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista consulta, para un cliente dado, el resultado de Experian, el histórico D1 y el score consolidado antes de aprobar o rechazar.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -889,7 +909,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -913,10 +933,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La lÃ³gica de invocaciÃ³n real a Experian no estÃ¡ en el cÃ³digo de <code>backends/b2b</code> disponible.</div>
-
-### Analista de cartera / ComitÃ© de Cartera
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">La lógica de invocación real a Experian no está en el código de <code>backends/b2b</code> disponible.</div>
 #### HU-018: Ver cartera segmentada por bucket de mora
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -928,11 +945,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de cartera, quiero ver la cartera segmentada por bucket de mora, para priorizar mi gestiÃ³n de cobro diaria.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de cartera, quiero ver la cartera segmentada por bucket de mora, para priorizar mi gestión de cobro diaria.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista consulta la cartera agrupada en pago anticipado y buckets 1 a 5, con los datos necesarios para priorizar su gestiÃ³n.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista consulta la cartera agrupada en pago anticipado y buckets 1 a 5, con los datos necesarios para priorizar su gestión.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -944,7 +961,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -969,8 +986,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 
 **Comentarios**  
 <div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Existe una discrepancia documentada entre el esquema de buckets y el journey de Colpatria B2B sobre los plazos de escalamiento (ver RNF-017).</div>
-
-#### HU-019: Registrar cada interacciÃ³n de cobranza
+#### HU-019: Registrar cada interacción de cobranza
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -981,11 +997,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de cartera, quiero registrar cada interacciÃ³n de cobranza (canal, tipo de contacto, resultado, compromiso de pago), para mantener trazabilidad completa del caso.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista de cartera, quiero registrar cada interacción de cobranza (canal, tipo de contacto, resultado, compromiso de pago), para mantener trazabilidad completa del caso.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista registra canal, tipo de contacto, resultado y monto comprometido de cada interacciÃ³n, quedando disponible en el resumen de atenciÃ³n del cliente.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El analista registra canal, tipo de contacto, resultado y monto comprometido de cada interacción, quedando disponible en el resumen de atención del cliente.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -997,7 +1013,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1021,24 +1037,23 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Este mÃ³dulo estÃ¡ implementado en el cÃ³digo pero no descrito explÃ­citamente en el alcance de producto (ver informe de hallazgos de negocio y producto).</div>
-
-#### HU-020: Tablero semanal de priorizaciÃ³n del ComitÃ© de Cartera
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Este módulo está implementado en el código pero no descrito explícitamente en el alcance de producto (ver informe de hallazgos de negocio y producto).</div>
+#### HU-020: Tablero semanal de priorización del Comité de Cartera
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Actor</th>
-    <td style="border:1px solid #c7d7eb; padding:8px; width:42%;">ComitÃ© de Cartera</td>
+    <td style="border:1px solid #c7d7eb; padding:8px; width:42%;">Comité de Cartera</td>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Identificador</th>
     <td style="border:1px solid #c7d7eb; padding:8px; width:22%;">HU-020</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como miembro del ComitÃ© de Cartera, quiero un tablero semanal con los casos priorizados (dÃ­as de mora, monto, historial), para decidir alivios, visitas o escalamiento jurÃ­dico.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como miembro del Comité de Cartera, quiero un tablero semanal con los casos priorizados (días de mora, monto, historial), para decidir alivios, visitas o escalamiento jurídico.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El comitÃ© visualiza semanalmente los casos priorizados segÃºn dÃ­as de mora, flujo de caja, cuotas vencidas, historial y monto adeudado.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El comité visualiza semanalmente los casos priorizados según días de mora, flujo de caja, cuotas vencidas, historial y monto adeudado.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1050,7 +1065,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1074,36 +1089,35 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontrÃ³ un tablero de priorizaciÃ³n automatizado en el cÃ³digo revisado.</div>
-
-#### HU-021: Recibir casos de escalamiento jurÃ­dico automÃ¡ticamente
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontró un tablero de priorización automatizado en el código revisado.</div>
+#### HU-021: Recibir casos de escalamiento jurídico automáticamente
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Actor</th>
-    <td style="border:1px solid #c7d7eb; padding:8px; width:42%;">Analista jurÃ­dico / abogado</td>
+    <td style="border:1px solid #c7d7eb; padding:8px; width:42%;">Analista jurídico / abogado</td>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; width:18%;">Identificador</th>
     <td style="border:1px solid #c7d7eb; padding:8px; width:22%;">HU-021</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista jurÃ­dico, quiero recibir automÃ¡ticamente los casos que llegan al bucket de escalamiento legal, para iniciar el proceso de cobro jurÃ­dico sin depender de un traspaso manual.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como analista jurídico, quiero recibir automáticamente los casos que llegan al bucket de escalamiento legal, para iniciar el proceso de cobro jurídico sin depender de un traspaso manual.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Los casos que alcanzan el bucket de escalamiento jurÃ­dico se enrutan automÃ¡ticamente al analista jurÃ­dico.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Los casos que alcanzan el bucket de escalamiento jurídico se enrutan automáticamente al analista jurídico.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">â€”</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">—</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Referencias</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;"><a href="../../negocio/Actores/03-actores-comerciales-cobranza.md">Actores</a></td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;"><a href="../../negocio/actores/03-actores-comerciales-cobranza.md">Actores</a></td>
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1128,9 +1142,6 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 
 **Comentarios**  
 <div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">Depende de resolver primero la discrepancia de plazos de escalamiento (RNF-017).</div>
-
-### Agente de servicio al cliente
-
 #### HU-022: Recibir el caso escalado con contexto completo
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1142,11 +1153,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como agente de servicio al cliente, quiero recibir el caso escalado por la IA con el contexto completo de la conversaciÃ³n, para no pedirle al cliente que repita su problema.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como agente de servicio al cliente, quiero recibir el caso escalado por la IA con el contexto completo de la conversación, para no pedirle al cliente que repita su problema.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Cuando la IA escala un caso, el agente humano ve el historial completo de la conversaciÃ³n antes de responder.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Cuando la IA escala un caso, el agente humano ve el historial completo de la conversación antes de responder.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1158,7 +1169,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1182,9 +1193,8 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No verificable en el cÃ³digo de <code>backends</code> disponible.</div>
-
-#### HU-023: Validar identidad en casos crÃ­ticos
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No verificable en el código de <code>backends</code> disponible.</div>
+#### HU-023: Validar identidad en casos críticos
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
   <tr style="background-color:#e8f4ff;">
@@ -1195,11 +1205,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como agente de servicio al cliente, quiero validar la identidad del cliente antes de aprobar un caso crÃ­tico (suplantaciÃ³n, uso indebido del cupo), para evitar fraude.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como agente de servicio al cliente, quiero validar la identidad del cliente antes de aprobar un caso crítico (suplantación, uso indebido del cupo), para evitar fraude.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Los casos crÃ­ticos requieren validaciÃ³n de identidad y aprobaciÃ³n manual explÃ­cita del agente antes de cerrarse.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Los casos críticos requieren validación de identidad y aprobación manual explícita del agente antes de cerrarse.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1211,7 +1221,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1235,10 +1245,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
-### Administrador del producto (portal administrativo)
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-024: Buscar cliente y ver historial auditado
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1250,11 +1257,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como administrador, quiero buscar un cliente por documento y ver su historial completo de operaciones auditadas, para resolver dudas o disputas rÃ¡pidamente.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como administrador, quiero buscar un cliente por documento y ver su historial completo de operaciones auditadas, para resolver dudas o disputas rápidamente.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador busca por documento y consulta hasta 500 registros de auditorÃ­a del cliente (lÃ­nea de crÃ©dito, desembolsos, pagos).</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador busca por documento y consulta hasta 500 registros de auditoría del cliente (línea de crédito, desembolsos, pagos).</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1266,7 +1273,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1290,8 +1297,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-025: Ajustar cupo o fecha de corte
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1303,11 +1309,11 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Descripcion</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como administrador, quiero ajustar el cupo o la fecha de corte de una lÃ­nea de crÃ©dito, para corregir casos excepcionales autorizados por negocio.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">Como administrador, quiero ajustar el cupo o la fecha de corte de una línea de crédito, para corregir casos excepcionales autorizados por negocio.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador ajusta <code>lineCap</code> y <code>cutoffDay</code> dentro de los rangos vÃ¡lidos, quedando la acciÃ³n registrada en auditorÃ­a.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador ajusta <code>lineCap</code> y <code>cutoffDay</code> dentro de los rangos válidos, quedando la acción registrada en auditoría.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1319,7 +1325,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1343,8 +1349,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">El rango vÃ¡lido de <code>cutoffDay</code> no es consistente con el de redemption (ver RNF-016).</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">El rango válido de <code>cutoffDay</code> no es consistente con el de redemption (ver RNF-016).</div>
 #### HU-026: Simular plan de pago con distintas tasas
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1360,7 +1365,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#eefaf2;">Caracteristicas</th>
-    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador ingresa tasa corriente, tasa de mora y umbral de dÃ­as, y obtiene el plan de pago diario descargable en CSV.</td>
+    <td colspan="3" style="border:1px solid #c7d7eb; padding:8px;">El administrador ingresa tasa corriente, tasa de mora y umbral de días, y obtiene el plan de pago diario descargable en CSV.</td>
   </tr>
   <tr>
     <th style="border:1px solid #c7d7eb; padding:8px; text-align:left; background-color:#f7fbff;">Relaciones</th>
@@ -1372,7 +1377,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1396,8 +1401,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">â€”</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">—</div>
 #### HU-027: Administrar la lista negra (blacklist)
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1425,7 +1429,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1449,8 +1453,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 </table>
 
 **Comentarios**  
-<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontrÃ³ enforcement de la blacklist sobre checkout, riesgo o desembolso en el cÃ³digo revisado (ver RF-027).</div>
-
+<div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">No se encontró enforcement de la blacklist sobre checkout, riesgo o desembolso en el código revisado (ver RF-027).</div>
 #### HU-028: Monitorear salud del sistema en tiempo real
 
 <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
@@ -1478,7 +1481,7 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
   </tr>
   <tr style="background-color:#fff9eb;">
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Autor</th>
-    <td style="border:1px solid #e7d9ad; padding:8px;">MarÃ­a Fernanda Herazo (con asistencia de Claude)</td>
+    <td style="border:1px solid #e7d9ad; padding:8px;">María Fernanda Herazo (con asistencia de Claude)</td>
     <th style="border:1px solid #e7d9ad; padding:8px; text-align:left;">Fecha</th>
     <td style="border:1px solid #e7d9ad; padding:8px;">2026-07-10</td>
   </tr>
@@ -1503,14 +1506,4 @@ Cada historia se documenta como una ficha individual, con el mismo espÃ­ritu d
 
 **Comentarios**  
 <div style="background-color:#f9fafb; border:1px solid #d9dee6; padding:8px 10px; border-radius:4px;">El monitoreo de "terceros" no cubre a los proveedores de negocio (ver RNF-012).</div>
-
-## Fuentes consultadas
-
-- [Actores](../../negocio/Actores/README.md)
-- [Procesos](../../negocio/procesos/README.md)
-- [Reglas Negocio](../../negocio/reglas-negocio/README.md)
-- [Casos De Uso](../02-casos-de-uso/01-casos-de-uso.md)
-- [Requerimientos Funcionales](../04-requerimientos/01-requerimientos-funcionales.md)
-- [Requerimientos No Funcionales](../04-requerimientos/02-requerimientos-no-funcionales.md)
-- Inventario funcional del cÃ³digo fuente `credits-platform-main`, realizado como parte de esta actualizaciÃ³n.
 

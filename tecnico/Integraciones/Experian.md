@@ -169,5 +169,5 @@ sequenceDiagram
 
 - [Producto/Alcance](../../producto/alcance.md)
 - [Producto/Vision](../../producto/vision.md)
-- [Funcional/Casos de Uso](../../funcional/casos-de-uso.md)
+- [Funcional/Casos de Uso](../../funcional/02-casos-de-uso/01-casos-de-uso.md)
 - [Tecnico/Arquitectura](../arquitectura.md)
