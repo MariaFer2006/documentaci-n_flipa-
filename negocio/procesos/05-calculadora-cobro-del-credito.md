@@ -1,5 +1,7 @@
 # 5. Calculadora y cobro del crédito
 
+*Versión corregida — se agregan las alertas de Slack (con enlace al panel de administración) para alinear este documento con el estándar de trazabilidad definido en el documento 4 (Firma de contrato y activación).*
+
 ## Objetivo
 
 Administrar el ciclo de pago del crédito una vez el cliente utiliza el bono D1, calculando automáticamente el plan de pagos, permitiendo realizar pagos anticipados o esperar el débito automático, actualizando el saldo del crédito y determinando si la obligación queda al día, se liquida completamente o continúa hacia el proceso de cobranza.
@@ -14,15 +16,19 @@ Administrar el ciclo de pago del crédito una vez el cliente utiliza el bono D1,
 
 El journey se organiza en tres carriles (swimlanes): **Cliente**, **Calculadora** y **Medios de pago**. La caja "No — espera cobro automático en corte" está marcada como ajuste de junio de 2026.
 
+> **⚠️ Pendiente de sincronizar:** el diagrama del journey (página 7) aún no refleja las alertas de Slack que se agregan en esta versión del documento (mora, error de actualización de saldo y falla del débito automático). Se recomienda actualizar la figura por separado para que quede consistente con el texto.
+
 *Los elementos marcados con asterisco (\*) corresponden a puntos aún no definidos técnicamente o pendientes de confirmación con el dueño del proceso; se detallan en cada paso y se listan de forma consolidada en "Pendientes de validación".*
 
 ---
 
 ## Descripción general
 
-Una vez el cliente recibe y accede a su bono D1 (asignado en el proceso de Firma de Contrato, documento 4) y lo utiliza para realizar una compra, un **worker periódico**\* detecta ese uso en D1 y dispara el inicio de los cálculos de cobro. La calculadora genera automáticamente el plan de pagos (cuotas, fechas, tasa y saldo inicial), información que el cliente puede consultar desde la plataforma web.
+Una vez el cliente recibe y accede a su bono D1 (asignado en el paso 16 del proceso de Firma de Contrato, documento 4) y lo utiliza para realizar una compra, un **worker periódico**\* detecta ese uso en D1 y dispara el inicio de los cálculos de cobro. La calculadora genera automáticamente el plan de pagos (cuotas, fechas, tasa y saldo inicial), información que el cliente puede consultar desde la plataforma web.
 
 El cliente decide entonces si desea realizar un prepago mediante PSE desde la web, o esperar el cobro automático que se ejecuta con Drúo al cierre del ciclo. Una vez recibido el pago, el sistema lo registra, aplica la amortización correspondiente y actualiza el saldo. Si el crédito queda al día, se liquida y el cupo se libera para un nuevo ciclo; si el cliente se encuentra en mora, el caso continúa automáticamente hacia el proceso de Cobranza (documento 8).
+
+En consistencia con el estándar de trazabilidad definido para el ciclo del crédito (documento 4), el sistema notifica por Slack al equipo de operaciones los eventos relevantes de este proceso —falla del débito automático con Drúo, error durante la actualización del saldo, y todo caso en que el crédito quede en mora—, incluyendo en cada alerta un **enlace directo al caso en el panel de administración**.
 
 ---
 
@@ -125,7 +131,9 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 > **Nota (Ajuste · jun 2026):** esta ruta ("No — espera cobro automático en corte") está marcada en el journey como un ajuste de junio de 2026.
 
-**Placeholder\*:** no está definida la frecuencia exacta de ejecución del débito automático (¿un único intento en la fecha de corte, o varios intentos como en el proceso de Cobranza, documento 8, días 0 y 1-5?). Debe alinearse con las reglas ya definidas en el documento de Cobranza para evitar duplicidad o inconsistencia entre ambos procesos.
+**Nuevo (trazabilidad):** si el débito automático con Drúo **falla** (fondos insuficientes, cuenta inválida u otro error), el sistema envía una alerta al canal de Slack de operaciones —con enlace directo al caso en el panel de administración— para dar seguimiento antes de que el caso escale a mora.
+
+**Placeholder\*:** no está definida la frecuencia exacta de ejecución del débito automático (¿un único intento en la fecha de corte, o varios intentos como en el proceso de Cobranza, documento 8, días 0 y 1-5?). Debe alinearse con las reglas ya definidas en el documento de Cobranza para evitar duplicidad o inconsistencia entre ambos procesos. Tampoco está definido si toda falla del débito debe alertar por Slack de inmediato o solo tras un número determinado de intentos fallidos (mismo criterio pendiente en doc. 4, paso 11).
 
 ---
 
@@ -138,6 +146,8 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 **Resultado:** Saldo del crédito actualizado.
 
 **Tiempo estimado:** Instantáneo (procesamiento automático tras la confirmación del pago).
+
+**Nuevo (trazabilidad):** si ocurre un error durante el registro del pago o la actualización del saldo, el sistema envía una alerta al canal de Slack de operaciones —con enlace directo al caso en el panel de administración— para que el equipo revise la inconsistencia.
 
 ---
 
@@ -158,19 +168,18 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 
 ---
 
-### 9a. Liquidación del crédito y liberación del cupo
+### 9a. Liquidación del crédito y disponibilidad del cupo
 
 **Actor:** Calculadora (sistema).
 
-**Proceso:** Cuando el saldo llega a cero, el sistema marca el crédito como liquidado y libera nuevamente el cupo aprobado, siguiendo las reglas de liberación de cupo definidas para el producto\*.
+**Proceso:** Cuando el saldo llega a cero, el sistema marca el crédito como liquidado. Posteriormente, ejecuta las reglas de negocio definidas para la renovación y disponibilidad del cupo, las cuales determinan el cupo que el cliente tendrá disponible para un nuevo ciclo de crédito.*
 
-**Resultado:** Crédito liquidado; cupo nuevamente disponible para futuras compras. Con este paso finaliza el ciclo operativo del crédito.
+**Resultado:** Crédito liquidado; estado del cupo actualizado de acuerdo con las reglas de negocio definidas para el producto. Con este paso finaliza el ciclo operativo del crédito.
 
 **Tiempo estimado:** Instantáneo.
 
-**Placeholder\*:** no están definidas con precisión las reglas para liberar nuevamente el cupo tras la liquidación (¿el cupo vuelve exactamente al mismo valor previo?, ¿puede ajustarse según el comportamiento de pago, en línea con la evaluación de renovación descrita en el documento 6, Dispersión de fondos?).
+**Placeholder\*:** no están definidas con precisión las reglas para actualizar la disponibilidad del cupo tras la liquidación (¿el cupo vuelve exactamente al mismo valor previo?, ¿puede incrementarse o disminuirse según el comportamiento de pago?, ¿requiere una nueva evaluación de riesgo?), en línea con la evaluación de renovación descrita en el documento 6, Dispersión de fondos.
 
----
 
 ### 9b. Mora e inicio del proceso de cobranza
 
@@ -181,6 +190,8 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 **Resultado:** Caso enviado al proceso de cobranza.
 
 **Tiempo estimado:** Instantáneo (clasificación automática); el proceso de cobranza en sí sigue su propia línea de tiempo (documento 8: Día 0 en adelante).
+
+**Nuevo (trazabilidad):** al marcar el crédito en mora, el sistema envía una alerta al canal de Slack de operaciones —con enlace directo al caso en el panel de administración—, en línea con el estándar de trazabilidad definido para el ciclo del crédito.
 
 ---
 
@@ -193,6 +204,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - Cada pago recibido (PSE o débito automático) actualiza automáticamente el saldo del crédito.
 - Cuando el saldo llega a cero, el crédito se liquida y el cupo vuelve a estar disponible.
 - Si el pago no se realiza oportunamente, el caso continúa hacia el proceso de cobranza.
+- **En consistencia con el estándar de trazabilidad acordado para el ciclo del crédito (documento 4), el sistema notifica en tiempo real por el canal de Slack de operaciones —con enlace directo al caso en el panel de administración— los siguientes eventos: falla del débito automático con Drúo, error durante el registro del pago o la actualización del saldo, y todo caso en que el crédito quede en mora.**
 
 ---
 
@@ -214,16 +226,17 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - Crédito liquidado.
 - Cupo nuevamente disponible.
 - Caso enviado al proceso de cobranza cuando exista mora.
+- **Alertas registradas en Slack, con enlace al caso en el panel de administración (falla de débito automático, error de actualización de saldo, mora).**
 
 ---
 
 ## Excepciones
 
 - El cliente no realiza el prepago.
-- El débito automático con Drúo no puede ejecutarse correctamente.
+- El débito automático con Drúo no puede ejecutarse correctamente (con alerta Slack asociada).
 - El pago es rechazado por la entidad financiera.
-- El cliente incurre en mora.
-- Se presenta un error durante la actualización del saldo.
+- El cliente incurre en mora (con alerta Slack asociada).
+- Se presenta un error durante la actualización del saldo (con alerta Slack asociada).
 - El worker periódico no detecta oportunamente el uso del bono (retraso en la originación del crédito).
 - El caso debe ser transferido al proceso de cobranza.
 
@@ -235,6 +248,7 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 - El cliente tiene dos vías de pago: prepago voluntario por PSE, o cobro automático con Drúo al cierre del ciclo — consistente con el mecanismo de débito automático ya usado en Onboarding (documento 2) y en Cobranza (documento 8).
 - La liberación del cupo tras la liquidación debe ser coherente con las reglas de renovación de cupo descritas en el documento 6 (Dispersión de fondos), que evalúa el comportamiento de pago del cliente.
 - Si el cliente entra en mora, el proceso se articula directamente con el documento 8 (Cobranza), que ya define reintentos de débito automático en los días 0 y 1-5; se debe evitar duplicar o contradecir esas reglas dentro de este proceso.
+- **Se incorporó la trazabilidad por Slack para los eventos críticos de este journey (falla de débito automático, error de saldo, mora), por consistencia con el estándar ya aplicado en el documento 4 (Firma de contrato y activación) y en el documento 3 (KYC/riesgo).**
 
 ---
 
@@ -247,9 +261,15 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 > - Confirmar las condiciones para permitir pagos anticipados parciales (monto mínimo, si se puede prepagar solo una parte del saldo). *(placeholder — paso 5)*
 > - Confirmar la frecuencia de ejecución del débito automático con Drúo (un único intento en la fecha de corte o varios intentos, y cómo se articula con los reintentos ya definidos en el proceso de Cobranza). *(placeholder — paso 6b)*
 > - Confirmar las reglas exactas para liberar nuevamente el cupo de crédito después de la liquidación, y su relación con la evaluación de renovación de cupo del documento de Dispersión de fondos. *(placeholder — paso 9a)*
+> - **Confirmar si toda falla del débito automático con Drúo debe alertar por Slack de inmediato, o solo a partir de cierto número de intentos fallidos (mismo criterio pendiente de definir en el documento 4, paso 11).** *(placeholder — paso 6b)*
 
 ---
 
+## Fuentes consultadas
+
+- *Journeys Colpatria B2B* (junio de 2026), página 7.
+- Documento de Alcance del Producto.
+- Estándar de trazabilidad por Slack (alertas con enlace al panel de administración) definido en el documento 4, Firma de contrato y activación, aplicado por consistencia a este documento.
 ## Fuentes consultadas
 
 - *Journeys Colpatria B2B* (junio de 2026), página 7.
