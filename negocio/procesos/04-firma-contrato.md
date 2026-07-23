@@ -36,7 +36,7 @@ En consistencia con el estándar de trazabilidad definido para el ciclo del cré
 
 ## Explicación paso a paso
 
-Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **tiempo estimado** de referencia. Estos tiempos son estimaciones de planeación para UX, consistentes con la meta comercial de que la firma se complete "en minutos, desde el celular" (*Modelo Comercial B2B*), y están pendientes de validar con Producto/Tecnología.
+Cada paso incluye la descripción del proceso (qué ocurre a nivel técnico u operativo) y un tiempo estimado de referencia. Estas duraciones son estimaciones de planificación para UX, alineadas con el objetivo comercial de completar la firma del contrato "en minutos, desde el celular" (Modelo Comercial B2B). Los tiempos son referenciales y están sujetos a validación por parte de los equipos de Producto y Tecnología.
 
 ### 1. Habilitación del crédito
 
