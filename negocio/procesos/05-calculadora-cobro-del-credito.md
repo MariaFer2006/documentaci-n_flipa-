@@ -1,6 +1,5 @@
 # 5. Calculadora y cobro del crédito
 
-*Versión corregida — se agregan las alertas de Slack (con enlace al panel de administración) para alinear este documento con el estándar de trazabilidad definido en el documento 4 (Firma de contrato y activación).*
 
 ## Objetivo
 
