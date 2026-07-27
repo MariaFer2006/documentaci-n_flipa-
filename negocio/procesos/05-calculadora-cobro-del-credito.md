@@ -155,8 +155,11 @@ Cada paso incluye el **proceso** (qué ocurre técnica u operativamente) y un **
 **Actor:** Calculadora (sistema).
 
 **Proceso:** El sistema evalúa si, tras la actualización del saldo, el crédito quedó al día.
+**Decisión** ¿crédito al día?
+**si**
+**no**
 
-**Decisión:** ¿Crédito al día?
+**Decisión:** ¿Crédito pagado en el corte o antes del corte?
 
 - **Sí:** el crédito se liquida y el cupo se libera.
 - **No:** el cliente se encuentra en mora y el caso continúa hacia el proceso de cobranza.
