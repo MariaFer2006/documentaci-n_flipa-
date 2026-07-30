@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" font-family="Arial, sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#1F2937"/>
+  </marker>
+</defs>
+
+    <rect x="190" y="20" width="270" height="160" fill="#FAFAFA" stroke="#9CA3AF" stroke-width="1.5" rx="4"/>
+    <text x="200" y="38" font-size="12.5" font-weight="bold" fill="#374151">Sistema Fliipa</text>
+    
+    <ellipse cx="325" cy="110" rx="95" ry="28" fill="#FFF3CD" stroke="#B8860B" stroke-width="1.5"/>
+    <text text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5" fill="#1F2937"><tspan x="325" y="96.0">Registrar</tspan><tspan x="325" y="110.0">solicitud de</tspan><tspan x="325" y="124.0">crédito</tspan></text>
+    
+    <circle cx="80" cy="99.0" r="9.0" fill="none" stroke="#1F2937" stroke-width="2"/>
+    <line x1="80" y1="108.0" x2="80" y2="124.0" stroke="#1F2937" stroke-width="2"/>
+    <line x1="66.0" y1="102.0" x2="94.0" y2="102.0" stroke="#1F2937" stroke-width="2"/>
+    <line x1="80" y1="124.0" x2="68.0" y2="145.0" stroke="#1F2937" stroke-width="2"/>
+    <line x1="80" y1="124.0" x2="92.0" y2="145.0" stroke="#1F2937" stroke-width="2"/>
+    <text x="80" y="161.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">Administrador</text>
+    <line x1="98" y1="88" x2="230" y2="110" stroke="#1F2937" stroke-width="1.5"/></svg>
