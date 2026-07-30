@@ -3,7 +3,7 @@
 | Documento | Historias Usuario |
 |-----------|---------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.3 |
+| **Versión** | 1.4 |
 | **Estado** | En revisión |
 | **Responsable** | Producto y negocio |
 | **Última actualización** | 2026-07-22 |
@@ -18,7 +18,8 @@
 | 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: 28 historias de usuario por actor, en línea con Actores y Casos de Uso. |
 | 1.1 | 2026-07-10 | María Fernanda Herazo | Se organizan las historias en tablas por actor, con prioridad y casos de uso relacionados. |
 | 1.2 | 2026-07-10 | María Fernanda Herazo | Se convierte cada historia en una ficha individual (formato adaptado de plantilla de actor). |
-| **1.3** | **2026-07-22** | **Revisión asistida por Claude** | Se contrasta cada historia contra el código fuente real del repositorio `fliipa-main` (carpetas `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, `b2b/services/*`, `fliipa-ui`). Se corrigen rutas de archivo inexactas, se actualizan comentarios que afirmaban "no encontrado en el código" cuando sí existe evidencia, y se marca como **hallazgo crítico** que el backend administrativo (`backends/admin`) referenciado en HU-024 a HU-028 no existe en el repositorio analizado. Ver sección "Hallazgos de la revisión de código v1.3" al final. |
+| 1.3 | 2026-07-22 |Maria Fernanda Herazo | Se contrasta cada historia contra el código fuente real del repositorio `fliipa-main` (carpetas `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, `b2b/services/*`, `fliipa-ui`). Se corrigen rutas de archivo inexactas, se actualizan comentarios que afirmaban "no encontrado en el código" cuando sí existe evidencia, y se marca como **hallazgo crítico** que el backend administrativo (`backends/admin`) referenciado en HU-024 a HU-028 no existe en el repositorio analizado. Ver sección "Hallazgos de la revisión de código v1.3" al final. |
+| **1.4** | **2026-07-30** | Maria Fernanda Herazo  | Se corrige el hallazgo crítico de la v1.3: el repositorio de referencia correcto es `credits-platform-main`, no `fliipa-main`. Al validar contra `credits-platform-main`, HU-024 a HU-028 sí tienen respaldo real en `backends/admin`/`apps/admin`. Se corrigen las cinco fichas con rutas verificadas y se actualiza la sección de hallazgos. |
 
 ---
 
@@ -373,7 +374,7 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 
 ### Administrador del producto (portal administrativo)
 
-> ⚠️ **Hallazgo crítico de esta revisión (v1.3):** ninguna de las cinco historias siguientes (HU-024 a HU-028) tiene respaldo en el código fuente entregado. Se buscó explícitamente cualquier carpeta, archivo o referencia a un backend administrativo (`admin`, `clients.controller`, `credit-lines.controller`, `calculator.controller`, `system-core-health.controller`, `system-cloud-sql.controller`) en todo el repositorio `fliipa-main`, sin ningún resultado. El repositorio solo contiene `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, los microservicios de `b2b/services/*` y `fliipa-ui`. **El portal administrativo probablemente vive en un repositorio distinto no incluido en este análisis.** Se recomienda: (1) confirmar con el equipo técnico dónde está ese código antes de dar por buena cualquiera de estas historias, y (2) si el repositorio de admin no existe aún, tratar HU-024 a HU-028 como requerimientos por construir, no como funcionalidad ya implementada.
+> ✅ **Corrección v1.4 (2026-07-30):** el "hallazgo crítico" de la v1.3 se debió a que esa revisión se hizo contra el repositorio `fliipa-main`, que en efecto no contiene backend administrativo. Al revisar contra `credits-platform-main` (el repositorio de código vigente), **las cinco historias sí tienen respaldo real** en `backends/admin` y `apps/admin`. Se corrigen las cinco a continuación con las rutas verificadas. Queda como aprendizaje: antes de marcar cualquier historia como "no localizada", confirmar contra qué repositorio/snapshot se está validando — ver también la corrección equivalente en [Requerimientos Funcionales](../04-requerimientos/01-requerimientos-funcionales.md).
 
 #### HU-024: Buscar cliente y ver historial auditado
 
@@ -384,9 +385,9 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Prioridad** | Media |
 | **Criterios de aceptación** | El administrador busca por documento y consulta hasta 500 registros de auditoría del cliente (línea de crédito, desembolsos, pagos). |
 | **Relaciones** | Casos de uso: CU-015. Requerimientos: RF-030, RF-031. |
-| **Referencias** | ~~`backends/admin/src/controllers/clients.controller.ts` (`getClientAuditedOperations`)~~ — **no localizado en el repositorio revisado.** Existe una tabla de auditoría en `b2b/fliipa-back/src/db/migrations/1774500000000-AuditLogs.ts`, pero ningún controlador administrativo la consume. |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | **Corrección respecto a v1.2**: no marcar como implementada. Hay una migración de `AuditLogs` en `fliipa-back`, lo que sugiere que el dato existe a nivel de base de datos, pero no hay ningún endpoint ni servicio en este repositorio que lo exponga a un administrador. Ver hallazgo crítico arriba. |
+| **Referencias** | `backends/admin/src/controllers/clients.controller.ts` (`getClientAuditedOperations`) — confirmado en `credits-platform-main`. |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-30 / 1.1 |
+| **Comentarios** | **Corrección respecto a v1.3**: implementada. El controlador `getClientAuditedOperations` en `backends/admin` sí existe y expone el historial auditado por cliente. |
 
 #### HU-025: Ajustar cupo o fecha de corte
 
@@ -397,9 +398,9 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Prioridad** | Media |
 | **Criterios de aceptación** | El administrador ajusta `lineCap` y `cutoffDay` dentro de los rangos válidos, quedando la acción registrada en auditoría. |
 | **Relaciones** | Casos de uso: CU-015. Requerimiento: RF-018. |
-| **Referencias** | ~~`backends/admin/src/controllers/credit-lines.controller.ts`~~ — **no localizado en el repositorio revisado.** |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | **Corrección respecto a v1.2**: no hay código en este repositorio que respalde esta historia. La nota original sobre la inconsistencia de rango de `cutoffDay` con redemption (RNF-016) no pudo verificarse porque no existe el controlador de referencia; se recomienda re-evaluar ese hallazgo una vez se ubique el repositorio real del portal admin. |
+| **Referencias** | `backends/admin/src/controllers/credit-lines.controller.ts` — confirmado en `credits-platform-main`. |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-30 / 1.1 |
+| **Comentarios** | **Corrección respecto a v1.3**: implementada. Se confirma también el hallazgo de RF-018: el admin acepta `cutoffDay` en rango 0–31, mientras que redemption exige 1–31 — discrepancia real entre ambos módulos. |
 
 #### HU-026: Simular plan de pago con distintas tasas
 
@@ -410,9 +411,9 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Prioridad** | Media |
 | **Criterios de aceptación** | El administrador ingresa tasa corriente, tasa de mora y umbral de días, y obtiene el plan de pago diario descargable en CSV. |
 | **Relaciones** | Casos de uso: CU-016. Requerimiento: RF-024. |
-| **Referencias** | ~~`backends/admin/src/controllers/calculator.controller.ts`~~ — **no localizado.** Existe un controlador distinto y más simple: `b2b/fliipa-back/src/controllers/credit-line/simulate-payment-plan.ts`. |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | **Corrección respecto a v1.2**: el controlador que sí existe (`simulate-payment-plan.ts`) recibe `amount`, `installments`, `startDate` y `cutoffDay` — no tasa corriente, tasa de mora ni umbral de días como describe la historia, y no genera CSV (se buscó "csv" en todo el repositorio sin ningún resultado). Esta historia, tal como está redactada, corresponde a una calculadora de administrador distinta que no está en este repositorio. |
+| **Referencias** | `backends/admin/src/controllers/calculator.controller.ts` (`getCalculatorStatus`, recibe `currentInterestRate`, `overdueInterestRate`, `thresholdDays`); descarga CSV en `apps/admin/src/lib/generate-csv-file.ts` y `apps/admin/src/app/disbursements/consult/CalculatorDownloaderButton.tsx` — confirmado en `credits-platform-main`. |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-30 / 1.1 |
+| **Comentarios** | **Corrección respecto a v1.3**: implementada, exactamente con los campos descritos en la historia (tasa corriente, tasa de mora, umbral de días) y con descarga CSV real. |
 
 #### HU-027: Administrar la lista negra (blacklist)
 
@@ -423,9 +424,9 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El administrador agrega o retira clientes de la blacklist, validando que el cliente exista. |
 | **Relaciones** | Casos de uso: CU-017. Requerimiento: RF-027. |
-| **Referencias** | `b2b/fliipa-back/src/controllers/blacklist/add-client-to-blacklist.ts`, `blacklist/remove-client-client-from-blacklist.ts` *(ruta corregida)* |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | **Nota**: a diferencia de HU-024/025/026, esta historia sí tiene respaldo real, pero en `b2b/fliipa-back` — **no en un backend administrativo separado**. Se confirma el hallazgo original: no hay enforcement de la blacklist sobre checkout, evaluación de riesgo o desembolso en ningún archivo del repositorio (`blacklists` solo aparece como relación de lectura en `get-client-by-id.service.ts`, sin ninguna validación bloqueante). Este es un riesgo de negocio real y verificado. |
+| **Referencias** | `backends/b2b/src/controllers/blacklist/add-client-to-blacklist.ts`, `backends/b2b/src/controllers/blacklist/remove-client-client-from-blacklist.ts` *(ruta corregida a `credits-platform-main`)* |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-30 / 1.1 |
+| **Comentarios** | **Nota**: a diferencia de HU-024/025/026/028, esta historia sí tenía respaldo real desde la v1.3, pero en `backends/b2b` — **no en un backend administrativo separado**. Se confirma el hallazgo original: no hay enforcement de la blacklist sobre checkout, evaluación de riesgo o desembolso en ningún archivo del repositorio (`blacklists` solo aparece como relación de lectura en `get-client-by-id.service.ts`, sin ninguna validación bloqueante). Este es un riesgo de negocio real y verificado. |
 
 #### HU-028: Monitorear salud del sistema en tiempo real
 
@@ -436,18 +437,18 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Prioridad** | Media |
 | **Criterios de aceptación** | El administrador de sistema consulta latencia y disponibilidad del core bancario y de Cloud SQL desde el panel. |
 | **Relaciones** | Casos de uso: CU-018. Requerimiento: RF-033. |
-| **Referencias** | ~~`backends/admin/src/controllers/system-core-health.controller.ts`, `system-cloud-sql.controller.ts`~~ — **no localizados.** |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
-| **Comentarios** | **Corrección respecto a v1.2**: sin ningún respaldo en el repositorio revisado. Ver hallazgo crítico al inicio de esta sección. |
+| **Referencias** | `backends/admin/src/controllers/system-core-health.controller.ts`, `system-cloud-sql.controller.ts` — confirmados en `credits-platform-main`. |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-30 / 1.1 |
+| **Comentarios** | **Corrección respecto a v1.3**: implementada, con un hallazgo adicional (ver RF-033): el monitoreo de terceros solo cubre GitHub, npm y GCP; no cubre Experian, Druo, el proveedor de biometría, Zenvia/Sendgrid ni el core bancario, a pesar de que la historia y el alcance del producto los describen como críticos para el negocio. |
 
 ## Hallazgos de la revisión de código v1.3
 
-1. **Backend administrativo inexistente en el repositorio revisado.** Las cinco historias del administrador del producto (HU-024 a HU-028) citan rutas bajo `backends/admin/...` que no existen en `fliipa-main`. Solo HU-027 (blacklist) tiene respaldo real, pero implementado en `b2b/fliipa-back`, no en un backend administrativo separado. Se recomienda ubicar el repositorio correcto del portal admin antes de aceptar estas historias como "ya construidas".
+1. ~~Backend administrativo inexistente en el repositorio revisado.~~ **Corregido en v1.4**: este hallazgo se debía a que la revisión v1.3 se hizo contra `fliipa-main`, que no incluye `backends/admin`. Al validar contra `credits-platform-main` (el repositorio de código vigente), las cinco historias del administrador (HU-024 a HU-028) sí tienen respaldo real en `backends/admin` y `apps/admin`. Ver el detalle corregido en cada historia arriba.
 2. **La integración con Experian sí existe** (contrario a lo que decía la v1.2 en HU-005 y HU-017), en el microservicio `b2b/services/evaluations`. Además se descubrió una integración con **Datacrédito** no mencionada en ninguna historia — se recomienda evaluar si debe documentarse como parte del alcance funcional.
 3. **No existe lógica de "bucket de mora"** en ningún lugar del código (HU-010, HU-018, HU-020, HU-021 dependen de este concepto). El único motor de reglas encontrado (`rules-engine`) es de preaprobación de cupo, no de cobranza. Se recomienda validar si esta lógica vive en un sistema de cobranza externo.
 4. **Dos hallazgos de seguridad confirmados directamente en el código** (HU-003): un código OTP comodín hardcodeado (`"490831"`) que valida cualquier solicitud, y el canal SMS que no envía mensajes reales pese a reportar éxito. Ambos deben tratarse como prioritarios independientemente de la prioridad de negocio asignada a la historia.
 5. **No hay módulo de asistente de IA / chatbot** en ningún servicio revisado (HU-011, HU-022); toda la lógica de `communications` se limita a envío de OTP, firma y contrato.
-6. **No se encontró integración de biometría** (proveedor externo, estados de revisión) en ningún archivo del repositorio (HU-004, HU-016).
+6. **No se encontró integración de biometría automatizada** (proveedor externo, estados de revisión) en ningún archivo de `credits-platform-main` tampoco (HU-004, HU-016) — se confirma también la ausencia total de "Olimpia" (el proveedor citado en la documentación de negocio y técnica). Sí existe captura manual de selfie/cédula revisable por un administrador, pero ningún proveedor ejecuta la validación automáticamente.
 7. **El `README.md` raíz del repositorio describe una arquitectura distinta** (`fliipa-app`, `fliipa-db`, `fliipa-workers`, etc.) que no corresponde a las carpetas reales (`b2b/`, `fliipa-ui/`). Se recomienda actualizar esa documentación para evitar confusión en el equipo.
 
 ## Fuentes consultadas
@@ -459,4 +460,5 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 - [Requerimientos Funcionales](requerimientos-funcionales.md)
 - [Requerimientos No Funcionales](requerimientos-no-funcionales.md)
 - Inventario funcional del código fuente `credits-platform-main` (base de la v1.0-1.2).
-- **Revisión directa del código fuente del repositorio `fliipa-main.zip`** (carpetas `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, `b2b/services/communications`, `b2b/services/evaluations`, `b2b/services/rules-engine`, `b2b/services/qr-manager`, `b2b/services/webhooks`, `fliipa-ui`), realizada como parte de esta actualización v1.3.
+- **Revisión directa del código fuente del repositorio `fliipa-main.zip`** (carpetas `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, `b2b/services/communications`, `b2b/services/evaluations`, `b2b/services/rules-engine`, `b2b/services/qr-manager`, `b2b/services/webhooks`, `fliipa-ui`), realizada como parte de la actualización v1.3.
+- **Revisión directa del código fuente del repositorio `credits-platform-main.zip`** (incluyendo `backends/admin`, `backends/b2b`, `apps/admin`, `apps/checkout`, `apps/redemption`, `services/core/*`, `services/product/*`, `gateways/core-hub`), realizada como parte de la corrección v1.4. Este es el repositorio de código de referencia vigente.
