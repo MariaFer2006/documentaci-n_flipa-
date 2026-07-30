@@ -1,29 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="Karla, Arial, sans-serif">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-    <path d="M0,0 L0,6 L9,3 z" fill="#3F1FE8"/>
-  </marker>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 990" font-family="Karla, Arial, sans-serif">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#3F1FE8"/></marker></defs>
+<rect x="210" y="20" width="740" height="960" fill="#F0F0F5" stroke="#D4D2DC" stroke-width="1.5" rx="6"/>
+<text x="224" y="40" font-size="14" font-weight="bold" fill="#32313D">Sistema Fliipa — Casos de uso CU-001 a CU-018</text>
+<rect x="220" y="60" width="720" height="254" fill="none" stroke="#9490A8" stroke-width="1" stroke-dasharray="4,3" rx="6"/>
+<text x="232" y="78" font-size="12" font-weight="bold" fill="#32313D">Originación del crédito</text>
+<ellipse cx="410.0" cy="120" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="410.0" y="117.0">Registrar</tspan><tspan x="410.0" y="131.0">solicitud</tspan></text>
 
-    <rect x="260" y="20" width="470" height="440" fill="#F0F0F5" stroke="#D4D2DC" stroke-width="1.5" rx="4"/>
-    <text x="270" y="38" font-size="13" font-weight="bold" fill="#32313D" font-family="Karla, Arial, sans-serif">Sistema Fliipa</text>
-    
-    <ellipse cx="420" cy="100" rx="95" ry="28" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
-    <text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="420" y="86.0">1. Registrar</tspan><tspan x="420" y="100.0">solicitud de</tspan><tspan x="420" y="114.0">crédito</tspan></text>
-    
-    <ellipse cx="420" cy="190" rx="95" ry="28" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
-    <text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="420" y="190.0">2. Evaluar riesgo</tspan></text>
-    
-    <ellipse cx="420" cy="280" rx="95" ry="28" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
-    <text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="420" y="266.0">3. Decidir</tspan><tspan x="420" y="280.0">aprobación o</tspan><tspan x="420" y="294.0">rechazo</tspan></text>
-    
-    <ellipse cx="420" cy="370" rx="95" ry="28" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
-    <text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="420" y="363.0">4. Dar seguimiento</tspan><tspan x="420" y="377.0">al crédito</tspan></text>
-    
-    <circle cx="100" cy="229.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
-    <line x1="100" y1="238.0" x2="100" y2="254.0" stroke="#32313D" stroke-width="2"/>
-    <line x1="86.0" y1="232.0" x2="114.0" y2="232.0" stroke="#32313D" stroke-width="2"/>
-    <line x1="100" y1="254.0" x2="88.0" y2="275.0" stroke="#32313D" stroke-width="2"/>
-    <line x1="100" y1="254.0" x2="112.0" y2="275.0" stroke="#32313D" stroke-width="2"/>
-    <text x="100" y="291.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Administrador</text>
-    <line x1="118" y1="238" x2="325" y2="100" stroke="#9490A8" stroke-width="1.3"/><line x1="118" y1="238" x2="325" y2="190" stroke="#9490A8" stroke-width="1.3"/><line x1="118" y1="238" x2="325" y2="280" stroke="#9490A8" stroke-width="1.3"/><line x1="118" y1="238" x2="325" y2="370" stroke="#9490A8" stroke-width="1.3"/><path d="M 420,266 C 460,240 460,215 420,204" fill="none" stroke="#3F1FE8" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/><text x="470" y="235" font-size="11" fill="#3F1FE8">&#171;include&#187;</text></svg>
+<text x="410.0" y="90" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-001</text>
+<ellipse cx="580.0" cy="120" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="117.0">Conocer cupo</tspan><tspan x="580.0" y="131.0">preaprobado</tspan></text>
+
+<text x="580.0" y="90" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-002</text>
+<ellipse cx="750.0" cy="120" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="750.0" y="124.0">Confirmar OTP</tspan></text>
+
+<text x="750.0" y="90" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-003</text>
+<ellipse cx="410.0" cy="190" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="410.0" y="194.0">Completar KYC</tspan></text>
+
+<text x="410.0" y="160" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-004</text>
+<ellipse cx="580.0" cy="190" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="187.0">Resolver KYC en</tspan><tspan x="580.0" y="201.0">revisión</tspan></text>
+
+<text x="580.0" y="160" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-005</text>
+<ellipse cx="750.0" cy="190" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="750.0" y="180.0">Conocer</tspan><tspan x="750.0" y="194.0">resultado</tspan><tspan x="750.0" y="208.0">evaluación</tspan></text>
+
+<text x="750.0" y="160" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-006</text>
+<ellipse cx="495.0" cy="260" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="495.0" y="257.0">Firmar contrato</tspan><tspan x="495.0" y="271.0">y pagaré</tspan></text>
+
+<text x="495.0" y="230" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-007</text>
+<ellipse cx="665.0" cy="260" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="665.0" y="257.0">Aprobar y</tspan><tspan x="665.0" y="271.0">activar línea</tspan></text>
+
+<text x="665.0" y="230" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-008</text>
+<rect x="220" y="340" width="720" height="114" fill="none" stroke="#9490A8" stroke-width="1" stroke-dasharray="4,3" rx="6"/>
+<text x="232" y="358" font-size="12" font-weight="bold" fill="#32313D">Administración del crédito</text>
+<ellipse cx="410.0" cy="400" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="410.0" y="397.0">Consultar cupo y</tspan><tspan x="410.0" y="411.0">plan de pagos</tspan></text>
+
+<text x="410.0" y="370" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-009</text>
+<ellipse cx="580.0" cy="400" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="397.0">Usar cupo en</tspan><tspan x="580.0" y="411.0">tienda D1</tspan></text>
+
+<text x="580.0" y="370" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-010</text>
+<ellipse cx="750.0" cy="400" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="750.0" y="397.0">Pagar débito o</tspan><tspan x="750.0" y="411.0">prepago</tspan></text>
+
+<text x="750.0" y="370" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-011</text>
+<rect x="220" y="480" width="720" height="114" fill="none" stroke="#9490A8" stroke-width="1" stroke-dasharray="4,3" rx="6"/>
+<text x="232" y="498" font-size="12" font-weight="bold" fill="#32313D">Cobranza</text>
+<ellipse cx="495.0" cy="540" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="495.0" y="530.0">Cobranza y</tspan><tspan x="495.0" y="544.0">segmentación</tspan><tspan x="495.0" y="558.0">mora</tspan></text>
+
+<text x="495.0" y="510" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-012</text>
+<ellipse cx="665.0" cy="540" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="665.0" y="544.0">Alivios de pago</tspan></text>
+
+<text x="665.0" y="510" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-013</text>
+<rect x="220" y="620" width="720" height="114" fill="none" stroke="#9490A8" stroke-width="1" stroke-dasharray="4,3" rx="6"/>
+<text x="232" y="638" font-size="12" font-weight="bold" fill="#32313D">Servicio al cliente</text>
+<ellipse cx="580.0" cy="680" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="677.0">Atención IA y</tspan><tspan x="580.0" y="691.0">escalamiento</tspan></text>
+
+<text x="580.0" y="650" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-014</text>
+<rect x="220" y="760" width="720" height="184" fill="none" stroke="#9490A8" stroke-width="1" stroke-dasharray="4,3" rx="6"/>
+<text x="232" y="778" font-size="12" font-weight="bold" fill="#32313D">Portal administrativo</text>
+<ellipse cx="410.0" cy="820" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="410.0" y="817.0">Buscar cliente /</tspan><tspan x="410.0" y="831.0">ajustar cupo</tspan></text>
+
+<text x="410.0" y="790" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-015</text>
+<ellipse cx="580.0" cy="820" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="817.0">Simular plan de</tspan><tspan x="580.0" y="831.0">pago</tspan></text>
+
+<text x="580.0" y="790" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-016</text>
+<ellipse cx="750.0" cy="820" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="750.0" y="817.0">Administrar</tspan><tspan x="750.0" y="831.0">blacklist</tspan></text>
+
+<text x="750.0" y="790" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-017</text>
+<ellipse cx="580.0" cy="890" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="580.0" y="887.0">Monitorear salud</tspan><tspan x="580.0" y="901.0">del sistema</tspan></text>
+
+<text x="580.0" y="860" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-018</text>
+<circle cx="80" cy="112.5" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="121.5" x2="80" y2="137.5" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="124.5" x2="94" y2="124.5" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="137.5" x2="68" y2="158.5" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="137.5" x2="92" y2="158.5" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="174.5" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Cliente</text>
+<text x="80" y="188.5" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">empresarial</text>
+
+<line x1="98" y1="103.5" x2="218" y2="187.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="176.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="185.0" x2="80" y2="201.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="188.0" x2="94" y2="188.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="201.0" x2="68" y2="222.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="201.0" x2="92" y2="222.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="238.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Sistema</text>
+<text x="80" y="252.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">(automático)</text>
+
+<line x1="98" y1="167.0" x2="218" y2="187.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="239.5" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="248.5" x2="80" y2="264.5" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="251.5" x2="94" y2="251.5" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="264.5" x2="68" y2="285.5" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="264.5" x2="92" y2="285.5" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="301.5" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Analista</text>
+<text x="80" y="315.5" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">de riesgo</text>
+
+<line x1="98" y1="230.5" x2="218" y2="187.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="386.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="395.0" x2="80" y2="411.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="398.0" x2="94" y2="398.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="411.0" x2="68" y2="432.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="411.0" x2="92" y2="432.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="448.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Cliente</text>
+<text x="80" y="462.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">empresarial</text>
+
+<line x1="98" y1="377.0" x2="218" y2="397.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="507.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="516.0" x2="80" y2="532.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="519.0" x2="94" y2="519.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="532.0" x2="68" y2="553.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="532.0" x2="92" y2="553.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="569.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Analista</text>
+<text x="80" y="583.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">de cartera</text>
+
+<line x1="98" y1="498.0" x2="218" y2="537.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="545.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="554.0" x2="80" y2="570.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="557.0" x2="94" y2="557.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="570.0" x2="68" y2="591.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="570.0" x2="92" y2="591.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="607.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Comité</text>
+<text x="80" y="621.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">de Cartera</text>
+
+<line x1="98" y1="536.0" x2="218" y2="537.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="647.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="656.0" x2="80" y2="672.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="659.0" x2="94" y2="659.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="672.0" x2="68" y2="693.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="672.0" x2="92" y2="693.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="709.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Cliente</text>
+<text x="80" y="723.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">empresarial</text>
+
+<line x1="98" y1="638.0" x2="218" y2="677.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="685.0" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="694.0" x2="80" y2="710.0" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="697.0" x2="94" y2="697.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="710.0" x2="68" y2="731.0" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="710.0" x2="92" y2="731.0" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="747.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Agente</text>
+<text x="80" y="761.0" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">de servicio</text>
+
+<line x1="98" y1="676.0" x2="218" y2="677.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="810.3333333333334" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="819.3333333333334" x2="80" y2="835.3333333333334" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="822.3333333333334" x2="94" y2="822.3333333333334" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="835.3333333333334" x2="68" y2="856.3333333333334" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="835.3333333333334" x2="92" y2="856.3333333333334" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="872.3333333333334" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Administrador</text>
+<text x="80" y="886.3333333333334" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">del producto</text>
+
+<line x1="98" y1="801.3333333333334" x2="218" y2="852.0" stroke="#9490A8" stroke-width="1.3"/>
+<circle cx="80" cy="871.6666666666666" r="9.0" fill="none" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="880.6666666666666" x2="80" y2="896.6666666666666" stroke="#32313D" stroke-width="2"/>
+<line x1="66" y1="883.6666666666666" x2="94" y2="883.6666666666666" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="896.6666666666666" x2="68" y2="917.6666666666666" stroke="#32313D" stroke-width="2"/>
+<line x1="80" y1="896.6666666666666" x2="92" y2="917.6666666666666" stroke="#32313D" stroke-width="2"/>
+<text x="80" y="933.6666666666666" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">Administrador</text>
+<text x="80" y="947.6666666666666" text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12" fill="#32313D">(rol sistema)</text>
+
+<line x1="98" y1="862.6666666666666" x2="218" y2="852.0" stroke="#9490A8" stroke-width="1.3"/>
+<line x1="665.0" y1="260" x2="580.0" y2="120" stroke="#3F1FE8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+<line x1="665.0" y1="260" x2="750.0" y2="190" stroke="#3F1FE8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+<text x="622.5" y="184.0" font-size="10" fill="#3F1FE8" font-style="italic">«include»</text>
+</svg>
