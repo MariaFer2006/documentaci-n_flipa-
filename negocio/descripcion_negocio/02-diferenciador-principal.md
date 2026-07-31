@@ -14,11 +14,11 @@ Esto se traduce en tres ventajas concretas frente a un esquema de crédito conve
 
 ## Contexto de mercado
 
-El modelo de crédito rotativo basado en datos transaccionales alternativos al historial bancario tradicional no es exclusivo de Flipa: existen otros actores en el mercado colombiano y latinoamericano que atienden necesidades similares de financiamiento para pequeños negocios, apoyándose en distintas fuentes de datos alternativas (transaccionales, contables, o de plataformas de venta). Frente a ese panorama, el diferenciador de Flipa está en la combinación específica de la relación comercial con D1 —una cadena con miles de puntos de venta y un flujo constante de transacciones— y un modelo de crédito diseñado alrededor de ese comportamiento de compra particular, en lugar de un modelo genérico de scoring alternativo.
+El modelo de crédito rotativo basado en datos transaccionales alternativos al historial bancario tradicional no es exclusivo de Fliipa: existen otros actores en el mercado colombiano y latinoamericano que atienden necesidades similares de financiamiento para pequeños negocios, apoyándose en distintas fuentes de datos alternativas (transaccionales, contables, o de plataformas de venta). Frente a ese panorama, el diferenciador de Fliipa está en la combinación específica de la relación comercial con D1 —una cadena con miles de puntos de venta y un flujo constante de transacciones— y un modelo de crédito diseñado alrededor de ese comportamiento de compra particular, en lugar de un modelo de originación tradicional.
 
-> **Nota (Check-in de Producto, 15 jul 2026):** esta sección fusiona lo que antes eran dos documentos separados ("Diferenciador principal" y "Contexto de mercado"), por instrucción explícita de Iván Aponte. Además, se eliminó la mención de competidores específicos por nombre (anteriormente se citaban cuatro empresas del mercado colombiano/latinoamericano); el contexto competitivo ahora se describe de forma genérica.
+> **Nota :** esta sección fusiona lo que antes eran dos documentos separados ("Diferenciador principal" y "Contexto de mercado"), por instrucción explícita de Iván Aponte. Además, se eliminó la mención de competidores específicos por nombre (anteriormente se citaban cuatro empresas del mercado colombiano/latinoamericano); el contexto competitivo ahora se describe de forma genérica.
 
-> **Nota (Check-in de Producto, 21 jul 2026):** se retiró la mención a RUES como fuente automatizada del proceso de aprobación, consistente con la eliminación de esta consulta acordada en esa reunión (ver [Validación de identidad — KYC](../procesos/03-validacion_kcy__y%20evaluación_riesgo.md)).
+> **Nota :** se retiró la mención a RUES como fuente automatizada del proceso de aprobación, consistente con la eliminación de esta consulta acordada en esa reunión (ver [Validación de identidad — KYC](../procesos/03-validacion_kcy__y%20evaluación_riesgo.md)).
 
 ## Fuentes consultadas
 
