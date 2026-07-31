@@ -1,11 +1,8 @@
-
-
-
 # 1. Captación comercial
 
 ## Objetivo
 
-Contactar a los clientes preaprobados de la base del piloto (tenderos socios D1) a través de tres canales simultáneos (email, WhatsApp y llamada), generar su interés en el crédito rotativo, acompañarlos hasta que completen la solicitud digital y hacer seguimiento posterior a la aprobación —firma de contrato y primer uso del cupo— para asegurar la activación efectiva del cliente.
+Contactar a los clientes preaprobados de la base del piloto (clientes/micronegocios socios D1) a través de tres canales simultáneos (email, WhatsApp y llamada), generar su interés en el crédito rotativo, acompañarlos hasta que completen la solicitud digital y hacer seguimiento posterior a la aprobación —firma de contrato y primer uso del cupo— para asegurar la activación efectiva del cliente.
 
 ---
 
@@ -13,11 +10,13 @@ Contactar a los clientes preaprobados de la base del piloto (tenderos socios D1)
 
 El proceso de captación comercial es la puerta de entrada al ecosistema del crédito B2B **Socios D1**, que conecta tres actores:
 
-- **D1**: la cadena de descuento, con más de 3.000 tiendas y millones de clientes tenderos que compran semanalmente.
-- **Sumz / Fliipa**: la plataforma financiera que origina y gestiona el crédito rotativo B2B, evaluando con datos de consumo real (no solo historial bancario).
-- **El tendero**: pequeño comercio con alta frecuencia de compra en D1, que necesita flujo de caja flexible para surtir su negocio sin descapitalizarse.
+- **D1**: la cadena de descuento, con más de 3.000 tiendas y millones de clientes que compran semanalmente.
+- **Sumz / Flipa**: la plataforma financiera que origina y gestiona el crédito rotativo B2B, evaluando con datos de consumo real (no solo historial bancario).
+- **El cliente/micronegocio**: pequeño comercio con alta frecuencia de compra en D1, que necesita flujo de caja flexible para surtir su negocio sin descapitalizarse.
 
-El producto es un **cupo rotativo preaprobado** para comprar en D1 y pagar en 3 cuotas, con aprobación máxima en 72 horas. El cliente paga, libera cupo y puede volver a usarlo; el cupo se bloquea ante retrasos de pago y se reporta a centrales de riesgo según los plazos legales.
+El producto es un **cupo rotativo preaprobado** para comprar en D1 y pagar en *1 cuota\**, con aprobación máxima en *24 horas\**. El cliente paga, libera cupo y puede volver a usarlo; el cupo se bloquea ante retrasos de pago y se reporta a centrales de riesgo según los plazos legales.
+
+> \* **Dato sujeto a cambios frecuentes** (Check-in de Producto, 15 jul 2026): el plazo de aprobación y el número de cuotas son parámetros operativos del piloto que pueden ajustarse conforme evolucione el producto. Confirmar la versión vigente con el dueño del proceso antes de citarlos en otro documento.
 
 ---
 
@@ -37,7 +36,7 @@ El proceso inicia con la base de clientes preaprobados definida para el piloto. 
 
 Cuando el cliente responde por cualquiera de los canales mostrando interés, el asesor lo acompaña en tiempo real (chat o llamada) hasta dejarlo listo para iniciar el proceso, momento en el cual se le envía el enlace de solicitud por WhatsApp al número confirmado. El cliente completa la solicitud (NIT, datos del negocio y del representante legal) mientras el asesor verifica que el proceso se complete correctamente.
 
-Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la verificación de identidad y el análisis de crédito (KYC + riesgo). El asesor notifica al cliente, en un plazo de hasta 72 horas, si su cupo fue aprobado o rechazado. Los casos aprobados continúan hacia la firma del contrato y la activación del cupo en D1; posteriormente, si el cliente no ha realizado su primera compra en 7 días, el asesor hace un seguimiento adicional para impulsar el uso del cupo.
+Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la verificación de identidad y el análisis de crédito (KYC + riesgo). El asesor notifica al cliente, en un plazo de hasta *24 horas\**, si su cupo fue aprobado o rechazado. Los casos aprobados continúan hacia la firma del contrato y la activación del cupo en D1; posteriormente, si el cliente no ha realizado su primera compra en 7 días, el asesor hace un seguimiento adicional para impulsar el uso del cupo.
 
 ---
 
@@ -47,9 +46,9 @@ Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la ver
 
 **Actor:** Asesor.
 
-**Información utilizada:** Lista de clientes preaprobados (tenderos socios D1) y sus datos de contacto.
+**Información utilizada:** Lista de clientes preaprobados (clientes/micronegocios socios D1) y sus datos de contacto.
 
-**Proceso:** El asesor parte de la base de clientes preaprobados definida para el piloto, la cual contiene los datos de contacto (teléfono, correo) de los tenderos seleccionados según su comportamiento de compra en D1.
+**Proceso:** El asesor parte de la base de clientes preaprobados definida para el piloto, la cual contiene los datos de contacto (teléfono, correo) de los clientes seleccionados según su comportamiento de compra en D1.
 
 **Resultado:** Base de clientes preaprobados lista para iniciar el contacto comercial.
 
@@ -177,7 +176,7 @@ Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la ver
 
 **Actor:** Asesor.
 
-**Proceso:** El asesor notifica al cliente, en un plazo de hasta 72 horas después de que el equipo realice la validación, si su cupo fue aprobado o rechazado. En caso de aprobación, se confirma el cupo activo (máximo 72 h), siempre que haya pasado el análisis de riesgo.
+**Proceso:** El asesor notifica al cliente, en un plazo de hasta *24 horas\** después de que el equipo realice la validación, si su cupo fue aprobado o rechazado. En caso de aprobación, se confirma el cupo activo (máximo *24 h\**), siempre que haya pasado el análisis de riesgo.
 
 **Resultado:** Cliente informado sobre el resultado de su solicitud.
 
@@ -225,9 +224,11 @@ Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la ver
 - Si el cliente no responde o no está interesado, el caso se reagenda y se reintenta el contacto con recordatorios del cupo preaprobado.
 - El link de solicitud se envía únicamente al número de WhatsApp confirmado durante el contacto.
 - El asesor debe verificar que el cliente complete correctamente el proceso de solicitud.
-- La notificación de aprobación o rechazo debe entregarse en un plazo máximo de 72 horas después de la validación de KYC + riesgo.
-- El cupo confirmado tiene una vigencia máxima de 72 horas, sujeta a que el análisis de riesgo sea satisfactorio.
+- La notificación de aprobación o rechazo debe entregarse en un plazo máximo de *24 horas\** después de la validación de KYC + riesgo.
+- El cupo confirmado tiene una vigencia máxima de *24 horas\**, sujeta a que el análisis de riesgo sea satisfactorio.
 - Si el cliente aprobado no realiza su primera compra en 7 días, el asesor debe contactarlo nuevamente.
+
+> \* **Dato sujeto a cambios frecuentes** (Check-in de Producto, 15 jul 2026): el plazo de aprobación y la vigencia del cupo son parámetros operativos del piloto que pueden ajustarse conforme evolucione el producto. Confirmar la versión vigente con el dueño del proceso antes de citarlos en otro documento.
 
 ---
 
@@ -269,9 +270,11 @@ Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la ver
 
 - El proceso combina gestión humana (asesor) con monitoreo automatizado de canales (sistema).
 - El tono de comunicación varía según el canal (informativo en email, cercano en WhatsApp, conversacional en llamada), pero mantiene un mismo mensaje de fondo.
-- Según la guía de arquetipos de marca (*Arquetipos.docx*), la comunicación con el tendero se basa en un mix de arquetipos "Persona Corriente + Héroe": un tono cercano, sin tecnicismos, que actúa como aliado del microempresario más que como una entidad financiera tradicional — esto es consistente con los tonos definidos por canal en este journey.
+- Según la guía de arquetipos de marca (*Arquetipos.docx*), la comunicación con el cliente/micronegocio se basa en un mix de arquetipos "Persona Corriente + Héroe": un tono cercano, sin tecnicismos, que actúa como aliado del microempresario más que como una entidad financiera tradicional — esto es consistente con los tonos definidos por canal en este journey.
 - El proceso de captación es el punto de entrada al resto del ciclo del producto: se conecta directamente con Onboarding digital (documento 2), KYC (documento 3) y Firma de Contrato (documento 4).
-- El piloto contempla una hoja de ruta de activación con las siguientes fases (según *Modelo Comercial B2B.pptx*, diapositiva 9): validar la base de datos de clientes preaprobados con D1, activar y configurar los canales (plantillas de WhatsApp, email y speech de llamada con Fliipa), lanzar el piloto contactando un primer lote de tenderos (300, según la referencia inicial) para medir tasa de respuesta por canal, acompañar la originación en sitio cuando aplique, hacer seguimiento a la primera compra, y analizar métricas para escalar (canal más efectivo, tipo de negocio, tasa de conversión y de uso).
+- El piloto contempla una hoja de ruta de activación con las siguientes fases (según *Modelo Comercial B2B.pptx*, diapositiva 9): validar la base de datos de clientes preaprobados con D1, activar y configurar los canales (plantillas de WhatsApp, email y speech de llamada con Flipa), lanzar el piloto contactando un primer lote de clientes/micronegocios (300, según la referencia inicial\*) para medir tasa de respuesta por canal, acompañar la originación en sitio cuando aplique, hacer seguimiento a la primera compra, y analizar métricas para escalar (canal más efectivo, tipo de negocio, tasa de conversión y de uso).
+
+> \* Ver nota en [Indicadores](../indicadores/README.md) sobre la cifra de piloto (300 vs. ~500 clientes / ~3.000 créditos mencionados en el Weekly Planning del 27 jul 2026), pendiente de conciliar con el dueño del proceso.
 
 ---
 
@@ -292,3 +295,4 @@ Una vez finalizada la solicitud, el caso pasa a **Sistema & Riesgo** para la ver
 - *Modelo Comercial B2B.pptx* (Sumz, junio de 2026), diapositivas 2 a 10 — carpeta *Proceso Collections B2B*.
 - *Arquetipos.docx* — guía de identidad de marca y voz para originación, servicio y cobranza.
 - Documento de Alcance del Producto.
+- Notas de la reunión "Producto: Check-in" (15 jul 2026) y su transcripción asociada — ajuste de 72h/3 cuotas a 24h/1 cuota; reemplazo de "tendero" por "cliente"/"micronegocio".
