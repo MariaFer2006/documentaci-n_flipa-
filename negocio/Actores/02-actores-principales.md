@@ -6,7 +6,7 @@
 |---|---|
 | Cliente empresarial | Micro o pequeña empresa que compra frecuentemente en D1 y solicita financiamiento. |
 | Fliipa | Equipo interno de Sumz que desarrolla y opera el producto de crédito: define reglas de negocio, coordina con proveedores externos y es responsable de la operación diaria de la plataforma. |
-| D1 | Aliado comercial que aporta la base de clientes preaprobados y el contexto transaccional de los clientes. No participa en la operación del crédito, en la evaluación del riesgo ni en las actividades de cobranza. |
+| D1 | No participa en la operación del crédito, en la evaluación del riesgo ni en las actividades de cobranza. Aliado comercial que aporta la base de clientes preaprobados y el contexto transaccional de los clientes. |
 | Grupo Santo Domingo | Aliado estratégico que impulsa la iniciativa y acompaña el crecimiento del modelo de negocio. |
 
 > **Nota:** corregido tras el Weekly Sync de Producto (10 jul 2026): D1 pasa a tener su propia fila y se aclara explícitamente que no participa en el crédito, el Comité de Cartera ni la cobranza.
