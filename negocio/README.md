@@ -2,7 +2,7 @@
 
 | Documento | Negocio |
 |-----------|---------|
-| **Proyecto** | Fliipa |
+| **Proyecto** | Flipa |
 | **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Equipo de negocio, producto y operaciones |
@@ -55,6 +55,7 @@ En revisión
 ## Contenido
 
 Esta carpeta contiene los documentos siguientes:
+
  - [Descripcion Negocio](descripcion_negocio/README.md): contexto y propósito del negocio.
  - [Actores](Actores/README.md): roles clave del ecosistema.
  - [Procesos](procesos/README.md): flujo operacional del crédito, con un archivo por proceso, diagramas Mermaid y tablas.
