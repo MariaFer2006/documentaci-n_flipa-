@@ -2,7 +2,7 @@
 
 | Documento | Reglas Negocio |
 |-----------|-----------------|
-| **Proyecto** | Fliipa |
+| **Proyecto** | Flipa |
 | **Versión** | 2.0 |
 | **Estado** | En revisión |
 | **Responsable** | Negocio y operaciones |
@@ -16,12 +16,13 @@
 |---------|-------|-------|-------------|
 | 0.1 – 1.2 | 2026-07-06 a 2026-07-09 | María Fernanda Herazo | Historial completo en el documento monolítico anterior: reglas de cupo, mora, alivios, escalamiento jurídico, control de riesgo operativo, tipificación de contactos, KYC, dispersión de fondos y servicio al cliente. |
 | 2.0 | 2026-07-15 | María Fernanda Herazo | Reorganización: un archivo por sección, siguiendo el mismo formato usado en [Actores](../Actores/README.md), [Procesos](../procesos/README.md) e [Indicadores](../indicadores/README.md). Se agrega diagrama de categorías. Se limpia la duplicación de las secciones "Dispersión de fondos" y "Servicio al cliente" que habían quedado repetidas al final del archivo original. Se agrega una nota pendiente de validar en la sección de mora y buckets: *Mensajes WhatsApp B2B.xlsx* (hoja "B2B Comunicaciones") cita la **Ley 2157 de 2021, Art. 3** para el día 20 de mora dentro de una cadencia más granular, que no coincide exactamente con los días 15/30 aquí documentados; esta cita legal no estaba referenciada en el documento original y queda pendiente de que negocio confirme cómo se relacionan ambos esquemas. |
+| 2.1 | 2026-07-30 | María Fernanda Herazo | Ajuste del cupo y crédito de 3 cuotas/SLA 72h a 1 cuota/SLA 24h, consistente con el acuerdo del Check-in de Producto (15 jul 2026) ya reflejado en [Visión de negocio](../descripcion_negocio/01-problema-negocio.md) y en [01-cupo-credito.md](01-cupo-credito.md). |
 
 ---
 
 ## Objetivo
 
-Documentar las reglas de negocio que rigen el otorgamiento, uso, mora y recuperación del crédito Fliipa, para mantener consistencia entre comercial, riesgo, cobranza y jurídico.
+Documentar las reglas de negocio que rigen el otorgamiento, uso, mora y recuperación del crédito Flipa, para mantener consistencia entre comercial, riesgo, cobranza y jurídico.
 
 ## Alcance
 
@@ -57,7 +58,7 @@ flowchart TD
 
 | # | Sección | Resumen | Documento |
 |---|---------|---------|-----------|
-| 1 | Cupo y crédito | Cupo preaprobado, rotativo, hasta 3 cuotas, SLA de 72h. | [01-cupo-credito.md](01-cupo-credito.md) |
+| 1 | Cupo y crédito | Cupo preaprobado, rotativo, 1 cuota*, SLA de 24h*. | [01-cupo-credito.md](01-cupo-credito.md) |
 | 2 | Mora y buckets | 6 estados de cartera; plazos de reporte a centrales (Ley 2157); nota de inconsistencia con el journey Colpatria. | [02-mora-buckets.md](02-mora-buckets.md) |
 | 3 | Alivios y negociación | Abono parcial, congelamiento de intereses, condonación. | [03-alivios-negociacion.md](03-alivios-negociacion.md) |
 | 4 | Gestión y escalamiento | Comité de Cartera, registro de interacciones, indicadores compartidos. | [04-gestion-escalamiento.md](04-gestion-escalamiento.md) |
@@ -66,6 +67,8 @@ flowchart TD
 | 7 | KYC y evaluación de riesgo | Biometría automática, score Experian, validación de cuenta. | [07-kyc-evaluacion-riesgo.md](07-kyc-evaluacion-riesgo.md) |
 | 8 | Dispersión de fondos | Fiducia Colpatria, costo GMF (4x1000). | [08-dispersion-fondos.md](08-dispersion-fondos.md) |
 | 9 | Servicio al cliente | IA de primer nivel, casos críticos, PQR, NPS/CSAT. | [09-servicio-cliente.md](09-servicio-cliente.md) |
+
+> \* **Dato sujeto a cambios frecuentes** (Check-in de Producto, 15 jul 2026): el plazo de aprobación y el número de cuotas son parámetros operativos del piloto que pueden ajustarse conforme evolucione el producto. Confirmar la versión vigente con el dueño del proceso antes de citarlos en otro documento.
 
 ## Documentos relacionados
 
@@ -88,3 +91,4 @@ flowchart TD
 - Mensajes WhatsApp B2B — *Mensajes WhatsApp B2B.xlsx* (hoja "B2B Comunicaciones", cita de Ley 2157 de 2021, Art. 3)
 - Investigación B2B (`Modelo Cobranza/Investigacion B2B.docx`)
 - Journeys Colpatria B2B, junio 2026 — *Journeys Fran finales-1.pdf*
+- Notas de la reunión "Producto: Check-in" (15 jul 2026) y su transcripción asociada — ajuste de 72h/3 cuotas a 24h/1 cuota.
