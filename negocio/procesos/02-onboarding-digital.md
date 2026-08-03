@@ -322,7 +322,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Información utilizada:** Certificación bancaria (saldo actual) y extractos bancarios de los últimos tres meses.
 
-**Proceso:** El cliente adjunta los archivos solicitados. Este requerimiento documental está sujeto a cambios según se definan las reglas de riesgo finales.
+**Proceso:** El cliente adjunta los archivos solicitados. 
 
 **Resultado:** La documentación queda adjunta como insumo para el análisis crediticio.
 
