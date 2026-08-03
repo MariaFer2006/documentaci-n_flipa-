@@ -100,7 +100,7 @@ Cada paso incluye la descripción del proceso (qué ocurre a nivel técnico u op
 
 ---
 
-### 5. Condiciones de la aprobación
+### 5. Condiciones de la aprobación*
 
 **Actor:** Web (sistema).
 
@@ -114,7 +114,7 @@ Cada paso incluye la descripción del proceso (qué ocurre a nivel técnico u op
 
 **Resultado:** Cliente informado de las condiciones del crédito aprobado, incluyendo tasa de interés y detalle de las cuotas mensuales.
 
-**Tiempo estimado:** ~20-30 segundos de lectura.
+**Tiempo estimado:** ~20-30 segundos de lectura.*
 
 **Placeholder\*:** el cupo aprobado depende de los cálculos internos de la entidad; falta confirmar si existe algún mensaje adicional sobre congelación del cupo en caso de mora, y en qué casos aplicaría.
 
@@ -306,7 +306,7 @@ Cada paso incluye la descripción del proceso (qué ocurre a nivel técnico u op
 
 **Actor:** Cliente.
 
-**Proceso:** El cliente ingresa a su cuenta y visualiza el código numérico (código de barras) correspondiente al bono, el cual podrá canjear en cualquier tienda D1 (consistente con el paso 6 del portal del cliente descrito en *Modelo Comercial B2B*: "Usa su cupo — código numérico para canjear en cualquier tienda D1").
+**Proceso:** El cliente ingresa a su cuenta y visualiza el código numérico correspondiente al bono, el cual podrá canjear en cualquier tienda D1 (consistente con el paso 6 del portal del cliente descrito en *Modelo Comercial B2B*: "Usa su cupo — código numérico para canjear en cualquier tienda D1").
 
 **Resultado:** Código del bono visible y disponible para su uso.
 
