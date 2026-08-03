@@ -175,7 +175,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 9-10. Envío y validación del código OTP
+### 9. Envío y validación del código OTP
 
 **Actor:** Web (sistema) y Cliente.
 
@@ -192,7 +192,6 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Tiempo estimado:** ~30-45 segundos (depende del tiempo de entrega del SMS, que es asíncrono).
 
-> **Nota:** los pasos 9 y 10 del flujo original (envío del OTP y validación del OTP) se unifican en un solo paso, ya que corresponden a una misma interacción continua desde la perspectiva del cliente.
 
 ---
 
@@ -250,7 +249,6 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Tiempo estimado:** Instantáneo del lado del sistema (asíncrono en su recepción).
 
-> **Nota (Ajuste · jun 2026):** este paso reemplaza la biometría in-house que antes se realizaba mediante foto de cédula, selfie y verificación manual.
 
 ---
 
