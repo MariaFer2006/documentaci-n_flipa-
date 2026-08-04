@@ -3,10 +3,10 @@
 | Documento | Requerimientos No Funcionales |
 |-----------|--------------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.0 |
+| **Versión** | 1.1 |
 | **Estado** | En revisión |
 | **Responsable** | Producto, negocio y QA |
-| **Última actualización** | 2026-07-10 |
+| **Última actualización** | 2026-08-04 |
 
 ---
 
@@ -16,6 +16,7 @@
 |---------|-------|-------|-------------|
 | 0.1 | 2026-07-06 | Maria Fernanda Herazo | Borrador vacío (pendiente de completar). |
 | 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: requerimientos de seguridad, auditoría y trazabilidad, disponibilidad/monitoreo y cumplimiento, organizados en tablas por categoría, construidos a partir de las reglas de negocio y una revisión directa del código fuente de `credits-platform-main`. |
+| 1.1 | 2026-08-04 | Maria Fernanda Herazo | Se corrigen 2 enlaces rotos: "Casos De Uso" apuntaba a un archivo ya inexistente (`01-casos-de-uso.md`, dividido en 18 casos de uso desde la v3.0 de esa sección) y ahora apunta a su README; la fuente de RNF-017 apuntaba a `negocio/procesos/09-cobranza.md` (no existe) y se corrige a `08-cobranza.md`, el nombre real del archivo. Sin cambios de contenido: este documento no mencionaba el pagaré. |
 
 ---
 
@@ -38,7 +39,7 @@ Cubre seguridad, auditoría y trazabilidad, disponibilidad y monitoreo, y cumpli
 - [Tecnico](../../tecnico/README.md)
 - [Qa](../../qa/README.md)
 - [Documento Funcional](../01-marco-funcional/01-documento-funcional.md)
-- [Casos De Uso](../02-casos-de-uso/01-casos-de-uso.md)
+- [Casos De Uso](../02-casos-de-uso/README.md)
 - [Historias Usuario](../03-historias-usuario/01-historias-usuario.md)
 - [Requerimientos Funcionales](01-requerimientos-funcionales.md)
 
@@ -81,7 +82,7 @@ Cada requerimiento usa el identificador `RNF-XXX`. La columna "Severidad" solo a
 |----|----------------|-----------|---------------------------|--------|
 | RNF-015 | Los parámetros financieros del crédito (tasa de interés, comisiones, seguro) deben estar documentados de forma consistente entre el código y la documentación de negocio. | Alta | No conforme: `insuranceRate` está comentado como tasa decimal (ej. "0.03") pero su valor real es `20000` (monto fijo en COP, no una tasa). Pendiente de validar con negocio y finanzas. | `backends/b2b/src/config/constants.ts` |
 | RNF-016 | Los rangos de validación de un mismo campo de negocio (por ejemplo, día de corte del crédito) deben ser consistentes en todos los módulos que lo validan. | Media | No conforme: el panel admin acepta `cutoffDay` entre 0 y 31, mientras redemption exige 1 a 31. | `backends/admin/src/controllers/credit-lines.controller.ts`, `apps/redemption/lib/is-complete-redemption-credit-settings.ts` |
-| RNF-017 | Los reportes a centrales de riesgo y las acciones de escalamiento jurídico deben ejecutarse según un único esquema de plazos de mora aprobado por negocio y jurídico. | Alta | Pendiente de resolver: negocio documenta dos esquemas de plazos distintos (buckets vs. journey Colpatria B2B) sin que el código disponible permita determinar cuál está implementado. | [Procesos](../../negocio/procesos/09-cobranza.md), [Reglas Negocio](../../negocio/reglas-negocio/02-mora-buckets.md) |
+| RNF-017 | Los reportes a centrales de riesgo y las acciones de escalamiento jurídico deben ejecutarse según un único esquema de plazos de mora aprobado por negocio y jurídico. | Alta | Pendiente de resolver: negocio documenta dos esquemas de plazos distintos (buckets vs. journey Colpatria B2B) sin que el código disponible permita determinar cuál está implementado. | [Procesos](../../negocio/procesos/08-cobranza.md), [Reglas Negocio](../../negocio/reglas-negocio/02-mora-buckets.md) |
 
 ## Fuentes consultadas
 
