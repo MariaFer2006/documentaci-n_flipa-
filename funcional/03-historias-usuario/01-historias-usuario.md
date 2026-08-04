@@ -3,10 +3,10 @@
 | Documento | Historias Usuario |
 |-----------|---------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.4 |
+| **Versión** | 1.5 |
 | **Estado** | En revisión |
 | **Responsable** | Producto y negocio |
-| **Última actualización** | 2026-07-22 |
+| **Última actualización** | 2026-08-04 |
 
 ---
 
@@ -20,6 +20,7 @@
 | 1.2 | 2026-07-10 | María Fernanda Herazo | Se convierte cada historia en una ficha individual (formato adaptado de plantilla de actor). |
 | 1.3 | 2026-07-22 |Maria Fernanda Herazo | Se contrasta cada historia contra el código fuente real del repositorio `fliipa-main` (carpetas `b2b/fliipa-back`, `b2b/fliipa-checkout`, `b2b/fliipa-redemption`, `b2b/services/*`, `fliipa-ui`). Se corrigen rutas de archivo inexactas, se actualizan comentarios que afirmaban "no encontrado en el código" cuando sí existe evidencia, y se marca como **hallazgo crítico** que el backend administrativo (`backends/admin`) referenciado en HU-024 a HU-028 no existe en el repositorio analizado. Ver sección "Hallazgos de la revisión de código v1.3" al final. |
 | **1.4** | **2026-07-30** | Maria Fernanda Herazo  | Se corrige el hallazgo crítico de la v1.3: el repositorio de referencia correcto es `credits-platform-main`, no `fliipa-main`. Al validar contra `credits-platform-main`, HU-024 a HU-028 sí tienen respaldo real en `backends/admin`/`apps/admin`. Se corrigen las cinco fichas con rutas verificadas y se actualiza la sección de hallazgos. |
+| **1.5** | **2026-08-04** | Maria Fernanda Herazo | Se elimina el pagaré de HU-006 (título, historia y criterios de aceptación), por confirmación de negocio de que ya no aplica al producto. Cambio equivalente al ya aplicado en [CU-007](../02-casos-de-uso/07-firmar-contrato-pagare.md). Queda pendiente verificar en `sign-contract.ts` si el backend todavía genera o exige un pagaré, para descartar el concepto también a nivel técnico si corresponde. |
 
 ---
 
@@ -130,17 +131,17 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | **Corrección importante respecto a v1.2**: el comentario original afirmaba que "la lógica de invocación real a Experian no se encontró en el código". Esto es incorrecto: sí existe, en el microservicio `b2b/services/evaluations`, que autentica contra Experian y consulta el score (`midecisorpj`) y la identidad (`reconocer`). El controlador `b2b/fliipa-back/src/controllers/institutions/get-advance-score.ts` actúa como proxy hacia ese microservicio vía `evaluationsClient`. Adicionalmente se encontró una integración con **Datacrédito** (`third-party/Datacredito/get-credit-score.ts`, `credit-history.ts`) no mencionada en ninguna historia — vale la pena que negocio confirme si ambos burós están en uso simultáneo o si uno es contingencia del otro. No se encontró, en cambio, un job o temporizador que garantice el SLA de 72 horas; ese plazo parece ser un compromiso operativo/de negocio, no una regla codificada. |
 
-#### HU-006: Firmar contrato y pagaré desde el celular
+#### HU-006: Firmar contrato desde el celular
 
 | Campo | Detalle |
 |-------|---------|
 | **Actor** | Cliente empresarial |
-| **Historia** | Como cliente empresarial, quiero firmar mi contrato y pagaré desde el celular con un código de verificación, para activar mi cupo sin papeleo físico. |
+| **Historia** | Como cliente empresarial, quiero firmar mi contrato desde el celular con un código de verificación, para activar mi cupo sin papeleo físico. |
 | **Prioridad** | Alta |
-| **Criterios de aceptación** | El cliente revisa el contrato y el pagaré, recibe un OTP de firma válido por 24 horas, y el sistema genera el PDF firmado y lo envía por correo. |
+| **Criterios de aceptación** | El cliente revisa el contrato, recibe un OTP de firma válido por 24 horas, y el sistema genera el PDF firmado y lo envía por correo. |
 | **Relaciones** | Casos de uso: CU-007. Requerimientos: RF-013, RF-014. |
 | **Referencias** | `b2b/fliipa-back/src/controllers/otp/send-signature-otp.ts`, `clients/sign-contract.ts`, `send-contract/send-contract.controller.ts` *(ruta corregida; se agrega referencia de envío)* |
-| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
+| **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 · corrección de contenido (sin pagaré) / 2026-08-04 / 1.5 |
 | **Comentarios** | Confirmado: existen controladores dedicados para OTP de firma, firma del contrato y envío del contrato. El bloqueo de 24 horas tras agotar intentos (RNF-013) no se verificó a nivel de constante exacta en esta revisión; se recomienda una revisión técnica puntual de `config/constants.ts` para confirmar el valor. |
 
 #### HU-007: Consultar cupo, plan de pagos y movimientos
