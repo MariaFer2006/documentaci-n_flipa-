@@ -29,7 +29,7 @@
 
 <text x="750.0" y="160" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-006</text>
 <ellipse cx="495.0" cy="260" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
-<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="495.0" y="257.0">Firmar contrato</tspan><tspan x="495.0" y="271.0">y pagaré</tspan></text>
+<text text-anchor="middle" font-family="Karla, Arial, sans-serif" font-size="12.5" fill="#32313D"><tspan x="495.0" y="264.0">Firmar contrato</tspan></text>
 
 <text x="495.0" y="230" text-anchor="middle" font-size="9.5" fill="#9490A8">CU-007</text>
 <ellipse cx="665.0" cy="260" rx="78" ry="26" fill="#BEFCE5" stroke="#32313D" stroke-width="1.5"/>
