@@ -3,10 +3,10 @@
 | Documento | Requerimientos Funcionales |
 |-----------|------------------------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 1.1 |
+| **Versión** | 1.3 |
 | **Estado** | En revisión |
 | **Responsable** | Producto, negocio y QA |
-| **Última actualización** | 2026-07-10 |
+| **Última actualización** | 2026-08-04 |
 
 ---
 
@@ -18,6 +18,7 @@
 | 1.0 | 2026-07-10 | María Fernanda Herazo | Primera versión completa: 35 requerimientos funcionales organizados en tablas por módulo, con estado de implementación verificado contra el código fuente de `credits-platform-main`. |
 | 1.1 | 2026-07-10 | María Fernanda Herazo  | Se amplía cada requerimiento con nombre corto, descripción detallada, actor(es) involucrados y prioridad, según los criterios de priorización de [Alcance del Producto](../../producto/alcance.md#criterios-de-priorización). |
 | 1.2 | 2026-07-30 | Maria Fernanda Herazo Escobar  | Se corrigen 5 requerimientos (RF-005, RF-008, RF-010, RF-011, RF-015) marcados como "no verificable" en la v1.1: esa revisión no había cubierto la carpeta `services/` del repositorio (motor de reglas, evaluaciones de riesgo, aprobación de líneas de crédito), donde sí existe evidencia real. Ver detalle en cada fila corregida. |
+| 1.3 | 2026-08-04 | Maria Fernanda Herazo | Se elimina el pagaré de RF-014 (nombre y descripción, ahora "Generación de contrato"), por confirmación de negocio de que ya no aplica al producto. Cambio equivalente al ya aplicado en [CU-007](../02-casos-de-uso/07-firmar-contrato-pagare.md) y [HU-006](../03-historias-usuario/01-historias-usuario.md). Queda pendiente verificar en `sign-contract.ts` si el backend todavía genera o exige un pagaré, para descartar el concepto también a nivel técnico si corresponde. |
 
 ---
 
@@ -83,7 +84,7 @@ Cubre los 11 procesos de negocio definidos en [Alcance del Producto](../../produ
 | ID | Nombre | Descripción | Actor(es) | Prioridad | Estado | Fuente |
 |----|--------|--------------|-----------|-----------|--------|--------|
 | RF-013 | OTP de firma | Generar y enviar un OTP de firma con vigencia de 24 horas, y bloquear la firma por 24 horas tras agotar los intentos permitidos. | Cliente empresarial | Alta | Implementado | `otp/send-signature-otp.ts`, `backends/b2b/src/config/constants.ts` (`signatureValidityMs`, `blockDurationMs`) |
-| RF-014 | Generación de contrato y pagaré | Generar el contrato y el pagaré en PDF a partir de una plantilla, y enviarlos por correo al cliente una vez firmados. | Cliente empresarial, sistema | Alta | Implementado | `clients/sign-contract.ts`, `send-contract/send-contract.controller.ts`, `backends/b2b/src/assets/contracts` |
+| RF-014 | Generación de contrato | Generar el contrato en PDF a partir de una plantilla, y enviarlo por correo al cliente una vez firmado. | Cliente empresarial, sistema | Alta | Implementado | `clients/sign-contract.ts`, `send-contract/send-contract.controller.ts`, `backends/b2b/src/assets/contracts` |
 | RF-015 | Activación del cupo y bono D1 | Activar el cupo y emitir el bono D1 una vez firmado el contrato, con fondeo a través de la fiducia del core bancario. | Sistema (automático) | Alta | No verificable, con precisión sobre el hallazgo: sí existe un mecanismo genérico de transición de estado de línea de crédito (`credit-line-status-update`, puede pasar a `active`) y webhooks de Druo, pero **no hay ningún concepto de "fiducia" en el código** (búsqueda exhaustiva sin resultados); la mecánica de fondeo vía fiducia del core bancario parece vivir fuera de este repositorio. | `services/core/credit-line-status-update/src/services/update-credit-line-status.service.ts` |
 
 ### Administración del crédito
