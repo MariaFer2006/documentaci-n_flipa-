@@ -3,10 +3,10 @@
 | Documento | Casos De Uso |
 |-----------|----------------|
 | **Proyecto** | Fliipa |
-| **Versión** | 3.1 |
+| **Versión** | 3.2 |
 | **Estado** | En revisión |
 | **Responsable** | Producto y QA |
-| **Última actualización** | 2026-07-30 |
+| **Última actualización** | 2026-08-04 |
 
 ---
 
@@ -22,6 +22,7 @@
 | 2.4 | 2026-07-30 | Revisión asistida por Claude | Se corrige el actor de los 4 casos de uso originales tras validar contra `services/` (no revisada antes): CU-1 → cliente empresarial; CU-2 y CU-3 → sí tienen respaldo real en código (antes marcados como "no verificables"); CU-4 → administrador / analista de cartera. |
 | **3.0** | **2026-07-30** | **Revisión asistida por Claude** | **Ampliación completa de 4 a los 18 casos de uso** (CU-001 a CU-018) referenciados por [Historias de Usuario](../03-historias-usuario/README.md), con numeración `CU-XXX` formal. Se reasigna el contenido de los 4 casos de uso originales dentro de la nueva numeración: "registrar solicitud" → CU-001; "evaluar riesgo" se retitula "conocer el cupo preaprobado" → CU-002; "decidir aprobación o rechazo" se divide en CU-008 (aprobación automática, llenando un vacío de numeración que ya existía en Historias de Usuario) y se fusiona con CU-015 (override manual del administrador); "dar seguimiento al crédito" se fusiona con CU-015 (buscar cliente / ajustar cupo / seguimiento, todas acciones del mismo panel administrativo). Se crean 14 casos de uso nuevos (CU-003 a CU-007, CU-009 a CU-014, CU-016 a CU-018), cada uno validado contra `credits-platform-main` y con su propio hallazgo de implementación (implementado, parcial, o sin respaldo en código). Ver el detalle de cobertura en [00-caso-de-uso-general.md](00-caso-de-uso-general.md#alcance-actual). |
 | **3.1** | **2026-07-30** | **Revisión asistida por Claude** | Se rehacen todos los diagramas: un diagrama UML individual por cada uno de los 18 casos de uso (actor con notación de monigote, caso de uso como óvalo, límite del sistema), más un diagrama general que agrupa los 18 en las 5 etapas del flujo, con la relación «include» de CU-008 hacia CU-002 y CU-006. Se eliminan los 2 diagramas huérfanos de la numeración anterior ("decidir aprobación o rechazo" y "dar seguimiento al crédito" sueltos). |
+| **3.2** | **2026-08-04** | **Revisión asistida por Claude** | Se elimina el pagaré de CU-007 (contenido y diagrama, individual y general), por confirmación de negocio de que ya no aplica al producto. El nombre de archivo (`07-firmar-contrato-pagare.md`) y el identificador CU-007/HU-006 se conservan para no romper referencias cruzadas existentes; queda pendiente verificar en el código si `sign-contract.ts` aún genera o exige un pagaré. |
 
 ---
 
@@ -50,7 +51,7 @@ Este documento cubre los 18 casos de uso (CU-001 a CU-018) que ya referenciaba [
 | CU-004 | Completar KYC y cargar soportes | Cliente empresarial | ⚠️ Parcial (sin biometría automatizada) | [04-completar-kyc.md](04-completar-kyc.md) |
 | CU-005 | Resolver manualmente casos de KYC en revisión | Analista de riesgo | ❌ Sin respaldo en código | [05-resolver-kyc-en-revision.md](05-resolver-kyc-en-revision.md) |
 | CU-006 | Conocer el resultado de la evaluación (score, Experian, D1) | Cliente empresarial / Analista de riesgo | ⚠️ Parcial (mocks) | [06-conocer-resultado-evaluacion.md](06-conocer-resultado-evaluacion.md) |
-| CU-007 | Firmar contrato y pagaré | Cliente empresarial | ✅ Implementado | [07-firmar-contrato-pagare.md](07-firmar-contrato-pagare.md) |
+| CU-007 | Firmar contrato | Cliente empresarial | ✅ Implementado | [07-firmar-contrato-pagare.md](07-firmar-contrato-pagare.md) |
 | CU-008 | Aprobar y activar la línea de crédito | Sistema (automático), override del Administrador | ✅ Implementado | [08-aprobar-activar-linea-credito.md](08-aprobar-activar-linea-credito.md) |
 | CU-009 | Consultar cupo, plan de pagos y movimientos | Cliente empresarial | ✅ Implementado | [09-consultar-cupo-plan-pagos.md](09-consultar-cupo-plan-pagos.md) |
 | CU-010 | Usar el cupo en tienda D1 | Cliente empresarial | ✅ Implementado, con hallazgo | [10-usar-cupo-tienda-d1.md](10-usar-cupo-tienda-d1.md) |
