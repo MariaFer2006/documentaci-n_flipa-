@@ -30,7 +30,7 @@ Este es el caso de uso "paraguas" que agrupa los 18 casos de uso específicos (C
 4. **[CU-004 — Completar KYC y cargar soportes](04-completar-kyc.md):** cliente empresarial.
 5. **[CU-005 — Resolver manualmente casos de KYC en revisión](05-resolver-kyc-en-revision.md):** analista de riesgo.
 6. **[CU-006 — Conocer el resultado de la evaluación](06-conocer-resultado-evaluacion.md):** cliente empresarial / analista de riesgo.
-7. **[CU-007 — Firmar contrato y pagaré](07-firmar-contrato-pagare.md):** cliente empresarial.
+7. **[CU-007 — Firmar contrato](07-firmar-contrato-pagare.md):** cliente empresarial.
 8. **[CU-008 — Aprobar y activar la línea de crédito](08-aprobar-activar-linea-credito.md):** sistema (automático), con override manual del administrador. **Incluye** siempre a CU-002/CU-006, porque no puede haber decisión sin evaluación previa.
 
 ### Administración del crédito
@@ -75,4 +75,3 @@ Un resumen honesto del estado de implementación (detalle en cada caso de uso):
 - [Requerimientos No Funcionales](../04-requerimientos/02-requerimientos-no-funcionales.md)
 - [Actores](../../negocio/Actores/README.md)
 - [Alcance del Producto](../../producto/alcance.md)
-
