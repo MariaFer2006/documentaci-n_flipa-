@@ -30,7 +30,7 @@ Este journey describe el flujo financiero del crédito una vez ha sido aprobado 
 
 Una vez el contrato ha sido firmado y el crédito queda activo, Colpatria crea y fondea una **cuenta fiduciaria** desde donde se administran los recursos del piloto (**fondeo inicial, único**, no recurrente por crédito) *el Banco donde se creara la fiducia*.
 
-> **Definición (Acta de reunión Check-in, 29 jul 2026):** el equipo acordó incluir en la documentación una aclaración sobre qué es una fiducia, para evitar confusiones. Una fiducia es un contrato mediante el cual una entidad fiduciaria administra recursos entregados por Colpatria (el fideicomitente) con una finalidad específica y previamente definida; en este caso, centralizar el fondeo de los desembolsos hacia D1 y el recaudo de los pagos de los clientes. **Pendiente:** confirmar el nombre de la entidad fiduciaria y el banco donde se constituirá, dato aún no definido.
+> **Definición:** el equipo acordó incluir en la documentación una aclaración sobre qué es una fiducia, para evitar confusiones. Una fiducia es un contrato mediante el cual una entidad fiduciaria administra recursos entregados por Colpatria (el fideicomitente) con una finalidad específica y previamente definida; en este caso, centralizar el fondeo de los desembolsos hacia D1 y el recaudo de los pagos de los clientes. **Pendiente:** confirmar el nombre de la entidad fiduciaria y el banco donde se constituirá, dato aún no definido.
 
 Posteriormente la fiducia desembolsa el dinero a D1 para emitir el bono correspondiente al valor del cupo utilizado (**desembolso recurrente, uno por cada ciclo de crédito**).
 
@@ -38,7 +38,7 @@ Cuando el cliente utiliza el bono en una tienda D1, un **worker automatizado**\*
 
 Posteriormente el cliente paga su obligación y el dinero retorna nuevamente a la fiducia como cuenta de recaudo — este retorno no vuelve a generar GMF adicional.
 
-> **Aclaración (Acta de reunión Check-in, 29 jul 2026):** el dinero recaudado a través de los canales de pago **no se reinvierte en su totalidad** en el fondeo de nuevos créditos. Únicamente el **capital recuperado** vuelve a utilizarse para fondear nuevos créditos; los intereses y demás cargos cobrados al cliente quedan excluidos de esa reinversión.
+> **Aclaración :** el dinero recaudado a través de los canales de pago **no se reinvierte en su totalidad** en el fondeo de nuevos créditos. Únicamente el **capital recuperado** vuelve a utilizarse para fondear nuevos créditos; los intereses y demás cargos cobrados al cliente quedan excluidos de esa reinversión.
 
 ---
 
@@ -95,9 +95,9 @@ NOTA: El dinero que se recaude a través de los canales de pago no se reinvierte
 
 **Proceso:** El cliente recibe el bono y realiza la compra en una tienda D1. Cuando el **worker automatizado** de consulta de bono detecta una compra realizada, el sistema registra la utilización efectiva del crédito y comienza formalmente el ciclo de vida de la obligación financiera. Aunque el bono queda emitido y disponible desde el desembolso (paso 3), la obligación financiera formal del cliente solo inicia cuando el sistema detecta que el bono fue efectivamente utilizado en una compra en D1. Después del primer uso, el sistema bloquea automáticamente el cupo remanente para evitar compras adicionales durante el mismo ciclo de crédito.
 
-**Vigencia y expiración del bono (Acta de reunión Check-in, 29 jul 2026):** el bono tiene un plazo de **15 días calendario** para que el cliente lo utilice. Este plazo se implementará como una **variable configurable** en el panel administrativo (a cargo de Francisco Javier Martínez Vargas), en lugar de un valor fijo en el código, de modo que pueda ajustarse sin requerir nuevos despliegues.
+**Vigencia y expiración del bono ):** el bono tiene un plazo de **15 días calendario** para que el cliente lo utilice. Este plazo se implementará como una **variable configurable** en el panel administrativo (a cargo de Francisco Javier Martínez Vargas), en lugar de un valor fijo en el código, de modo que pueda ajustarse sin requerir nuevos despliegues.
 
-**Comunicación automatizada (Acta de reunión Check-in, 29 jul 2026):** el equipo acordó diseñar un flujo automatizado de recordatorios (vía WhatsApp o correo electrónico) para incentivar al cliente a usar el bono durante los 15 días de vigencia. La frecuencia y el canal definitivo de estos mensajes están a cargo de Alejandra Suárez y aún deben definirse.
+**Comunicación automatizada :** el equipo acordó diseñar un flujo automatizado de recordatorios (vía WhatsApp o correo electrónico) para incentivar al cliente a usar el bono durante los 15 días de vigencia. La frecuencia y el canal definitivo de estos mensajes están a cargo de Alejandra Suárez y aún deben definirse.
 
 **Resultado:** Crédito activado mediante el uso del bono; cupo remanente bloqueado hasta finalizar el ciclo.
 

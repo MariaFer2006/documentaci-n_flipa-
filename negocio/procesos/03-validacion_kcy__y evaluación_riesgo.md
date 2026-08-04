@@ -98,7 +98,7 @@ La cuenta bancaria informada por el cliente se registra también en Druo para ha
 **Decisión:** ¿El cliente cumple con los requisitos?
 
 - **Sí:** si el cliente es aprobado se le envía un correo de forma automática confirmando su aprobación.
-- **No:** la solicitud pasa al estado de **"posible rechazo"** (ver Paso 7) en lugar de rechazarse de forma automática; se envía una alerta al canal de Slack de operaciones para que el equipo revise el caso.
+- **No:** la solicitud pasa al estado de **"posible rechazo"** (ver Paso 7) en lugar de rechazarse de forma automática; se envía una alerta al canal de Slack de operaciones fliipa-ops-alerts para que el equipo revise el caso.
 
 **Tiempo estimado:** Instantáneo.
 
