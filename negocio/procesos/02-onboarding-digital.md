@@ -2,9 +2,11 @@
 
 ## Objetivo
 
-Registrar al cliente empresarial mediante un proceso completamente digital, identificar su cupo preaprobado utilizando la información transaccional disponible, recopilar la información básica del negocio y del representante legal, validar los mecanismos de autenticación y seguridad, realizar la validación biométrica, registrar la cuenta bancaria para el débito automático y recopilar la documentación necesaria para dejar la solicitud preparada para el análisis crediticio y continuar con el proceso de Validación de Identidad (KYC).
+Registrar al cliente empresarial mediante un proceso completamente digital, identificar su cupo preaprobado utilizando la información transaccional disponible, recopilar la información básica del negocio y del representante legal, validar el correo electrónico y el PIN de seguridad, realizar la validación biométrica, registrar la cuenta bancaria para el débito automático y recopilar la documentación necesaria para dejar la solicitud preparada para el análisis crediticio y continuar con el proceso de Validación de Identidad (KYC).
 
 > **Actualización (Check-in 16 jul 2026):** el estudio de crédito inicial queda completamente automatizado a través del motor de riesgo; no interviene un asesor humano en esta etapa. El flujo final del onboarding queda enfocado en dejar la solicitud lista para KYC + motor de riesgo.
+>
+> **Actualización (ago 2026):** se elimina la validación del número telefónico mediante código OTP (paso anterior "Envío y validación del código OTP"). La confirmación de identidad en el onboarding queda a cargo del código de verificación enviado por correo electrónico y del PIN de seguridad; el número de teléfono del representante legal se conserva como dato de contacto pero deja de requerir un código de un solo uso para validarse.
 
 ---
 
@@ -27,7 +29,7 @@ En el journey, las cajas en color morado corresponden a pasos nuevos o ajustados
 
 El onboarding digital constituye el primer contacto del cliente con el producto y concentra todas las actividades necesarias para crear su perfil dentro de la plataforma.
 
-El proceso inicia cuando el cliente recibe una invitación personalizada por correo electrónico(Sendgrid), SMS o WhatsApp ( Zenvia) para acceder al producto. A partir de este momento registra la información básica del negocio, suministra los datos del representante legal y valida el número telefónico mediante un código OTP. Posteriormente ingresa un segundo código de verificación enviado a su correo electrónico, configura un PIN de seguridad, realiza la validación biométrica con el proveedor externo *Olimpia*, registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos (validada ante Drúo), adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada al proceso de Validación de Identidad (KYC).
+El proceso inicia cuando el cliente recibe una invitación personalizada por correo electrónico(Sendgrid), SMS o WhatsApp ( Zenvia) para acceder al producto. A partir de este momento registra la información básica del negocio y suministra los datos del representante legal. Posteriormente ingresa un código de verificación enviado a su correo electrónico, configura un PIN de seguridad, realiza la validación biométrica con el proveedor externo *Olimpia*, registra la cuenta bancaria desde la cual se autorizarán los débitos automáticos (validada ante Drúo), adjunta la documentación bancaria requerida y selecciona su localidad habitual de compra. Finalmente, toda la información recopilada es enviada al proceso de Validación de Identidad (KYC).
 
 > **Nota de estado:** tras la creación de la cuenta, el cliente queda en el estado **"pendiente de biometría"**, visible para seguimiento interno del funnel.
 
@@ -155,9 +157,9 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Información utilizada:** Nombre, cédula de ciudadanía y número de teléfono del representante legal (campos desglosados de forma independiente).
 
-**Proceso:** El cliente diligencia en pantalla los tres datos del representante legal por separado (nombre / cédula / teléfono), quedando disponibles para la validación posterior del número telefónico.
+**Proceso:** El cliente diligencia en pantalla los tres datos del representante legal por separado (nombre / cédula / teléfono). El teléfono queda registrado como dato de contacto; ya no se somete a una validación mediante código de un solo uso (OTP).
 
-**Resultado:** Queda registrada la información del representante legal necesaria para continuar con la validación del número telefónico.
+**Resultado:** Queda registrada la información del representante legal necesaria para continuar con la confirmación de datos.
 
 **Tiempo estimado:** ~30 segundos.
 
@@ -167,49 +169,36 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 **Actor:** Cliente.
 
-**Proceso:** Antes de continuar hacia el envío del OTP, la plataforma muestra en pantalla un resumen de los datos ingresados en el paso 8 (nombre, cédula, teléfono) para que el cliente los revise y confirme que son correctos. Si detecta un error, puede volver atrás y corregirlo antes de continuar.
+**Proceso:** Antes de continuar hacia la validación del correo electrónico, la plataforma muestra en pantalla un resumen de los datos ingresados en el paso 8 (nombre, cédula, teléfono) para que el cliente los revise y confirme que son correctos. Si detecta un error, puede volver atrás y corregirlo antes de continuar.
 
-**Resultado:** Datos del representante legal confirmados por el cliente, reduciendo el riesgo de errores de digitación antes de disparar la validación del teléfono.
+**Resultado:** Datos del representante legal confirmados por el cliente, reduciendo el riesgo de errores de digitación antes de continuar el flujo.
 
 **Tiempo estimado:** ~10 segundos.
 
----
-
-### 9. Envío y validación del código OTP
-
-**Actor:** Web (sistema) y Cliente.
-
-**Información utilizada:** Número de teléfono registrado del representante legal.
-
-**Proceso:** El sistema genera y envía un código OTP al número de teléfono confirmado en el paso 8.1. El cliente lo recibe y lo ingresa en pantalla; el sistema valida su vigencia y coincidencia. Si el cliente no recibe el código, puede solicitar el reenvío.
-
-**Decisión:** ¿El código OTP ingresado es válido?
-
-- **Exitoso:** el flujo continúa hacia la siguiente etapa (Figura 3).
-- **Fallido:** el cliente vuelve a la pantalla de ingreso del código para intentarlo de nuevo.
-
-**Resultado:** Titularidad del número telefónico validada. El cliente puede solicitar el reenvío del código si no lo recibe.
-
-**Tiempo estimado:** ~30-45 segundos (depende del tiempo de entrega del SMS, que es asíncrono).
-
+> **Actualización (ago 2026):** se eliminó el paso "Envío y validación del código OTP" que antes seguía a esta confirmación. El teléfono del representante legal ya no se valida con un código de un solo uso; el siguiente paso del flujo es la validación del correo electrónico.
 
 ---
 
-### 11. Envío y validación del código de verificación al correo electrónico
+### 9. Envío y validación del código de verificación al correo electrónico
 
 **Actor:** Cliente y Web (sistema).
 
 **Información utilizada:** Correo electrónico registrado por el cliente.
 
-**Proceso:** El sistema envía un segundo código de verificación —distinto del OTP telefónico— al correo electrónico del cliente. El cliente lo ingresa y el sistema lo valida antes de habilitar la creación del PIN de seguridad. El cliente puede solicitar el reenvío si no lo recibe.
+**Proceso:** El sistema envía un código de verificación al correo electrónico del cliente. El cliente lo ingresa y el sistema lo valida antes de habilitar la creación del PIN de seguridad. El cliente puede solicitar el reenvío si no lo recibe.
 
-**Resultado:** Correo electrónico validado como segundo factor, previo a la creación del PIN.
+**Decisión:** ¿El código de verificación ingresado es válido?
+
+- **Exitoso:** el flujo continúa hacia la creación del PIN de seguridad.
+- **Fallido:** el cliente vuelve a la pantalla de ingreso del código para intentarlo de nuevo.
+
+**Resultado:** Correo electrónico validado, previo a la creación del PIN.
 
 **Tiempo estimado:** ~30-45 segundos (depende de la entrega del correo).
 
 ---
 
-### 12. Creación del PIN de seguridad
+### 10. Creación del PIN de seguridad
 
 **Actor:** Cliente.
 
@@ -223,7 +212,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 13. Confirmación de creación de la cuenta
+### 11. Confirmación de creación de la cuenta
 
 **Actor:** Web (sistema).
 
@@ -237,7 +226,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 14. Envío del enlace para biometría
+### 12. Envío del enlace para biometría
 
 **Actor:** Web (sistema).
 
@@ -252,7 +241,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 15. Validación biométrica *(placeholder — pendiente de definición técnica con Olimpia)*
+### 13. Validación biométrica *(placeholder — pendiente de definición técnica con Olimpia)*
 
 **Actor:** Cliente y proveedor externo (Olimpia).
 
@@ -264,7 +253,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 16. Gestión del resultado biométrico *(placeholder — pendiente de definición técnica con Olimpia)*
+### 14. Gestión del resultado biométrico *(placeholder — pendiente de definición técnica con Olimpia)*
 
 **Actor:** Sistema-webhook.
 
@@ -283,7 +272,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 17. Revisión manual por analista de riesgo *(placeholder)*
+### 15. Revisión manual por analista de riesgo *(placeholder)*
 
 **Actor:** Analista de riesgo.
 
@@ -300,7 +289,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 18. Vinculación de la cuenta bancaria
+### 16. Vinculación de la cuenta bancaria
 
 **Actor:** Cliente.
 
@@ -316,7 +305,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 19. Carga de documentación bancaria
+### 17. Carga de documentación bancaria
 
 **Actor:** Cliente.
 
@@ -330,7 +319,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 20. Selección de localidad habitual *(placeholder)*
+### 18. Selección de localidad habitual *(placeholder)*
 
 **Actor:** Cliente.
 
@@ -344,7 +333,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 21. Envío al análisis de crédito
+### 19. Envío al análisis de crédito
 
 **Actor:** Web (sistema).
 
@@ -356,7 +345,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 ---
 
-### 22. Continuación hacia KYC
+### 20. Continuación hacia KYC
 
 **Proceso:** La solicitud pasa automáticamente al proceso de Validación de Identidad (KYC) más motor de riesgo, donde se realizan las verificaciones correspondientes (incluyendo servicios de Experian) antes de la originación del crédito.
 
@@ -371,9 +360,9 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - Cada cliente inicia el proceso mediante un enlace a la landing page enviado por Sendgrid y Zenvia.
 - El cupo preaprobado se consulta a partir de información transaccional de D1 **ya calculada y almacenada previamente**; si la identificación falla, el cliente debe reintentar el ingreso de su NIT o identificación.
 - La aceptación de términos y condiciones es obligatoria, tanto en el flujo NIT como en el flujo CC; si no se acepta, el sistema simplemente no permite avanzar.
-- El número telefónico debe validarse mediante OTP; el cliente puede solicitar un nuevo código cuando sea necesario.
-- El cliente debe confirmar en pantalla los datos del representante legal (paso 8.1) antes de que se dispare el OTP.
-- El cliente debe validar un segundo código de verificación enviado a su correo electrónico antes de crear el PIN de seguridad.
+- El número telefónico del representante legal se registra como dato de contacto y **ya no requiere validación mediante código OTP**.
+- El cliente debe confirmar en pantalla los datos del representante legal (paso 8.1) antes de continuar hacia la validación del correo electrónico.
+- El cliente debe validar un código de verificación enviado a su correo electrónico antes de crear el PIN de seguridad; puede solicitar el reenvío si no lo recibe.
 - El cliente debe crear un PIN de cuatro dígitos, sin reglas adicionales de validación de combinaciones inseguras por ahora.
 - La biometría se realiza mediante el proveedor externo *Olimpia*, fuera de la plataforma web.
 - Los resultados de biometría "en revisión" y "rechazado" son evaluados por un analista de riesgo, quien determina la aprobación o el rechazo final.
@@ -394,8 +383,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - Departamento, ciudad y dirección.
 - Nombre del representante legal.
 - Cédula de ciudadanía del representante legal.
-- Teléfono del representante legal.
-- Código OTP (teléfono).
+- Teléfono del representante legal (dato de contacto, sin validación OTP).
 - Código de verificación (correo electrónico).
 - PIN de seguridad.
 - Cuenta bancaria.
@@ -409,7 +397,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 
 - Cliente registrado.
 - Cupo preaprobado identificado.
-- Teléfono y correo electrónico validados.
+- Correo electrónico validado.
 - Datos del representante legal confirmados.
 - PIN registrado.
 - Estado "pendiente de biometría" asignado.
@@ -427,7 +415,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - El cliente abandona el proceso.
 - La consulta del cupo preaprobado falla.
 - No acepta los términos y condiciones.
-- El código OTP o el código de verificación por correo expiran o son incorrectos.
+- El código de verificación por correo expira o es incorrecto.
 - La biometría es rechazada o queda en revisión y el analista de riesgo la rechaza.
 - Error durante la validación biométrica con Olimpia.
 - Error en la validación de la cuenta bancaria ante Drúo.
@@ -457,6 +445,7 @@ El proceso inicia cuando el cliente recibe una invitación personalizada por cor
 - Queda pendiente agregar un copy que indique al cliente revisar su correo tras la confirmación de cuenta.
 - Debe confirmarse con el dueño del proceso si todo rechazo automático de biometría pasa por revisión manual del analista de riesgo.
 - Pendiente documentar en detalle el proceso de KYC y motor de riesgo, incluyendo los servicios específicos de Experian utilizados (acción asignada a María Fernanda Herazo en el check-in del 16 de julio de 2026).
+- **Pendiente (ago 2026):** actualizar las Figuras 2 y 3 del journey (`imagenes/page-02.png`, `imagenes/page-03.png`) para reflejar la eliminación del paso "Envío y validación del código OTP"; las imágenes actuales aún muestran ese paso.
 
 ---
 
