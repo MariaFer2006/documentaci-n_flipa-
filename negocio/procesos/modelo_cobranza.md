@@ -38,9 +38,9 @@ El comité analiza semanalmente la cartera y prioriza la gestión según:
 
 - Días de mora y clientes con 20+ días
 - Flujo de caja y tipo de negocio
-- Número de cuotas vencidas
+- Cuota vencida.
 - Historial y respuesta del cliente
-- Alto monto adeudado
+- Monto adeudado
 
 ## 4. Alivios y negociación
 
