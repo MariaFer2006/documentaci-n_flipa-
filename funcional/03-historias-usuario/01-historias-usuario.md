@@ -117,14 +117,14 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
 | **Comentarios** | **Parcialmente verificable**: `upload-document.ts` solo acepta dos tipos de documento (`id_document`, `bank_certificate`); no hay lógica de "extractos de los últimos 3 meses" como conjunto separado ni llamada a un proveedor de biometría en este controlador ni en ningún otro archivo del repositorio (se buscó explícitamente "biometr*" y "Olimpia" en todo `b2b/`, sin resultados). El criterio de aceptación tal como está redactado **excede lo que el código respalda**; se recomienda ajustar la historia o confirmar que la biometría vive en un microservicio no incluido en este repositorio. |
 
-#### HU-005: Conocer el resultado en máximo 72 horas
+#### HU-005: Conocer el resultado en máximo 24 horas
 
 | Campo | Detalle |
 |-------|---------|
 | **Actor** | Cliente empresarial |
-| **Historia** | Como cliente empresarial, quiero conocer el resultado de mi solicitud en máximo 72 horas, para poder planear mis compras en D1. |
+| **Historia** | Como cliente empresarial, quiero conocer el resultado de mi solicitud en máximo 24 horas, para poder planear mis compras en D1. |
 | **Prioridad** | Alta |
-| **Criterios de aceptación** | El cliente recibe notificación de aprobación o rechazo dentro de las 72 horas siguientes a completar la validación de identidad. |
+| **Criterios de aceptación** | El cliente recibe notificación de aprobación o rechazo dentro de las 24 horas siguientes a completar la validación de identidad. |
 | **Relaciones** | Casos de uso: CU-006. Requerimientos: RF-010, RF-011, RF-012. |
 | **Referencias** | [Reglas Negocio](../negocio/reglas-negocio/01-cupo-credito.md); `b2b/services/evaluations/src/third-party/Experian/authentication-experian.ts`, `midecisorpj.ts`, `reconocer.ts` *(referencia corregida y ampliada)* |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
@@ -135,7 +135,7 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | Campo | Detalle |
 |-------|---------|
 | **Actor** | Cliente empresarial |
-| **Historia** | Como cliente empresarial, quiero firmar mi contrato y pagaré desde el celular con un código de verificación, para activar mi cupo sin papeleo físico. |
+| **Historia** | Como cliente empresarial, quiero firmar mi contrato y pagaré desde cualquier Dispositivo con un código de verificación, para activar mi cupo sin papeleo físico. |
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente revisa el contrato y el pagaré, recibe un OTP de firma válido por 24 horas, y el sistema genera el PDF firmado y lo envía por correo. |
 | **Relaciones** | Casos de uso: CU-007. Requerimientos: RF-013, RF-014. |
@@ -150,7 +150,7 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | **Actor** | Cliente empresarial |
 | **Historia** | Como cliente empresarial, quiero consultar mi cupo disponible, mi plan de pagos y mis movimientos, para saber cuánto puedo usar y cuánto debo. |
 | **Prioridad** | Alta |
-| **Criterios de aceptación** | El cliente accede al dashboard de redención y visualiza cupo disponible, plan de pagos y movimientos, solo si su línea de crédito está en estado `approved` o `active`. |
+| **Criterios de aceptación** | El cliente accede al portal de usuarios y visualiza cupo disponible, plan de pagos y movimientos, solo si su línea de crédito está en estado `approved` o `active`. |
 | **Relaciones** | Casos de uso: CU-009. Requerimientos: RF-016, RF-017. |
 | **Referencias** | `b2b/fliipa-back/src/controllers/credit-line/get-credit-status.ts`, `credit-line/get-disbursements.ts`; `b2b/fliipa-redemption/actions/auth.ts` *(ruta corregida; antes: `backends/b2b/...`, `apps/redemption/...`)* |
 | **Autor / Fecha / Versión** | María Fernanda Herazo (con asistencia de Claude) / 2026-07-10 / 1.0 |
@@ -161,7 +161,7 @@ Cada historia se documenta como una ficha individual: identificador, descripció
 | Campo | Detalle |
 |-------|---------|
 | **Actor** | Cliente empresarial |
-| **Historia** | Como cliente empresarial, quiero generar un código QR o un código de compra para usar mi cupo en la tienda D1, para pagar mi mercancía sin dinero en efectivo. |
+| **Historia** | Como cliente empresarial, quiero generar un código de barras o un código de compra para usar mi cupo en la tienda D1, para pagar mi mercancía sin dinero en efectivo. |
 | **Prioridad** | Alta |
 | **Criterios de aceptación** | El cliente genera un QR con TTL o revela un código de compra, y el punto de venta D1 lo valida para aplicar el cupo a la compra. |
 | **Relaciones** | Casos de uso: CU-010. Requerimientos: RF-019, RF-020. |
